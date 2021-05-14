@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+
+    public GameObject ball      ;
+    public Transform spawnPoint ;
+
+    void Start() {
+        SpawnBall();
+    }
+
+    void Update() {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void SpawnBall() {
+        Instantiate(ball, spawnPoint.position, Quaternion.identity);
     }
 }
