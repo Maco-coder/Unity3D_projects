@@ -8,4 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Asset Store/Vuforia/SamplesResources/Scenes/0-Main.unity
     guid: a09cb257d566c489595b16ab37547666
-  m_configObjects: {}
+  m_configObjects:
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ec8bcb6c066fe134d92d991537b0ec54,
+      type: 2}
