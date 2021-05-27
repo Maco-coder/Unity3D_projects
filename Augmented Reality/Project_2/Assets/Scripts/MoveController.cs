@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public ParticleSystem flame1PS;
+    public ParticleSystem flame2PS;
+
+
+    public void PlayFlame1()
     {
-        
+        flame1PS.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayFlame2()
     {
-        
+        flame2PS.Play();
     }
+
 }
