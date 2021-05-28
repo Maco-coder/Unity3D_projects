@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1341,16 +1341,16 @@ MonoBehaviour:
   m_Script: {fileID: -780924145, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: vulpix1
+  mTrackableName: vulpix3
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/AR_vulpix1_OT.xml
+  mDataSetPath: Vuforia/AR_vulpix3_OT.xml
   mBaseSize: 1
   mAspectRatioXY: 0.6666667
   mAspectRatioXZ: 0.6666667
   mShowBoundingBox: 1
   mBBoxMin: {x: 0, y: 0, z: 0}
   mBBoxMax: {x: 0.1425, y: 0.095, z: 0.095}
-  mPreviewImage: {fileID: 2800000, guid: e19607a2b77545e89fa033b6b45ca061, type: 3}
+  mPreviewImage: {fileID: 2800000, guid: 5dcd71db3d9942bc98ed5474a15953f7, type: 3}
   mLength: 0.1425
   mWidth: 0.095
   mHeight: 0.095
