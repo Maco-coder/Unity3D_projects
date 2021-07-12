@@ -27,9 +27,10 @@ public class Plant : MonoBehaviour
         stream.BaseStream.Flush()         ;
 
         //string[] data = receivedString.Split(',');
-        if (data[0] != "")
+        if (data[0] != "" && data[1] != "")
         {
             dataReceived[0] = data[0];
+            dataReceived[1] = data[1];
             stream.BaseStream.Flush();
         }
     }
