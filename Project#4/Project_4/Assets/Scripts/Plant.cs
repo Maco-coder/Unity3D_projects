@@ -8,7 +8,7 @@ public class Plant : MonoBehaviour
 {
 
     public float speed;
-    SerialPort sp = new SerialPort("COM3", 9600);
+    SerialPort sp = new SerialPort("COM7", 9600);
 
 
     void Start()
