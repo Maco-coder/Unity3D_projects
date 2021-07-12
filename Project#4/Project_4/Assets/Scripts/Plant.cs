@@ -22,12 +22,16 @@ public class Plant : MonoBehaviour
     {
         if (sp.IsOpen)
         {
-            print(sp.ReadByte());
-        }
-        catch (System.Exception)
-        {
+            try
+            {
+                print(sp.ReadByte());
+            }
+            catch (System.Exception)
+            {
 
+            }
         }
+
     }
 
     void MoveObject(int direction)
