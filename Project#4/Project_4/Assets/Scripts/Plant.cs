@@ -8,30 +8,30 @@ public class Plant : MonoBehaviour
 {
 
     public float speed;
-    SerialPort sp = new SerialPort("COM7", 9600);
+
+    SerialPort stream = new SerialPort("COM7", 9600);
+    public string receivedString;
+    public string[] data        ;
+    public string[] dataReceived;
 
 
     void Start()
     {
-        sp.Open();
-        sp.ReadTimeout = 1;
+        stream.Open();
     }
 
 
     void Update()
     {
-        if (sp.IsOpen)
+        receivedString = stream.ReadLine();
+        stream.BaseStream.Flush()         ;
+
+        //string[] data = receivedString.Split(',');
+        if (data[0] != "")
         {
-            try
-            {
-                print(sp.ReadByte());
-            }
-            catch (System.Exception)
-            {
-
-            }
+            dataReceived[0] = data[0];
+            stream.BaseStream.Flush();
         }
-
     }
 
     void MoveObject(int direction)
