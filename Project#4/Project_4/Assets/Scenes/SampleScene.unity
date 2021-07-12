@@ -3842,6 +3842,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  receivedString: 
+  data: []
+  dataReceived:
+  - 
+  - 
 --- !u!4 &1735495528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2728355139828275145, guid: bffeccdfc1f6af2479c3fb5ae25a7a3c,

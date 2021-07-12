@@ -8,8 +8,9 @@ public class Plant : MonoBehaviour
 {
 
     public float speed;
+    private float amountToMove;
 
-    SerialPort stream = new SerialPort("COM7", 9600);
+    SerialPort stream = new SerialPort("COM7", 115200);
     public string receivedString;
     public string[] data        ;
     public string[] dataReceived;
@@ -26,17 +27,22 @@ public class Plant : MonoBehaviour
         receivedString = stream.ReadLine();
         stream.BaseStream.Flush()         ;
 
-        //string[] data = receivedString.Split(',');
+        string[] data = receivedString.Split(',');
         if (data[0] != "" && data[1] != "")
         {
-            dataReceived[0] = data[0];
-            dataReceived[1] = data[1];
+            dataReceived[0] =  data[0];
+            dataReceived[1] =  data[1];
             stream.BaseStream.Flush();
         }
+
+        amountToMove = speed * Time.deltaTime;
+
+
+        //if (data[0] >= 260 && data[0] <= 300)
+        //{
+        //    transform.Translate(Vector3.right * amountToMove, Space.World);
+        //}
+
     }
 
-    void MoveObject(int direction)
-    {
-
-    }
 }
