@@ -14,6 +14,7 @@ public class Plant : MonoBehaviour
     public string receivedString;
     public string[] data        ;
     public string[] dataReceived;
+    public int[] sensors        ;
 
 
     void Start()
@@ -35,13 +36,16 @@ public class Plant : MonoBehaviour
             stream.BaseStream.Flush();
         }
 
+        sensors[0] = int.Parse(data[0]);
+        sensors[1] = int.Parse(data[1]);
+
         amountToMove = speed * Time.deltaTime;
 
 
-        //if (data[0] >= 260 && data[0] <= 300)
-        //{
-        //    transform.Translate(Vector3.right * amountToMove, Space.World);
-        //}
+        if (sensors[0] >= 260 && sensors[0] <= 300)
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        }
 
     }
 
