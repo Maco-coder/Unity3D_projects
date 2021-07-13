@@ -39,12 +39,12 @@ public class Plant : MonoBehaviour
         sensors[0] = int.Parse(data[0]);
         sensors[1] = int.Parse(data[1]);
 
-        amountToMove = speed * Time.deltaTime;
+        //amountToMove = speed * Time.deltaTime;
 
 
-        if (sensors[0] >= 260 && sensors[0] <= 300)
+        if (sensors[0] >= 250 && sensors[0] <= 300)
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
 
     }
