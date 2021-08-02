@@ -526,7 +526,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   receivedstring: 
-  data: []
+  data:
+  - 
+  - 
+  - 
   data_received:
   - 
   - 

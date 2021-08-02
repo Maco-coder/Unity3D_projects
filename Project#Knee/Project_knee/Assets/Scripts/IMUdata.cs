@@ -13,6 +13,9 @@ public class IMUdata : MonoBehaviour
     //public Vector3 rot2          ;
     public string[] data         ;
     public string[] data_received;
+    int x_value;
+    int y_value;
+    int z_value;
 
 
     void Start()
@@ -27,12 +30,17 @@ public class IMUdata : MonoBehaviour
         stream.BaseStream.Flush();
 
         string[] data = receivedstring.Split(',');
-        if (data[0] != "" && data[1] != "" && data[2] != "" && data[3] != "")
+        if (data[0] != "" && data[1] != "" && data[2] != "")
         {
             data_received[0] = data[0];
+            int.TryParse(data[0], out x_value);
+
             data_received[1] = data[1];
+            int.TryParse(data[1], out y_value);
+
             data_received[2] = data[2];
-            data_received[3] = data[3];
+            int.TryParse(data[2], out z_value);
+
             stream.BaseStream.Flush() ;
         }
     }
