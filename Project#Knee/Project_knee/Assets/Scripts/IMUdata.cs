@@ -41,6 +41,8 @@ public class IMUdata : MonoBehaviour
             data_received[2] = data[2];
             int.TryParse(data[2], out z_value);
 
+            transform.Rotate(x_value, 0, 0);
+
             stream.BaseStream.Flush() ;
         }
     }
