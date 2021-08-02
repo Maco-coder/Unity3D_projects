@@ -6,7 +6,7 @@ using System.IO.Ports            ;
 public class IMUdata : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM3", 9600);
+    SerialPort stream = new SerialPort("COM3", 115200);
     public string receivedstring ;
     //public GameObject IMU        ;
     //public Vector3 rot1          ;
@@ -41,7 +41,7 @@ public class IMUdata : MonoBehaviour
             data_received[2] = data[2];
             int.TryParse(data[2], out z_value);
 
-            transform.Rotate(x_value, 0, 0);
+            transform.Rotate(x_value, 0, 0, Space.World);
 
             stream.BaseStream.Flush() ;
         }
