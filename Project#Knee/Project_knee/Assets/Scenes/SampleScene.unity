@@ -526,13 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   receivedstring: 
-  IMU: {fileID: 0}
-  rot1: {x: 0, y: 0, z: 0}
-  rot2: {x: 0, y: 0, z: 0}
-  data:
-  - 
-  - 
-  - 
+  data: []
   data_received:
   - 
   - 
