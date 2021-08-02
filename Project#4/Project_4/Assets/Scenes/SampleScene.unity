@@ -1908,7 +1908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742397345888134, guid: 9ba64372b9e08374193a9865323748cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20
+      value: 17.68
       objectReference: {fileID: 0}
     - target: {fileID: 4742397345888134, guid: 9ba64372b9e08374193a9865323748cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3841,13 +3841,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f5af5736cd12242ab81de176fb2235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  receivedString: 
-  data: []
-  dataReceived:
-  - 
-  - 
-  sensors: 0000000000000000
 --- !u!4 &1735495528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2728355139828275145, guid: bffeccdfc1f6af2479c3fb5ae25a7a3c,
