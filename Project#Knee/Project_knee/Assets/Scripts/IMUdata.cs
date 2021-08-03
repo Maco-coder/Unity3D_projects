@@ -41,7 +41,10 @@ public class IMUdata : MonoBehaviour
             data_received[2] = data[2];
             int.TryParse(data[2], out z_value);
 
-            transform.Rotate(x_value, 0, 0, Space.World);
+            //transform.Rotate(x_value, 0, 0, Space.Self);
+
+            Vector3 to = new Vector3(x_value, 0, 0);
+            transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime*100);
 
             stream.BaseStream.Flush() ;
         }
