@@ -6,7 +6,7 @@ using System.IO.Ports            ;
 public class IMUdata : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM3", 115200);
+    SerialPort stream = new SerialPort("COM4", 115200);
     public string receivedstring ;
     //public GameObject IMU        ;
     //public Vector3 rot1          ;
