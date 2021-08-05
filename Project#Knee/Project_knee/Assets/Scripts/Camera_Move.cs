@@ -5,7 +5,9 @@ using UnityEngine;
 public class Camera_Move : MonoBehaviour
 {
 
-    public float speed;
+    public float speed    ;
+    public float waitTime ;
+    private float timer   ;
 
     void Start()
     {
@@ -15,6 +17,11 @@ public class Camera_Move : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, speed * Time.deltaTime, 0);
+        timer += Time.deltaTime ;
+        
+        if (timer >= waitTime)
+        {
+            transform.Rotate(0, speed * Time.deltaTime, 0);
+        }
     }
 }
