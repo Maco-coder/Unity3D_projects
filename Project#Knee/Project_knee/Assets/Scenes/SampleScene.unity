@@ -223,7 +223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   receivedstring: 
   data: []
-  data_received: []
+  data_received:
+  - 
+  - 
+  - 
 --- !u!1 &147949052
 GameObject:
   m_ObjectHideFlags: 0
