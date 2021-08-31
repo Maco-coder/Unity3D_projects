@@ -3,10 +3,10 @@ using System.Collections.Generic ;
 using UnityEngine                ;
 using System.IO.Ports            ;
 
-public class IMUdata : MonoBehaviour
+public class IMUdata1 : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM7", 115200);
+    SerialPort stream = new SerialPort("COM4", 115200);
     public string receivedstring ;
     //public GameObject IMU        ;
     //public Vector3 rot1          ;
