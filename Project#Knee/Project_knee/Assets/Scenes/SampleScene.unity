@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 91223720}
   - component: {fileID: 91223721}
-  - component: {fileID: 91223722}
   m_Layer: 0
   m_Name: Femur
   m_TagString: Untagged
@@ -165,7 +164,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91223718}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6848a7a2f51460a479e9d1e9a91f7bbf, type: 3}
   m_Name: 
@@ -176,27 +175,15 @@ MonoBehaviour:
   - 
   - 
   - 
---- !u!114 &91223722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91223718}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b263c27c0ec4bc4683408d6bbed8eee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  receivedstring: 
-  data: []
-  data_received:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  x_value1: 0
+  y_value1: 0
+  z_value1: 0
+  x_value2: 0
+  y_value2: 0
+  z_value2: 0
 --- !u!1 &111294630
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,20 +225,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111294630}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b263c27c0ec4bc4683408d6bbed8eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receivedstring: 
-  data: []
-  data_received:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  x: {fileID: 91223721}
+  y: {fileID: 91223721}
+  z: {fileID: 91223721}
 --- !u!1 &147949052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,15 +1341,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b263c27c0ec4bc4683408d6bbed8eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receivedstring: 
-  data:
-  - 
-  - 
-  - 
-  data_received:
-  - 
-  - 
-  - 
+  x: {fileID: 0}
+  y: {fileID: 0}
+  z: {fileID: 0}
 --- !u!1 &1178064849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,15 +1474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b263c27c0ec4bc4683408d6bbed8eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receivedstring: 
-  data:
-  - 
-  - 
-  - 
-  data_received:
-  - 
-  - 
-  - 
+  x: {fileID: 0}
+  y: {fileID: 0}
+  z: {fileID: 0}
 --- !u!136 &1200248062
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1619,15 +1588,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b263c27c0ec4bc4683408d6bbed8eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receivedstring: 
-  data:
-  - 
-  - 
-  - 
-  data_received:
-  - 
-  - 
-  - 
+  x: {fileID: 0}
+  y: {fileID: 0}
+  z: {fileID: 0}
 --- !u!136 &1371858649
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1739,15 +1702,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b263c27c0ec4bc4683408d6bbed8eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receivedstring: 
-  data:
-  - 
-  - 
-  - 
-  data_received:
-  - 
-  - 
-  - 
+  x: {fileID: 0}
+  y: {fileID: 0}
+  z: {fileID: 0}
 --- !u!136 &1378578721
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2498,15 +2455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b263c27c0ec4bc4683408d6bbed8eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receivedstring: 
-  data:
-  - 
-  - 
-  - 
-  data_received:
-  - 
-  - 
-  - 
+  x: {fileID: 0}
+  y: {fileID: 0}
+  z: {fileID: 0}
 --- !u!4 &1961344950
 Transform:
   m_ObjectHideFlags: 0
