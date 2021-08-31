@@ -7,10 +7,7 @@ public class IMUdata1 : MonoBehaviour
 {
 
     SerialPort stream = new SerialPort("COM4", 115200);
-    public string receivedstring ;
-    //public GameObject IMU       ;
-    //public Vector3 rot1         ;
-    //public Vector3 rot2         ;
+    public string receivedstring  ;
     public string[] data          ;
     public string[] data_received ;
     public int x_value1 ;
