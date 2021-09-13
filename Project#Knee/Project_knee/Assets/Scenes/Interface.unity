@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 91223720}
   - component: {fileID: 91223721}
   m_Layer: 0
-  m_Name: Femur
+  m_Name: Upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
