@@ -19,8 +19,8 @@ public class Angles : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(element.rotation.x);
-        x_text.text = element.rotation.x.ToString("0");
+        //Debug.Log(element.eulerAngles.x);
+        x_text.text = element.eulerAngles.x.ToString("0");
 
     }
 }
