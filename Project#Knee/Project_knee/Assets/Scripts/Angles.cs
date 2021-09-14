@@ -8,7 +8,7 @@ public class Angles : MonoBehaviour
 {
 
     public Transform element ;
-    public Text x_text      ;
+    public Text x_text       ;
     //public Text y_text      ;
     //public Text z_text      ;
 

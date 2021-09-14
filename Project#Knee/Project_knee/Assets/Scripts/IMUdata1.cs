@@ -60,6 +60,11 @@ public class IMUdata1 : MonoBehaviour
         //}
 
 
+
+
+        // FOR TESTING PURPOSES WITH ONLY ONE ACCELEROMETER //
+
+
         if (data[0] != "" && data[1] != "" && data[2] != "")
         {
             data_received[0] = data[0];

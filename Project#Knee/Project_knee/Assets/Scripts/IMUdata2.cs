@@ -21,8 +21,8 @@ public class IMUdata2 : MonoBehaviour
         //print(IMUdata1_.x_value2) ;
         //print(IMUdata1_.y_value2) ;
 
-        Vector3 to = new Vector3(IMUdata1_.x_value2, 0, IMUdata1_.y_value2);  // Raw values
-        transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime*100);
+        //Vector3 to = new Vector3(IMUdata1_.x_value2, 0, IMUdata1_.y_value2);  // Raw values
+        //transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime*100);
 
     }
 }
