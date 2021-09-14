@@ -9,8 +9,8 @@ public class Angles : MonoBehaviour
 
     public Transform element ;
     public Text x_text      ;
-    public Text y_text      ;
-    public Text z_text      ;
+    //public Text y_text      ;
+    //public Text z_text      ;
 
     void Start()
     {
@@ -19,8 +19,8 @@ public class Angles : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(element.rotation.z);
-        x_text.text = element.position.x.ToString();
+        //Debug.Log(element.rotation.x);
+        x_text.text = element.rotation.x.ToString();
 
     }
 }
