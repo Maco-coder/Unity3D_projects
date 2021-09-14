@@ -20,7 +20,7 @@ public class Angles : MonoBehaviour
     void Update()
     {
         //Debug.Log(element.rotation.x);
-        x_text.text = element.rotation.x.ToString();
+        x_text.text = element.rotation.z.ToString();
 
     }
 }
