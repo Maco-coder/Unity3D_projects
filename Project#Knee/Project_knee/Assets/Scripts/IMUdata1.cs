@@ -78,8 +78,8 @@ public class IMUdata1 : MonoBehaviour
 
             //transform.Rotate(x_value, 0, 0, Space.Self);
 
-            Vector3 to = new Vector3(x_value1, 0, y_value1);  // Raw values
-            //Vector3 to = new Vector3((9 / 7) * x_value, 0, y_value - y_value);  // Mapped values
+            //Vector3 to = new Vector3(x_value1, 0, y_value1);  // Raw values
+            Vector3 to = new Vector3((9 / 7) * x_value1, 0, y_value1 - y_value1);  // Mapped values
             transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime * 100);
             
 
