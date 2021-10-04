@@ -93,15 +93,7 @@ public class IMUdata1 : MonoBehaviour
             data_received[0] = data[0];
             int.TryParse(data[0], out x_value1);
             Vector3 to = new Vector3(x_value1, 0, 0);
+            stream.BaseStream.Flush();
         }
-
-
-
-        stream.BaseStream.Flush();
-        }
-
-
-
-
     }
 }
