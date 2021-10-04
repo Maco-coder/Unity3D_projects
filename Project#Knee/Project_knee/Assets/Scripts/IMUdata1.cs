@@ -88,7 +88,7 @@ public class IMUdata1 : MonoBehaviour
 
 
         // DATA FROM THE ACCELEROMETER_MATH ARDUINO CODE //
-        if (data[0] != "" && data[1] != "" && data[2] != "")
+        if (data[0] != "")
         {
             data_received[0] = data[0];
             int.TryParse(data[0], out x_value1);
