@@ -12,7 +12,7 @@ public class IMUdata1 : MonoBehaviour
     public string[] data_received ;
     public int x_value1 ;
     public int y_value1 ;
-    public int z_value1 ;
+    //public int z_value1 ;
     //public int x_value2 ;
     //public int y_value2 ;
     //public int z_value2 ;
@@ -88,11 +88,16 @@ public class IMUdata1 : MonoBehaviour
 
 
         // DATA FROM THE ACCELEROMETER_MATH ARDUINO CODE //
-        if (data[0] != "")
+        if (data[0] != "" && data[1] != "")
         {
             data_received[0] = data[0];
             int.TryParse(data[0], out x_value1);
+
+            data_received[1] = data[1];
+            int.TryParse(data[1], out y_value1);
+
             Vector3 to = new Vector3(x_value1, 0, 0);
+            transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime * 100);
             stream.BaseStream.Flush();
         }
     }
