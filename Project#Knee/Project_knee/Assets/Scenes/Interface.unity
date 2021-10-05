@@ -252,8 +252,15 @@ MonoBehaviour:
   receivedstring: 
   data:
   - 
-  data_received: []
+  - 
+  - 
+  data_received:
+  - 
+  - 
+  - 
   x_value1: 0
+  y_value1: 0
+  z_value1: 0
 --- !u!1 &111294630
 GameObject:
   m_ObjectHideFlags: 0
