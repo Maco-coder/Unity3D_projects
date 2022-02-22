@@ -1,0 +1,77 @@
+
+using System.Collections         ;
+using System.Collections.Generic ;
+using UnityEngine                ;
+using System.IO.Ports            ;
+
+
+public class Sensors : MonoBehaviour
+{
+
+    SerialPort stream = new SerialPort("COM5", 9600);
+    public string receivedstring  ;
+    public string[] data          ;
+    public string[] data_received ;
+
+    // GameObjects //
+    public Transform gameObject1 ;  // Cube_IMU
+    public Transform gameObject2 ;  // Cube_FSR
+    public Transform gameObject3 ;  // Cube_Strain
+    public Transform gameObject4 ;  // Cube_Servo
+
+    // Knee motion data //
+    public int Gyr_X_value;
+    public int Gyr_Y_value;
+    public int Gyr_Z_value;
+
+    // Tension/Injury data //
+    public int Servo_pos_value;
+    public int Strain_value   ;
+
+    // Force data //
+    public int FSR_value;
+
+
+    void Start()
+    {
+        stream.Open();
+    }
+
+    
+    void Update()
+    {
+        receivedstring = stream.ReadLine();
+        stream.BaseStream.Flush();
+
+        string[] data = receivedstring.Split(',');
+
+        //if (data[0] != "" && data[1] != "" && data[2] != "" && data[3] != "" && data[4] != "" && data[5] != "")
+        //{
+            data_received[0] = data[0];
+            int.TryParse(data[0], out Servo_pos_value);
+
+            data_received[1] = data[1];
+            int.TryParse(data[1], out FSR_value);
+
+            data_received[2] = data[2];
+            int.TryParse(data[2], out Strain_value);
+
+            data_received[3] = data[3];
+            int.TryParse(data[3], out Gyr_X_value);
+
+            data_received[4] = data[4];
+            int.TryParse(data[4], out Gyr_Y_value);
+
+            data_received[5] = data[5];
+            int.TryParse(data[5], out Gyr_Z_value);
+
+            Vector3 to1 = new Vector3(Gyr_X_value, Gyr_Z_value, Gyr_Y_value);
+            Vector3 to2 = new Vector3(FSR_value, 0, 0)                      ;
+            Vector3 to4 = new Vector3(Servo_pos_value, 0, 0)                ;
+
+            gameObject1.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to1, Time.deltaTime * 100);
+            gameObject2.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to2, Time.deltaTime * 100);
+            //gameObject3.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to3, Time.deltaTime * 100);
+            gameObject4.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to4, Time.deltaTime * 100);
+    }
+}
