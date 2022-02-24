@@ -91,23 +91,22 @@ public class Sensors : MonoBehaviour
         angle_servo_position.text = Servo_pos_value.ToString("0") ;
         //force_FSR.text = FSR_value.ToString("0")                ;
 
-        if (FSR_value >= 0 && FSR_value < 255)
+        if (FSR_value >= 0 && FSR_value < 500)
         {
             force_FSR.text = ("High pressure") ;
-
         }
 
-        if (FSR_value >= 255 && FSR_value < 510)
+        if (FSR_value >= 500 && FSR_value < 750)
         {
             force_FSR.text = ("Medium pressure");
         }
 
-        if (FSR_value >= 510 && FSR_value < 765)
+        if (FSR_value >= 750 && FSR_value < 1000)
         {
             force_FSR.text = ("Low pressure");
         }
 
-        else
+        if (FSR_value >= 1000)
         {
             force_FSR.text = ("No pressure");
         }
