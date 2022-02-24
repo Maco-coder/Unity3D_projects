@@ -2,6 +2,7 @@
 using System.Collections         ;
 using System.Collections.Generic ;
 using UnityEngine                ;
+using UnityEngine.UI             ;
 using System.IO.Ports            ;
 
 
@@ -31,6 +32,16 @@ public class Sensors : MonoBehaviour
     // Force data //
     public int FSR_value;
 
+    // Displaying data //
+    //public Transform cube_IMU;
+    //public Transform cube_Servo;
+    //public Transform cube_FSR;
+    public Text angle_flexion_extension;
+    public Text angle_abduction_adduction;
+    public Text angle_external_internal;
+    public Text angle_servo_position;
+    public Text force_FSR;
+
 
     void Start()
     {
@@ -47,31 +58,60 @@ public class Sensors : MonoBehaviour
 
         //if (data[0] != "" && data[1] != "" && data[2] != "" && data[3] != "" && data[4] != "" && data[5] != "")
         //{
-            data_received[0] = data[0];
-            int.TryParse(data[0], out Servo_pos_value);
+        data_received[0] = data[0];
+        int.TryParse(data[0], out Servo_pos_value);
 
-            data_received[1] = data[1];
-            int.TryParse(data[1], out FSR_value);
+        data_received[1] = data[1];
+        int.TryParse(data[1], out FSR_value);
 
-            data_received[2] = data[2];
-            int.TryParse(data[2], out Strain_value);
+        data_received[2] = data[2];
+        int.TryParse(data[2], out Strain_value);
 
-            data_received[3] = data[3];
-            int.TryParse(data[3], out Gyr_X_value);
+        data_received[3] = data[3];
+        int.TryParse(data[3], out Gyr_X_value);
 
-            data_received[4] = data[4];
-            int.TryParse(data[4], out Gyr_Y_value);
+        data_received[4] = data[4];
+        int.TryParse(data[4], out Gyr_Y_value);
 
-            data_received[5] = data[5];
-            int.TryParse(data[5], out Gyr_Z_value);
+        data_received[5] = data[5];
+        int.TryParse(data[5], out Gyr_Z_value);
 
-            Vector3 to1 = new Vector3(Gyr_X_value, Gyr_Z_value, Gyr_Y_value);
-            Vector3 to2 = new Vector3(FSR_value, 0, 0)                      ;
-            Vector3 to4 = new Vector3(Servo_pos_value, 0, 0)                ;
+        Vector3 to1 = new Vector3(Gyr_X_value, Gyr_Z_value, Gyr_Y_value);
+        Vector3 to2 = new Vector3(FSR_value, 0, 0)                      ;
+        Vector3 to4 = new Vector3(Servo_pos_value, 0, 0)                ;
 
-            gameObject1.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to1, Time.deltaTime * 100);
-            gameObject2.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to2, Time.deltaTime * 100);
-            //gameObject3.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to3, Time.deltaTime * 100);
-            gameObject4.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to4, Time.deltaTime * 100);
+        gameObject1.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to1, Time.deltaTime * 100);
+        gameObject2.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to2, Time.deltaTime * 100);
+        //gameObject3.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to3, Time.deltaTime * 100);
+        gameObject4.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to4, Time.deltaTime * 100);
+
+        angle_flexion_extension.text = Gyr_X_value.ToString("0")  ;
+        angle_abduction_adduction.text = Gyr_Y_value.ToString("0");
+        angle_external_internal.text = Gyr_Z_value.ToString("0")  ;
+        angle_servo_position.text = Servo_pos_value.ToString("0") ;
+        //force_FSR.text = FSR_value.ToString("0")                ;
+
+        if (FSR_value >= 0 && FSR_value < 255)
+        {
+            force_FSR.text = ("High pressure") ;
+
+        }
+
+        if (FSR_value >= 255 && FSR_value < 510)
+        {
+            force_FSR.text = ("Medium pressure");
+        }
+
+        if (FSR_value >= 510 && FSR_value < 765)
+        {
+            force_FSR.text = ("Low pressure");
+        }
+
+        else
+        {
+            force_FSR.text = ("No pressure");
+        }
+
     }
+
 }

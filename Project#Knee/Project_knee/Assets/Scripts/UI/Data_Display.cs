@@ -32,6 +32,5 @@ public class Data_Display : MonoBehaviour
         force_FSR.text = cube_FSR.eulerAngles.x.ToString("0")                 ;
         angle_servo_position.text = cube_Servo.eulerAngles.x.ToString("0")    ;
 
-
     }
 }

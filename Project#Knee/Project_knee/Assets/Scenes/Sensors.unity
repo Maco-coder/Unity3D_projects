@@ -679,7 +679,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -60}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 150, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &221887614
 MonoBehaviour:
@@ -1635,7 +1635,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1393987900}
   - component: {fileID: 1393987899}
-  - component: {fileID: 1393987901}
   m_Layer: 0
   m_Name: 01_Serial_Data
   m_TagString: Untagged
@@ -1680,6 +1679,11 @@ MonoBehaviour:
   Servo_pos_value: 0
   Strain_value: 0
   FSR_value: 0
+  angle_flexion_extension: {fileID: 1817560463}
+  angle_abduction_adduction: {fileID: 1515539833}
+  angle_external_internal: {fileID: 132063581}
+  angle_servo_position: {fileID: 1792841486}
+  force_FSR: {fileID: 221887614}
 --- !u!4 &1393987900
 Transform:
   m_ObjectHideFlags: 0
@@ -1695,26 +1699,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1393987901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393987898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0398c7138dd1ff54fa164cb47beef451, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cube_IMU: {fileID: 1886901466}
-  cube_Servo: {fileID: 2112561536}
-  cube_FSR: {fileID: 1168800409}
-  angle_flexion_extension: {fileID: 1817560463}
-  angle_abduction_adduction: {fileID: 1515539833}
-  angle_external_internal: {fileID: 132063581}
-  angle_servo_position: {fileID: 1792841486}
-  force_FSR: {fileID: 221887614}
 --- !u!1 &1394015982
 GameObject:
   m_ObjectHideFlags: 0
