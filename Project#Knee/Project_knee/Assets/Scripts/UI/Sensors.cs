@@ -9,7 +9,7 @@ using System.IO.Ports            ;
 public class Sensors : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM8", 9600);
+    SerialPort stream = new SerialPort("COM5", 9600);
     public string receivedstring  ;
     public string[] data          ;
     public string[] data_received ;
@@ -117,22 +117,22 @@ public class Sensors : MonoBehaviour
 
 
 
-        if (FSR2_value >= 0 && FSR2_value < 100)
+        if (FSR2_value >= 0 && FSR2_value < 200)
         {
             force_FSR2.text = ("High pressure");
         }
 
-        if (FSR2_value >= 100 && FSR2_value < 150)
+        if (FSR2_value >= 200 && FSR2_value < 280)
         {
             force_FSR2.text = ("Medium pressure");
         }
 
-        if (FSR2_value >= 150 && FSR2_value < 200)
+        if (FSR2_value >= 280 && FSR2_value < 350)
         {
             force_FSR2.text = ("Low pressure");
         }
 
-        if (FSR2_value >= 200)
+        if (FSR2_value >= 350)
         {
             force_FSR2.text = ("No pressure");
         }
