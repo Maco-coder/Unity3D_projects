@@ -9,7 +9,7 @@ using System.IO.Ports            ;
 public class Sensors : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM5", 9600);
+    SerialPort stream = new SerialPort("COM8", 9600);
     public string receivedstring  ;
     public string[] data          ;
     public string[] data_received ;
@@ -89,8 +89,8 @@ public class Sensors : MonoBehaviour
         //angle_flexion_extension.text = Gyr_X_value.ToString("0")  ;
         //angle_abduction_adduction.text = Gyr_Y_value.ToString("0");
         //angle_external_internal.text = Gyr_Z_value.ToString("0")  ;
-        //angle_servo_position.text = Servo_pos_value.ToString("0") ;
-        //force_FSR.text = FSR_value.ToString("0")                ;
+        angle_servo_position.text = Servo_pos_value.ToString("0") ;
+        force_FSR1.text = FSR1_value.ToString("0")                 ;
 
 
         if (FSR1_value >= 0 && FSR1_value < 500)
@@ -112,6 +112,29 @@ public class Sensors : MonoBehaviour
         {
             force_FSR1.text = ("No pressure");
         }
+
+
+        if (FSR2_value >= 0 && FSR2_value < 500)
+        {
+            force_FSR2.text = ("High pressure");
+        }
+
+        if (FSR2_value >= 500 && FSR2_value < 750)
+        {
+            force_FSR2.text = ("Medium pressure");
+        }
+
+        if (FSR2_value >= 750 && FSR2_value < 1000)
+        {
+            force_FSR2.text = ("Low pressure");
+        }
+
+        if (FSR2_value >= 1000)
+        {
+            force_FSR2.text = ("No pressure");
+        }
+
+
 
     }
 

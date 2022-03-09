@@ -563,7 +563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &158276820
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -742,7 +742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &300231094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1245,7 +1245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1168800406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1674,13 +1674,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - 
-  - 
   data_received:
-  - 
-  - 
-  - 
   - 
   - 
   - 
@@ -1692,13 +1686,14 @@ MonoBehaviour:
   Gyr_Y_value: 0
   Gyr_Z_value: 0
   Servo_pos_value: 0
-  Strain_value: 0
-  FSR_value: 0
+  FSR1_value: 0
+  FSR2_value: 0
   angle_flexion_extension: {fileID: 1817560463}
   angle_abduction_adduction: {fileID: 1515539833}
   angle_external_internal: {fileID: 132063581}
   angle_servo_position: {fileID: 1792841486}
-  force_FSR: {fileID: 221887614}
+  force_FSR1: {fileID: 221887614}
+  force_FSR2: {fileID: 1454503946}
 --- !u!4 &1393987900
 Transform:
   m_ObjectHideFlags: 0
@@ -2542,7 +2537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1886901463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2866,7 +2861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2112561533
 BoxCollider:
   m_ObjectHideFlags: 0
