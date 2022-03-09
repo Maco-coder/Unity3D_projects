@@ -114,22 +114,22 @@ public class Sensors : MonoBehaviour
         }
 
 
-        if (FSR2_value >= 0 && FSR2_value < 500)
+        if (FSR2_value >= 0 && FSR2_value < 100)
         {
             force_FSR2.text = ("High pressure");
         }
 
-        if (FSR2_value >= 500 && FSR2_value < 750)
+        if (FSR2_value >= 100 && FSR2_value < 150)
         {
             force_FSR2.text = ("Medium pressure");
         }
 
-        if (FSR2_value >= 750 && FSR2_value < 1000)
+        if (FSR2_value >= 150 && FSR2_value < 200)
         {
             force_FSR2.text = ("Low pressure");
         }
 
-        if (FSR2_value >= 1000)
+        if (FSR2_value >= 200)
         {
             force_FSR2.text = ("No pressure");
         }
