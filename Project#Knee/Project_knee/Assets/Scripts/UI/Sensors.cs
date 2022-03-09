@@ -40,8 +40,9 @@ public class Sensors : MonoBehaviour
     public Text angle_abduction_adduction;
     public Text angle_external_internal;
     public Text angle_servo_position;
-    public Text force_FSR1;
-    public Text force_FSR2;
+    public Text force_FSR1  ;
+    public Text force_FSR2  ;
+    public Text grade_injury;
 
 
     void Start()
@@ -90,7 +91,8 @@ public class Sensors : MonoBehaviour
         //angle_abduction_adduction.text = Gyr_Y_value.ToString("0");
         //angle_external_internal.text = Gyr_Z_value.ToString("0")  ;
         angle_servo_position.text = Servo_pos_value.ToString("0") ;
-        force_FSR1.text = FSR1_value.ToString("0")                 ;
+        force_FSR1.text = FSR1_value.ToString("0")                ;
+        force_FSR2.text = FSR2_value.ToString("0")                ;
 
 
         if (FSR1_value >= 0 && FSR1_value < 500)
@@ -114,6 +116,7 @@ public class Sensors : MonoBehaviour
         }
 
 
+
         if (FSR2_value >= 0 && FSR2_value < 100)
         {
             force_FSR2.text = ("High pressure");
@@ -132,6 +135,28 @@ public class Sensors : MonoBehaviour
         if (FSR2_value >= 200)
         {
             force_FSR2.text = ("No pressure");
+        }
+
+
+
+        if (Servo_pos_value >= 0 && Servo_pos_value < 30)
+        {
+            grade_injury.text = ("Healthy");
+        }
+
+        if (Servo_pos_value >= 30 && Servo_pos_value < 50)
+        {
+            grade_injury.text = ("1");
+        }
+
+        if (Servo_pos_value >= 50 && Servo_pos_value < 70)
+        {
+            grade_injury.text = ("2");
+        }
+
+        if (Servo_pos_value >= 70)
+        {
+            grade_injury.text = ("3");
         }
 
 
