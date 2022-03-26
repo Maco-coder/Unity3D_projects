@@ -21,9 +21,13 @@ public class Sensors : MonoBehaviour
     public Transform gameObject4 ;  // Cube_Servo
 
     // Knee motion data //
-    public int Gyr_X_value;
-    public int Gyr_Y_value;
-    public int Gyr_Z_value;
+    public int Gyr1_X_value;
+    public int Gyr1_Y_value;
+    public int Gyr1_Z_value;
+
+    public int Gyr2_X_value;
+    public int Gyr2_Y_value;
+    public int Gyr2_Z_value;
 
     // Tension/Injury data //
     public int Servo_pos_value;
@@ -70,15 +74,15 @@ public class Sensors : MonoBehaviour
         int.TryParse(data[2], out FSR2_value);
 
         //data_received[3] = data[3];
-        //int.TryParse(data[3], out Gyr_X_value);
+        //int.TryParse(data[3], out Gyr1_X_value);
 
         //data_received[4] = data[4];
-        //int.TryParse(data[4], out Gyr_Y_value);
+        //int.TryParse(data[4], out Gyr2_Y_value);
 
         //data_received[5] = data[5];
-        //int.TryParse(data[5], out Gyr_Z_value);
+        //int.TryParse(data[5], out Gyr2_Z_value);
 
-        //Vector3 to1 = new Vector3(Gyr_X_value, Gyr_Z_value, Gyr_Y_value);
+        //Vector3 to1 = new Vector3(Gyr1_X_value, Gyr2_Z_value, Gyr3_Y_value);
         //Vector3 to2 = new Vector3(FSR_value, 0, 0)                      ;
         //Vector3 to4 = new Vector3(Servo_pos_value, 0, 0)                ;
 
