@@ -77,12 +77,12 @@ public class Sensors : MonoBehaviour
         //int.TryParse(data[3], out Gyr1_X_value);
 
         //data_received[4] = data[4];
-        //int.TryParse(data[4], out Gyr2_Y_value);
+        //int.TryParse(data[4], out Gyr1_Y_value);
 
         //data_received[5] = data[5];
-        //int.TryParse(data[5], out Gyr2_Z_value);
+        //int.TryParse(data[5], out Gyr1_Z_value);
 
-        //Vector3 to1 = new Vector3(Gyr1_X_value, Gyr2_Z_value, Gyr3_Y_value);
+        //Vector3 to1 = new Vector3(Gyr1_X_value, Gyr1_Z_value, Gyr1_Y_value);
         //Vector3 to2 = new Vector3(FSR_value, 0, 0)                      ;
         //Vector3 to4 = new Vector3(Servo_pos_value, 0, 0)                ;
 
