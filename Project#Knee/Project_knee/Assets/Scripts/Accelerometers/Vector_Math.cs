@@ -10,7 +10,7 @@ public class Vector_Math : MonoBehaviour
 {
 
     SerialPort stream = new SerialPort("COM3", 9600);
-    public string receivedstring;
+    public string receivedstring ;
     public string[] data         ;
     public string[] data_received;
 
@@ -26,6 +26,8 @@ public class Vector_Math : MonoBehaviour
     public int Gyr2_X_value;
     public int Gyr2_Y_value;
     public int Gyr2_Z_value;
+
+    public int flexion_angle;
 
 
     void Start()
@@ -58,12 +60,15 @@ public class Vector_Math : MonoBehaviour
         data_received[5] = data[5];
         int.TryParse(data[5], out Gyr2_Z_value)  ;
 
+        data_received[6] = data[6];
+        int.TryParse(data[6], out flexion_angle) ;
+
 
         Vector3 to1 = new Vector3(Gyr1_X_value, 0, Gyr1_Y_value) ;
         Vector3 to2 = new Vector3(Gyr2_X_value, 0, Gyr2_Y_value) ;
 
         gameObject1.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to1, Time.deltaTime * 100) ;
-        gameObject2.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to2, Time.deltaTime * 100);
+        gameObject2.transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to2, Time.deltaTime * 100) ;
 
     }
 }
