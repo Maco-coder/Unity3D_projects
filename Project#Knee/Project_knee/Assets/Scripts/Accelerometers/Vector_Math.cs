@@ -29,6 +29,8 @@ public class Vector_Math : MonoBehaviour
 
     public int flexion_angle;
 
+    public Text angle_flexion_extension;
+
 
     void Start()
     {
@@ -63,6 +65,7 @@ public class Vector_Math : MonoBehaviour
         data_received[6] = data[6];
         int.TryParse(data[6], out flexion_angle) ;
 
+        angle_flexion_extension.text = flexion_angle.ToString("0");
 
         Vector3 to1 = new Vector3(Gyr1_X_value, 0, Gyr1_Y_value) ;
         Vector3 to2 = new Vector3(Gyr2_X_value, 0, Gyr2_Y_value) ;
