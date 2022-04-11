@@ -21,13 +21,13 @@ public class Sensors : MonoBehaviour
     public Transform gameObject4 ;  // Cube_Servo
 
     // Knee motion data //
-    public int Gyr1_X_value;
-    public int Gyr1_Y_value;
-    public int Gyr1_Z_value;
+    //public int Gyr1_X_value;
+    //public int Gyr1_Y_value;
+    //public int Gyr1_Z_value;
 
-    public int Gyr2_X_value;
-    public int Gyr2_Y_value;
-    public int Gyr2_Z_value;
+    //public int Gyr2_X_value;
+    //public int Gyr2_Y_value;
+    //public int Gyr2_Z_value;
 
     // Tension/Injury data //
     public int Servo_pos_value;
@@ -40,9 +40,9 @@ public class Sensors : MonoBehaviour
     //public Transform cube_IMU;
     //public Transform cube_Servo;
     //public Transform cube_FSR;
-    public Text angle_flexion_extension;
-    public Text angle_abduction_adduction;
-    public Text angle_external_internal;
+    //public Text angle_flexion_extension;
+    //public Text angle_abduction_adduction;
+    //public Text angle_external_internal;
     public Text angle_servo_position;
     public Text force_FSR1  ;
     public Text force_FSR2  ;
@@ -68,10 +68,10 @@ public class Sensors : MonoBehaviour
         int.TryParse(data[0], out Servo_pos_value);
 
         data_received[1] = data[1];
-        int.TryParse(data[1], out FSR1_value);
+        int.TryParse(data[1], out FSR2_value);
 
         data_received[2] = data[2];
-        int.TryParse(data[2], out FSR2_value);
+        int.TryParse(data[2], out FSR1_value);
 
         //data_received[3] = data[3];
         //int.TryParse(data[3], out Gyr1_X_value);
@@ -99,17 +99,17 @@ public class Sensors : MonoBehaviour
         force_FSR2.text = FSR2_value.ToString("0")                ;
 
 
-        if (FSR1_value >= 0 && FSR1_value < 500)
+        if (FSR1_value >= 0 && FSR1_value < 800)
         {
             force_FSR1.text = ("High pressure") ;
         }
 
-        if (FSR1_value >= 500 && FSR1_value < 750)
+        if (FSR1_value >= 800 && FSR1_value < 900)
         {
             force_FSR1.text = ("Medium pressure");
         }
 
-        if (FSR1_value >= 750 && FSR1_value < 1000)
+        if (FSR1_value >= 900 && FSR1_value < 1000)
         {
             force_FSR1.text = ("Low pressure");
         }
