@@ -543,10 +543,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Interactive Artificial Human Limb for Teaching, Training, and Communication
-
-    System
-    Information & Sensors Data'
+  m_Text: Interactive Artificial Human Limb for Kinesiology Education
 --- !u!222 &123726079
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2084,7 +2081,9 @@ MonoBehaviour:
   - 
   - 
   - 
+  - 
   data_received:
+  - 
   - 
   - 
   - 
@@ -2092,21 +2091,14 @@ MonoBehaviour:
   gameObject2: {fileID: 1168800409}
   gameObject3: {fileID: 300231097}
   gameObject4: {fileID: 2112561536}
-  Gyr1_X_value: 0
-  Gyr1_Y_value: 0
-  Gyr1_Z_value: 0
-  Gyr2_X_value: 0
-  Gyr2_Y_value: 0
-  Gyr2_Z_value: 0
   Servo_pos_value: 0
   FSR1_value: 0
   FSR2_value: 0
-  angle_flexion_extension: {fileID: 1817560463}
-  angle_abduction_adduction: {fileID: 1515539833}
-  angle_external_internal: {fileID: 132063581}
+  FSR3_value: 0
   angle_servo_position: {fileID: 1792841486}
   force_FSR1: {fileID: 221887614}
   force_FSR2: {fileID: 1454503946}
+  force_FSR3: {fileID: 1454503946}
   grade_injury: {fileID: 535219048}
 --- !u!4 &1393987900
 Transform:

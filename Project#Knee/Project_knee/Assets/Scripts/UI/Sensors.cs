@@ -35,6 +35,7 @@ public class Sensors : MonoBehaviour
     // Force data //
     public int FSR1_value;
     public int FSR2_value;
+    public int FSR3_value;
 
     // Displaying data //
     //public Transform cube_IMU;
@@ -46,6 +47,7 @@ public class Sensors : MonoBehaviour
     public Text angle_servo_position;
     public Text force_FSR1  ;
     public Text force_FSR2  ;
+    public Text force_FSR3  ;
     public Text grade_injury;
 
 
@@ -68,10 +70,14 @@ public class Sensors : MonoBehaviour
         int.TryParse(data[0], out Servo_pos_value);
 
         data_received[1] = data[1];
-        int.TryParse(data[1], out FSR2_value);
+        int.TryParse(data[1], out FSR1_value);
 
         data_received[2] = data[2];
-        int.TryParse(data[2], out FSR1_value);
+        int.TryParse(data[2], out FSR2_value);
+
+        data_received[3] = data[3];
+        int.TryParse(data[3], out FSR3_value);
+
 
         //data_received[3] = data[3];
         //int.TryParse(data[3], out Gyr1_X_value);
@@ -97,68 +103,69 @@ public class Sensors : MonoBehaviour
         angle_servo_position.text = Servo_pos_value.ToString("0") ;
         force_FSR1.text = FSR1_value.ToString("0")                ;
         force_FSR2.text = FSR2_value.ToString("0")                ;
+        force_FSR3.text = FSR3_value.ToString("0")                ;
 
 
-        if (FSR1_value >= 0 && FSR1_value < 800)
+        if (FSR1_value >= 0 && FSR1_value < 55)
         {
             force_FSR1.text = ("High pressure") ;
         }
 
-        if (FSR1_value >= 800 && FSR1_value < 900)
+        if (FSR1_value >= 55 && FSR1_value < 75)
         {
             force_FSR1.text = ("Medium pressure");
         }
 
-        if (FSR1_value >= 900 && FSR1_value < 1000)
+        if (FSR1_value >= 75 && FSR1_value < 100)
         {
             force_FSR1.text = ("Low pressure");
         }
 
-        if (FSR1_value >= 1000)
+        if (FSR1_value >= 100)
         {
             force_FSR1.text = ("No pressure");
         }
 
 
 
-        if (FSR2_value >= 0 && FSR2_value < 200)
+        if (FSR2_value >= 0 && FSR2_value < 260)
         {
             force_FSR2.text = ("High pressure");
         }
 
-        if (FSR2_value >= 200 && FSR2_value < 280)
+        if (FSR2_value >= 260 && FSR2_value < 350)
         {
             force_FSR2.text = ("Medium pressure");
         }
 
-        if (FSR2_value >= 280 && FSR2_value < 350)
+        if (FSR2_value >= 350 && FSR2_value < 440)
         {
             force_FSR2.text = ("Low pressure");
         }
 
-        if (FSR2_value >= 350)
+        if (FSR2_value >= 440)
         {
             force_FSR2.text = ("No pressure");
         }
 
 
 
-        if (Servo_pos_value >= 0 && Servo_pos_value < 30)
+        if (Servo_pos_value >= 0 && Servo_pos_value < 22)
         {
             grade_injury.text = ("Healthy");
         }
 
-        if (Servo_pos_value >= 30 && Servo_pos_value < 50)
+        if (Servo_pos_value >= 22 && Servo_pos_value < 40)
         {
             grade_injury.text = ("1");
         }
 
-        if (Servo_pos_value >= 50 && Servo_pos_value < 70)
+        if (Servo_pos_value >= 40 && Servo_pos_value < 60)
         {
             grade_injury.text = ("2");
         }
 
-        if (Servo_pos_value >= 70)
+        if (Servo_pos_value >= 60)
         {
             grade_injury.text = ("3");
         }
