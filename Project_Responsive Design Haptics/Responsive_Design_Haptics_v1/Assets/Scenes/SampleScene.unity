@@ -215,7 +215,7 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1865749
 MonoBehaviour:
@@ -352,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 094627802cc8b7849aed1eb1a64bbe75, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 094627802cc8b7849aed1eb1a64bbe75, type: 3}
       propertyPath: m_LocalScale.x
@@ -559,7 +559,7 @@ PrefabInstance:
     - target: {fileID: 7346488073879018754, guid: 7ddfa3a1d18174043aab251be6df3a0e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7346488073879018754, guid: 7ddfa3a1d18174043aab251be6df3a0e,
         type: 3}
@@ -715,7 +715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_LocalScale.x
@@ -1610,7 +1610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1654,6 +1654,160 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+--- !u!1 &1104048706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 160596, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1104048705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1104048707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 144230, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1104048705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1104048708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104048706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817521c5973e4ee45905ee97df3c38ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linearMapping: {fileID: 0}
+  teethCount: 128
+  minimumPulseDuration: 500
+  maximumPulseDuration: 900
+  onPulse:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1104048709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104048706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateActionSetOnAttach:
+    actionSetPath: 
+  hideHandOnAttach: 1
+  hideSkeletonOnAttach: 0
+  hideControllerOnAttach: 0
+  handAnimationOnPickup: 0
+  setRangeOfMotionOnPickup: -1
+  useHandObjectAttachmentPoint: 1
+  attachEaseIn: 0
+  snapAttachEaseInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  snapAttachEaseInTime: 0.15
+  snapAttachEaseInCompleted: 0
+  skeletonPoser: {fileID: 0}
+  handFollowTransform: 1
+  highlightOnHover: 1
+  hideHighlight: []
+  hoverPriority: 0
+--- !u!114 &1104048710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104048707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817521c5973e4ee45905ee97df3c38ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linearMapping: {fileID: 0}
+  teethCount: 128
+  minimumPulseDuration: 500
+  maximumPulseDuration: 900
+  onPulse:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1104048711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104048707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateActionSetOnAttach:
+    actionSetPath: 
+  hideHandOnAttach: 1
+  hideSkeletonOnAttach: 0
+  hideControllerOnAttach: 0
+  handAnimationOnPickup: 0
+  setRangeOfMotionOnPickup: -1
+  useHandObjectAttachmentPoint: 1
+  attachEaseIn: 0
+  snapAttachEaseInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  snapAttachEaseInTime: 0.15
+  snapAttachEaseInCompleted: 0
+  skeletonPoser: {fileID: 0}
+  handFollowTransform: 1
+  highlightOnHover: 1
+  hideHighlight: []
+  hoverPriority: 0
 --- !u!1001 &1110794489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1934,7 +2088,7 @@ PrefabInstance:
     - target: {fileID: 5473569773201559785, guid: fd8e0760db14a534a89257f68a4f2a8c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5473569773201559785, guid: fd8e0760db14a534a89257f68a4f2a8c,
         type: 3}
