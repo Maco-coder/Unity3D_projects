@@ -9,7 +9,6 @@ public class Haptics : MonoBehaviour
 {
     public SteamVR_Action_Vibration hapticAction;
     public SteamVR_Action_Boolean trackpadAction;
-    public SteamVR_Action_Boolean triggerAction ;
 
 
     void Update()
@@ -24,6 +23,8 @@ public class Haptics : MonoBehaviour
         {
             Pulse(1, 150, 75, SteamVR_Input_Sources.RightHand);
         }
+
+
     }
 
     private void Pulse(float duration, float frequency, float amplitude, SteamVR_Input_Sources source)
