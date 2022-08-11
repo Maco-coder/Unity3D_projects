@@ -5,7 +5,7 @@ using UnityEngine               ;
 using Valve.VR                  ;
 
 
-public class Haptics : MonoBehaviour
+public class Haptics_V1 : MonoBehaviour
 {
     public SteamVR_Action_Vibration hapticAction;
     public SteamVR_Action_Boolean trackpadAction;
