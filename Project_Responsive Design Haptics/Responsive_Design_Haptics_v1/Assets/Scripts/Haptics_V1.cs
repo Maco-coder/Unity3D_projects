@@ -9,10 +9,12 @@ public class Haptics_V1 : MonoBehaviour
 {
     public SteamVR_Action_Vibration hapticAction;
     public SteamVR_Action_Boolean trackpadAction;
+    public SteamVR_Action_Single squeezeAction   ;
 
 
     void Update()
     {
+        
         if (trackpadAction.GetStateDown(SteamVR_Input_Sources.LeftHand))
         {
             Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
@@ -24,6 +26,14 @@ public class Haptics_V1 : MonoBehaviour
             Pulse(1, 150, 75, SteamVR_Input_Sources.RightHand);
         }
 
+
+        float triggerValue = squeezeAction.GetAxis(SteamVR_Input_Sources.Any);
+
+        if (triggerValue > 0.0f)
+        {
+            print(triggerValue);
+            Pulse(1, 150, 75, SteamVR_Input_Sources.Any);
+        }
 
     }
 
