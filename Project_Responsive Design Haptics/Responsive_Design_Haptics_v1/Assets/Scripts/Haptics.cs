@@ -1,4 +1,5 @@
-﻿using System.Collections        ;
+﻿
+using System.Collections        ;
 using System.Collections.Generic;
 using UnityEngine               ;
 using Valve.VR                  ;
@@ -8,6 +9,7 @@ public class Haptics : MonoBehaviour
 {
     public SteamVR_Action_Vibration hapticAction;
     public SteamVR_Action_Boolean trackpadAction;
+    public SteamVR_Action_Boolean triggerAction ;
 
 
     void Update()
@@ -16,6 +18,7 @@ public class Haptics : MonoBehaviour
         {
             Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
         }
+
 
         if (trackpadAction.GetStateDown(SteamVR_Input_Sources.RightHand))
         {
