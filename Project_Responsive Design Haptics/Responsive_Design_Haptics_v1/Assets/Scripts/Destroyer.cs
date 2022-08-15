@@ -2,14 +2,15 @@
 //using System.Collections.Generic;
 using UnityEngine;
 
-public class destroyer : MonoBehaviour
+public class Destroyer : MonoBehaviour
 {
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Plane")
         {
-            Destroy(collision.gameObject);
+            Debug.Log("collision detected");
+            Destroy(collision.gameObject)  ;
         }
     }
 
