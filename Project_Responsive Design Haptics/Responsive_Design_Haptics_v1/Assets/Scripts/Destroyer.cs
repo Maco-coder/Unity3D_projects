@@ -7,7 +7,6 @@ public class Destroyer : MonoBehaviour
 
     public GameObject Joint_Object1; // Red space with friction effect //
     public GameObject Joint_Object2; // Sphere that connects with apple //
-    public GameObject Cube_spring  ;
 
 
     void Start()
