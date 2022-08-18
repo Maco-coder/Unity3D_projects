@@ -5,7 +5,7 @@ using UnityEngine;
 public class Destroyer : MonoBehaviour
 {
 
-    public GameObject Joint_Object1; // Red space with friction effect //
+    public GameObject Joint_Object1; // Red space with friction effect  //
     public GameObject Joint_Object2; // Sphere that connects with apple //
 
 
@@ -23,7 +23,6 @@ public class Destroyer : MonoBehaviour
             Debug.Log("collision detected") ;
             Joint_Object1.SetActive (true)  ;
             Joint_Object2.SetActive (true)  ;
-            //Destroy(Cube_spring)  ;
         }
     }
 
