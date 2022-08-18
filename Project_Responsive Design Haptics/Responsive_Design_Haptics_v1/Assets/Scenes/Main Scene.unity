@@ -2271,6 +2271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1801297860}
+  - component: {fileID: 1801297861}
   m_Layer: 0
   m_Name: Haptics
   m_TagString: Untagged
@@ -2292,6 +2293,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801297861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801297859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1088139266938748ac39b61e156f816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hapticAction:
+    actionPath: 
+    needsReinit: 0
+  trackpadAction:
+    actionPath: 
+    needsReinit: 0
+  squeezeAction:
+    actionPath: 
+    needsReinit: 0
 --- !u!1001 &1973922973
 PrefabInstance:
   m_ObjectHideFlags: 0
