@@ -147,6 +147,13 @@ GameObject:
   - component: {fileID: 41381054}
   - component: {fileID: 41381056}
   - component: {fileID: 41381055}
+  - component: {fileID: 41381057}
+  - component: {fileID: 41381058}
+  - component: {fileID: 41381060}
+  - component: {fileID: 41381059}
+  - component: {fileID: 41381061}
+  - component: {fileID: 41381063}
+  - component: {fileID: 41381062}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -226,9 +233,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 41381040}
+  - {fileID: 41381043}
   selectedCommands:
-  - {fileID: 41381046}
+  - {fileID: 41381061}
   variables: []
   description: 
   stepPause: 0
@@ -268,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 314.96075
+    x: 340.82288
     y: 75.828674
     width: 112.068924
     height: 40
@@ -282,8 +289,12 @@ MonoBehaviour:
   - {fileID: 41381052}
   - {fileID: 41381049}
   - {fileID: 41381051}
+  - {fileID: 41381058}
   - {fileID: 41381053}
+  - {fileID: 41381057}
   - {fileID: 41381055}
+  - {fileID: 41381063}
+  - {fileID: 41381061}
   suppressAllAutoSelections: 0
 --- !u!114 &41381044
 MonoBehaviour:
@@ -439,9 +450,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: "In this mock-up tool, we inform VR users on what VR experiences are
-    available,\n1) based on the hardware they own or \n2) based on what they want
-    to play."
+  storyText: "In this mock-up tool, we inform users on what haptic VR experiences
+    are available,\n\n1) based on the hardware they own or \n\n2) based on what they
+    want to play."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -488,7 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  text: I want to choose the device I own
+  text: I want to choose a device
   description: 
   targetBlock: {fileID: 41381054}
   hideIfVisited: 0
@@ -523,7 +534,8 @@ MonoBehaviour:
   blockName: Choosing Device
   description: 
   eventHandler: {fileID: 0}
-  commandList: []
+  commandList:
+  - {fileID: 41381059}
   suppressAllAutoSelections: 0
 --- !u!114 &41381055
 MonoBehaviour:
@@ -539,7 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  text: I want to select a VR experience I wish to play
+  text: I want to choose a VR experience
   description: 
   targetBlock: {fileID: 41381056}
   hideIfVisited: 0
@@ -574,8 +586,144 @@ MonoBehaviour:
   blockName: Choosing Experience
   description: 
   eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 41381060}
+  suppressAllAutoSelections: 0
+--- !u!114 &41381057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
+--- !u!114 &41381058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
+--- !u!114 &41381059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  sayDialog: {fileID: 1422131887}
+--- !u!114 &41381060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
+  sayDialog: {fileID: 1422131887}
+--- !u!114 &41381061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  text: I want to choose either
+  description: 
+  targetBlock: {fileID: 41381062}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &41381062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 626.9309
+    y: 266.98856
+    width: 75.86205
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 22
+  blockName: Both
+  description: 
+  eventHandler: {fileID: 0}
   commandList: []
   suppressAllAutoSelections: 0
+--- !u!114 &41381063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
 --- !u!212 &194480097 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 21200000, guid: 4442b79fcbcbb4aac97f42d6dc3d4e0b,
@@ -918,15 +1066,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_Color.g
-      value: 0.6909754
+      value: 0.8325564
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.6556604
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_FontData.m_MaxSize
@@ -1099,7 +1247,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 188902, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_Name
-      value: Instructions
+      value: Game
       objectReference: {fileID: 0}
     - target: {fileID: 188902, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_IsActive
@@ -1127,15 +1275,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_Color.g
-      value: 0.6909754
+      value: 0.8352941
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.65882355
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_FontData.m_MaxSize
@@ -1147,7 +1295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_FontData.m_Alignment
@@ -1203,7 +1351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -959.1334
+      value: -437.0359
       objectReference: {fileID: 0}
     - target: {fileID: 22488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1211,7 +1359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22488896, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 82.70105
+      value: 82.70099
       objectReference: {fileID: 0}
     - target: {fileID: 22488900, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_SizeDelta.x
