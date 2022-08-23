@@ -2310,13 +2310,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hapticAction:
-    actionPath: 
+    actionPath: /actions/default/out/Haptic
     needsReinit: 0
   trackpadAction:
     actionPath: 
     needsReinit: 0
   squeezeAction:
-    actionPath: 
+    actionPath: /actions/default/in/Squeeze
     needsReinit: 0
 --- !u!1001 &1973922973
 PrefabInstance:
