@@ -412,7 +412,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 41381086}
   selectedCommands:
-  - {fileID: 41381097}
+  - {fileID: 41381095}
   variables: []
   description: 
   stepPause: 0
@@ -1366,8 +1366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 870.4726
-    y: -156.92645
+    x: 869.1568
+    y: -160.8738
     width: 103.94736
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1591,12 +1591,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 56
   indentLevel: 0
-  storyText: 'Grabbing apple: {color=yellow}conventional
+  storyText: 'Grabbing apple: {color=yellow}pulse{1,150,75}
 
     {color=white}Plucking
-    apple: {color=yellow}conventional
+    apple: {color=yellow}pulse{3,120,100}
 
-    {color=white}Spring effect: {color=yellow}conventional
+    {color=white}Spring effect: {color=yellow}pulse{2,120,200}
 
     {color=white}Shape:
     {color=red}unavailable'
