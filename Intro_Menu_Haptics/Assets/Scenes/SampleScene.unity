@@ -369,7 +369,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 141.48271
     y: 129.58618
-    width: 89.47367
+    width: 89.999985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -398,11 +398,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -328.98227, y: -36.787437}
+  scrollPos: {x: -748.8342, y: 266.74496}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 367
-  zoom: 0.7600002
+  zoom: 0.7000003
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -410,8 +410,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 41381043}
-  selectedCommands: []
+  - {fileID: 41381083}
+  selectedCommands:
+  - {fileID: 41381103}
   variables: []
   description: 
   stepPause: 0
@@ -453,7 +454,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 340.82288
     y: 75.828674
-    width: 113.157875
+    width: 116.28569
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -701,7 +702,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 617.39825
     y: -110.32699
-    width: 142.10522
+    width: 145.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -761,7 +762,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 615.98474
     y: 73.28379
-    width: 163.15787
+    width: 167.71423
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1000,7 +1001,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 874.985
     y: 218.79483
-    width: 88.15788
+    width: 89.999985
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1052,7 +1053,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 872.40356
     y: 122.80228
-    width: 115.78945
+    width: 120.85712
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1097,7 +1098,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 873.32996
     y: 34.088604
-    width: 122.3684
+    width: 127.71426
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1182,7 +1183,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 867.0708
     y: -69.33489
-    width: 142.10522
+    width: 144.8571
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1252,7 +1253,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 869.1568
     y: -160.8738
-    width: 103.94736
+    width: 105.99998
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1327,7 +1328,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 871.5559
     y: -246.11679
-    width: 124.99998
+    width: 129.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1495,11 +1496,11 @@ MonoBehaviour:
   storyText: 'Grabbing apple: {color=yellow}pulse (duration: 1, frequency: 150, amplitude:
     75)
 
-    {color=white}Plucking apple: {color=yellow}pulse (duration: 3,frequency:
+    {color=white}Plucking apple: {color=yellow}pulse (duration: 3, frequency:
     120, amplitude: 100)
 
     {color=white}Spring effect: {color=yellow}pulse (duration:
-    2,frequency: 120, amplitude: 200)
+    2, frequency: 120, amplitude: 200)
 
     {color=white}Shape: {color=red}unavailable'
   description: 
@@ -1675,8 +1676,8 @@ MonoBehaviour:
     {color=white}Plucking apple: {color=yellow}pulse (duration: 3, frequency:
     120, amplitude: 100)
 
-    {color=white}Spring effect: {color=yellow}friction
-    (gain: 0.5, magnitude: 1)
+    {color=white}Spring effect: {color=green}spring (gain:
+    0.5, magnitude: 1)
 
     {color=white}Shape: {color=red}unavailable'
   description: 
@@ -1821,8 +1822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -349.99994, y: 432.5}
-  m_SizeDelta: {x: 700, y: 335}
+  m_AnchoredPosition: {x: -400.00006, y: 432.5}
+  m_SizeDelta: {x: 800, y: 335}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &63552901
 GameObject:
@@ -2530,8 +2531,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 522, y: 432.5}
-  m_SizeDelta: {x: 700, y: 335}
+  m_AnchoredPosition: {x: 466, y: 432.5}
+  m_SizeDelta: {x: 800, y: 335}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &235247860
 GameObject:
@@ -4163,8 +4164,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1189, y: 432.5}
-  m_SizeDelta: {x: 700, y: 335}
+  m_AnchoredPosition: {x: -1265, y: 432.5}
+  m_SizeDelta: {x: 800, y: 335}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &725900421 stripped
 MonoBehaviour:
@@ -8277,7 +8278,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79197ecfbc3a4294a89ce589dac02cf2, type: 3}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
