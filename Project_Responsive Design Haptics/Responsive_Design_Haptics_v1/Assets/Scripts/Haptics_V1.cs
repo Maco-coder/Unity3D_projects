@@ -8,7 +8,7 @@ using Valve.VR                  ;
 public class Haptics_V1 : MonoBehaviour
 {
     public SteamVR_Action_Single squeezeAction   ;
-
+    public SteamVR_Action_Vibration hapticAction ;
 
     void Update()
     {
