@@ -7,25 +7,11 @@ using Valve.VR                  ;
 
 public class Haptics_V1 : MonoBehaviour
 {
-    public SteamVR_Action_Vibration hapticAction ;
-    public SteamVR_Action_Boolean trackpadAction ;
     public SteamVR_Action_Single squeezeAction   ;
 
 
     void Update()
     {
-        
-        if (trackpadAction.GetStateDown(SteamVR_Input_Sources.LeftHand))
-        {
-            Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
-        }
-
-
-        if (trackpadAction.GetStateDown(SteamVR_Input_Sources.RightHand))
-        {
-            Pulse(1, 150, 75, SteamVR_Input_Sources.RightHand);
-        }
-
 
         float triggerValueL = squeezeAction.GetAxis(SteamVR_Input_Sources.LeftHand);
 
