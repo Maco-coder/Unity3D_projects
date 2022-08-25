@@ -292,13 +292,8 @@ GameObject:
   - component: {fileID: 41381058}
   - component: {fileID: 41381060}
   - component: {fileID: 41381059}
-  - component: {fileID: 41381061}
-  - component: {fileID: 41381063}
-  - component: {fileID: 41381062}
   - component: {fileID: 41381066}
-  - component: {fileID: 41381064}
   - component: {fileID: 41381065}
-  - component: {fileID: 41381067}
   - component: {fileID: 41381068}
   - component: {fileID: 41381069}
   - component: {fileID: 41381073}
@@ -324,13 +319,18 @@ GameObject:
   - component: {fileID: 41381093}
   - component: {fileID: 41381092}
   - component: {fileID: 41381091}
-  - component: {fileID: 41381090}
   - component: {fileID: 41381089}
   - component: {fileID: 41381095}
   - component: {fileID: 41381099}
   - component: {fileID: 41381098}
   - component: {fileID: 41381097}
   - component: {fileID: 41381096}
+  - component: {fileID: 41381104}
+  - component: {fileID: 41381103}
+  - component: {fileID: 41381102}
+  - component: {fileID: 41381101}
+  - component: {fileID: 41381100}
+  - component: {fileID: 41381090}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -747.7077, y: 348.11887}
+  scrollPos: {x: -328.98227, y: -36.787437}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 367
@@ -410,9 +410,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 41381086}
-  selectedCommands:
-  - {fileID: 41381095}
+  - {fileID: 41381043}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -471,8 +470,6 @@ MonoBehaviour:
   - {fileID: 41381053}
   - {fileID: 41381057}
   - {fileID: 41381055}
-  - {fileID: 41381063}
-  - {fileID: 41381061}
   suppressAllAutoSelections: 0
 --- !u!114 &41381044
 MonoBehaviour:
@@ -849,92 +846,6 @@ MonoBehaviour:
   itemId: 18
   indentLevel: 0
   sayDialog: {fileID: 1614862490}
---- !u!114 &41381061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41381038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 20
-  indentLevel: 0
-  text: I want to choose either
-  description: 
-  targetBlock: {fileID: 41381062}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &41381062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41381038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 646.13324
-    y: 350.64664
-    width: 74.99999
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 22
-  blockName: Both
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 41381064}
-  - {fileID: 41381067}
-  suppressAllAutoSelections: 0
---- !u!114 &41381063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41381038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 21
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 1
-  durationOLD: 0
---- !u!114 &41381064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41381038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 24
-  indentLevel: 0
-  sayDialog: {fileID: 1614862490}
 --- !u!114 &41381065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,33 +889,6 @@ MonoBehaviour:
   itemId: 23
   indentLevel: 0
   storyText: 'Click on one of these experiences to know what hardware you need:'
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &41381067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41381038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 26
-  indentLevel: 0
-  storyText: 'Click on any item below:'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1377,6 +1261,11 @@ MonoBehaviour:
   description: 3D Touch chosen prior to experience
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 41381104}
+  - {fileID: 41381103}
+  - {fileID: 41381102}
+  - {fileID: 41381101}
+  - {fileID: 41381100}
   - {fileID: 41381090}
   suppressAllAutoSelections: 0
 --- !u!114 &41381084
@@ -1511,12 +1400,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 41381038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 52
+  itemId: 66
   indentLevel: 0
-  sayDialog: {fileID: 1614862490}
+  storyText: TBD
+  description: 
+  character: {fileID: 1284844170}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &41381091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,15 +1492,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 56
   indentLevel: 0
-  storyText: 'Grabbing apple: {color=yellow}pulse{1,150,75}
+  storyText: 'Grabbing apple: {color=yellow}pulse (duration: 1, frequency: 150, amplitude:
+    75)
 
-    {color=white}Plucking
-    apple: {color=yellow}pulse{3,120,100}
+    {color=white}Plucking apple: {color=yellow}pulse (duration: 3,frequency:
+    120, amplitude: 100)
 
-    {color=white}Spring effect: {color=yellow}pulse{2,120,200}
+    {color=white}Spring effect: {color=yellow}pulse (duration:
+    2,frequency: 120, amplitude: 200)
 
-    {color=white}Shape:
-    {color=red}unavailable'
+    {color=white}Shape: {color=red}unavailable'
   description: 
   character: {fileID: 570135397}
   portrait: {fileID: 0}
@@ -1696,6 +1598,114 @@ MonoBehaviour:
   itemId: 57
   indentLevel: 0
   sayDialog: {fileID: 1697137991}
+--- !u!114 &41381100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 65
+  indentLevel: 0
+  sayDialog: {fileID: 262798569}
+--- !u!114 &41381101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 64
+  indentLevel: 0
+  storyText: TBD
+  description: 
+  character: {fileID: 82990549}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &41381102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 63
+  indentLevel: 0
+  sayDialog: {fileID: 1697137991}
+--- !u!114 &41381103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 62
+  indentLevel: 0
+  storyText: 'Grabbing apple: {color=yellow}pulse (duration: 1, frequency: 150, amplitude:
+    75)
+
+    {color=white}Plucking apple: {color=yellow}pulse (duration: 3, frequency:
+    120, amplitude: 100)
+
+    {color=white}Spring effect: {color=yellow}friction
+    (gain: 0.5, magnitude: 1)
+
+    {color=white}Shape: {color=red}unavailable'
+  description: 
+  character: {fileID: 570135397}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 0
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &41381104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41381038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 61
+  indentLevel: 0
+  sayDialog: {fileID: 999552775}
 --- !u!1 &62454812
 GameObject:
   m_ObjectHideFlags: 0
