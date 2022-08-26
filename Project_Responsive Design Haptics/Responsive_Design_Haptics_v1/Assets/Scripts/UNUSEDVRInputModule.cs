@@ -80,7 +80,7 @@ public class VRInputModule : BaseInputModule
         // Check if actual
         if (data.pointerPress == pointerUpHandler)
         {
-            ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);
+            ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerClickHandler);
         }
 
         // Clear selected gameobject

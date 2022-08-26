@@ -26,7 +26,7 @@ public class Pointer : MonoBehaviour
     {
         // Use default or distance
         PointerEventData data = m_InputModule.GetData();
-        float targetLength = m_DefaultLength;
+        float targetLength = data.pointerCurrentRaycast.distance == 0 ? m_DefaultLength : data.pointerCurrentRaycast.distance;
 
         // Raycast
         RaycastHit hit = CreateRaycast(targetLength);
