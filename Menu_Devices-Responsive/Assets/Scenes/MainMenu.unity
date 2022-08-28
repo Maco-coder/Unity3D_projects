@@ -1018,9 +1018,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38458012ce01ea14f87c446d0d270ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GRAB_pulse_time: 1
-  GRAB_pulse_frequency: 60
-  GRAB_pulse_amplitude: 100
+  GRAB_pulse_time: 50
+  GRAB_pulse_frequency: 10
+  GRAB_pulse_amplitude: 10
   PLUCK_pulse_time: 0
   PLUCK_pulse_frequency: 0
   PLUCK_pulse_amplitude: 0

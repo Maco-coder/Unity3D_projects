@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AppleScenes/MainMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: d3c3eecfb1921e349b28d30d556511a9
   - enabled: 1
     path: Assets/Scenes/AppleScenes/AppleGame_with_VIVE_controller.unity
