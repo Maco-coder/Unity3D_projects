@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class StoreVariables : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public static float VRcontroller_GRAB_pulse_time     ;
+	public static float VRcontroller_GRAB_pulse_frequency;
+	public static float VRcontroller_GRAB_pulse_amplitude;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public static float Touch_vibration_gain     ;
+	public static float Touch_vibration_magnitude;
+	public static float Touch_spring_gain        ;
+	public static float Touch_spring_magnitude   ;
+
 }

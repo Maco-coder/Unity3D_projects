@@ -7,21 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+
+    public float input ;
+    public float input2;
     
-    public void LoadGame (float input)
+    public void LoadGame()
     {
         
-        StateNameController.difficulty = input;
-        SceneManager.LoadScene("Game")        ;
-
-    }
-
-
-    public void LoadGame2 (float input2)
-    {
-        
+        StateNameController.difficulty = input  ;
         StateNameController.difficulty2 = input2;
+        SceneManager.LoadScene("Game")          ;
 
     }
-
 }
