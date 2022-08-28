@@ -1028,8 +1028,8 @@ MonoBehaviour:
   SPRING_pulse_frequency: 0
   SPRING_pulse_amplitude: 0
   SHAPE_VIVE: 0
-  GRAB_vibration_gain: 0
-  GRAB_vibration_magnitude: 0
+  GRAB_vibration_gain: 59
+  GRAB_vibration_magnitude: 14
   PLUCK_vibration_gain: 0
   PLUCK_vibration_magnitude: 0
   SPRING_spring_gain: 0
