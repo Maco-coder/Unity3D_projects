@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-	public Text difficultyText;
+	public Text difficultyText ;
 	public Text difficultyText2;
 
 	private void Start()
