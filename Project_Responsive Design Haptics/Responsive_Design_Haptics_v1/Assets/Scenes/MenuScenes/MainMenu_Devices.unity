@@ -595,7 +595,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755694303}
+      - m_Target: {fileID: 1755694305}
         m_MethodName: GoToMenuExperiences
         m_Mode: 1
         m_Arguments:
@@ -897,12 +897,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755694300}
-        m_MethodName: 
+      - m_Target: {fileID: 1755694304}
+        m_MethodName: LoadVRController
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755694302}
+      - m_Target: {fileID: 1755694304}
         m_MethodName: Load3DTouchSystem
         m_Mode: 1
         m_Arguments:
@@ -1656,8 +1656,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1755694301}
-  - component: {fileID: 1755694302}
-  - component: {fileID: 1755694303}
   - component: {fileID: 1755694304}
   - component: {fileID: 1755694305}
   m_Layer: 0
@@ -1681,47 +1679,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1755694302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755694300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38458012ce01ea14f87c446d0d270ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GRAB_pulse_time: 5
-  GRAB_pulse_frequency: 60
-  GRAB_pulse_amplitude: 10
-  PLUCK_pulse_time: 0
-  PLUCK_pulse_frequency: 0
-  PLUCK_pulse_amplitude: 0
-  SPRING_pulse_time: 0
-  SPRING_pulse_frequency: 0
-  SPRING_pulse_amplitude: 0
-  SHAPE_VIVE: 0
-  GRAB_vibration_gain: 59
-  GRAB_vibration_magnitude: 14
-  PLUCK_vibration_gain: 0
-  PLUCK_vibration_magnitude: 0
-  SPRING_spring_gain: 0
-  SPRING_spring_magnitude: 0
-  SHAPE_3DTOUCH: 0
---- !u!114 &1755694303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755694300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9de5489533d4d4587a205b76ac006e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1755694304
 MonoBehaviour:
   m_ObjectHideFlags: 0
