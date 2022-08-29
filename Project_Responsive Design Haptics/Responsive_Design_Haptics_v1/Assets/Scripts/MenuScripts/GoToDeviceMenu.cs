@@ -10,4 +10,11 @@ public class GoToDeviceMenu : MonoBehaviour
 	{
 		SceneManager.LoadScene("MainMenu_Devices");
 	}
+
+	void Update()
+	{
+		if (Input.GetKeyDown("space")){
+			SceneManager.LoadScene("MainMenu_Devices");
+		}
+	}
 }
