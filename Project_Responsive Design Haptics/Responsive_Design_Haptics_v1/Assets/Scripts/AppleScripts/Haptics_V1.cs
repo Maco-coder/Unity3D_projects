@@ -19,6 +19,7 @@ public class Haptics_V1 : MonoBehaviour
         {
             print(triggerValueL);
             Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
+            //Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
         }
 
 
@@ -28,6 +29,7 @@ public class Haptics_V1 : MonoBehaviour
         {
             print(triggerValueR);
             Pulse(1, 150, 75, SteamVR_Input_Sources.RightHand);
+            //Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
         }
 
     }
