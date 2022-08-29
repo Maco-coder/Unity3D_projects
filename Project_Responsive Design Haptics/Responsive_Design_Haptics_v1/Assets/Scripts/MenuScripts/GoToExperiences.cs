@@ -10,4 +10,12 @@ public class GoToExperiences : MonoBehaviour
 	{
 		SceneManager.LoadScene("MainMenu_Experiences");
 	}
+
+	void Update()
+	{
+		if (Input.GetKeyDown("space")){
+			SceneManager.LoadScene("MainMenu_Devices");
+		}
+	}
+
 }
