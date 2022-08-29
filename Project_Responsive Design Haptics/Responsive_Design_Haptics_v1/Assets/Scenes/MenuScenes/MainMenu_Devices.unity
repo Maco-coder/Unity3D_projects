@@ -1691,9 +1691,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a116a0d4f55c89c41b8efe1912f06b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GRAB_pulse_time: 0
-  GRAB_pulse_frequency: 0
-  GRAB_pulse_amplitude: 0
+  GRAB_pulse_time: 1
+  GRAB_pulse_frequency: 200
+  GRAB_pulse_amplitude: 75
   PLUCK_pulse_time: 0
   PLUCK_pulse_frequency: 0
   PLUCK_pulse_amplitude: 0
@@ -1705,8 +1705,8 @@ MonoBehaviour:
   GRAB_vibration_magnitude: 0
   PLUCK_vibration_gain: 0
   PLUCK_vibration_magnitude: 0
-  SPRING_spring_gain: 0
-  SPRING_spring_magnitude: 0
+  SPRING_spring_gain: 0.5
+  SPRING_spring_magnitude: 0.5
   SHAPE_3DTOUCH: 0
 --- !u!114 &1755694305
 MonoBehaviour:
