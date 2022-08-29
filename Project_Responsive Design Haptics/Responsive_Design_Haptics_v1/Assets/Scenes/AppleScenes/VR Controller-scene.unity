@@ -1003,12 +1003,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
---- !u!1 &985782396 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1104048705}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1004079432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1432,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1801297860}
   - component: {fileID: 1801297861}
-  - component: {fileID: 1801297862}
   m_Layer: 0
   m_Name: Haptics
   m_TagString: Untagged
@@ -1478,16 +1471,3 @@ MonoBehaviour:
   hapticAction:
     actionPath: /actions/default/out/Haptic
     needsReinit: 0
---- !u!114 &1801297862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801297859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8002ac05a27bfd49aaad9a07d93b873, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerVR: {fileID: 985782396}

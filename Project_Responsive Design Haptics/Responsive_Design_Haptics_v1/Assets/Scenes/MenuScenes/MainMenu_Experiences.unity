@@ -234,7 +234,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1071,7 +1071,7 @@ Canvas:
   m_GameObject: {fileID: 1684456297}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 2089902503}
   m_PlaneDistance: 10
   m_PixelPerfect: 0

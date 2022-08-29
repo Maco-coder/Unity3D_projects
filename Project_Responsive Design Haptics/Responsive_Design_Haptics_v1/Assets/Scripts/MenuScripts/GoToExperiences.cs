@@ -11,11 +11,21 @@ public class GoToExperiences : MonoBehaviour
 		SceneManager.LoadScene("MainMenu_Experiences");
 	}
 
-	void Update()
-	{
-		if (Input.GetKeyDown("space")){
-			SceneManager.LoadScene("MainMenu_Devices");
-		}
-	}
+	//void Update()
+	//{
+	//	if (Input.GetKeyDown("space")){
+	//		SceneManager.LoadScene("MainMenu_Experiences");
+	//	}
+
+    //    if (Input.GetKeyDown(KeyCode.A))
+    //    {
+    //        SceneManager.LoadScene("VR Controller-scene");
+    //    }
+
+    //    if (Input.GetKeyDown(KeyCode.B))
+    //    {
+    //        SceneManager.LoadScene("3D touch-scene");
+    //    }
+    //}
 
 }
