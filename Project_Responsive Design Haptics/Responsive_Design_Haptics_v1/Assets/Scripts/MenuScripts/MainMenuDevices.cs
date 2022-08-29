@@ -51,7 +51,7 @@ public class MainMenuDevices : MonoBehaviour
 
         StoreVariables.VRcontroller_SHAPE_VIVE = SHAPE_VIVE;
         
-        SceneManager.LoadScene("AppleGame_with_VIVE_controller");
+        SceneManager.LoadScene("VR Controller-scene");
     }
 
 
@@ -68,6 +68,6 @@ public class MainMenuDevices : MonoBehaviour
 
         StoreVariables.VRcontroller_SHAPE_VIVE = SHAPE_3DTOUCH;
         
-        SceneManager.LoadScene("AppleGame_with_3D_Touch");
+        SceneManager.LoadScene("3D touch-scene");
     }
 }

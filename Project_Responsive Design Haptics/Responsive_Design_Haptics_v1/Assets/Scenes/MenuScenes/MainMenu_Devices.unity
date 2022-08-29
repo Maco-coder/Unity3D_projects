@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -897,12 +897,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755694302}
-        m_MethodName: LoadVRController
+      - m_Target: {fileID: 1755694300}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1658,6 +1658,8 @@ GameObject:
   - component: {fileID: 1755694301}
   - component: {fileID: 1755694302}
   - component: {fileID: 1755694303}
+  - component: {fileID: 1755694304}
+  - component: {fileID: 1755694305}
   m_Layer: 0
   m_Name: GameObject_MenuDevices
   m_TagString: Untagged
@@ -1718,6 +1720,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d9de5489533d4d4587a205b76ac006e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1755694304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755694300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a116a0d4f55c89c41b8efe1912f06b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GRAB_pulse_time: 0
+  GRAB_pulse_frequency: 0
+  GRAB_pulse_amplitude: 0
+  PLUCK_pulse_time: 0
+  PLUCK_pulse_frequency: 0
+  PLUCK_pulse_amplitude: 0
+  SPRING_pulse_time: 0
+  SPRING_pulse_frequency: 0
+  SPRING_pulse_amplitude: 0
+  SHAPE_VIVE: 0
+  GRAB_vibration_gain: 0
+  GRAB_vibration_magnitude: 0
+  PLUCK_vibration_gain: 0
+  PLUCK_vibration_magnitude: 0
+  SPRING_spring_gain: 0
+  SPRING_spring_magnitude: 0
+  SHAPE_3DTOUCH: 0
+--- !u!114 &1755694305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755694300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68369f988ffca5d4a98a393463d5a204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1815019263
