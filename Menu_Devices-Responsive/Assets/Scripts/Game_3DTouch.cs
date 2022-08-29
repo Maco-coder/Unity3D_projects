@@ -31,6 +31,6 @@ public class Game_3DTouch : MonoBehaviour
 
 	public void GoBack()
 	{
-		SceneManager.LoadScene("MainMenu");
+		SceneManager.LoadScene("MainMenu_Devices");
 	}
 }

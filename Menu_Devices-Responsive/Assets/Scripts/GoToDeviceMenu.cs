@@ -8,6 +8,6 @@ public class GoToDeviceMenu : MonoBehaviour
 {
 	public void GoToDevices()
 	{
-		SceneManager.LoadScene("MainMenu");
+		SceneManager.LoadScene("MainMenu_Devices");
 	}
 }

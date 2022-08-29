@@ -39,6 +39,6 @@ public class Game_VIVE : MonoBehaviour
 
 	public void GoBack()
 	{
-		SceneManager.LoadScene("MainMenu");
+		SceneManager.LoadScene("MainMenu_Devices");
 	}
 }
