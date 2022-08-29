@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 858993507}
   - component: {fileID: 858993506}
   m_Layer: 5
-  m_Name: Button
+  m_Name: GoToExperiencesButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,7 +441,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 858993507}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1755694303}
+        m_MethodName: GoToMenuExperiences
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &858993507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,6 +1270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755694301}
   - component: {fileID: 1755694302}
+  - component: {fileID: 1755694303}
   m_Layer: 0
   m_Name: GameObject_MenuDevices
   m_TagString: Untagged
@@ -1309,6 +1321,18 @@ MonoBehaviour:
   SPRING_spring_gain: 0
   SPRING_spring_magnitude: 0
   SHAPE_3DTOUCH: 0
+--- !u!114 &1755694303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755694300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9de5489533d4d4587a205b76ac006e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1815019263
 GameObject:
   m_ObjectHideFlags: 0
