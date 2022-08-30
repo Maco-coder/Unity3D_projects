@@ -1713,7 +1713,7 @@ MonoBehaviour:
   PLUCK_vibration_magnitude: 1
   SPRING_spring_gain: 1
   SPRING_spring_magnitude: 1
-  SHAPE_roundTOUCH: 1
+  SHAPE_roundTOUCH: 0
   GRAB_feedback: 0
   PLUCK_feedback: 0
   SPRING_feedback: 0
