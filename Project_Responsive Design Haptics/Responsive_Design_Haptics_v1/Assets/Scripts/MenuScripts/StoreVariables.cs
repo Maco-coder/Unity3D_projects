@@ -17,7 +17,7 @@ public class StoreVariables : MonoBehaviour
 	public static float VRcontroller_SPRING_pulse_frequency;
 	public static float VRcontroller_SPRING_pulse_amplitude;
 
-	public static int VRcontroller_SHAPE_VIVE ;
+	public static bool SHAPE_VIVE_round ;
 
 	public static float Touch_GRAB_vibration_gain      ;
 	public static float Touch_GRAB_vibration_magnitude ;
@@ -28,6 +28,6 @@ public class StoreVariables : MonoBehaviour
 	public static float Touch_SPRING_spring_gain       ;
 	public static float Touch_SPRING_spring_magnitude  ;
 
-	public static int Touch_SHAPE_3DTOUCH ;
+	public static bool SHAPE_TOUCH_round ;
 
 }

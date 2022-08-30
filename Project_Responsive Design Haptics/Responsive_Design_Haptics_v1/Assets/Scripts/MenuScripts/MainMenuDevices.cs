@@ -20,7 +20,7 @@ public class MainMenuDevices : MonoBehaviour
     public float SPRING_pulse_frequency ;
     public float SPRING_pulse_amplitude ;
 
-    public int SHAPE_VIVE;
+    public bool SHAPE_roundVIVE;
 
 
     public float GRAB_vibration_gain       ;
@@ -32,7 +32,7 @@ public class MainMenuDevices : MonoBehaviour
     public float SPRING_spring_gain        ;
     public float SPRING_spring_magnitude   ;
 
-    public int SHAPE_3DTOUCH;
+    public bool SHAPE_roundTOUCH ;
 
 
     public void LoadVRController()
@@ -49,7 +49,7 @@ public class MainMenuDevices : MonoBehaviour
         StoreVariables.VRcontroller_SPRING_pulse_frequency = SPRING_pulse_frequency;
         StoreVariables.VRcontroller_SPRING_pulse_amplitude = SPRING_pulse_amplitude;
 
-        StoreVariables.VRcontroller_SHAPE_VIVE = SHAPE_VIVE;
+        StoreVariables.SHAPE_VIVE_round = SHAPE_roundVIVE;
         
         SceneManager.LoadScene("VR Controller-scene");
     }
@@ -64,10 +64,15 @@ public class MainMenuDevices : MonoBehaviour
         StoreVariables.Touch_PLUCK_vibration_magnitude = PLUCK_vibration_magnitude;
 
         StoreVariables.Touch_SPRING_spring_gain = SPRING_spring_gain              ;
-        StoreVariables.Touch_SPRING_spring_gain = SPRING_spring_magnitude         ;
+        StoreVariables.Touch_SPRING_spring_magnitude = SPRING_spring_magnitude    ;
 
-        StoreVariables.VRcontroller_SHAPE_VIVE = SHAPE_3DTOUCH;
+        StoreVariables.SHAPE_TOUCH_round = SHAPE_roundTOUCH ;
         
         SceneManager.LoadScene("3D touch-scene");
     }
+
+
+
+
+
 }
