@@ -144,28 +144,28 @@ public class MainMenuDevices : MonoBehaviour
         if (VRcontroller_compatibility == 0)
         {
             TextVR.text = "not supported"          ;
-            TextVR.color= new Color(0, 0, 1, 1)    ;
+            TextVR.color= new Color(1, 0, 0, 1)    ;
             ButtonVRcontroller.interactable = false;
         }
 
         if (VRcontroller_compatibility == 1)
         {
-            TextVR.text = "minimally supported"   ;
-            TextVR.color= new Color(0, 0, 1, 1)   ;
-            ButtonVRcontroller.interactable = true;
+            TextVR.text = "minimally supported"             ;
+            TextVR.color= new Color(1.0f, 0.65f, 0.0f, 1.0f);
+            ButtonVRcontroller.interactable = true          ;
         }
 
         if (VRcontroller_compatibility == 2 ||  VRcontroller_compatibility == 3 )
         {
-            TextVR.text = "partially supported"   ;
-            TextVR.color= new Color(0, 0, 1, 1)   ;
-            ButtonVRcontroller.interactable = true;
+            TextVR.text = "partially supported"            ;
+            TextVR.color= new Color(0.5f, 1.0f, 0.3f, 1.0f);
+            ButtonVRcontroller.interactable = true         ;
         }
 
         if (VRcontroller_compatibility == 4)
         {
             TextVR.text = "fully supported"       ;
-            TextVR.color= new Color(0, 0, 1, 1)   ;
+            TextVR.color= new Color(0, 1, 0, 1)   ;
             ButtonVRcontroller.interactable = true;
         }
 
@@ -198,28 +198,28 @@ public class MainMenuDevices : MonoBehaviour
         if (Touch_compatibility == 0)
         {
             TextTOUCH.text = "not supported"      ;
-            TextTOUCH.color= new Color(0, 0, 1, 1);
+            TextTOUCH.color= new Color(1, 0, 0, 1);
             Button3DTouch.interactable = false    ;
         }
 
         if (Touch_compatibility == 1)
         {
-            TextTOUCH.text = "minimally supported";
-            TextTOUCH.color= new Color(0, 0, 1, 1);
-            Button3DTouch.interactable = true     ;
+            TextTOUCH.text = "minimally supported"             ;
+            TextTOUCH.color= new Color(1.0f, 0.65f, 0.0f, 1.0f);
+            Button3DTouch.interactable = true                  ;
         }
 
         if (Touch_compatibility == 2 ||  VRcontroller_compatibility == 3 )
         {
-            TextTOUCH.text = "partially supported";
-            TextTOUCH.color= new Color(0, 0, 1, 1);
-            Button3DTouch.interactable = true     ;
+            TextTOUCH.text = "partially supported"            ;
+            TextTOUCH.color= new Color(0.5f, 1.0f, 0.3f, 1.0f);
+            Button3DTouch.interactable = true                 ;
         }
 
         if (Touch_compatibility == 4)
         {
             TextTOUCH.text = "fully supported"    ;
-            TextTOUCH.color= new Color(0, 0, 1, 1);
+            TextTOUCH.color= new Color(0, 1, 0, 1);
             Button3DTouch.interactable = true     ;
         }
 
@@ -252,28 +252,28 @@ public class MainMenuDevices : MonoBehaviour
         if (Props_compatibility == 0)
         {
             Textprops.text = "not supported"      ;
-            Textprops.color= new Color(0, 0, 1, 1);
+            Textprops.color= new Color(1, 0, 0, 1);
             ButtonProps.interactable = false      ;
         }
 
         if (Props_compatibility == 1)
         {
-            Textprops.text = "minimally supported";
-            TextTOUCH.color= new Color(0, 0, 1, 1);
-            ButtonProps.interactable = true       ;
+            Textprops.text = "minimally supported"             ;
+            Textprops.color= new Color(1.0f, 0.65f, 0.0f, 1.0f);
+            ButtonProps.interactable = true                    ;
         }
 
         if (Props_compatibility == 2 ||  Props_compatibility == 3 )
         {
-            Textprops.text = "partially supported";
-            TextTOUCH.color= new Color(0, 0, 1, 1);
-            ButtonProps.interactable = true       ;
+            Textprops.text = "partially supported"            ;
+            Textprops.color= new Color(0.5f, 1.0f, 0.3f, 1.0f);
+            ButtonProps.interactable = true                   ;
         }
 
         if (Props_compatibility == 4)
         {
             Textprops.text = "fully supported"    ;
-            TextTOUCH.color= new Color(0, 0, 1, 1);
+            Textprops.color= new Color(0, 1, 0, 1);
             ButtonProps.interactable = true       ;
         }
     }
