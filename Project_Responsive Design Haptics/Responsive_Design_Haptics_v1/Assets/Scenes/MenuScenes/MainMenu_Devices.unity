@@ -1698,26 +1698,26 @@ MonoBehaviour:
   ButtonProps: {fileID: 1419311279}
   Textprops: {fileID: 2048610761}
   GRAB_pulse_time: 1
-  GRAB_pulse_frequency: 175
+  GRAB_pulse_frequency: 150
   GRAB_pulse_amplitude: 50
-  PLUCK_pulse_time: 1
+  PLUCK_pulse_time: 2
   PLUCK_pulse_frequency: 200
   PLUCK_pulse_amplitude: 50
   SPRING_pulse_time: 5
-  SPRING_pulse_frequency: 300
+  SPRING_pulse_frequency: 250
   SPRING_pulse_amplitude: 60
   SHAPE_roundVIVE: 0
-  GRAB_vibration_gain: 1
-  GRAB_vibration_magnitude: 1
-  PLUCK_vibration_gain: 1
+  GRAB_vibration_gain: 0.5
+  GRAB_vibration_magnitude: 0.5
+  PLUCK_vibration_gain: 0.5
   PLUCK_vibration_magnitude: 1
   SPRING_spring_gain: 1
   SPRING_spring_magnitude: 1
-  SHAPE_roundTOUCH: 0
+  SHAPE_roundTOUCH: 1
   GRAB_feedback: 0
   PLUCK_feedback: 0
   SPRING_feedback: 0
-  SHAPE_roundPROPS: 0
+  SHAPE_roundPROPS: 1
 --- !u!114 &1755694305
 MonoBehaviour:
   m_ObjectHideFlags: 0
