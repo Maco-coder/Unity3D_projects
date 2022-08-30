@@ -35,6 +35,12 @@ public class MainMenuDevices : MonoBehaviour
     public bool SHAPE_roundTOUCH ;
 
 
+    public float GRAB_feedback  ;
+    public float PLUCK_feedback ;
+    public float SPRING_feedback;
+    public bool SHAPE_roundPROPS;
+
+
     public void LoadVRController()
     {
         StoreVariables.VRcontroller_GRAB_pulse_time = GRAB_pulse_time          ;
@@ -72,7 +78,14 @@ public class MainMenuDevices : MonoBehaviour
     }
 
 
+    public void LoadHouseHoldProps()
+    {
+        StoreVariables.PROPS_GRAB_feedback = GRAB_feedback    ;
+        StoreVariables.PROPS_PLUCK_feedback = PLUCK_feedback  ;
+        StoreVariables.PROPS_SPRING_feedback = SPRING_feedback;
+        StoreVariables.SHAPE_PROPS_round = SHAPE_roundPROPS   ;
 
-
+        SceneManager.LoadScene("Household Props-scene");
+    }
 
 }
