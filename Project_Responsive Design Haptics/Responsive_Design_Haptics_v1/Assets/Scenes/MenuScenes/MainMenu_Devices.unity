@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.72322863, g: 1, b: 0.6273585, a: 1}
+    m_PressedColor: {r: 0.42651436, g: 1, b: 0.2216981, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.52156866, g: 0.7372549, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.8669976, b: 0.0141509175, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1212,7 +1212,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: partially supported
+  m_Text: 
 --- !u!222 &1359885528
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1619,7 +1619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.51925296, g: 0.735849, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1638,7 +1638,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: partially supported
+  m_Text: 
 --- !u!222 &1661481370
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1691,23 +1691,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a116a0d4f55c89c41b8efe1912f06b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GRAB_pulse_time: 0.5
-  GRAB_pulse_frequency: 50
-  GRAB_pulse_amplitude: 2
-  PLUCK_pulse_time: 0
-  PLUCK_pulse_frequency: 0
-  PLUCK_pulse_amplitude: 0
-  SPRING_pulse_time: 0
-  SPRING_pulse_frequency: 0
-  SPRING_pulse_amplitude: 0
-  SHAPE_VIVE: 0
-  GRAB_vibration_gain: 0
-  GRAB_vibration_magnitude: 0
-  PLUCK_vibration_gain: 0
-  PLUCK_vibration_magnitude: 0
+  ButtonVRcontroller: {fileID: 968959029}
+  TextVR: {fileID: 1661481369}
+  Button3DTouch: {fileID: 1016819262}
+  TextTOUCH: {fileID: 1359885527}
+  ButtonProps: {fileID: 1419311279}
+  Textprops: {fileID: 2048610761}
+  GRAB_pulse_time: 1
+  GRAB_pulse_frequency: 175
+  GRAB_pulse_amplitude: 50
+  PLUCK_pulse_time: 1
+  PLUCK_pulse_frequency: 200
+  PLUCK_pulse_amplitude: 50
+  SPRING_pulse_time: 5
+  SPRING_pulse_frequency: 300
+  SPRING_pulse_amplitude: 60
+  SHAPE_roundVIVE: 0
+  GRAB_vibration_gain: 1
+  GRAB_vibration_magnitude: 1
+  PLUCK_vibration_gain: 1
+  PLUCK_vibration_magnitude: 1
   SPRING_spring_gain: 1
   SPRING_spring_magnitude: 1
-  SHAPE_3DTOUCH: 0
+  SHAPE_roundTOUCH: 0
+  GRAB_feedback: 0
+  PLUCK_feedback: 0
+  SPRING_feedback: 0
+  SHAPE_roundPROPS: 0
 --- !u!114 &1755694305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1966,7 +1976,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: minimally supported
+  m_Text: 
 --- !u!222 &2048610762
 CanvasRenderer:
   m_ObjectHideFlags: 0
