@@ -11,6 +11,7 @@ public class JSON_testing : MonoBehaviour
     {
         Debug.Log("GameHandler.start")  ;
 
+        /*
         PlayerData playerData = new PlayerData();
         playerData.position = new Vector3(5,0);
         playerData.health = 80;
@@ -19,11 +20,12 @@ public class JSON_testing : MonoBehaviour
         Debug.Log(json);
 
         File.WriteAllText(Application.dataPath + "saveFile.json", json);
+        */
 
-        //string json = File.ReadAllText(Application.dataPath + "/saveFile.json");
-        //PlayerData loadedPlayerData = JsonUtility.FromJson<PlayerData>(json);
-        //Debug.Log("position: "+loadedPlayerData.position);
-        //Debug.Log("health: "+loadedPlayerData.health)    ;
+        string json = File.ReadAllText(Application.dataPath + "/saveFile.json");
+        PlayerData loadedPlayerData = JsonUtility.FromJson<PlayerData>(json);
+        Debug.Log("position: "+loadedPlayerData.position);
+        Debug.Log("health: "+loadedPlayerData.health)    ;
     }
 
     private class PlayerData
