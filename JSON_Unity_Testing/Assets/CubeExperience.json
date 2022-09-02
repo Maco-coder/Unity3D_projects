@@ -16,7 +16,7 @@
 	"speed":
 	{
 		"speedX": 0,
-		"speedY": 0,
+		"speedY": 0.5,
 		"speedZ": 0
 	},
 	

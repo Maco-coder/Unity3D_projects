@@ -9,6 +9,8 @@ public class Cube1Data : MonoBehaviour
 
     public GameObject Cube1 ;
     
+    Vector3 m_NewSpeed;
+
     private float Pos_X = 0 ;
     private float Pos_Y = 1 ;
     private float Pos_Z = 0 ;
@@ -35,8 +37,8 @@ public class Cube1Data : MonoBehaviour
         Debug.Log("gravity: "+loadedPlayerData.gravity)  ;
 
         
-        Cube1.transform.position = new Vector3(Pos_X,Pos_Y,Pos_Z)          ;  // Position setting //
-        Cube1.transform.localScale = new Vector3(Scale_X, Scale_Y, Scale_Z);  // Scale setting    //
+        Cube1.transform.position = new Vector3(Pos_X, Pos_Y, Pos_Z)         ;  // Position setting //
+        Cube1.transform.localScale = new Vector3(Scale_X, Scale_Y, Scale_Z) ;  // Scale setting    //
 
         if (EnableGravity == "yes"){
             Cube1.GetComponent<Rigidbody>().useGravity = true ;  // Gravity enabling //
@@ -45,13 +47,17 @@ public class Cube1Data : MonoBehaviour
         if (EnableGravity == "no"){
             Cube1.GetComponent<Rigidbody>().useGravity = false ;  // Gravity enabling //
         }
+
+
+        m_NewSpeed = new Vector3(loadedPlayerData.speed.x, loadedPlayerData.speed.y, loadedPlayerData.speed.z);
+
+
     }
 
     
     void Update()
     {
-        //Cube1.transform.Rotate(scale.x, scale.y, scale.z) ;
-        Cube1.transform.Rotate(speed_X, speed_Y, speed_Z, Space.World);  // Speed setting //
+        Cube1.transform.Rotate(m_NewSpeed.x, m_NewSpeed.y, m_NewSpeed.z, Space.World);  // Speed setting //
     }
 
     
