@@ -22,10 +22,12 @@ public class JSON_testing : MonoBehaviour
         File.WriteAllText(Application.dataPath + "FileJson.json", json);
         */
 
-        string json = File.ReadAllText(Application.dataPath + "/sample_v1.json");
-        PlayerData loadedPlayerData = JsonUtility.FromJson<PlayerData>(json)   ;
-        Debug.Log("position: "+loadedPlayerData.position)        ;
-        Debug.Log("acceleration: "+loadedPlayerData.acceleration);
+
+        //string json = File.ReadAllText(Application.dataPath + "/AssetsFileJson.json");
+        //string json = File.ReadAllText(Application.dataPath + "/sample_v2.json");
+        //PlayerData loadedPlayerData = JsonUtility.FromJson<PlayerData>(json)   ;
+        //Debug.Log("position: "+loadedPlayerData.position)        ;
+        //Debug.Log("acceleration: "+loadedPlayerData.acceleration);
     }
 
     private class PlayerData
