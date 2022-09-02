@@ -11,6 +11,8 @@ public class JSON_testing : MonoBehaviour
     {
         Debug.Log("GameHandler.start")  ;
 
+
+        // GENERATING A JSON FILE FROM PARAMETERS INPUTTED IN UNITY //
         /*
         PlayerData playerData = new PlayerData();
         playerData.position = new Vector3(5,0);
@@ -22,18 +24,22 @@ public class JSON_testing : MonoBehaviour
         File.WriteAllText(Application.dataPath + "FileJson.json", json);
         */
 
+        // EXTRACTING PARAMETERS FROM A JSON FILE AND PARSE THEM INTO GAME OBJECTS //
 
-        //string json = File.ReadAllText(Application.dataPath + "/AssetsFileJson.json");
-        //string json = File.ReadAllText(Application.dataPath + "/sample_v2.json");
-        //PlayerData loadedPlayerData = JsonUtility.FromJson<PlayerData>(json)   ;
-        //Debug.Log("position: "+loadedPlayerData.position)        ;
-        //Debug.Log("acceleration: "+loadedPlayerData.acceleration);
+        string json = File.ReadAllText(Application.dataPath + "/CubeExperience.json");
+        PlayerData loadedPlayerData = JsonUtility.FromJson<PlayerData>(json)   ;
+        Debug.Log("position: "+loadedPlayerData.position);
+        Debug.Log("scale: "+loadedPlayerData.scale)      ;
+        Debug.Log("speed: "+loadedPlayerData.scale)      ;
+        Debug.Log("gravity: "+loadedPlayerData.gravity)  ;
     }
 
     private class PlayerData
     {
         public Vector3 position;
-        public int acceleration;
+        public Vector3 scale   ;
+        public Vector3 speed   ;
+        public string gravity  ;
     }
 
 }
