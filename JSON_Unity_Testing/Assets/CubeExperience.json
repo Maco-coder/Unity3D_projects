@@ -1,24 +1,24 @@
 {
 	"position":
 	{
-		"posX": 0,
-		"posY": 1,
-		"posZ": 0
+		"x": 0.0,
+		"y": 0.0,
+		"Z": 0.0
 	},
 	
 	"scale":
 	{
-		"sizeX": 1,
-		"sizeY": 1,
-		"sizeZ": 1
+		"x": 0.0,
+		"y": 0.0,
+		"z": 0.0
 	},
 	
 	"speed":
 	{
-		"speedX": 0,
-		"speedY": 0.5,
-		"speedZ": 0
+		"x": 0.0,
+		"y": 0.0,
+		"z": 0.0
 	},
 	
-	"gravity": "yes"
+	"gravity": "no"
 }
