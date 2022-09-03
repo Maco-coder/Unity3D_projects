@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuDevices : MonoBehaviour
 {
+    
+    
+    
+
+
 
     public Button ButtonVRcontroller       ;
     private int VRcontroller_compatibility ;
