@@ -1,0 +1,6 @@
+{
+	"PositionCube": "position",
+	"ScaleCube": "scale",
+	"SpeedCube": "speed",
+	"GravityYN": "gravity"
+}

@@ -11,7 +11,6 @@ public class JSON_testing : MonoBehaviour
     {
         Debug.Log("GameHandler.start")  ;
 
-
         // GENERATING A JSON FILE FROM PARAMETERS INPUTTED IN UNITY //
         /*
         PlayerData playerData = new PlayerData();
