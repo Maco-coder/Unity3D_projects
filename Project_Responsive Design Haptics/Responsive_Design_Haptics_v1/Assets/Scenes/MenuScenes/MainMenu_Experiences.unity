@@ -486,6 +486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430810016}
   - component: {fileID: 430810017}
+  - component: {fileID: 430810018}
   m_Layer: 0
   m_Name: GameObject_MenuExperiences
   m_TagString: Untagged
@@ -517,6 +518,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06f85d41f75cd644796a31795635eb15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &430810018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430810015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eed9025678837d4ab9bf44652569246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &450807653
