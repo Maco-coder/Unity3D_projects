@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.json_unity_testing.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\hapti\\Desktop\\Unity3D_projects\\JSON_Unity_Testing\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "JSON_Unity_Testing [Testing]"
+        }
+      }
+    }
+  ]
+}

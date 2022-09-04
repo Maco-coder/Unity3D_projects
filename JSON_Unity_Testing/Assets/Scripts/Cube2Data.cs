@@ -36,23 +36,6 @@ public class Cube2Data : MonoBehaviour
 
         print(myFeedbackList.feedback[0].type);
 
-        //m_position = new Vector3(loadedPlayerData.position.x, loadedPlayerData.position.y, loadedPlayerData.position.z);
-        //m_scale = new Vector3(loadedPlayerData.scale.x, loadedPlayerData.scale.y, loadedPlayerData.scale.z)            ;
-        //m_speed = new Vector3(loadedPlayerData.speed.x, loadedPlayerData.speed.y, loadedPlayerData.speed.z)            ;
-        //m_gravity = loadedPlayerData.gravity;
-
-        //Cube2.transform.position = new Vector3(m_position.x, m_position.y, m_position.z) ;
-        //Cube2.transform.localScale = new Vector3(m_scale.x, m_scale.y, m_scale.z)        ;
-
-
-        //if (m_gravity == "yes"){
-        //    Cube2.GetComponent<Rigidbody>().useGravity = true ;  // Gravity enabling //
-        //}
-
-        //if (m_gravity == "no" || m_gravity == null){
-        //    Cube2.GetComponent<Rigidbody>().useGravity = false ;  // Gravity enabling //
-        //}
-
     }
 
     
