@@ -78,10 +78,10 @@ public class Haptics : MonoBehaviour
             if(myFeedbackList.feedback[1].type=="weight"){
                 
                 if(myFeedbackList.feedback[1].magnitude=="20"){
-                    Pulse(1, 100, 75, SteamVR_Input_Sources.RightHand);
+                    Pulse(1, 1, 1, SteamVR_Input_Sources.RightHand);
                 }
                 if(myFeedbackList.feedback[1].magnitude=="60"){
-                    Pulse(1, 200, 150, SteamVR_Input_Sources.RightHand);
+                    Pulse(1, 1, 1, SteamVR_Input_Sources.RightHand);
                 }
 
             }
