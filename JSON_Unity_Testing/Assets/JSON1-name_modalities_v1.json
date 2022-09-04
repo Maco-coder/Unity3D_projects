@@ -1,0 +1,30 @@
+{
+	"GrabApple": {
+		"label": "shape_apple" ,
+		"feedback": {
+			"type": "shape"    ,
+			"material": "rigid",
+			"geometry":"round" ,
+			"diameter": "80"   ,
+			"units": "mm"
+		}
+	},
+	
+	"HoldApple": {
+		"label": "weight_apple",
+		"feedback": {
+			"type": "weight"   ,
+			"mass": "175"      ,
+			"units": "grams"
+		}
+	},
+	
+	"DetachApple": {
+		"label": "pluck_apple",
+		"feedback":{
+			"type": "spring"  ,
+			"strength": "weak"
+			"constant": null
+		}
+	},
+}
