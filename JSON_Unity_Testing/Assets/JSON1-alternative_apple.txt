@@ -6,8 +6,8 @@
 			"geometry": null
 		},
 		{
-			"type": "spring"   ,
-			"magnitude": "strong",
+			"type": "weight"   ,
+			"magnitude": "60",
 			"geometry": null
 		},
 		{
