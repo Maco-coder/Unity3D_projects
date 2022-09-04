@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -222,10 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 778914171}
-  - component: {fileID: 778914170}
-  - component: {fileID: 778914172}
-  - component: {fileID: 778914173}
-  - component: {fileID: 778914174}
+  - component: {fileID: 778914175}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -233,18 +230,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &778914170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778914169}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3607c06dcd6c4d4a8677db3908a51d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &778914171
 Transform:
   m_ObjectHideFlags: 0
@@ -259,7 +244,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &778914172
+--- !u!114 &778914175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,34 +253,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 778914169}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d9f637b3f781fa42be6e00251ad5ab6, type: 3}
+  m_Script: {fileID: 11500000, guid: 31893f4a31aa6b84b9c3bed12995d8ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube1: {fileID: 1499896536}
---- !u!114 &778914173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778914169}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5c5e9acb7c8cb45b00cf84b564b99a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &778914174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778914169}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddeac908721d25646885488763ea12a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Cube2: {fileID: 1106841148}
+  textJSON: {fileID: 4900000, guid: aca05801e18a46340965f7153e938951, type: 3}
+  myFeedbackList:
+    feedback: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1106841149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -466,7 +430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106841148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 1, z: 0}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 0}
@@ -491,7 +455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1499896537
 BoxCollider:
   m_ObjectHideFlags: 0

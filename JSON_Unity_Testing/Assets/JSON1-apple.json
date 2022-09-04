@@ -1,0 +1,24 @@
+{
+	"GrabApple": {
+		"feedback": {
+			"type": "shape",
+			"geometry": "round",
+			"diameter": "80",
+			"units": "mm"
+		}
+	},
+	
+	"HoldApple": {
+		"feedback": {
+			"type": "weight",
+			"magnitude": "20%"
+		}
+	},
+	
+	"PluckApple": {
+		"feedback": {
+			"type": "spring",
+			"magnitude": "40%"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"feedback": [
+	{
+		"type": "weight" ,
+		"magnitude": "20",
+		"geometry": null
+	},
+	{
+		"type": "spring",
+		"magnitude": "40",
+		"geometry": null
+	},
+	{
+		"type": "shape",
+		"magnitude": null,
+		"geometry": "round"
+	},
+	]
+}

@@ -45,8 +45,8 @@ public class Cube1Data : MonoBehaviour
 
 
         Debug.Log("GameHandler.start") ;
-        string json = File.ReadAllText(Application.dataPath + "/CubeExperience.json");
-        PlayerData loadedPlayerData = JsonUtility.FromJson<PlayerData>(json)         ;
+        string json = File.ReadAllText(Application.dataPath + "/Cube1Experience.json");
+        PlayerData loadedPlayerData = JsonUtility.FromJson<PlayerData>(json)          ;
         Debug.Log("position: "+loadedPlayerData.position);
         Debug.Log("scale: "+loadedPlayerData.scale)      ;
         Debug.Log("speed: "+loadedPlayerData.speed)      ;
