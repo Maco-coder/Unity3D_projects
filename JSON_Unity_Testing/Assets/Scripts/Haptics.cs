@@ -34,8 +34,9 @@ public class Haptics : MonoBehaviour
     void Start()
     {
         myFeedbackList = JsonUtility.FromJson<List>(textJSON.text);
-        print(myFeedbackList.feedback[0].type);
-
+        print(myFeedbackList.feedback[1].type)     ;
+        print(myFeedbackList.feedback[1].magnitude);
+        print(myFeedbackList.feedback[1].geometry) ;
     }
 
 
@@ -43,7 +44,6 @@ public class Haptics : MonoBehaviour
     {
 
         float triggerValueL = squeezeAction.GetAxis(SteamVR_Input_Sources.LeftHand);
-
         if (triggerValueL > 0.0f)
         {
             print(triggerValueL);
@@ -51,12 +51,41 @@ public class Haptics : MonoBehaviour
         }
 
 
+
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand);
 
         if (triggerValueR > 0.0f)
         {
             print(triggerValueR);
-            Pulse(2, 150, 75, SteamVR_Input_Sources.LeftHand);
+
+
+            // SPRING FEEDBACK //
+
+            if(myFeedbackList.feedback[1].type=="spring"){
+                
+                if(myFeedbackList.feedback[1].magnitude=="weak"){
+                    Pulse(2, 100, 75, SteamVR_Input_Sources.LeftHand);
+                }
+                if(myFeedbackList.feedback[1].magnitude=="strong"){
+                    Pulse(2, 300, 75, SteamVR_Input_Sources.LeftHand);
+                }
+
+            }
+
+
+            // WEIGHT FEEDBACK //
+
+            if(myFeedbackList.feedback[1].type=="weight"){
+                
+                if(myFeedbackList.feedback[1].magnitude=="20"){
+                    Pulse(1, 100, 75, SteamVR_Input_Sources.LeftHand);
+                }
+                if(myFeedbackList.feedback[1].magnitude=="60"){
+                    Pulse(1, 300, 75, SteamVR_Input_Sources.LeftHand);
+                }
+
+            }
+
         }
 
     }

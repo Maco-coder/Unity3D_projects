@@ -3,16 +3,16 @@
 		{
 			"type": "weight",
 			"magnitude": "20",
-			"geometry": "0"
+			"geometry": null
 		},
 		{
-			"type": "spring",
-			"magnitude": "40",
-			"geometry": "0"
+			"type": "spring"   ,
+			"magnitude": "weak",
+			"geometry": null
 		},
 		{
 			"type": "shape",
-			"magnitude": "0",
+			"magnitude": null,
 			"geometry": "round"
 		}
 	]
