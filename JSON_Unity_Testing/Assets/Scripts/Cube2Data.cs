@@ -34,9 +34,7 @@ public class Cube2Data : MonoBehaviour
     {
         myFeedbackList = JsonUtility.FromJson<List>(textJSON.text);
 
-
-        //Debug.Log("GameHandler.start") ;
-        Debug.Log(myFeedbackList.feedback.[1]["type"]);
+        print(myFeedbackList.feedback[1].type);
 
         //m_position = new Vector3(loadedPlayerData.position.x, loadedPlayerData.position.y, loadedPlayerData.position.z);
         //m_scale = new Vector3(loadedPlayerData.scale.x, loadedPlayerData.scale.y, loadedPlayerData.scale.z)            ;
