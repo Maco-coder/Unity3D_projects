@@ -7,7 +7,7 @@
 		},
 		{
 			"type": "spring"   ,
-			"magnitude": "weak",
+			"magnitude": "strong",
 			"geometry": null
 		},
 		{
