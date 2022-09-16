@@ -8,6 +8,8 @@ public class Haptics : MonoBehaviour
 {
 
     public GameObject Cube2  ;
+    public GameObject apple  ;
+    public GameObject tree   ;
     public TextAsset textJSON;
 
     [System.Serializable]
@@ -43,18 +45,11 @@ public class Haptics : MonoBehaviour
     void Update()
     {
 
-        float triggerValueL = squeezeAction.GetAxis(SteamVR_Input_Sources.LeftHand);
-        if (triggerValueL > 0.0f)
-        {
-            print(triggerValueL);
-            Pulse(2, 150, 75, SteamVR_Input_Sources.LeftHand);
-        }
+        distance_ = Vector3.Distance(tree.transform.position,apple.transform.position);
+        
+        //float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand);
 
-
-
-        float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand);
-
-        if (triggerValueR > 0.0f)
+        if (distance_ > 0.0f)
         {
             print(triggerValueR);
 
@@ -63,25 +58,11 @@ public class Haptics : MonoBehaviour
 
             if(myFeedbackList.feedback[1].type=="spring"){
                 
-                if(myFeedbackList.feedback[1].magnitude=="weak"){
-                    Pulse(2, 50, 75, SteamVR_Input_Sources.RightHand);
+                if(myFeedbackList.feedback[1].magnitude=="10"){
+                    Pulse(1, distance_, 10, SteamVR_Input_Sources.RightHand);
                 }
-                if(myFeedbackList.feedback[1].magnitude=="strong"){
-                    Pulse(2, 200, 75, SteamVR_Input_Sources.RightHand);
-                }
-
-            }
-
-
-            // WEIGHT FEEDBACK //
-
-            if(myFeedbackList.feedback[1].type=="weight"){
-                
-                if(myFeedbackList.feedback[1].magnitude=="20"){
-                    Pulse(1, 1, 1, SteamVR_Input_Sources.RightHand);
-                }
-                if(myFeedbackList.feedback[1].magnitude=="60"){
-                    Pulse(1, 1, 1, SteamVR_Input_Sources.RightHand);
+                if(myFeedbackList.feedback[1].magnitude=="40"){
+                    Pulse(1, distance_, 40, SteamVR_Input_Sources.RightHand);
                 }
 
             }
