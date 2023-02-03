@@ -49,7 +49,7 @@ public class Haptics : MonoBehaviour
         
         //float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand);
 
-        if (distance_ > 0.0f)
+        if (distance_ > 0)
         {
             print(triggerValueR);
 
@@ -58,14 +58,18 @@ public class Haptics : MonoBehaviour
 
             if(myFeedbackList.feedback[1].type=="spring"){
                 
-                if(myFeedbackList.feedback[1].magnitude=="10"){
-                    Pulse(1, distance_, 10, SteamVR_Input_Sources.RightHand);
-                }
                 if(myFeedbackList.feedback[1].magnitude=="40"){
-                    Pulse(1, distance_, 40, SteamVR_Input_Sources.RightHand);
+                    Pulse(1, distance_*10, 40, SteamVR_Input_Sources.RightHand);
                 }
-
             }
+
+            if(myFeedbackList.feedback[1].type=="applied"){
+                
+                if(myFeedbackList.feedback[1].magnitude=="20"){
+                    Pulse(1, 100, 20, SteamVR_Input_Sources.RightHand);
+                }
+            }
+
 
         }
 
