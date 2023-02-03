@@ -1423,6 +1423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1470458588}
+  - component: {fileID: 1470458589}
   m_Layer: 0
   m_Name: SerialData
   m_TagString: Untagged
@@ -1445,6 +1446,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1470458589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470458587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eccfa4d7d4bf2df4e950074c2adf816d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receivedstring: 
+  data: []
+  data_received: []
+  gameObject1: {fileID: 0}
+  gameObject2: {fileID: 0}
+  gameObject3: {fileID: 0}
+  gameObject4: {fileID: 0}
+  Servomotor_value: 0
+  Upper_value: 0
+  Lower1_value: 0
+  Lower2_value: 0
+  angle_servo_position: {fileID: 0}
+  force_Upper: {fileID: 0}
+  force_Lower1: {fileID: 0}
+  force_Lower2: {fileID: 0}
+  grade_injury: {fileID: 0}
 --- !u!1 &1482145774
 GameObject:
   m_ObjectHideFlags: 0
