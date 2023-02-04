@@ -2243,6 +2243,7 @@ MonoBehaviour:
   - 
   - 
   Servomotor_value: 0
+  DIAL_value: 0
   Upper_value: 0
   Lower1_value: 0
   Lower2_value: 0
@@ -2925,7 +2926,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1421139397}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
