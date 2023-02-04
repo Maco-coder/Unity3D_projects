@@ -84,7 +84,7 @@ public class Sensors : MonoBehaviour
         FSRupper.value = Upper_value       ;
         FSRlower1.value = Lower1_value     ;
         FSRlower2.value = Lower2_value     ;
-        DIAL.value = Servomotor_value            ;
+        DIAL.value = Servomotor_value      ;
 
     }
 
