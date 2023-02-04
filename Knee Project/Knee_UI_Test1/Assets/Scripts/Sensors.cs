@@ -1,3 +1,4 @@
+
 using System.Collections         ;
 using System.Collections.Generic ;
 using UnityEngine                ;
@@ -13,12 +14,6 @@ public class Sensors : MonoBehaviour
     public string[] data          ;
     public string[] data_received ;
 
-    // GameObjects //
-    public Transform gameObject1 ;  // Servomotor slider
-    public Transform gameObject2 ;  // Upper Leg Slider
-    public Transform gameObject3 ;  // Lower Leg1 Slider
-    public Transform gameObject4 ;  // Lower Leg2 Slider 
-
     // Tension/Injury data //
     public int Servomotor_value;
 
@@ -28,14 +23,24 @@ public class Sensors : MonoBehaviour
     public int Lower2_value;
 
     // Displaying data //
-    //public Transform cube_IMU;
-    //public Transform cube_Servo;
-    //public Transform cube_FSR;
     public Text angle_servo_position;
-    public Text force_Upper  ;
-    public Text force_Lower1 ;
-    public Text force_Lower2 ;
-    public Text grade_injury;
+    public Text force_Upper         ;
+    public Text force_Lower1        ;
+    public Text force_Lower2        ;
+    public Text grade_injury        ;
+
+    public Slider servomotor;
+    public int max_servo    ;
+
+    public Slider FSRupper  ;
+    public int max_FSRupper ;
+    
+    public Slider FSRlower1  ;
+    public int max_FSRlower1 ;
+
+    public Slider FSRlower2  ;
+    public int max_FSRlower2 ;
+
 
 
     void Start()
@@ -65,77 +70,15 @@ public class Sensors : MonoBehaviour
         data_received[3] = data[3];
         int.TryParse(data[3], out Lower2_value);
 
-        angle_servo_position.text = Servomotor_value.ToString("0") ;
-        force_Upper.text = Upper_value.ToString("0")              ;
-        force_Lower1.text = Lower1_value.ToString("0")            ;
-        force_Lower2.text = Lower2_value.ToString("0")            ;
+        //angle_servo_position.text = Servomotor_value.ToString("0");
+        //force_Upper.text = Upper_value.ToString("0")              ;
+        //force_Lower1.text = Lower1_value.ToString("0")            ;
+        //force_Lower2.text = Lower2_value.ToString("0")            ;
 
-
-        //if (FSR1_value >= 0 && FSR1_value < 55)
-        //{
-        //    force_FSR1.text = ("High pressure") ;
-        //}
-
-        //if (FSR1_value >= 55 && FSR1_value < 75)
-        //{
-        //   force_FSR1.text = ("Medium pressure");
-        //}
-
-        //if (FSR1_value >= 75 && FSR1_value < 100)
-        //{
-        //    force_FSR1.text = ("Low pressure");
-        //}
-
-        //if (FSR1_value >= 100)
-        //{
-        //    force_FSR1.text = ("No pressure");
-        //}
-
-
-
-        //if (FSR2_value >= 0 && FSR2_value < 260)
-        //{
-        //    force_FSR2.text = ("High pressure");
-        //}
-
-        //if (FSR2_value >= 260 && FSR2_value < 350)
-        //{
-        //    force_FSR2.text = ("Medium pressure");
-        //}
-
-        //if (FSR2_value >= 350 && FSR2_value < 440)
-        //{
-        //    force_FSR2.text = ("Low pressure");
-        //}
-
-        //if (FSR2_value >= 440)
-        //{
-        //    force_FSR2.text = ("No pressure");
-        //}
-
-
-
-        //if (Servo_pos_value >= 0 && Servo_pos_value < 22)
-        //{
-        //    grade_injury.text = ("Healthy");
-        //}
-
-        //if (Servo_pos_value >= 22 && Servo_pos_value < 40)
-        //{
-        //    grade_injury.text = ("1");
-        //}
-
-        //if (Servo_pos_value >= 40 && Servo_pos_value < 60)
-        //{
-        //    grade_injury.text = ("2");
-        //}
-
-        //if (Servo_pos_value >= 60)
-        //{
-        //    grade_injury.text = ("3");
-        //}
-
-
+        servomotor.value = Servomotor_value;
+        FSRupper.value = Upper_value       ;
+        FSRlower1.value = Lower1_value     ;
+        FSRlower2.value = Lower2_value     ;
 
     }
 
