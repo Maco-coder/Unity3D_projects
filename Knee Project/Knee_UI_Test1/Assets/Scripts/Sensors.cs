@@ -27,10 +27,10 @@ public class Sensors : MonoBehaviour
 
     // Displaying data //
     public Text angle_servo_position;
-    public Text force_Upper         ;
-    public Text force_Lower1        ;
-    public Text force_Lower2        ;
     public Text grade_injury        ;
+    //public Text force_Upper       ;
+    //public Text force_Lower1      ;
+    //public Text force_Lower2      ;
 
     public Slider servomotor;
     public int max_servo    ;
@@ -83,7 +83,28 @@ public class Sensors : MonoBehaviour
         FSRlower1.value = Lower1_value     ;
         FSRlower2.value = Lower2_value     ;
 
-        DIAL.transform.Rotate(0, 0, (Servomotor_value / 1.42f), Space.Self);
+        DIAL.transform.localEulerAngles = new Vector3(0,0,Servomotor_value/1.41666666667f);
+        angle_servo_position.text = (Servomotor_value/1.41666666667f).ToString("0")       ;
+
+        if ((Servomotor_value/1.41666666667f) >= 0 && (Servomotor_value/1.41666666667f) < 45)
+        {
+            grade_injury.text = ("3");
+        }
+
+        if ((Servomotor_value/1.41666666667f) >= 45 && (Servomotor_value/1.41666666667f) < 90)
+        {
+            grade_injury.text = ("2");
+        }
+
+        if ((Servomotor_value/1.41666666667f) >= 90 && (Servomotor_value/1.41666666667f) < 135)
+        {
+            grade_injury.text = ("1");
+        }
+
+        if ((Servomotor_value/1.41666666667f) >= 135)
+        {
+            grade_injury.text = ("healthy");
+        }
 
     }
 
