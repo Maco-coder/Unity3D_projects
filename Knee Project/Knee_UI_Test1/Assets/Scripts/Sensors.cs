@@ -83,7 +83,7 @@ public class Sensors : MonoBehaviour
         FSRlower1.value = Lower1_value     ;
         FSRlower2.value = Lower2_value     ;
 
-        DIAL.transform.Rotate(0, 0, (Servomotor_value / 1.42), Space.Self);
+        DIAL.transform.Rotate(0, 0, (Servomotor_value / 1.42f), Space.Self);
 
     }
 
