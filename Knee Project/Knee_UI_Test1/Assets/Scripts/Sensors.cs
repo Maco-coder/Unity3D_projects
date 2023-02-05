@@ -17,7 +17,8 @@ public class Sensors : MonoBehaviour
     // Tension/Injury data //
     public int Servomotor_value;
 
-    public int DIAL_value;
+    public GameObject DIAL ;
+    public int DIAL_value  ;
 
     // Force data //
     public int Upper_value ;
@@ -33,9 +34,6 @@ public class Sensors : MonoBehaviour
 
     public Slider servomotor;
     public int max_servo    ;
-
-    public Slider DIAL;
-    public int max_DIAL;
 
     public Slider FSRupper  ;
     public int max_FSRupper ;
@@ -84,7 +82,8 @@ public class Sensors : MonoBehaviour
         FSRupper.value = Upper_value       ;
         FSRlower1.value = Lower1_value     ;
         FSRlower2.value = Lower2_value     ;
-        DIAL.value = Servomotor_value      ;
+
+        DIAL.transform.Rotate(0, 0, (Servomotor_value / 1.42), Space.Self);
 
     }
 
