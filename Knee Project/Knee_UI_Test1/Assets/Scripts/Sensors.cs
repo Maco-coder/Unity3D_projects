@@ -9,7 +9,7 @@ using System.IO.Ports            ;
 public class Sensors : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM8", 38400);
+    SerialPort stream = new SerialPort("COM5", 38400);
     public string receivedstring  ;
     public string[] data          ;
     public string[] data_received ;
@@ -83,25 +83,26 @@ public class Sensors : MonoBehaviour
         FSRlower1.value = Lower1_value     ;
         FSRlower2.value = Lower2_value     ;
 
-        DIAL.transform.localEulerAngles = new Vector3(0,0,Servomotor_value/1.41666666667f);
-        angle_servo_position.text = (Servomotor_value/1.41666666667f).ToString("0")       ;
+        DIAL.transform.localEulerAngles = new Vector3(0,0,Servomotor_value);
+        angle_servo_position.text = (Servomotor_value).ToString("0")       ;
 
-        if ((Servomotor_value/1.41666666667f) >= 0 && (Servomotor_value/1.41666666667f) < 45)
+        if ((Servomotor_value) >= 0 && (Servomotor_value) < 45)
         {
             grade_injury.text = ("3");
         }
 
-        if ((Servomotor_value/1.41666666667f) >= 45 && (Servomotor_value/1.41666666667f) < 90)
+        if ((Servomotor_value) >= 45 && (Servomotor_value) < 90)
         {
             grade_injury.text = ("2");
         }
 
-        if ((Servomotor_value/1.41666666667f) >= 90 && (Servomotor_value/1.41666666667f) < 135)
+        if ((Servomotor_value) >= 90 && (Servomotor_value) < 135)
+        //if ((Servomotor_value/1.41666666667f) >= 90 && (Servomotor_value/1.41666666667f) < 135)
         {
             grade_injury.text = ("1");
         }
 
-        if ((Servomotor_value/1.41666666667f) >= 135)
+        if ((Servomotor_value) >= 135)
         {
             grade_injury.text = ("healthy");
         }

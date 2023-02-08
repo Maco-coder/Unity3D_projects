@@ -420,7 +420,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1560482033}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1023
+  m_MaxValue: 255
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1191450368}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1023
+  m_MaxValue: 255
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -2568,13 +2568,13 @@ MonoBehaviour:
   angle_servo_position: {fileID: 2052222656}
   grade_injury: {fileID: 360819831}
   servomotor: {fileID: 2134643653}
-  max_servo: 255
+  max_servo: 180
   FSRupper: {fileID: 1282063263}
   max_FSRupper: 1023
   FSRlower1: {fileID: 161436281}
-  max_FSRlower1: 1023
+  max_FSRlower1: 255
   FSRlower2: {fileID: 71860614}
-  max_FSRlower2: 1023
+  max_FSRlower2: 255
 --- !u!1 &1482145774
 GameObject:
   m_ObjectHideFlags: 0
