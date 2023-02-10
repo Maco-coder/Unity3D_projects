@@ -78,33 +78,33 @@ public class Sensors : MonoBehaviour
         //force_Lower1.text = Lower1_value.ToString("0")            ;
         //force_Lower2.text = Lower2_value.ToString("0")            ;
 
-        servomotor.value = Servomotor_value;
-        FSRupper.value = Upper_value       ;
-        FSRlower1.value = Lower1_value     ;
-        FSRlower2.value = Lower2_value     ;
+        servomotor.value = 270-Servomotor_value;
+        FSRupper.value = Upper_value           ;
+        FSRlower1.value = Lower1_value         ;
+        FSRlower2.value = Lower2_value         ;
 
-        DIAL.transform.localEulerAngles = new Vector3(0,0,Servomotor_value);
-        angle_servo_position.text = (Servomotor_value).ToString("0")       ;
+        DIAL.transform.localEulerAngles = new Vector3(0,0,Servomotor_value-90);
+        angle_servo_position.text = (Servomotor_value-90).ToString("0")       ;
 
-        if ((Servomotor_value) >= 0 && (Servomotor_value) < 45)
+        if ((Servomotor_value) >= 90 && (Servomotor_value) < 110)
         {
-            grade_injury.text = ("3");
+            grade_injury.text = ("healthy");
         }
 
-        if ((Servomotor_value) >= 45 && (Servomotor_value) < 90)
-        {
-            grade_injury.text = ("2");
-        }
-
-        if ((Servomotor_value) >= 90 && (Servomotor_value) < 135)
-        //if ((Servomotor_value/1.41666666667f) >= 90 && (Servomotor_value/1.41666666667f) < 135)
+        if ((Servomotor_value) >= 110 && (Servomotor_value) < 130)
         {
             grade_injury.text = ("1");
         }
 
-        if ((Servomotor_value) >= 135)
+       if ((Servomotor_value) >= 130 && (Servomotor_value) < 150)
+        //if ((Servomotor_value/1.41666666667f) >= 90 && (Servomotor_value/1.41666666667f) < 135)
         {
-            grade_injury.text = ("healthy");
+            grade_injury.text = ("2");
+        }
+
+        if ((Servomotor_value) >= 150)
+        {
+            grade_injury.text = ("3");
         }
 
     }
