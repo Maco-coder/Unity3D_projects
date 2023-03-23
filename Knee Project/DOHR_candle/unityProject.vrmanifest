@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.dohr_candle.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\genha\\OneDrive\\Desktop\\Marco\\Unity3D_projects\\Knee Project\\DOHR_candle\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "DOHR_candle [Testing]"
+        }
+      }
+    }
+  ]
+}
