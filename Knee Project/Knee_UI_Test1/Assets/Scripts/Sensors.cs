@@ -9,7 +9,7 @@ using System.IO.Ports            ;
 public class Sensors : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM5", 38400);
+    SerialPort stream = new SerialPort("COM8", 38400);
     public string receivedstring  ;
     public string[] data          ;
     public string[] data_received ;
