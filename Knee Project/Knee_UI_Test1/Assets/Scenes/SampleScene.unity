@@ -2570,11 +2570,11 @@ MonoBehaviour:
   servomotor: {fileID: 2134643653}
   max_servo: 180
   FSRupper: {fileID: 1282063263}
-  max_FSRupper: 1023
+  max_FSRupper: 1000
   FSRlower1: {fileID: 161436281}
-  max_FSRlower1: 255
+  max_FSRlower1: 1000
   FSRlower2: {fileID: 71860614}
-  max_FSRlower2: 255
+  max_FSRlower2: 1000
 --- !u!1 &1482145774
 GameObject:
   m_ObjectHideFlags: 0
