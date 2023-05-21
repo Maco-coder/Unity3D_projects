@@ -9,13 +9,13 @@ using System.IO.Ports            ;
 public class Sensors : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM4", 38400);
+    SerialPort stream = new SerialPort("COM8", 38400);
     public string receivedstring  ;
     public string[] data          ;
     public string[] data_received ;
 
     // Tension/Injury data //
-    public int Servomotor_value;
+    public int tension_gauge;
 
     public GameObject DIAL ;
     public int DIAL_value  ;
@@ -32,8 +32,8 @@ public class Sensors : MonoBehaviour
     //public Text force_Lower1      ;
     //public Text force_Lower2      ;
 
-    public Slider servomotor;
-    public int max_servo    ;
+    public Slider Tension;
+    public int max_tension    ;
 
     public Slider FSRupper  ;
     public int max_FSRupper ;
@@ -62,7 +62,7 @@ public class Sensors : MonoBehaviour
         //if (data[0] != "" && data[1] != "" && data[2] != "" && data[3] != "" && data[4] != "" && data[5] != "")
         //{
         data_received[0] = data[0];
-        int.TryParse(data[0], out Servomotor_value);
+        int.TryParse(data[0], out tension_gauge);
 
         data_received[1] = data[1];
         int.TryParse(data[1], out Upper_value);
@@ -78,31 +78,31 @@ public class Sensors : MonoBehaviour
         //force_Lower1.text = Lower1_value.ToString("0")            ;
         //force_Lower2.text = Lower2_value.ToString("0")            ;
 
-        servomotor.value = 160-Servomotor_value;
-        FSRupper.value = Upper_value           ;
-        FSRlower1.value = Lower1_value         ;
-        FSRlower2.value = Lower2_value         ;
+        Tension.value = tension_gauge   ;
+        FSRupper.value = Upper_value    ;
+        FSRlower1.value = Lower1_value  ;
+        FSRlower2.value = Lower2_value  ;
 
-        DIAL.transform.localEulerAngles = new Vector3(0,0,Servomotor_value-70);
-        angle_servo_position.text = (Servomotor_value-70).ToString("0")       ;
+        //DIAL.transform.localEulerAngles = new Vector3(0,0,Servomotor_value-70);
+        //angle_servo_position.text = (Servomotor_value-70).ToString("0")       ;
 
-        if ((Servomotor_value) >= 70 && (Servomotor_value) <90)
+        if ((tension_gauge) >= 70 && (tension_gauge) <90)
         {
             grade_injury.text = ("healthy");
         }
 
-        if ((Servomotor_value) >= 90 && (Servomotor_value) < 120)
+        if ((tension_gauge) >= 90 && (tension_gauge) < 120)
         {
             grade_injury.text = ("1");
         }
 
-       if ((Servomotor_value) >= 120 && (Servomotor_value) < 150)
+       if ((tension_gauge) >= 120 && (tension_gauge) < 150)
         //if ((Servomotor_value/1.41666666667f) >= 90 && (Servomotor_value/1.41666666667f) < 135)
         {
             grade_injury.text = ("2");
         }
 
-        if ((Servomotor_value) >= 150)
+        if ((tension_gauge) >= 150)
         {
             grade_injury.text = ("3");
         }
