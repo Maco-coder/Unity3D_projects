@@ -9,7 +9,8 @@ using System.IO.Ports            ;
 public class Sensors : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM4", 38400);
+    SerialPort stream = new SerialPort("COM4", 38400) ;
+    string filePath = "Assets/SavedData/savedData.txt";
     public string receivedstring  ;
     public string[] data          ;
     public string[] data_received ;
@@ -106,10 +107,13 @@ public class Sensors : MonoBehaviour
         {
             grade_injury.text = ("3");
         }
+
+
+        System.IO.File.AppendAllText(filePath, receivedstring + "\n");
+
     }
 
-    void p_DataReceived(){
 
-    }
+
 
 }

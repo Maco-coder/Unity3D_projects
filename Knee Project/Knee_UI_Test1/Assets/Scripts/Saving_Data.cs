@@ -1,35 +1,26 @@
-using System.Collections         ;
-using System.Collections.Generic ;
-using UnityEngine                ;
-using System.IO.Ports            ;
+using UnityEngine;
+using System.IO  ;
 
 
 public class Saving_Data : MonoBehaviour
 {
 
-    SerialPort serialPort        ;
-    string filePath = "data.txt" ;
+    string filePath = "Assets/SavedData/savedData.txt" ;
 
-    void Start()
+    public void SaveDataToFile(string data)
     {
-        serialPort = new SerialPort("COM4", 34800);
-        serialPort.Open()                         ;
+        
+        using (StreamWriter writer = File.AppendText(filePath))
+        {
+            writer.WriteLine(data);
+        }
+        Debug.Log("Data saved to file: " + filePath);
+
     }
 
-    void Update()
-    {
-        if (serialPort.IsOpen && serialPort.BytesToRead > 0)
-        {
-            string receivedData = serialPort.ReadLine() ;
-            System.IO.File.AppendAllText(filePath, receivedData + "\n");
-        }
-    }
 
-    void OnDestroy()
+    public void ReceiveSerialData(string receiveData)
     {
-        if (serialPort != null && serialPort.IsOpen)
-        {
-            serialPort.Close();
-        }
+        SaveDataToFile(receiveData);
     }
 }
