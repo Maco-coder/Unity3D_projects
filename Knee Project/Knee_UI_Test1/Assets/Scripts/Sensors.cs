@@ -106,6 +106,9 @@ public class Sensors : MonoBehaviour
         {
             grade_injury.text = ("3");
         }
+    }
+
+    void p_DataReceived(){
 
     }
 
