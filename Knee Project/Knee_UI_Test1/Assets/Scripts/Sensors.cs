@@ -10,7 +10,12 @@ public class Sensors : MonoBehaviour
 {
 
     SerialPort stream = new SerialPort("COM4", 38400) ;
+    
     string filePath = "Assets/SavedData/savedData.txt";
+    //string filePath = "Assets/SavedData/Robert.txt";
+    //string filePath = "Assets/SavedData/Oliver.txt";
+    //string filePath = "Assets/SavedData/Mark.txt";
+
     public string receivedstring  ;
     public string[] data          ;
     public string[] data_received ;
@@ -84,8 +89,6 @@ public class Sensors : MonoBehaviour
         FSRlower1.value = Lower1_value  ;
         FSRlower2.value = Lower2_value  ;
 
-        //DIAL.transform.localEulerAngles = new Vector3(0,0,Servomotor_value-70);
-        //angle_servo_position.text = (Servomotor_value-70).ToString("0")       ;
 
         if ((tension_gauge) >= 70 && (tension_gauge) <90)
         {
@@ -98,11 +101,10 @@ public class Sensors : MonoBehaviour
         }
 
        if ((tension_gauge) >= 120 && (tension_gauge) < 150)
-        //if ((Servomotor_value/1.41666666667f) >= 90 && (Servomotor_value/1.41666666667f) < 135)
         {
             grade_injury.text = ("2");
         }
-
+        
         if ((tension_gauge) >= 150)
         {
             grade_injury.text = ("3");
