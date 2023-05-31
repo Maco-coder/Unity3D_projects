@@ -12,7 +12,7 @@ public class Sensors : MonoBehaviour
     SerialPort stream = new SerialPort("COM4", 38400) ;
     
     string filePath = "Assets/SavedData/savedData.txt";
-    //string filePath = "Assets/SavedData/Robert.txt";
+    string filePath_tension = "Assets/SavedData/Robert.txt";
     //string filePath = "Assets/SavedData/Oliver.txt";
     //string filePath = "Assets/SavedData/Mark.txt";
 
@@ -113,9 +113,13 @@ public class Sensors : MonoBehaviour
 
         System.IO.File.AppendAllText(filePath, receivedstring + "\n");
 
+
+        if (Input.GetKeyDown("space"))
+        {
+            print("space key has been pressed")                    ;
+            System.IO.File.AppendAllText(filePath_tension, data[0] + "\n") ;
+        }
+
     }
-
-
-
 
 }
