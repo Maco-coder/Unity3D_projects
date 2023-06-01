@@ -120,6 +120,13 @@ public class Sensors : MonoBehaviour
             System.IO.File.AppendAllText(filePath_tension, data[0] + "\n") ;
         }
 
+
+        if (Input.GetKeyDown("s"))
+        {
+            print("s key has been pressed - tension reading frozen");
+        }
+
+
     }
 
 }
