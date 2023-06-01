@@ -38,8 +38,8 @@ public class Sensors : MonoBehaviour
     //public Text force_Lower1      ;
     //public Text force_Lower2      ;
 
-    public Slider Tension;
-    public int max_tension    ;
+    public Slider Tension  ;
+    public int max_tension ;
 
     public Slider FSRupper  ;
     public int max_FSRupper ;
@@ -49,6 +49,8 @@ public class Sensors : MonoBehaviour
 
     public Slider FSRlower2  ;
     public int max_FSRlower2 ;
+
+    bool read_tension = true ;
 
 
 
@@ -67,8 +69,9 @@ public class Sensors : MonoBehaviour
 
         //if (data[0] != "" && data[1] != "" && data[2] != "" && data[3] != "" && data[4] != "" && data[5] != "")
         //{
-        data_received[0] = data[0];
-        int.TryParse(data[0], out tension_gauge);
+
+        //data_received[0] = data[0];
+        //int.TryParse(data[0], out tension_gauge);
 
         data_received[1] = data[1];
         int.TryParse(data[1], out Upper_value);
@@ -84,10 +87,31 @@ public class Sensors : MonoBehaviour
         //force_Lower1.text = Lower1_value.ToString("0")            ;
         //force_Lower2.text = Lower2_value.ToString("0")            ;
 
-        Tension.value = tension_gauge   ;
-        FSRupper.value = Upper_value    ;
-        FSRlower1.value = Lower1_value  ;
-        FSRlower2.value = Lower2_value  ;
+        //Tension.value = tension_gauge ;
+        FSRupper.value = Upper_value   ;
+        FSRlower1.value = Lower1_value ;
+        FSRlower2.value = Lower2_value ;
+
+
+        if (Input.GetKeyDown("s"))
+        {   
+            read_tension = !read_tension             ;
+            print("Tension reading " + read_tension) ;
+        }
+
+        if (read_tension == true)
+        {
+            data_received[0] = data[0] ;
+            int.TryParse(data[0], out tension_gauge);
+            Tension.value = tension_gauge ;
+        }
+
+        if (read_tension == false)
+        {
+            data[0] = "0";
+            Tension.value = tension_gauge ;
+        }
+
 
 
         if ((tension_gauge) >= 70 && (tension_gauge) <90)
@@ -119,13 +143,6 @@ public class Sensors : MonoBehaviour
             print("space key has been pressed")                    ;
             System.IO.File.AppendAllText(filePath_tension, data[0] + "\n") ;
         }
-
-
-        if (Input.GetKeyDown("s"))
-        {
-            print("s key has been pressed - tension reading frozen");
-        }
-
 
     }
 
