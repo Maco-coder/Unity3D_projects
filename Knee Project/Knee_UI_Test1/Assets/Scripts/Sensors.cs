@@ -52,6 +52,8 @@ public class Sensors : MonoBehaviour
 
     bool read_tension = true ;
 
+    public GameObject ON_indicator  ;
+    public GameObject OFF_indicator ;
 
 
     void Start()
@@ -101,17 +103,20 @@ public class Sensors : MonoBehaviour
 
         if (read_tension == true)
         {
-            data_received[0] = data[0] ;
-            int.TryParse(data[0], out tension_gauge);
-            Tension.value = tension_gauge ;
+            data_received[0] = data[0]               ;
+            int.TryParse(data[0], out tension_gauge) ;
+            Tension.value = tension_gauge            ;
+            ON_indicator.SetActive(true)             ;
+            OFF_indicator.SetActive(false)           ;
         }
 
         if (read_tension == false)
         {
-            data[0] = "0";
+            data[0] = "0"                 ;
             Tension.value = tension_gauge ;
+            ON_indicator.SetActive(false) ;
+            OFF_indicator.SetActive(true) ;
         }
-
 
 
         if ((tension_gauge) >= 70 && (tension_gauge) <90)
