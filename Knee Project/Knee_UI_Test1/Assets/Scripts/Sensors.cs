@@ -12,7 +12,8 @@ public class Sensors : MonoBehaviour
     SerialPort stream = new SerialPort("COM4", 38400) ;
     
     string filePath = "Assets/SavedData/savedData.txt";
-    string filePath_tension = "Assets/SavedData/Robert.txt";
+    string filePath_grades = "Assets/SavedData/Grades.txt";
+    string filePath_staircase = "Assets/SavedData/Staircase.txt";
     //string filePath = "Assets/SavedData/Oliver.txt";
     //string filePath = "Assets/SavedData/Mark.txt";
 
@@ -145,8 +146,32 @@ public class Sensors : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
-            print("space key has been pressed")                    ;
-            System.IO.File.AppendAllText(filePath_tension, data[0] + "\n") ;
+            print("space key has been pressed")                              ;
+            System.IO.File.AppendAllText(filePath_staircase, data[0] + "\n") ;
+        }
+
+        if (Input.GetKeyDown("1"))
+        {
+            print("A grade 1 has been sensed")                      ;
+            System.IO.File.AppendAllText(filePath_grades, 1 + "\n") ;
+        }
+
+        if (Input.GetKeyDown("2"))
+        {
+            print("A grade 2 has been sensed")                      ;
+            System.IO.File.AppendAllText(filePath_grades, 2 + "\n") ;
+        }
+
+        if (Input.GetKeyDown("3"))
+        {
+            print("A grade 3 has been sensed")                      ;
+            System.IO.File.AppendAllText(filePath_grades, 3 + "\n") ;
+        }
+
+        if (Input.GetKeyDown("h"))
+        {
+            print("A healthy knee has been sensed")                 ;
+            System.IO.File.AppendAllText(filePath_grades, 0 + "\n") ;
         }
 
     }

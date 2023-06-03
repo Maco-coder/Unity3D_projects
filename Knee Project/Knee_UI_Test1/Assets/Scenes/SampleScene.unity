@@ -3345,7 +3345,7 @@ MonoBehaviour:
   angle_servo_position: {fileID: 2052222656}
   grade_injury: {fileID: 360819831}
   Tension: {fileID: 2134643653}
-  max_tension: 75
+  max_tension: 1000
   FSRupper: {fileID: 1282063263}
   max_FSRupper: 1000
   FSRlower1: {fileID: 161436281}
@@ -4370,7 +4370,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1017379014}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 80
+  m_MaxValue: 1000
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
