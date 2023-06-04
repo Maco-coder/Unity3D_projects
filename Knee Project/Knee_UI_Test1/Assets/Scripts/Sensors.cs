@@ -33,11 +33,11 @@ public class Sensors : MonoBehaviour
     public int Lower2_value;
 
     // Displaying data //
-    public Text angle_servo_position;
-    public Text grade_injury        ;
-    //public Text force_Upper       ;
-    //public Text force_Lower1      ;
-    //public Text force_Lower2      ;
+    public Text tension_sensor ;
+    public Text grade_injury   ;
+    //public Text force_Upper  ;
+    //public Text force_Lower1 ;
+    //public Text force_Lower2 ;
 
     public Slider Tension  ;
     public int max_tension ;
@@ -85,10 +85,10 @@ public class Sensors : MonoBehaviour
         data_received[3] = data[3];
         int.TryParse(data[3], out Lower2_value);
 
-        //angle_servo_position.text = Servomotor_value.ToString("0");
-        //force_Upper.text = Upper_value.ToString("0")              ;
-        //force_Lower1.text = Lower1_value.ToString("0")            ;
-        //force_Lower2.text = Lower2_value.ToString("0")            ;
+        tension_sensor.text = tension_gauge.ToString("0");
+        //force_Upper.text = Upper_value.ToString("0")   ;
+        //force_Lower1.text = Lower1_value.ToString("0") ;
+        //force_Lower2.text = Lower2_value.ToString("0") ;
 
         //Tension.value = tension_gauge ;
         FSRupper.value = Upper_value   ;
@@ -120,25 +120,25 @@ public class Sensors : MonoBehaviour
         }
 
 
-        if ((tension_gauge) >= 70 && (tension_gauge) <90)
-        {
-            grade_injury.text = ("healthy");
-        }
+//        if ((tension_gauge) >= 70 && (tension_gauge) <90)
+//        {
+//            grade_injury.text = ("healthy");
+//        }
 
-        if ((tension_gauge) >= 90 && (tension_gauge) < 120)
-        {
-            grade_injury.text = ("1");
-        }
+//        if ((tension_gauge) >= 90 && (tension_gauge) < 120)
+//        {
+//            grade_injury.text = ("1");
+//        }
 
-       if ((tension_gauge) >= 120 && (tension_gauge) < 150)
-        {
-            grade_injury.text = ("2");
-        }
+//       if ((tension_gauge) >= 120 && (tension_gauge) < 150)
+//        {
+//            grade_injury.text = ("2");
+//        }
         
-        if ((tension_gauge) >= 150)
-        {
-            grade_injury.text = ("3");
-        }
+//        if ((tension_gauge) >= 150)
+//        {
+//            grade_injury.text = ("3");
+//        }
 
 
         System.IO.File.AppendAllText(filePath, receivedstring + "\n");
