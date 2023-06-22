@@ -6,13 +6,13 @@
 		"geometry": null
 	},
 	{
-		"type": "spring",
-		"magnitude": "40",
+		"type": "spring"   ,
+		"magnitude": "weak",
 		"geometry": null
 	},
 	{
-		"type": "shape",
-		"magnitude": null,
+		"type": "shape"    ,
+		"magnitude": null  ,
 		"geometry": "round"
 	},
 	]
