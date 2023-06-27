@@ -22,6 +22,7 @@ public class Read_JSON_Data : MonoBehaviour
         Debug.Log("position: "+loadedPlayerData.position);
         Debug.Log("scale: "+loadedPlayerData.scale)      ;
         Debug.Log("speed: "+loadedPlayerData.speed)      ;
+        Debug.Log("multiple speed: "+loadedPlayerData.speedY);
         Debug.Log("gravity: "+loadedPlayerData.gravity)  ;
 
         m_position = new Vector3(loadedPlayerData.position.x, loadedPlayerData.position.y, loadedPlayerData.position.z);
@@ -55,6 +56,7 @@ public class Read_JSON_Data : MonoBehaviour
         public Vector3 position;
         public Vector3 scale   ;
         public Vector3 speed   ;
+        public string speedY   ;
         public string gravity  ;
     }
 }
