@@ -10,6 +10,7 @@ public class Read_JSON_Data : MonoBehaviour
     Vector3 m_position;
     Vector3 m_scale   ;
     Vector3 m_speed   ;
+    float speedY      ;
     string m_gravity  ;
 
 
@@ -56,7 +57,7 @@ public class Read_JSON_Data : MonoBehaviour
         public Vector3 position;
         public Vector3 scale   ;
         public Vector3 speed   ;
-        public string speedY   ;
+        public float speedY    ;
         public string gravity  ;
     }
 }
