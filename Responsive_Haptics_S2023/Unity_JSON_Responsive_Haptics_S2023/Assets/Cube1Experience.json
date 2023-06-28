@@ -22,10 +22,16 @@
 	
 	"gravity": "no",
 
-	"tests":{
-		"uno" : "one",
-		"dos" : "two",
-		"tres": "three"
-	}
+	"tests":[
+		{
+			"name": "marco",
+			"program": "SYDE"
+		},
+
+		{
+			"name": "sophia",
+			"program": "BME"
+		}
+	]
 
 }

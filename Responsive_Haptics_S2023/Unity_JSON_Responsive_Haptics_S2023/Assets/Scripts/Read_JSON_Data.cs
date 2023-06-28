@@ -25,7 +25,7 @@ public class Read_JSON_Data : MonoBehaviour
         Debug.Log("speed: "+loadedPlayerData.speed)      ;
         Debug.Log("gravity: "+loadedPlayerData.gravity)  ;
 
-        Debug.Log("tests: "+loadedPlayerData.tests[2])   ;
+        Debug.Log("tests: "+loadedPlayerData.tests[1]) ;
 
         m_position = new Vector3(loadedPlayerData.position.x, loadedPlayerData.position.y, loadedPlayerData.position.z);
         m_scale = new Vector3(loadedPlayerData.scale.x, loadedPlayerData.scale.y, loadedPlayerData.scale.z)            ;
