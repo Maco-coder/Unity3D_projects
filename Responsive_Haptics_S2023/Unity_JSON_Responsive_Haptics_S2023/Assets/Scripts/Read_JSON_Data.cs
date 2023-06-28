@@ -2,6 +2,8 @@ using System.Collections        ;
 using System.Collections.Generic;
 using UnityEngine               ;
 using System.IO                 ;
+using LitJson                   ;
+
 
 public class Read_JSON_Data : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class Read_JSON_Data : MonoBehaviour
     Vector3 m_scale   ;
     Vector3 m_speed   ;
     string m_gravity  ;
+    string[] m_tests  ;
+    string m_program  ;
+    string m_name     ;
 
 
     void Start()
@@ -24,12 +29,12 @@ public class Read_JSON_Data : MonoBehaviour
         Debug.Log("speed: "+loadedPlayerData.speed)      ;
         Debug.Log("gravity: "+loadedPlayerData.gravity)  ;
 
-        //Debug.Log("tests: "+loadedPlayerData.tests[1]) ;
+        Debug.Log("tests: "+loadedPlayerData.tests[0]) ;
 
         m_position = new Vector3(loadedPlayerData.position.x, loadedPlayerData.position.y, loadedPlayerData.position.z);
         m_scale = new Vector3(loadedPlayerData.scale.x, loadedPlayerData.scale.y, loadedPlayerData.scale.z)            ;
         m_speed = new Vector3(loadedPlayerData.speed.x, loadedPlayerData.speed.y, loadedPlayerData.speed.z)            ;
-        m_gravity = loadedPlayerData.gravity;
+        m_gravity = loadedPlayerData.gravity  ;
 
         Cube1.transform.position = new Vector3(m_position.x, m_position.y, m_position.z) ;
         Cube1.transform.localScale = new Vector3(m_scale.x, m_scale.y, m_scale.z)        ;
@@ -58,6 +63,9 @@ public class Read_JSON_Data : MonoBehaviour
         public Vector3 scale   ;
         public Vector3 speed   ;
         public string gravity  ;
+        public string[] tests  ;
+        public string name     ;
+        public string program  ;
     }
 
 }
