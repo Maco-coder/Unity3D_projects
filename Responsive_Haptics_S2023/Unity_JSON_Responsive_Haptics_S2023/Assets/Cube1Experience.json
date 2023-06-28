@@ -16,14 +16,16 @@
 	"speed":
 	{
 		"x": 0.0,
-		"y": {
-            "speed1": 1.0,
-			"speed2": 0.5,
-			"speed3": 0.1
-        },
+		"y": 0.0,
 		"z": 0.0
 	},
 	
-	"gravity": "no"
+	"gravity": "no",
+
+	"tests":{
+		"uno" : "one",
+		"dos" : "two",
+		"tres": "three"
+	}
 
 }
