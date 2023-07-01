@@ -1,1 +1,6 @@
 SCENES DESCRIPTION
+
+"Devices_Main Menu" - Users pick the device available using the computer"
+
+"Experiences_Main Menu" - Users pick the experience using the computer"
+
