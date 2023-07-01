@@ -13,10 +13,10 @@ APPLE SCRIPTS
 
 "ButtonHandler1" - If users select "VIVE controller" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "VR Controller-scene".
 
-"ButtonHandler2" - If users select "3D Touch System" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "3D touch-scene" (found in Assets-Asset_store-OpenHaptics-3D touch-scene).
+"ButtonHandler2" - If users select "3D Touch System" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "3D touch-scene" (found in Assets-Asset_store-OpenHaptics-HapticDemos-3D touch-scene).
 
 "ButtonHandler3" - If users select "Household Props" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "Household props-scene" (currently not working).
 
-"Destroyer"
+"Destroyer" (attached to sphere at end of grabber in the 3D touch-scene) - If sphere collides with apple, 1) a translucent volume enclosing the apple is set to active and 2) a joint is created between the sphere and the apple. While the sphere/grabber is inside the translucent volume, users will feel a spring-like effect. I'M NOT SURE WHY I CALLED THIS "DESTROYER".
 
-"Haptics_V1"
+"Haptics_V1" (attached to empty object called "Haptics" in the VR Controller-scene" -  
