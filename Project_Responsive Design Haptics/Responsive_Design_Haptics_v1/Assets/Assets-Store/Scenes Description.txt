@@ -1,1 +1,16 @@
+
 SCENES DESCRIPTION
+
+"Devices_Main Menu" - Users pick the device available using the computer"
+
+"Experiences_Main Menu" - Users pick the experience using the computer"
+
+
+
+SCRIPTS DESCRIPTION
+
+"ButtonHandler1" - If users select "VIVE controller" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "VR Controller-scene".
+
+"ButtonHandler2" - If users select "3D Touch System" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "VR Controller-scene".
+
+"ButtonHandler3" - 
