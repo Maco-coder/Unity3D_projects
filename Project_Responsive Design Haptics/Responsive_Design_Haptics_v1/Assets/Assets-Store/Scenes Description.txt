@@ -11,6 +11,6 @@ SCRIPTS DESCRIPTION
 
 "ButtonHandler1" - If users select "VIVE controller" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "VR Controller-scene".
 
-"ButtonHandler2" - If users select "3D Touch System" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "VR Controller-scene".
+"ButtonHandler2" - If users select "3D Touch System" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "3D touch-scene" (found in Assets-Asset_store-OpenHaptics-3D touch-scene).
 
-"ButtonHandler3" - 
+"ButtonHandler3" - If users select "Household Props" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "Household props-scene" (currently not working).
