@@ -9,13 +9,20 @@ using System.IO.Ports            ;
 public class Sensors : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM5", 38400);
+    SerialPort stream = new SerialPort("COM4", 38400) ;
+    
+    string filePath = "Assets/SavedData/savedData.txt";
+    string filePath_grades = "Assets/SavedData/Grades.txt";
+    string filePath_staircase = "Assets/SavedData/Staircase.txt";
+    //string filePath = "Assets/SavedData/Oliver.txt";
+    //string filePath = "Assets/SavedData/Mark.txt";
+
     public string receivedstring  ;
     public string[] data          ;
     public string[] data_received ;
 
     // Tension/Injury data //
-    public int Servomotor_value;
+    public int tension_gauge;
 
     public GameObject DIAL ;
     public int DIAL_value  ;
@@ -26,14 +33,14 @@ public class Sensors : MonoBehaviour
     public int Lower2_value;
 
     // Displaying data //
-    public Text angle_servo_position;
-    public Text grade_injury        ;
-    //public Text force_Upper       ;
-    //public Text force_Lower1      ;
-    //public Text force_Lower2      ;
+    public Text tension_sensor ;
+    public Text grade_injury   ;
+    //public Text force_Upper  ;
+    //public Text force_Lower1 ;
+    //public Text force_Lower2 ;
 
-    public Slider servomotor;
-    public int max_servo    ;
+    public Slider Tension  ;
+    public int max_tension ;
 
     public Slider FSRupper  ;
     public int max_FSRupper ;
@@ -44,6 +51,10 @@ public class Sensors : MonoBehaviour
     public Slider FSRlower2  ;
     public int max_FSRlower2 ;
 
+    bool read_tension = true ;
+
+    public GameObject ON_indicator  ;
+    public GameObject OFF_indicator ;
 
 
     void Start()
@@ -61,8 +72,9 @@ public class Sensors : MonoBehaviour
 
         //if (data[0] != "" && data[1] != "" && data[2] != "" && data[3] != "" && data[4] != "" && data[5] != "")
         //{
-        data_received[0] = data[0];
-        int.TryParse(data[0], out Servomotor_value);
+
+        //data_received[0] = data[0];
+        //int.TryParse(data[0], out tension_gauge);
 
         data_received[1] = data[1];
         int.TryParse(data[1], out Upper_value);
@@ -73,38 +85,93 @@ public class Sensors : MonoBehaviour
         data_received[3] = data[3];
         int.TryParse(data[3], out Lower2_value);
 
-        //angle_servo_position.text = Servomotor_value.ToString("0");
-        //force_Upper.text = Upper_value.ToString("0")              ;
-        //force_Lower1.text = Lower1_value.ToString("0")            ;
-        //force_Lower2.text = Lower2_value.ToString("0")            ;
+        tension_sensor.text = tension_gauge.ToString("0");
+        //force_Upper.text = Upper_value.ToString("0")   ;
+        //force_Lower1.text = Lower1_value.ToString("0") ;
+        //force_Lower2.text = Lower2_value.ToString("0") ;
 
-        servomotor.value = 160-Servomotor_value;
-        FSRupper.value = Upper_value           ;
-        FSRlower1.value = Lower1_value         ;
-        FSRlower2.value = Lower2_value         ;
+        //Tension.value = tension_gauge ;
+        FSRupper.value = Upper_value   ;
+        FSRlower1.value = Lower1_value ;
+        FSRlower2.value = Lower2_value ;
 
-        DIAL.transform.localEulerAngles = new Vector3(0,0,Servomotor_value-70);
-        angle_servo_position.text = (Servomotor_value-70).ToString("0")       ;
 
-        if ((Servomotor_value) >= 70 && (Servomotor_value) <90)
-        {
-            grade_injury.text = ("healthy");
+        if (Input.GetKeyDown("s"))
+        {   
+            read_tension = !read_tension             ;
+            print("Tension reading " + read_tension) ;
         }
 
-        if ((Servomotor_value) >= 90 && (Servomotor_value) < 120)
+        if (read_tension == true)
         {
-            grade_injury.text = ("1");
+            data_received[0] = data[0]               ;
+            int.TryParse(data[0], out tension_gauge) ;
+            Tension.value = tension_gauge            ;
+            ON_indicator.SetActive(true)             ;
+            OFF_indicator.SetActive(false)           ;
         }
 
-       if ((Servomotor_value) >= 120 && (Servomotor_value) < 150)
-        //if ((Servomotor_value/1.41666666667f) >= 90 && (Servomotor_value/1.41666666667f) < 135)
+        if (read_tension == false)
         {
-            grade_injury.text = ("2");
+            data[0] = "0"                 ;
+            Tension.value = tension_gauge ;
+            ON_indicator.SetActive(false) ;
+            OFF_indicator.SetActive(true) ;
         }
 
-        if ((Servomotor_value) >= 150)
+
+//        if ((tension_gauge) >= 70 && (tension_gauge) <90)
+//        {
+//            grade_injury.text = ("healthy");
+//        }
+
+//        if ((tension_gauge) >= 90 && (tension_gauge) < 120)
+//        {
+//            grade_injury.text = ("1");
+//        }
+
+//       if ((tension_gauge) >= 120 && (tension_gauge) < 150)
+//        {
+//            grade_injury.text = ("2");
+//        }
+        
+//        if ((tension_gauge) >= 150)
+//        {
+//            grade_injury.text = ("3");
+//        }
+
+
+        System.IO.File.AppendAllText(filePath, receivedstring + "\n");
+
+
+        if (Input.GetKeyDown("space"))
         {
-            grade_injury.text = ("3");
+            print("space key has been pressed")                              ;
+            System.IO.File.AppendAllText(filePath_staircase, data[0] + "\n") ;
+        }
+
+        if (Input.GetKeyDown("1"))
+        {
+            print("A grade 1 has been sensed")                      ;
+            System.IO.File.AppendAllText(filePath_grades, 1 + "\n") ;
+        }
+
+        if (Input.GetKeyDown("2"))
+        {
+            print("A grade 2 has been sensed")                      ;
+            System.IO.File.AppendAllText(filePath_grades, 2 + "\n") ;
+        }
+
+        if (Input.GetKeyDown("3"))
+        {
+            print("A grade 3 has been sensed")                      ;
+            System.IO.File.AppendAllText(filePath_grades, 3 + "\n") ;
+        }
+
+        if (Input.GetKeyDown("h"))
+        {
+            print("A healthy knee has been sensed")                 ;
+            System.IO.File.AppendAllText(filePath_grades, 0 + "\n") ;
         }
 
     }
