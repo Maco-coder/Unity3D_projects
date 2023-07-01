@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.responsive_design_haptics_v1.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\hapti\\Desktop\\Unity3D_projects\\Project_Responsive Design Haptics\\Responsive_Design_Haptics_v1\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\genha\\OneDrive\\Desktop\\Marco\\Unity3D_projects\\Project_Responsive Design Haptics\\Responsive_Design_Haptics_v1\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Responsive_Design_Haptics_v1 [Testing]"
