@@ -267,13 +267,13 @@ public class HapticEffectEditor : Editor
 				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
 				break;
 			case HapticEffect.EFFECT_TYPE.SPRING:
-				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
+				//HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
 				
-				//HE.Gain = StoreVariables.Touch_SPRING_spring_gain;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+				HE.Gain = StoreVariables.Touch_SPRING_spring_gain;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 				
-				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				//HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
 
-				//HE.Magnitude = StoreVariables.Touch_SPRING_spring_magnitude;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+				HE.Magnitude = StoreVariables.Touch_SPRING_spring_magnitude;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 
 				HE.Position = EditorGUILayout.Vector3Field("Position", HE.Position);
 				break;
