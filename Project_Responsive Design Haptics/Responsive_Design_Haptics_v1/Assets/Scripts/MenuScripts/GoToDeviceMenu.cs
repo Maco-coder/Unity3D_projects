@@ -8,13 +8,13 @@ public class GoToDeviceMenu : MonoBehaviour
 {
 	public void GoToDevices()
 	{
-		SceneManager.LoadScene("MainMenu_Devices");
+		SceneManager.LoadScene("Devices_MainMenu");
 	}
 
 	void Update()
 	{
 		if (Input.GetKeyDown("space")){
-			SceneManager.LoadScene("MainMenu_Devices");
+			SceneManager.LoadScene("Devices_MainMenu");
 		}
 	}
 }

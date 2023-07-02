@@ -8,7 +8,7 @@ public class GoToExperiences : MonoBehaviour
 {
 	public void GoToMenuExperiences()
 	{
-		SceneManager.LoadScene("MainMenu_Experiences");
+		SceneManager.LoadScene("Experiences_MainMenu");
 	}
 
 	//void Update()
