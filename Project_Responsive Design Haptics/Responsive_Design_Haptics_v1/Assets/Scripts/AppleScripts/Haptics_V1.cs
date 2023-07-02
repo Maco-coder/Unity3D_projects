@@ -18,7 +18,7 @@ public class Haptics_V1 : MonoBehaviour
         if (triggerValueL > 0.0f)
         {
             print(triggerValueL);
-            Pulse(StoreVariables.VRcontroller_GRAB_pulse_time, StoreVariables.VRcontroller_GRAB_pulse_frequency, StoreVariables.VRcontroller_GRAB_pulse_amplitude, SteamVR_Input_Sources.LeftHand);
+            Pulse(StoreVariables.VRcontroller_GRAB_pulse_time, StoreVariables.VRcontroller_GRAB_pulse_frequency, StoreVariables.VRcontroller_GRAB_pulse_amplitude, SteamVR_Input_Sources.LeftHand) ;
             //Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
         }
 
@@ -28,7 +28,7 @@ public class Haptics_V1 : MonoBehaviour
         if (triggerValueR > 0.0f)
         {
             print(triggerValueR);
-            Pulse(StoreVariables.VRcontroller_GRAB_pulse_time, StoreVariables.VRcontroller_GRAB_pulse_frequency, StoreVariables.VRcontroller_GRAB_pulse_amplitude, SteamVR_Input_Sources.RightHand);
+            Pulse(StoreVariables.VRcontroller_GRAB_pulse_time, StoreVariables.VRcontroller_GRAB_pulse_frequency, StoreVariables.VRcontroller_GRAB_pulse_amplitude, SteamVR_Input_Sources.RightHand) ;
             //Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
         }
 
