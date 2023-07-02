@@ -19,4 +19,4 @@ APPLE SCRIPTS
 
 "Destroyer" (attached to sphere at end of grabber in the 3D touch-scene) - If sphere collides with apple, 1) a translucent volume enclosing the apple is set to active and 2) a joint is created between the sphere and the apple. While the sphere/grabber is inside the translucent volume, users will feel a spring-like effect. I'M NOT SURE WHY I CALLED THIS "DESTROYER".
 
-"Haptics_V1" (attached to empty object called "Haptics" in the VR Controller-scene" -  
+"Haptics_V1" (attached to empty object called "Haptics" in the VR Controller-scene" - If
