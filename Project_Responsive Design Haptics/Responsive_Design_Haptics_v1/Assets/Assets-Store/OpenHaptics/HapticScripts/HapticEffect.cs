@@ -239,6 +239,7 @@ public class HapticEffect : MonoBehaviour {
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(HapticEffect))]
+
 public class HapticEffectEditor : Editor 
 {
 	override public void OnInspectorGUI()
@@ -276,6 +277,7 @@ public class HapticEffectEditor : Editor
 				//HE.Magnitude = StoreVariables.Touch_SPRING_spring_magnitude;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 
 				HE.Position = EditorGUILayout.Vector3Field("Position", HE.Position);
+
 				break;
 			case HapticEffect.EFFECT_TYPE.VIBRATE:
 				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
@@ -296,9 +298,4 @@ public class HapticEffectEditor : Editor
 }
 
 #endif
-
-
-
-
-
 

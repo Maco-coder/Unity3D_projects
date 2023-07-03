@@ -22,3 +22,4 @@ APPLE SCRIPTS
 "Haptics_V1" (attached to empty object called "Haptics" in the VR Controller-scene") - Haptic feedback is produced in the form of "Pulses". Users specify a 1) duration, a 2) frequency, and an 3) amplitude for the pulses.
 
 "HapticEffects" (USES 3D TOUCH PLUG-IN FOR UNITY) - The script offers "Spring", "Constant", "Viscous", "Vibrate", and "Friction" effects. For "Spring", users enter gain (0-1), magnitude (0-1), and direction (x,y,z). For "Constant", users enter magnitude (0-1) and direction (x,y,z). For "Friction" and "Viscous", users enter gain (0-1) and magnitude (0-1). Gain increases the responsiveness of the device, while magnitude increases the intensity of the effect. This is perhaps the reason "Constant" does not include gain?
+
