@@ -10,6 +10,7 @@ using UnityEditor;
 //! This MonoBehavior can be attached to any object with a collider. It will apply a haptic "effect"
 //! to any haptic stylus that is within the boundries of the collider.
 //! The parameters can be adjusted on the fly.
+
 public class HapticEffect : MonoBehaviour {
 
 
