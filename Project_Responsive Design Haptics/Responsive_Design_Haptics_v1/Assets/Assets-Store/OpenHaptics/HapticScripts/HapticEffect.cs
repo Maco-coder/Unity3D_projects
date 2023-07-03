@@ -237,7 +237,7 @@ public class HapticEffect : MonoBehaviour {
 
 }
 
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
 [CustomEditor(typeof(HapticEffect))]
 
 public class HapticEffectEditor : Editor 
@@ -297,5 +297,5 @@ public class HapticEffectEditor : Editor
 
 }
 
-#endif
+//#endif
 
