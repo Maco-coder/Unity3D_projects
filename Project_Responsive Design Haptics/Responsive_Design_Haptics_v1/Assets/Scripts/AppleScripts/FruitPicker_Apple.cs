@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class FruitPicker_Apple : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject newJoint;
+
+    void OnCollisionEnter(Collision targetObj)
     {
-        
+        if (targetObj.gameObject.tag == "Cube_Joint_Apple")
+        {
+            Destroy(targetObj.gameObject);
+            newJoint.SetActive(true);
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
