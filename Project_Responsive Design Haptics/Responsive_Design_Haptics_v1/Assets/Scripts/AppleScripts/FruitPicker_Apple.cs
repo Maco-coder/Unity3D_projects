@@ -11,7 +11,7 @@ public class FruitPicker_Apple : MonoBehaviour
         if (targetObj.gameObject.tag == "Cube_Joint_Apple")
         {
             Destroy(targetObj.gameObject);
-            newJoint.SetActive(true)     ;
+            //newJoint.SetActive(true)     ;
 
         }
 
