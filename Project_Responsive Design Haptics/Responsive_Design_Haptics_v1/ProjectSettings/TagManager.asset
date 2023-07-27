@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Purple
   - Cube_Joint_Apple
+  - Lhand
+  - Rhand
   layers:
   - Default
   - TransparentFX
