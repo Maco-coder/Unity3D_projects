@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/AppleScenes/VR Controller-scene.unity
     guid: 811863cbaac66404fb0467df48a3213e
   - enabled: 1
-    path: Assets/Assets-Store/OpenHaptics/HapticDemos/3D touch-scene.unity
+    path: Assets/Assets-Store/OpenHaptics/HapticDemos/OLD 3D touch-scene.unity
     guid: f170c9c1d227b0743aa239be1c001cbd
   - enabled: 1
     path: Assets/Scenes/MenuScenes/Experiences_MainMenu.unity
