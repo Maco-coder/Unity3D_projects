@@ -8,6 +8,8 @@ TagManager:
   - Cube_Joint_Apple
   - Lhand
   - Rhand
+  - tree_VIVE
+  - apple_VIVE
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,17 @@ public class Haptics_V1 : MonoBehaviour
         float triggerValueL = squeezeAction.GetAxis(SteamVR_Input_Sources.LeftHand)  ;
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand) ;
 
+        if ( isCurrentlyCollidingWApple && isCurrentlyCollidingWTree ){
 
+            Pulse(1, 100, 40, SteamVR_Input_Sources.LeftHand);
+            
+        }
+
+        if ( isCurrentlyCollidingWApple ){
+
+            Pulse(1, 50, 30, SteamVR_Input_Sources.LeftHand);
+            
+        }
 
 
         //if ( (triggerValueL > 0.0f) && LisCurrentlyColliding)  // IF GRASPING APPLE WITH HANDS WHILE ON TREE //
@@ -50,19 +60,19 @@ public class Haptics_V1 : MonoBehaviour
     void OnCollisionEnter(Collision collision){
         
         if (collision.gameObject.name == "apple_VIVE"){
-            isCurrentlyColliding = true ;
+            isCurrentlyCollidingWApple = true ;
         }
 
         if (collision.gameObject.name == "tree_VIVE"){
-            isCurrentlyColliding = true ;
+            isCurrentlyCollidingWTree = true ;
         }
         
     }
 
     void OnCollisionExit(Collision collision){
 
-        LisCurrentlyColliding = false ;
-        RisCurrentlyColliding = false ;
+        isCurrentlyCollidingWApple = false ;
+        isCurrentlyCollidingWTree = false  ;
         
     }
 
