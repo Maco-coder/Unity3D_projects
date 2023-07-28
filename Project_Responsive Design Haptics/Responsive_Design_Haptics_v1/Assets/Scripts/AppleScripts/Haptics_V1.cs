@@ -10,8 +10,8 @@ public class Haptics_V1 : MonoBehaviour
     public SteamVR_Action_Single squeezeAction   ;
     public SteamVR_Action_Vibration hapticAction ;
 
-    bool LisCurrentlyColliding;
-    bool RisCurrentlyColliding;
+    bool LisCurrentlyColliding ;
+    bool RisCurrentlyColliding ;
 
 
     void Update()
@@ -38,6 +38,7 @@ public class Haptics_V1 : MonoBehaviour
         }
 
     }
+
 
     private void Pulse(float duration, float frequency, float amplitude, SteamVR_Input_Sources source)
     {
