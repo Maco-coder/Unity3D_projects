@@ -19,21 +19,19 @@ public class Haptics_V1 : MonoBehaviour
 
         float triggerValueL = squeezeAction.GetAxis(SteamVR_Input_Sources.LeftHand);
 
-        if ( (triggerValueL > 0.0f) && LisCurrentlyColliding)
+        if ( (triggerValueL > 0.0f) && LisCurrentlyColliding)  // IF GRASPING APPLE WITH HANDS WHILE ON TREE //
         //if (triggerValueL > 0.0f)
         {
             print(triggerValueL);
-            //Pulse(StoreVariables.VRcontroller_GRAB_pulse_time, StoreVariables.VRcontroller_GRAB_pulse_frequency, StoreVariables.VRcontroller_GRAB_pulse_amplitude, SteamVR_Input_Sources.LeftHand) ;
             Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
         }
 
 
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand);
 
-        if ( (triggerValueR > 0.0f) && RisCurrentlyColliding )
+        if ( (triggerValueR > 0.0f) && RisCurrentlyColliding )  // IF GRASPING APPLE WITH HANDS WHILE ON TREE //
         {
             print(triggerValueR);
-            //Pulse(StoreVariables.VRcontroller_GRAB_pulse_time, StoreVariables.VRcontroller_GRAB_pulse_frequency, StoreVariables.VRcontroller_GRAB_pulse_amplitude, SteamVR_Input_Sources.RightHand) ;
             Pulse(1, 150, 75, SteamVR_Input_Sources.RightHand);
         }
 
@@ -60,7 +58,6 @@ public class Haptics_V1 : MonoBehaviour
         }
         
     }
-
 
     void OnCollisionExit(Collision collision){
 
