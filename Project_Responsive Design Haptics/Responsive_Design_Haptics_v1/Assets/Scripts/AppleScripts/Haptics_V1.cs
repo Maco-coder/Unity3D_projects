@@ -10,30 +10,32 @@ public class Haptics_V1 : MonoBehaviour
     public SteamVR_Action_Single squeezeAction   ;
     public SteamVR_Action_Vibration hapticAction ;
 
-    bool LisCurrentlyColliding ;
-    bool RisCurrentlyColliding ;
+    bool isCurrentlyCollidingWTree  ;
+    bool isCurrentlyCollidingWApple ;
 
 
     void Update()
     {
 
-        float triggerValueL = squeezeAction.GetAxis(SteamVR_Input_Sources.LeftHand);
+        float triggerValueL = squeezeAction.GetAxis(SteamVR_Input_Sources.LeftHand)  ;
+        float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand) ;
 
-        if ( (triggerValueL > 0.0f) && LisCurrentlyColliding)  // IF GRASPING APPLE WITH HANDS WHILE ON TREE //
+
+
+
+        //if ( (triggerValueL > 0.0f) && LisCurrentlyColliding)  // IF GRASPING APPLE WITH HANDS WHILE ON TREE //
         //if (triggerValueL > 0.0f)
-        {
-            print(triggerValueL);
-            Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
-        }
+        //{
+        //    print(triggerValueL);
+        //    Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
+        //}
 
 
-        float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand);
-
-        if ( (triggerValueR > 0.0f) && RisCurrentlyColliding )  // IF GRASPING APPLE WITH HANDS WHILE ON TREE //
-        {
-            print(triggerValueR);
-            Pulse(1, 150, 75, SteamVR_Input_Sources.RightHand);
-        }
+        //if ( (triggerValueR > 0.0f) && RisCurrentlyColliding )  // IF GRASPING APPLE WITH HANDS WHILE ON TREE //
+        //{
+        //    print(triggerValueR);
+        //    Pulse(1, 150, 75, SteamVR_Input_Sources.RightHand);
+        //}
 
     }
 
@@ -47,14 +49,12 @@ public class Haptics_V1 : MonoBehaviour
 
     void OnCollisionEnter(Collision collision){
         
-        if (collision.gameObject.name == "LHand"){
-            Debug.Log("Left hand touching apple") ;
-            LisCurrentlyColliding = true          ;
+        if (collision.gameObject.name == "apple_VIVE"){
+            isCurrentlyColliding = true ;
         }
 
-        if (collision.gameObject.name == "RHand"){
-            Debug.Log("Right hand touching apple") ;
-            RisCurrentlyColliding = true           ;
+        if (collision.gameObject.name == "tree_VIVE"){
+            isCurrentlyColliding = true ;
         }
         
     }
