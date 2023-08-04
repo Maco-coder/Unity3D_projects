@@ -1805,19 +1805,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1782941779}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1782941782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782941780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24c15dc64dca5354db91ec7a48f8798b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newJoint: {fileID: 1967821390}
 --- !u!23 &1782941783
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1880,7 +1867,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.07, y: 0.14, z: 0.015}
-  m_Center: {x: 0.05, y: 0, z: 0.24}
+  m_Center: {x: 0.03, y: 0, z: 0.24}
 --- !u!64 &1782941786
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2152,7 +2139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801297859}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1088139266938748ac39b61e156f816, type: 3}
   m_Name: 
