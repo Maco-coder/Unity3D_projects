@@ -35,7 +35,7 @@ public class Haptics_V1 : MonoBehaviour
             Pulse(1, 50, 75, SteamVR_Input_Sources.LeftHand);
         }
 
-        if ( (distance_apple_tree > 1) )
+        if ( (distance_apple_tree > 1) && (distance_apple_tree < 4))
         //if ( (triggerValueR > 0.0f) && (distance_apple_tree > 1) )
         {
             print(triggerValueR);
