@@ -110,7 +110,7 @@ public class MainMenuDevices : MonoBehaviour
         StoreVariables.PROPS_SPRING_feedback = SPRING_feedback;
         StoreVariables.SHAPE_PROPS_round = SHAPE_roundPROPS   ;
 
-        SceneManager.LoadScene("Household Props-scene");
+        SceneManager.LoadScene("FruitPicker-scene");
     }
 
 
