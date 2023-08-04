@@ -29,17 +29,18 @@ public class Haptics_V1 : MonoBehaviour
 
 
 
-        if ( (triggerValueL > 0.0f) )
-        {
-            print(triggerValueL);
-            Pulse(1, 50, 75, SteamVR_Input_Sources.LeftHand);
-        }
+        //if ( (triggerValueL > 0.0f) )
+        //{
+        //    print(triggerValueL);
+        //    Pulse(1, 50, 75, SteamVR_Input_Sources.LeftHand);
+        //}
 
-        if ( (distance_apple_tree > 1) && (distance_apple_tree < 4))
+        if ( (distance_apple_tree > 0.1) && (distance_apple_tree < 0.3))
         //if ( (triggerValueR > 0.0f) && (distance_apple_tree > 1) )
         {
-            print(triggerValueR);
-            Pulse(1, 50, 75, SteamVR_Input_Sources.RightHand);
+            //print(triggerValueR);
+            Debug.Log(distance_apple_tree.ToString());
+            Pulse(1, 30, distance_apple_tree*500, SteamVR_Input_Sources.RightHand);
         }
 
     }
