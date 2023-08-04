@@ -10,6 +10,8 @@ TagManager:
   - Rhand
   - tree_VIVE
   - apple_VIVE
+  - Touchable
+  - box_VIVE
   layers:
   - Default
   - TransparentFX
