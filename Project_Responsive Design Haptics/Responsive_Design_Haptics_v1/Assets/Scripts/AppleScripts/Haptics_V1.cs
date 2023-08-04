@@ -7,6 +7,10 @@ using Valve.VR                  ;
 
 public class Haptics_V1 : MonoBehaviour
 {
+
+    public GameObject cube_in_tree ;
+    public GameObject apple_in_tree;
+
     public SteamVR_Action_Single squeezeAction   ;
     public SteamVR_Action_Vibration hapticAction ;
 
@@ -17,31 +21,14 @@ public class Haptics_V1 : MonoBehaviour
 
     void Update()
     {
+        float distance_apple_tree = Vector3.Distance(cube_in_tree.transform.position, apple_in_tree.transform.position);
+        Debug.Log(distance_apple_tree.ToString());
 
         float triggerValueL = squeezeAction.GetAxis(SteamVR_Input_Sources.LeftHand)  ;
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand) ;
 
-        //if ( isCurrentlyCollidingWApple == true && isCurrentlyCollidingWTree == true ){
-
-        //    Pulse(1, 100, 40, SteamVR_Input_Sources.RightHand);
-            
-        //}
-
-        //if ( isCurrentlyCollidingWApple == true ){
-
-        //    Pulse(1, 50, 30, SteamVR_Input_Sources.RightHand);
-            
-        //}
-
-        //if (isCurrentlyCollidingWBox == true)
-        //{
-
-        //    Pulse(1, 150, 30, SteamVR_Input_Sources.RightHand);
-
-        //}
 
 
-        //if ( (triggerValueL > 0.0f) && LisCurrentlyColliding)  // IF GRASPING APPLE WITH HANDS WHILE ON TREE //
         if ( (triggerValueL > 0.0f) && (isCurrentlyCollidingWBox == true))
         {
             print(triggerValueL);
@@ -49,7 +36,7 @@ public class Haptics_V1 : MonoBehaviour
         }
 
 
-        if ( (triggerValueR > 0.0f) && (isCurrentlyCollidingWBox == true) )  // IF GRASPING APPLE WITH HANDS WHILE ON TREE //
+        if ( (triggerValueR > 0.0f) && (isCurrentlyCollidingWBox == true) )
         {
             print(triggerValueR);
             Pulse(1, 50, 75, SteamVR_Input_Sources.RightHand);

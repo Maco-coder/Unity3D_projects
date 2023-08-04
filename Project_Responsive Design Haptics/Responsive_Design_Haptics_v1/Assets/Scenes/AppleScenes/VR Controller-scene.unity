@@ -511,7 +511,7 @@ SpringJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
   m_Spring: 100
-  m_Damper: 10
+  m_Damper: 5
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.025
@@ -2108,6 +2108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1088139266938748ac39b61e156f816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cube_in_tree: {fileID: 1865744}
+  apple_in_tree: {fileID: 249898051}
   squeezeAction:
     actionPath: /actions/default/in/Squeeze
     needsReinit: 0
