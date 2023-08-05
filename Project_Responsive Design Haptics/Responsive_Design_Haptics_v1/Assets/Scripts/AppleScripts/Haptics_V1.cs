@@ -28,14 +28,13 @@ public class Haptics_V1 : MonoBehaviour
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand) ;
 
 
-
         //if ( (triggerValueL > 0.0f) )
         //{
         //    print(triggerValueL);
         //    Pulse(1, 50, 75, SteamVR_Input_Sources.LeftHand);
         //}
 
-        if ( (distance_apple_tree > 0.1) && (distance_apple_tree < 0.3))
+        if ( (distance_apple_tree > 0.11) && (distance_apple_tree < 0.2))
         //if ( (triggerValueR > 0.0f) && (distance_apple_tree > 1) )
         {
             //print(triggerValueR);
