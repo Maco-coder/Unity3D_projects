@@ -38,7 +38,7 @@ public class Haptics_V1 : MonoBehaviour
         if ( isCurrentlyCollidingWTree == true )
         {
             Debug.Log(distance_apple_tree.ToString());
-            Pulse(1, 10, 50, SteamVR_Input_Sources.RightHand);
+            Pulse(1, 30, 50, SteamVR_Input_Sources.RightHand);
         }
 
     }
