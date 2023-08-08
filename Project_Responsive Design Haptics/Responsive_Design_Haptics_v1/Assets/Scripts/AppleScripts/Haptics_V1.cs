@@ -28,7 +28,7 @@ public class Haptics_V1 : MonoBehaviour
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand) ;
 
 
-        if ( (distance_apple_tree > 0.15) && (distance_apple_tree < 0.2) && (triggerValueR > 0.0f) )
+        if ( (distance_apple_tree > 0.17) && (distance_apple_tree < 0.22) && (triggerValueR > 0.0f) )
         {
             Debug.Log(distance_apple_tree.ToString())                              ;
             Pulse(1, 50, distance_apple_tree*500, SteamVR_Input_Sources.RightHand) ;
@@ -61,11 +61,22 @@ public class Haptics_V1 : MonoBehaviour
         }
 
         if (collision.gameObject.tag == "Outer_Cube")
-            Pulse(0.2f, 1, 300, SteamVR_Input_Sources.RightHand);
+            Pulse(0.2f, 1, 200, SteamVR_Input_Sources.RightHand);
 
 
         if (collision.gameObject.tag == "Trunk_Cube")
             Pulse(0.5f, 1, 300, SteamVR_Input_Sources.RightHand);
+
+
+        float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand);
+        float distance_apple_tree = Vector3.Distance(cube_in_tree.transform.position, apple_in_tree.transform.position);
+
+
+        if ( (collision.gameObject.tag == "apple_VIVE") && (distance_apple_tree > 0.22) && (triggerValueR > 0.0f))
+        {
+            Debug.Log(distance_apple_tree.ToString());
+            Pulse(0.2f, 1, 150, SteamVR_Input_Sources.RightHand);
+        }
 
 
     }
@@ -110,5 +121,6 @@ public class Haptics_V1 : MonoBehaviour
         //isCurrentlyCollidingWBox = false   ;
 
     }
+
 
 }
