@@ -99,7 +99,7 @@ public class MainMenuDevices : MonoBehaviour
 
         StoreVariables.SHAPE_TOUCH_round = SHAPE_roundTOUCH ;
         
-        SceneManager.LoadScene("3D touch-scene");
+        SceneManager.LoadScene("3D Touch-Scene");
     }
 
 

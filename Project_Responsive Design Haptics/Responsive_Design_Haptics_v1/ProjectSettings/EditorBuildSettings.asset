@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScenes/Devices_MainMenu.unity
     guid: 56b5c6dd26037e4418c54dfe66353cd5
   - enabled: 1
-    path: Assets/Assets-Store/OpenHaptics/HapticDemos/3D touch-scene.unity
-    guid: 907c67ac8ffe0b846adb6a1d0294ba67
-  - enabled: 1
     path: Assets/Scenes/AppleScenes/VR Controller-scene.unity
     guid: 811863cbaac66404fb0467df48a3213e
   - enabled: 1
     path: Assets/Scenes/AppleScenes/FruitPicker-scene.unity
     guid: 3ea8ec76d2dec1c4cacc8974da2ebfe4
+  - enabled: 1
+    path: Assets/Scenes/AppleScenes/3D Touch-Scene.unity
+    guid: ca74c56abf3b05d45a9da534a1ab8001
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 46b6f538a83e8bf46954f4d05f82a7ea,
       type: 2}
