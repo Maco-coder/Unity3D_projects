@@ -28,10 +28,17 @@ public class Haptics_V1 : MonoBehaviour
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand) ;
 
 
-        if ( (distance_apple_tree > 0.11) && (distance_apple_tree < 0.2) && (triggerValueR > 0.0f) )
+        if ( (distance_apple_tree > 0.11) && (distance_apple_tree < 0.2) && (triggerValueR > 0.0f) && isCurrentlyCollidingWTree == true )
         {
             Debug.Log(distance_apple_tree.ToString());
             Pulse(1, 30, distance_apple_tree*500, SteamVR_Input_Sources.RightHand);
+        }
+
+
+        if ( isCurrentlyCollidingWTree == true )
+        {
+            Debug.Log(distance_apple_tree.ToString());
+            Pulse(1, 10, 50, SteamVR_Input_Sources.RightHand);
         }
 
     }
@@ -46,15 +53,15 @@ public class Haptics_V1 : MonoBehaviour
 
     void OnCollisionEnter(Collision collision){
 
-        if (collision.gameObject.tag == "apple_VIVE"){
-            Debug.Log("collision detected")   ;
-            isCurrentlyCollidingWApple = true ;
-        }
+        //if (collision.gameObject.tag == "apple_VIVE"){
+        //    Debug.Log("collision detected")   ;
+        //    isCurrentlyCollidingWApple = true ;
+        //}
 
-        if (collision.gameObject.tag == "box_VIVE"){
-            print("collision detected")     ;
-            isCurrentlyCollidingWBox = true ;
-        }
+        //if (collision.gameObject.tag == "box_VIVE"){
+        //    print("collision detected")     ;
+        //    isCurrentlyCollidingWBox = true ;
+        //}
 
         if (collision.gameObject.tag == "tree_VIVE"){
             isCurrentlyCollidingWTree = true ;
@@ -64,9 +71,9 @@ public class Haptics_V1 : MonoBehaviour
 
     void OnCollisionExit(Collision collision){
 
-        isCurrentlyCollidingWApple = false ;
+        //isCurrentlyCollidingWApple = false ;
         isCurrentlyCollidingWTree = false  ;
-        isCurrentlyCollidingWBox = false   ;
+        //isCurrentlyCollidingWBox = false   ;
 
     }
 
