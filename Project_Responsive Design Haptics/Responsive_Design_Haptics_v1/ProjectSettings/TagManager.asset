@@ -12,6 +12,9 @@ TagManager:
   - apple_VIVE
   - Touchable
   - box_VIVE
+  - Outer_Cube
+  - Inner_Cube
+  - Trunk_Cube
   layers:
   - Default
   - TransparentFX
