@@ -28,17 +28,16 @@ public class Haptics_V1 : MonoBehaviour
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand) ;
 
 
-        if ( (distance_apple_tree > 0.11) && (distance_apple_tree < 0.2) && (triggerValueR > 0.0f) && isCurrentlyCollidingWTree == true )
+        if ( (distance_apple_tree > 0.15) && (distance_apple_tree < 0.2) && (triggerValueR > 0.0f) )
         {
-            Debug.Log(distance_apple_tree.ToString());
-            Pulse(1, 30, distance_apple_tree*500, SteamVR_Input_Sources.RightHand);
+            Debug.Log(distance_apple_tree.ToString())                              ;
+            Pulse(1, 30, distance_apple_tree*500, SteamVR_Input_Sources.RightHand) ;
         }
 
 
         if ( isCurrentlyCollidingWTree == true )
         {
-            Debug.Log(distance_apple_tree.ToString());
-            Pulse(1, 30, 50, SteamVR_Input_Sources.RightHand);
+            Pulse(1, 30, 30, SteamVR_Input_Sources.RightHand);
         }
 
     }
