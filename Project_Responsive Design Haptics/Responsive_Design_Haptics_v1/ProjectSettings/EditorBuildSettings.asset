@@ -5,21 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/AppleScenes/UNUSEDOpening-scene.unity
-    guid: 27ad293636bb5e74499c034d94104475
-  - enabled: 1
-    path: Assets/Scenes/AppleScenes/VR Controller-scene.unity
-    guid: 811863cbaac66404fb0467df48a3213e
-  - enabled: 1
-    path: Assets/Assets-Store/OpenHaptics/HapticDemos/3D touch-scene.unity
-    guid: f170c9c1d227b0743aa239be1c001cbd
   - enabled: 1
     path: Assets/Scenes/MenuScenes/Experiences_MainMenu.unity
     guid: 4e09a48a58265b447bc2b460894ebd16
   - enabled: 1
     path: Assets/Scenes/MenuScenes/Devices_MainMenu.unity
     guid: 56b5c6dd26037e4418c54dfe66353cd5
+  - enabled: 1
+    path: Assets/Scenes/AppleScenes/VR Controller-scene.unity
+    guid: 811863cbaac66404fb0467df48a3213e
+  - enabled: 1
+    path: Assets/Scenes/AppleScenes/FruitPicker-scene.unity
+    guid: 3ea8ec76d2dec1c4cacc8974da2ebfe4
+  - enabled: 1
+    path: Assets/Scenes/AppleScenes/3D Touch-Scene.unity
+    guid: ca74c56abf3b05d45a9da534a1ab8001
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 46b6f538a83e8bf46954f4d05f82a7ea,
       type: 2}

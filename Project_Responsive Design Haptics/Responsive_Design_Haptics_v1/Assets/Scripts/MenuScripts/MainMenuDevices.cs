@@ -1,4 +1,5 @@
-﻿using System.Collections         ;
+﻿
+using System.Collections         ;
 using System.Collections.Generic ;
 using UnityEngine                ;
 using UnityEngine.UI             ;
@@ -99,7 +100,7 @@ public class MainMenuDevices : MonoBehaviour
 
         StoreVariables.SHAPE_TOUCH_round = SHAPE_roundTOUCH ;
         
-        SceneManager.LoadScene("3D touch-scene");
+        SceneManager.LoadScene("3D Touch-Scene");
     }
 
 
@@ -110,7 +111,7 @@ public class MainMenuDevices : MonoBehaviour
         StoreVariables.PROPS_SPRING_feedback = SPRING_feedback;
         StoreVariables.SHAPE_PROPS_round = SHAPE_roundPROPS   ;
 
-        SceneManager.LoadScene("Household Props-scene");
+        SceneManager.LoadScene("FruitPicker-scene");
     }
 
 

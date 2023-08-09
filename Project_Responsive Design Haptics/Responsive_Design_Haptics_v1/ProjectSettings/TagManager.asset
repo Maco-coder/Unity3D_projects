@@ -5,6 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Purple
+  - Cube_Joint_Apple
+  - Lhand
+  - Rhand
+  - tree_VIVE
+  - apple_VIVE
+  - Touchable
+  - box_VIVE
+  - Outer_Cube
+  - Inner_Cube
+  - Trunk_Cube
+  - apple_TOUCH
   layers:
   - Default
   - TransparentFX
