@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 2859
+  controlID: 43
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 2860
+  controlID: 58
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 2826
+  controlID: 44
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -242,14 +242,14 @@ MonoBehaviour:
     y: 0
     width: 413.59998
     height: 481.6
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -628,9 +628,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.47922814, y: 2.38082, z: -2.3249881}
+    m_Target: {x: 5.1897163, y: -1.0537388, z: -6.5059605}
     speed: 2
-    m_Value: {x: 0.47922814, y: 2.38082, z: -2.3249881}
+    m_Value: {x: 5.1897163, y: -1.0537388, z: -6.5059605}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -677,13 +677,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.019291103, y: 0.91973895, z: -0.04556432, w: 0.3894017}
+    m_Target: {x: -0.04391156, y: -0.952714, z: 0.16625987, w: -0.2507407}
     speed: 2
-    m_Value: {x: 0.019291086, y: 0.9197382, z: -0.045564283, w: 0.38940138}
+    m_Value: {x: -0.044285215, y: -0.9524134, z: 0.16767994, w: -0.25066137}
   m_Size:
-    m_Target: 1.0844474
+    m_Target: 7.5534306
     speed: 2
-    m_Value: 1.0844474
+    m_Value: 7.2281632
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -787,15 +787,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes/AppleScenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\genha\OneDrive\Desktop\Marco\Unity3D_projects\Project_Responsive
+  m_LastProjectPath: C:\Users\macoc\Desktop\Projects\Unity3D_projects\Project_Responsive
     Design Haptics\Responsive_Design_Haptics_v1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90530000
-    m_LastClickedID: 21392
-    m_ExpandedIDs: 00000000be520000c2520000c4520000825300008453000086530000885300008a5300008c5300008e53000000ca9a3b
+    m_SelectedIDs: c44f0000
+    m_LastClickedID: 20420
+    m_ExpandedIDs: 00000000864f0000884f00008a4f00008c4f00008e4f0000904f0000924f0000944f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -823,7 +823,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be520000c0520000c2520000c452000000ca9a3b
+    m_ExpandedIDs: 00000000864f0000884f00008a4f00008c4f00008e4f0000904f0000924f0000944f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -848,9 +848,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 1e810000
-    m_LastClickedInstanceID: 33054
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -953,23 +953,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 48810000
-      m_LastClickedID: 33096
-      m_ExpandedIDs: d051ffffd651fffff651ffffd8c3fffffec3ffffe8caffff86ceffff3cd6ffff7ce0ffff3cefffff46f6ffff60f6ffff36fbfffff4ffffff325400002a590000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: dcf9fffff4faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Apple
-        m_OriginalName: Apple
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 33054
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 11}
       m_SearchString: 
