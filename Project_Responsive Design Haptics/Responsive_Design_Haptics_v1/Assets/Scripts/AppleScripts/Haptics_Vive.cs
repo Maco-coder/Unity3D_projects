@@ -5,7 +5,7 @@ using UnityEngine               ;
 using Valve.VR                  ;
 
 
-public class Haptics_V1 : MonoBehaviour
+public class Haptics_Vive : MonoBehaviour
 {
 
     public GameObject cube_in_tree ;
@@ -108,8 +108,6 @@ public class Haptics_V1 : MonoBehaviour
 
         if (collision.gameObject.tag == "Inner_Cube")
             Pulse(1, 30, 30, SteamVR_Input_Sources.RightHand);
-
-
 
     }
 

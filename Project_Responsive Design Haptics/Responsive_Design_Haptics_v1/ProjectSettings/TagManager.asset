@@ -15,6 +15,7 @@ TagManager:
   - Outer_Cube
   - Inner_Cube
   - Trunk_Cube
+  - apple_TOUCH
   layers:
   - Default
   - TransparentFX
