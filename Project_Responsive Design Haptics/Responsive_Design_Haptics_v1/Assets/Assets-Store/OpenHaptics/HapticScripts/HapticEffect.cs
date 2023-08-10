@@ -243,6 +243,7 @@ public class HapticEffect : MonoBehaviour {
 
 public class HapticEffectEditor : Editor 
 {
+	public int i = 0;
 	override public void OnInspectorGUI()
 	{
 		HapticEffect HE = (HapticEffect)target;
@@ -280,12 +281,15 @@ public class HapticEffectEditor : Editor
 				HE.Position = EditorGUILayout.Vector3Field("Position", HE.Position);
 
 				break;
+
 			case HapticEffect.EFFECT_TYPE.VIBRATE:
 				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
 				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
-				HE.Frequency = EditorGUILayout.Slider("Frequency", (float)HE.Frequency, 1.0f, 1000.0f);
+				HE.Frequency = Haptics_Pen_v3.value  ;
+				//HE.Frequency = EditorGUILayout.Slider("Frequency", (float)HE.Frequency, 1.0f, 1000.0f);
 				HE.Direction = EditorGUILayout.Vector3Field("Direction", HE.Direction);
 				break;
+
 			case HapticEffect.EFFECT_TYPE.VISCOUS:
 				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
 				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);

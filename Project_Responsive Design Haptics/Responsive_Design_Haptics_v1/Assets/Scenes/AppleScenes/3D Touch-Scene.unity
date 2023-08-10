@@ -455,9 +455,7 @@ GameObject:
   - component: {fileID: 411318723}
   - component: {fileID: 411318722}
   - component: {fileID: 411318721}
-  - component: {fileID: 411318720}
   - component: {fileID: 411318724}
-  - component: {fileID: 411318725}
   m_Layer: 0
   m_Name: Cube_outter_apple
   m_TagString: Untagged
@@ -480,24 +478,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &411318720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411318718}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ad3557e55d4326498774f659558e89a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectType: 0
-  Gain: 1
-  Magnitude: 0.30000001192092896
-  Frequency: 200
-  Position: {x: 0, y: 0, z: 0}
-  Direction: {x: 0, y: 0, z: -1}
 --- !u!65 &411318721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -574,25 +554,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectType: 4
-  Gain: 0
-  Magnitude: 0.5
-  Frequency: 250
+  Gain: 0.75
+  Magnitude: 0.75
+  Frequency: 1
   Position: {x: 0, y: 0, z: 0}
   Direction: {x: 1, y: 1, z: 1}
---- !u!114 &411318725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411318718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94c4338961daf604b8c193c06e6aeae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  apple: {fileID: 1708916296}
-  cube_outter_apple: {fileID: 411318718}
 --- !u!1 &653001509 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7346488073879044386, guid: 7ddfa3a1d18174043aab251be6df3a0e,
