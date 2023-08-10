@@ -28,7 +28,7 @@ public class Haptics_Vive : MonoBehaviour
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand) ;
 
 
-        if ( (distance_apple_tree > 0.17) && (distance_apple_tree < 0.22) && (triggerValueR > 0.0f) )
+        if ( (distance_apple_tree > 0.17) && (distance_apple_tree < 0.3) && (triggerValueR > 0.0f) )
         {
             Debug.Log(distance_apple_tree.ToString())                              ;
             Pulse(1, 50, distance_apple_tree*500, SteamVR_Input_Sources.RightHand) ;
