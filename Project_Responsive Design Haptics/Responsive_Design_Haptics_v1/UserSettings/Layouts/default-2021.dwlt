@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1425
+  controlID: 104
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 363.19995
     height: 722.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 290.4
     height: 427.2
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -176,7 +176,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Default
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1426
+  controlID: 105
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1427
+  controlID: 106
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,23 +317,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/AppleScripts
+    - Assets/Scenes/AppleScenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Scripts/AppleScripts
+  - Assets/Scenes/AppleScenes
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\genha\OneDrive\Desktop\Marco\Unity3D_projects\Project_Responsive
     Design Haptics\Responsive_Design_Haptics_v1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 97.400024}
-    m_SelectedIDs: ae550000
-    m_LastClickedID: 21934
-    m_ExpandedIDs: 00000000fc520000fe5200000053000002530000045300003653000000ca9a3b
+    scrollPos: {x: 0, y: 213.40002}
+    m_SelectedIDs: 30530000
+    m_LastClickedID: 21296
+    m_ExpandedIDs: 00000000025300000453000006530000085300000a5300003453000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -361,7 +361,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc520000fe52000000530000025300000453000000ca9a3b
+    m_ExpandedIDs: 00000000025300000453000006530000085300000a530000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -491,9 +491,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 16690000
-      m_LastClickedID: 26902
-      m_ExpandedIDs: 00ceffff2cceffff2eceffffbecfffff4ed1ffff30d5ffff14f1ffff42f1ffff42fbffff5e690000
+      m_SelectedIDs: 764e0000
+      m_LastClickedID: 20086
+      m_ExpandedIDs: 08fbffff34fbffff36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -776,9 +776,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.43846154, y: 2.6923501, z: -1.373077}
+    m_Target: {x: 0.36793566, y: 2.994286, z: -1.5010756}
     speed: 2
-    m_Value: {x: 0.43846154, y: 2.6923501, z: -1.373077}
+    m_Value: {x: 0.36793566, y: 2.994286, z: -1.5010756}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -825,13 +825,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.03790731, y: -0.9405735, z: 0.11198303, w: -0.31839764}
+    m_Target: {x: -0.024676206, y: -0.94925517, z: 0.07705844, w: -0.30397427}
     speed: 2
-    m_Value: {x: -0.03790669, y: -0.94055814, z: 0.111981206, w: -0.31839246}
+    m_Value: {x: -0.022395497, y: -0.949791, z: 0.069935754, w: -0.30414587}
   m_Size:
-    m_Target: 0.8723501
+    m_Target: 1.5315408
     speed: 2
-    m_Value: 0.8723501
+    m_Value: 1.4655893
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -894,7 +894,7 @@ MonoBehaviour:
   m_TargetSize: {x: 880.4, y: 385.2}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
+  m_RenderIMGUI: 0
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
