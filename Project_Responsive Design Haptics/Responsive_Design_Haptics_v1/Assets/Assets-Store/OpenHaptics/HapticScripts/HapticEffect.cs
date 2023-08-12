@@ -1,4 +1,7 @@
-﻿using System.Timers;
+﻿
+// HAPTIC_EFFECT - VIBROTACTILE EFFECT WHEN CARRYING APPLE INSIDE BASKET OF TOOL //
+
+using System.Timers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
