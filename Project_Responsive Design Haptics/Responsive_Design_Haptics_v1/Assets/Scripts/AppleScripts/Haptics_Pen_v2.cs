@@ -1,3 +1,6 @@
+
+// HAPTICS_PEN_V2 //
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +33,4 @@ public class Haptics_Pen_v2 : MonoBehaviour
 
     }
 
-
-
-    }
+}
