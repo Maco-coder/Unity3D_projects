@@ -13,7 +13,7 @@ public class OpeningScene_Devices : MonoBehaviour
     public Button Button3DTouch     ;
     public Button ButtonFruitPicker ;
 
-    private int chosen_device = 0 ;
+    public static int chosen_device = 0 ;
 
 
     public void DeviceChosenIsVRController ()

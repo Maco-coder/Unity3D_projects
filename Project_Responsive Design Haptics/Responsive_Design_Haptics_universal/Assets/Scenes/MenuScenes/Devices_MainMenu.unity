@@ -608,7 +608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755694305}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: GoToMenuExperiences
         m_Mode: 1
@@ -918,9 +918,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755694304}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: LoadVRController
+      - m_Target: {fileID: 1755694305}
+        m_TargetAssemblyTypeName: OpeningScene_Devices, Assembly-CSharp
+        m_MethodName: DeviceChosenIsVRController
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1054,9 +1054,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755694304}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Load3DTouchSystem
+      - m_Target: {fileID: 1755694305}
+        m_TargetAssemblyTypeName: OpeningScene_Devices, Assembly-CSharp
+        m_MethodName: DeviceChosenIs3DTouch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1415,9 +1415,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755694304}
-        m_TargetAssemblyTypeName: MainMenuDevices, Assembly-CSharp
-        m_MethodName: LoadHouseHoldProps
+      - m_Target: {fileID: 1755694305}
+        m_TargetAssemblyTypeName: OpeningScene_Devices, Assembly-CSharp
+        m_MethodName: DeviceChosenIsFruitPicker
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1741,7 +1741,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755694300}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a116a0d4f55c89c41b8efe1912f06b91, type: 3}
   m_Name: 
@@ -1782,9 +1782,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755694300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68369f988ffca5d4a98a393463d5a204, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e748534fd476cb449df4f5c9d76b291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonVRController: {fileID: 968959029}
+  Button3DTouch: {fileID: 1016819262}
+  ButtonFruitPicker: {fileID: 1419311279}
 --- !u!1 &1815019263
 GameObject:
   m_ObjectHideFlags: 0
