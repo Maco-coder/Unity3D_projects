@@ -225,6 +225,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Apple: {fileID: 476833021}
   Picker: {fileID: 0}
+  OuterCube_InTree: {fileID: 392468149}
+  InnerCube_InTree: {fileID: 1049200228}
+  TrunkCube_InTree: {fileID: 985490082}
+  LargeCube_InWorld: {fileID: 1215903175}
+  Capsule_Apple: {fileID: 2026721122}
 --- !u!1 &141883911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1173,12 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!4 &246518489 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 246518484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &267432499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,7 +1878,7 @@ SpringJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
   m_Spring: 50
-  m_Damper: 10
+  m_Damper: 2
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.025
@@ -1877,6 +1888,20 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &476833027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476833021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37c2cf88f7c59f4c8cf5d3812568143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 4
+  origin: {fileID: 246518489}
 --- !u!1 &492717874
 GameObject:
   m_ObjectHideFlags: 0

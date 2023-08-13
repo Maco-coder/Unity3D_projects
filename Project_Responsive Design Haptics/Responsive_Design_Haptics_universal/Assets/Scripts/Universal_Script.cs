@@ -5,6 +5,9 @@ using UnityEngine                ;
 using UnityEngine.UI             ;
 using UnityEngine.SceneManagement;
 
+using Valve.VR                   ; // Needed to enable and disable VR trackers //
+using Valve.VR.InteractionSystem ; // Needed to enable and disable VR controllers //
+
 
 public class Universal_Script : MonoBehaviour
 {
@@ -13,38 +16,68 @@ public class Universal_Script : MonoBehaviour
 
     public GameObject Apple  ;
     public GameObject Picker ;
-       
+
+    public GameObject OuterCube_InTree  ;
+    public GameObject InnerCube_InTree  ;
+    public GameObject TrunkCube_InTree  ;
+    public GameObject LargeCube_InWorld ;  // For vibrations produced by 3D touch when carrying apple in basket //
+    public GameObject Capsule_Apple     ;  // For more intense friction produced by 3D touch around apple //
+    
+
 
     void Start()
     {
-        
+        Capsule_Apple.SetActive(false)    ;
+        OuterCube_InTree.SetActive(false) ;
+        InnerCube_InTree.SetActive(false) ;
+        TrunkCube_InTree.SetActive(false) ;
+        LargeCube_InWorld.SetActive(false);
+
+        Apple.GetComponent<SteamVR_TrackedObject>().enabled = false ;
+        Apple.GetComponent<Interactable>().enabled = false          ;
+        Apple.GetComponent<Throwable>().enabled = false             ;
+
     }
 
     void Update()
     {
 
-        
-        if (device == 1)
+        if (device == 1)  // IF VR CONTROLLER IS CHOSEN IN THE OPENING SCENE //
         {
-            Debug.Log("The device chosen was VR controller") ;
-            Apple.GetComponent<SpringJoint>().breakForce = 0 ;
+            Debug.Log("The device chosen was VR controller")   ;
+            Apple.GetComponent<SpringJoint>().spring = 50      ;
+            Apple.GetComponent<SpringJoint>().damper = 2       ;
+            Apple.GetComponent<SpringJoint>().breakTorque = 10 ;
+            Apple.GetComponent<SpringJoint>().breakForce = 10  ;
+            
+            OuterCube_InTree.SetActive(true) ;
+            InnerCube_InTree.SetActive(true) ;
+            TrunkCube_InTree.SetActive(true) ;
 
+            Apple.GetComponent<Interactable>().enabled = true ;
+            Apple.GetComponent<Throwable>().enabled = true    ;
 
         }
 
 
-        if (device == 2)
+        if (device == 2)  // IF 3D TOUCH IS CHOSEN IN THE OPENING SCENE //
         {
             Debug.Log("The device chosen was 3D Touch");
         }
 
 
-        if (device == 3)
+        if (device == 3)  // IF FRUIT PICKER IS CHOSEN IN THE OPENING SCENE //
         {
-            Debug.Log("The device chosen was Fruit picker");
+            Debug.Log("The device chosen was Fruit picker")    ;
+            Apple.GetComponent<SpringJoint>().spring = 50      ;
+            Apple.GetComponent<SpringJoint>().damper = 2       ;
+            Apple.GetComponent<SpringJoint>().breakTorque = 0  ;
+            Apple.GetComponent<SpringJoint>().breakForce = 0   ;
+
+            Apple.GetComponent<SteamVR_TrackedObject>().enabled = true ;
+            
         }
-        
-        
+                
     }
 
 }
