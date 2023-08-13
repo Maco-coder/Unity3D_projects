@@ -264,14 +264,17 @@ public class HapticEffectEditor : Editor
 
 			switch (HE.effectType)
 			{
+
 			case HapticEffect.EFFECT_TYPE.CONSTANT:
 				HE.Direction = EditorGUILayout.Vector3Field("Direction", HE.Direction);
 				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
 				break;
+
 			case HapticEffect.EFFECT_TYPE.FRICTION:
 				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
 				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
 				break;
+
 			case HapticEffect.EFFECT_TYPE.SPRING:
 				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
 				
