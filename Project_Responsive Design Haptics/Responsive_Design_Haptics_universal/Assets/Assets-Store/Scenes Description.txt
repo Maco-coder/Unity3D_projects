@@ -1,0 +1,25 @@
+
+SCENES DESCRIPTION
+
+"Devices_Main Menu" - Users pick the device available using the computer"
+
+"Experiences_Main Menu" - Users pick the experience using the computer"
+
+
+
+SCRIPTS DESCRIPTION
+
+APPLE SCRIPTS
+
+"ButtonHandler1" - If users select "VIVE controller" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "VR Controller-scene".
+
+"ButtonHandler2" - If users select "3D Touch System" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "3D touch-scene" (found in Assets-Asset_store-OpenHaptics-HapticDemos-3D touch-scene).
+
+"ButtonHandler3" - If users select "Household Props" in the "Experiences_Main Menu" scene, Unity launches the apple picking application in the "Household props-scene" (currently not working).
+
+"Destroyer" (attached to sphere at end of grabber in the 3D touch-scene) - If sphere collides with apple, 1) a translucent volume enclosing the apple is set to active and 2) a joint is created between the sphere and the apple. While the sphere/grabber is inside the translucent volume, users will feel a spring-like effect. I'M NOT SURE WHY I CALLED THIS "DESTROYER".
+
+"Haptics_V1" (attached to empty object called "Haptics" in the VR Controller-scene") - Haptic feedback is produced in the form of "Pulses". Users specify a 1) duration, a 2) frequency, and an 3) amplitude for the pulses.
+
+"HapticEffects" (USES 3D TOUCH PLUG-IN FOR UNITY) - The script offers "Spring", "Constant", "Viscous", "Vibrate", and "Friction" effects. For "Spring", users enter gain (0-1), magnitude (0-1), and direction (x,y,z). For "Constant", users enter magnitude (0-1) and direction (x,y,z). For "Friction" and "Viscous", users enter gain (0-1) and magnitude (0-1). Gain increases the responsiveness of the device, while magnitude increases the intensity of the effect. This is perhaps the reason "Constant" does not include gain?
+
