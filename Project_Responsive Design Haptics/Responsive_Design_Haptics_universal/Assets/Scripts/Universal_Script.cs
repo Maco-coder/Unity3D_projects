@@ -15,6 +15,7 @@ public class Universal_Script : MonoBehaviour
     public static int device = OpeningScene_Devices.chosen_device ;
 
     public GameObject Apple                ;
+    private Rigidbody AppleRigidBody       ;
     public GameObject Picker_VR_Controller ;
     public GameObject Picker_3D_Touch      ;
     public GameObject Picker_Fruit_Picker  ;
@@ -42,6 +43,8 @@ public class Universal_Script : MonoBehaviour
         Apple.GetComponent<SteamVR_TrackedObject>().enabled = false ;
         Apple.GetComponent<Interactable>().enabled = false          ;
         Apple.GetComponent<Throwable>().enabled = false             ;
+
+        AppleRigidBody = Apple.GetComponent<Rigidbody>()            ;
 
         Apple.GetComponent<Haptics_Pen_v1>().enabled = false ;  // Added the content in "Haptics_Pen_v2" and "Haptics_Pen_v3" to this one //
 
@@ -110,6 +113,8 @@ public class Universal_Script : MonoBehaviour
             Apple.GetComponent<SpringJoint>().damper = 2       ;
             Apple.GetComponent<SpringJoint>().breakTorque = 0  ;
             Apple.GetComponent<SpringJoint>().breakForce = 0   ;
+
+            AppleRigidBody.isKinematic = true                  ;
 
             Picker_Fruit_Picker.SetActive(true) ;
 
