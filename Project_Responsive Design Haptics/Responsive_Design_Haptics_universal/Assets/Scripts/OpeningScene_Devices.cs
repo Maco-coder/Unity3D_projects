@@ -22,7 +22,6 @@ public class OpeningScene_Devices : MonoBehaviour
         SceneManager.LoadScene("UNIVERSAL_Scene");
     }
 
-
     public void DeviceChosenIs3DTouch ()
     {
         chosen_device = 2                        ;
@@ -35,16 +34,14 @@ public class OpeningScene_Devices : MonoBehaviour
         SceneManager.LoadScene("UNIVERSAL_Scene");
     }
 
-    
+
     void Start()
     {
         
     }
 
-    
     void Update()
     {
           
     }
-
 }
