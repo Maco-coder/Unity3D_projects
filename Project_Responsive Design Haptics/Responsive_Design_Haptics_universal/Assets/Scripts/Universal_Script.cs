@@ -45,6 +45,7 @@ public class Universal_Script : MonoBehaviour
         if (device == 1)  // IF VR CONTROLLER IS CHOSEN IN THE OPENING SCENE //
         {
             Debug.Log("The device chosen was VR controller")   ;
+            
             Apple.GetComponent<SpringJoint>().spring = 50      ;
             Apple.GetComponent<SpringJoint>().damper = 2       ;
             Apple.GetComponent<SpringJoint>().breakTorque = 10 ;
@@ -63,12 +64,20 @@ public class Universal_Script : MonoBehaviour
         if (device == 2)  // IF 3D TOUCH IS CHOSEN IN THE OPENING SCENE //
         {
             Debug.Log("The device chosen was 3D Touch");
+
+            Apple.GetComponent<SpringJoint>().spring = 50      ;
+            Apple.GetComponent<SpringJoint>().damper = 2       ;
+            Apple.GetComponent<SpringJoint>().breakTorque = 10 ;
+            Apple.GetComponent<SpringJoint>().breakForce = 10  ;
+
         }
 
 
         if (device == 3)  // IF FRUIT PICKER IS CHOSEN IN THE OPENING SCENE //
         {
             Debug.Log("The device chosen was Fruit picker")    ;
+
+            // We do not require a joint in the scene, as the virtual apple is tracked with the VIVE tracker //
             Apple.GetComponent<SpringJoint>().spring = 50      ;
             Apple.GetComponent<SpringJoint>().damper = 2       ;
             Apple.GetComponent<SpringJoint>().breakTorque = 0  ;
