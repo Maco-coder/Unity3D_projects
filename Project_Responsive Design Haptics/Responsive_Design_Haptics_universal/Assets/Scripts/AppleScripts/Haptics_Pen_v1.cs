@@ -8,8 +8,11 @@ using UnityEngine                 ;
 
 public class Haptics_Pen_v1 : MonoBehaviour
 {
-
+    public GameObject apple             ;
     public GameObject cube_outter_apple ;
+    
+    public static float velocity = 0f ;
+    public static float value = 0f    ;
 
 
     void Start()
@@ -19,7 +22,21 @@ public class Haptics_Pen_v1 : MonoBehaviour
 
     void Update()
     {
-        //cube_outter_apple.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z) ;
+
+        Rigidbody rb = apple.GetComponent<Rigidbody>();
+        velocity = rb.velocity.magnitude;
+        Debug.Log("Changing haptics by velocity." + velocity);
+
+        if (velocity > 0.01f)
+        {
+            Debug.Log("Changing haptics by velocity." + velocity);
+            value = Mathf.Min(200 * velocity, 600f) ;
+        }
+
+        else
+        {
+            value = 0f;
+        }
     }
 
 

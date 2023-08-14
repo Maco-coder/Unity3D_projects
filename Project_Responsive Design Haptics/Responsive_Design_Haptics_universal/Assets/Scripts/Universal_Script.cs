@@ -37,6 +37,9 @@ public class Universal_Script : MonoBehaviour
         Apple.GetComponent<Interactable>().enabled = false          ;
         Apple.GetComponent<Throwable>().enabled = false             ;
 
+        Apple.GetComponent<Haptics_Pen_v1>().enabled = false ;  // Added the content in "Haptics_Pen_v3" to this one //
+        Apple.GetComponent<Haptics_Pen_v2>().enabled = false ;
+
     }
 
     void Update()
@@ -63,12 +66,21 @@ public class Universal_Script : MonoBehaviour
 
         if (device == 2)  // IF 3D TOUCH IS CHOSEN IN THE OPENING SCENE //
         {
-            Debug.Log("The device chosen was 3D Touch");
+            //Debug.Log("The device chosen was 3D Touch");
 
             Apple.GetComponent<SpringJoint>().spring = 50      ;
             Apple.GetComponent<SpringJoint>().damper = 2       ;
-            Apple.GetComponent<SpringJoint>().breakTorque = 10 ;
-            Apple.GetComponent<SpringJoint>().breakForce = 10  ;
+            Apple.GetComponent<SpringJoint>().breakTorque = 30 ;
+            Apple.GetComponent<SpringJoint>().breakForce = 30  ;
+
+            OuterCube_InTree.SetActive(true) ;
+            TrunkCube_InTree.SetActive(true) ;
+
+            Apple.GetComponent<Interactable>().enabled = true  ;
+            Apple.GetComponent<Throwable>().enabled = true     ;
+
+            Apple.GetComponent<Haptics_Pen_v1>().enabled = true ;
+            Apple.GetComponent<Haptics_Pen_v2>().enabled = true ;
 
         }
 

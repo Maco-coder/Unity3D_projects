@@ -1687,11 +1687,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.148
+      value: 3.15
       objectReference: {fileID: 0}
     - target: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.818
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1878,7 +1878,7 @@ SpringJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
   m_Spring: 50
-  m_Damper: 2
+  m_Damper: 20
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.025
@@ -1902,6 +1902,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 4
   origin: {fileID: 246518489}
+--- !u!114 &476833028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476833021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff2595677abcc46acf81e2148ac367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apple: {fileID: 476833021}
+  cube_outter_apple: {fileID: 1215903175}
 --- !u!1 &492717874
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,6 +3384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ff2595677abcc46acf81e2148ac367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  apple: {fileID: 0}
   cube_outter_apple: {fileID: 0}
 --- !u!114 &1243820532
 MonoBehaviour:
