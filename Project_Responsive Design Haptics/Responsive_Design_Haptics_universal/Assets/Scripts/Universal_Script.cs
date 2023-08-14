@@ -14,8 +14,10 @@ public class Universal_Script : MonoBehaviour
 
     public static int device = OpeningScene_Devices.chosen_device ;
 
-    public GameObject Apple  ;
-    public GameObject Picker ;
+    public GameObject Apple                ;
+    public GameObject Picker_VR_Controller ;
+    public GameObject Picker_3D_Touch      ;
+    public GameObject Picker_Fruit_Picker  ;
 
     public GameObject OuterCube_InTree  ;
     public GameObject InnerCube_InTree  ;
@@ -27,18 +29,27 @@ public class Universal_Script : MonoBehaviour
 
     void Start()
     {
-        Capsule_Apple.SetActive(false)    ;
-        OuterCube_InTree.SetActive(false) ;
-        InnerCube_InTree.SetActive(false) ;
-        TrunkCube_InTree.SetActive(false) ;
-        LargeCube_InWorld.SetActive(false);
+        Capsule_Apple.SetActive(false)     ;
+        OuterCube_InTree.SetActive(false)  ;
+        InnerCube_InTree.SetActive(false)  ;
+        TrunkCube_InTree.SetActive(false)  ;
+        LargeCube_InWorld.SetActive(false) ;
+
+        Picker_VR_Controller.SetActive(false) ;
+        Picker_3D_Touch.SetActive(false)      ;
+        Picker_Fruit_Picker.SetActive(false)  ;
 
         Apple.GetComponent<SteamVR_TrackedObject>().enabled = false ;
         Apple.GetComponent<Interactable>().enabled = false          ;
         Apple.GetComponent<Throwable>().enabled = false             ;
 
-        Apple.GetComponent<Haptics_Pen_v1>().enabled = false ;  // Added the content in "Haptics_Pen_v3" to this one //
-        Apple.GetComponent<Haptics_Pen_v2>().enabled = false ;
+        Apple.GetComponent<Haptics_Pen_v1>().enabled = false ;  // Added the content in "Haptics_Pen_v2" and "Haptics_Pen_v3" to this one //
+
+        Picker_VR_Controller.GetComponent<Haptics_Vive>().enabled = false ;
+
+        Picker_Fruit_Picker.GetComponent<SteamVR_TrackedObject>().enabled = false ;
+        Picker_VR_Controller.GetComponent<Interactable>().enabled = false         ;
+        Picker_VR_Controller.GetComponent<Throwable>().enabled = false            ;
 
     }
 
@@ -47,19 +58,24 @@ public class Universal_Script : MonoBehaviour
 
         if (device == 1)  // IF VR CONTROLLER IS CHOSEN IN THE OPENING SCENE //
         {
-            Debug.Log("The device chosen was VR controller")   ;
+            //Debug.Log("The device chosen was VR controller")   ;
             
             Apple.GetComponent<SpringJoint>().spring = 50      ;
             Apple.GetComponent<SpringJoint>().damper = 2       ;
             Apple.GetComponent<SpringJoint>().breakTorque = 10 ;
             Apple.GetComponent<SpringJoint>().breakForce = 10  ;
             
-            OuterCube_InTree.SetActive(true) ;
-            InnerCube_InTree.SetActive(true) ;
-            TrunkCube_InTree.SetActive(true) ;
+            OuterCube_InTree.SetActive(true)     ;
+            InnerCube_InTree.SetActive(true)     ;
+            TrunkCube_InTree.SetActive(true)     ;
+            Picker_VR_Controller.SetActive(true) ;
 
             Apple.GetComponent<Interactable>().enabled = true ;
             Apple.GetComponent<Throwable>().enabled = true    ;
+
+            Picker_VR_Controller.GetComponent<Haptics_Vive>().enabled = true ;
+            Picker_VR_Controller.GetComponent<Interactable>().enabled = true ;
+            Picker_VR_Controller.GetComponent<Throwable>().enabled = true    ;
 
         }
 
@@ -75,25 +91,27 @@ public class Universal_Script : MonoBehaviour
 
             OuterCube_InTree.SetActive(true) ;
             TrunkCube_InTree.SetActive(true) ;
+            Picker_3D_Touch.SetActive(true)  ;
 
             Apple.GetComponent<Interactable>().enabled = true  ;
             Apple.GetComponent<Throwable>().enabled = true     ;
 
             Apple.GetComponent<Haptics_Pen_v1>().enabled = true ;
-            Apple.GetComponent<Haptics_Pen_v2>().enabled = true ;
 
         }
 
 
         if (device == 3)  // IF FRUIT PICKER IS CHOSEN IN THE OPENING SCENE //
         {
-            Debug.Log("The device chosen was Fruit picker")    ;
+            //Debug.Log("The device chosen was Fruit picker")    ;
 
             // We do not require a joint in the scene, as the virtual apple is tracked with the VIVE tracker //
             Apple.GetComponent<SpringJoint>().spring = 50      ;
             Apple.GetComponent<SpringJoint>().damper = 2       ;
             Apple.GetComponent<SpringJoint>().breakTorque = 0  ;
             Apple.GetComponent<SpringJoint>().breakForce = 0   ;
+
+            Picker_Fruit_Picker.SetActive(true) ;
 
             Apple.GetComponent<SteamVR_TrackedObject>().enabled = true ;
             

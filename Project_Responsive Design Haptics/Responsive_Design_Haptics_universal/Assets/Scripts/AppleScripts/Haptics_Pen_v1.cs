@@ -10,6 +10,7 @@ public class Haptics_Pen_v1 : MonoBehaviour
 {
     public GameObject apple             ;
     public GameObject cube_outter_apple ;
+    public GameObject feedback_capsule  ;
     
     public static float velocity = 0f ;
     public static float value = 0f    ;
@@ -18,6 +19,7 @@ public class Haptics_Pen_v1 : MonoBehaviour
     void Start()
     {
         cube_outter_apple.SetActive(false);
+        feedback_capsule.SetActive(false) ;
     }
 
     void Update()
@@ -45,6 +47,17 @@ public class Haptics_Pen_v1 : MonoBehaviour
 
         cube_outter_apple.SetActive(true);
         Debug.Log("The apple has been plucked from the tree!, force: " + breakForce);
+
+    }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.name == "Grabber")
+        {
+            feedback_capsule.SetActive(true);
+        }
 
     }
 
