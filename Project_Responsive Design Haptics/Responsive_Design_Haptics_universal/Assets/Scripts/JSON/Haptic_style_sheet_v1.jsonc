@@ -1,0 +1,313 @@
+{
+
+    
+    // 1. Script-related grammar
+
+    {
+        "id": "SteamVR_TrackedObject-1",
+        "type": "script",
+        "class": "object",
+        "params": 
+            {
+                {
+                    "device": "props",
+                    "enabled": "true"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "false"
+                }
+            }
+    }, 
+    
+
+    {
+        "id": "SteamVR_TrackedObject-2",
+        "type": "script",
+        "class": "tool",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "true"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "false"
+                }
+            }
+    },
+
+    {
+        "id": "Interactable-1",
+        "type": "script",
+        "class": "object",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "true"
+                }
+            }
+    },
+
+    {
+        "id": "Interactable-2",
+        "type": "script",
+        "class": "tool",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "true"
+                }
+            }
+    },
+
+    {
+        "id": "Throwable-1",
+        "type": "script",
+        "class": "object",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "true"
+                }
+            }
+    },
+
+    {
+        "id": "Throwable-2",
+        "type": "script",
+        "class": "tool",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "true"
+                }
+            }
+    },
+
+    {
+        "id": "Haptics_Vive",
+        "type": "script",
+        "class": "tool",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "true"
+                }
+            }
+    },
+
+    {
+        "id": "Haptics_Pen_v1",
+        "type": "script",
+        "class": "object",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "true"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "false"
+                }
+            }
+    },
+
+
+    // 2. Colliders
+
+    {
+        "id": "Capsule_Apple",
+        "type": "collider",
+        "class": "object",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false",
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "false"
+                }
+            }
+    },
+
+    {
+        "id": "OuterCube_InTree",
+        "type": "collider",
+        "class": "object",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "true"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "true"
+                }
+            }
+    },
+
+    {
+        "id": "InnerCube_InTree",
+        "type": "collider",
+        "class": "object",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "true"
+                }
+            }
+    },
+
+    {
+        "id": "TrunkCube_InTree",
+        "type": "collider",
+        "class": "object",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "true"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "true"
+                }
+            }
+    },
+
+    {
+        "id": "LargeCube_InWorld",
+        "type": "collider",
+        "class": "tool",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "enabled": "false"
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": "false"
+                }
+            }
+    }
+
+
+    // 3. Constraints
+
+    {
+        "id": "SpringJoint",
+        "type": "constraint",
+        "class": "object",
+        "params":
+            {
+                {
+                    "device": "props",
+                    "enabled": "false"
+                },
+                {
+                    "device": "stylus",
+                    "spring": 50,
+                    "damper": 2,
+                    "breakTorque": 30,
+                    "breakForce": 30
+                },
+                {
+                    "device": "vr_controller",
+                    "spring": 50,
+                    "damper": 2,
+                    "breakTorque": 10,
+                    "breakForce": 10
+                }
+            }
+    }
+
+}
