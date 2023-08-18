@@ -1,108 +1,40 @@
-
-// 2. Colliders (Alternative)
-
-
 {
+    
+    // 2. Colliders (Alternative - including location, orietation, and size)
+
     "id": "Capsule_Apple",
     "type": "collider",
     "class": "object",
-    "params":
-        {
-            {
-                "device": "props",
-                "enabled": "false"
-            },
-            {
-                "device": "stylus",
-                "enabled": "false",
-            },
-            {
-                "device": "vr_controller",
-                "enabled": "false"
-            }
-        }
-},
+    "params": {
+        
+        "device1":{
+            "name": "props",
+            "enabled" : "false",
+        },
 
-{
-    "id": "OuterCube_InTree",
-    "type": "collider",
-    "class": "object",
-    "params":
-        {
-            {
-                "device": "props",
-                "enabled": "false"
-            },
-            {
-                "device": "stylus",
-                "enabled": "true"
-            },
-            {
-                "device": "vr_controller",
-                "enabled": "true"
-            }
-        }
-},
+        "device2":{
+            "name": "stylus",
+            "enabled" : "false",
+        },
 
-{
-    "id": "InnerCube_InTree",
-    "type": "collider",
-    "class": "object",
-    "params":
-        {
-            {
-                "device": "props",
-                "enabled": "false"
+        "device3":{
+            "name": "vr_controller",
+            "enabled" : "true",
+            "position": {   // we need to specify the origin/relative object //
+                "x": "0" ,
+                "y": "0" ,
+                "z": "0"
             },
-            {
-                "device": "stylus",
-                "enabled": "false"
+            "rotation": {   // we need to specify the origin/relative object //
+                "x": "0" ,
+                "y": "0" ,
+                "z": "0"
             },
-            {
-                "device": "vr_controller",
-                "enabled": "true"
+            "scale": {      // we need to specify the origin/relative object //
+                "x": "0" ,
+                "y": "0" ,
+                "z": "0"
             }
         }
-},
-
-{
-    "id": "TrunkCube_InTree",
-    "type": "collider",
-    "class": "object",
-    "params":
-        {
-            {
-                "device": "props",
-                "enabled": "false"
-            },
-            {
-                "device": "stylus",
-                "enabled": "true"
-            },
-            {
-                "device": "vr_controller",
-                "enabled": "true"
-            }
-        }
-},
-
-{
-    "id": "LargeCube_InWorld",
-    "type": "collider",
-    "class": "tool",
-    "params":
-        {
-            {
-                "device": "props",
-                "enabled": "false"
-            },
-            {
-                "device": "stylus",
-                "enabled": "false"
-            },
-            {
-                "device": "vr_controller",
-                "enabled": "false"
-            }
-        }
+    }
 }
