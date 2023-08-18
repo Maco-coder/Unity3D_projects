@@ -1,6 +1,5 @@
 {
 
-    
     // 1. Script-related grammar
 
     {
@@ -22,9 +21,9 @@
                     "enabled": "false"
                 }
             }
-    }, 
+    },
     
-
+    
     {
         "id": "SteamVR_TrackedObject-2",
         "type": "script",
@@ -47,7 +46,7 @@
     },
 
     {
-        "id": "Interactable-1",
+        "id": "Interactable-1",  // attached to the apple //
         "type": "script",
         "class": "object",
         "params":
@@ -68,7 +67,7 @@
     },
 
     {
-        "id": "Interactable-2",
+        "id": "Interactable-2", // attached to the picker //
         "type": "script",
         "class": "tool",
         "params":
@@ -89,7 +88,7 @@
     },
 
     {
-        "id": "Throwable-1",
+        "id": "Throwable-1", // attached to the apple //
         "type": "script",
         "class": "object",
         "params":
@@ -110,7 +109,7 @@
     },
 
     {
-        "id": "Throwable-2",
+        "id": "Throwable-2", // attached to the picker //
         "type": "script",
         "class": "tool",
         "params":
