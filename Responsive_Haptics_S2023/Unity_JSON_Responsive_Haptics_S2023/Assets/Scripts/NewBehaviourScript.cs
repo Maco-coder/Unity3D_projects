@@ -12,7 +12,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Start()
     {
-        JSONstring = File.ReadAllText(Application.dataPath + "/Cube1Experience.json");
+        JSONstring = File.ReadAllText(Application.dataPath + "/Cube1Experience.json") ;
         FileData = JsonMapper.ToObject(JSONstring) ;
         Debug.Log(FileData["tests"][1]["name"])    ;
     }
