@@ -16,15 +16,19 @@ public class Universal_Script : MonoBehaviour
 
     public GameObject Apple                ;
     private Rigidbody AppleRigidBody       ;
+
+    public GameObject Tool                 ;
+    private Rigidbody ToolRigidBody        ;
+
     public GameObject Picker_VR_Controller ;
     public GameObject Picker_3D_Touch      ;
     public GameObject Picker_Fruit_Picker  ;
 
-    public GameObject OuterCube_InTree  ;
-    public GameObject InnerCube_InTree  ;
-    public GameObject TrunkCube_InTree  ;
-    public GameObject LargeCube_InWorld ;  // For vibrations produced by 3D touch when carrying apple in basket //
-    public GameObject Capsule_Apple     ;  // For more intense friction produced by 3D touch around apple //
+    public GameObject OuterCube_InTree     ;
+    public GameObject InnerCube_InTree     ;
+    public GameObject TrunkCube_InTree     ;
+    public GameObject LargeCube_InWorld    ;  // For vibrations produced by 3D touch when carrying apple in basket //
+    public GameObject Capsule_Apple        ;  // For more intense friction produced by 3D touch around apple //
     
 
 
@@ -39,17 +43,23 @@ public class Universal_Script : MonoBehaviour
         Picker_VR_Controller.SetActive(false) ;
         Picker_3D_Touch.SetActive(false)      ;
         Picker_Fruit_Picker.SetActive(false)  ;
-
+        
+        Apple.GetComponent<Haptics_Pen_v1>().enabled = false        ;
         Apple.GetComponent<SteamVR_TrackedObject>().enabled = false ;
         Apple.GetComponent<Interactable>().enabled = false          ;
         Apple.GetComponent<Throwable>().enabled = false             ;
 
         AppleRigidBody = Apple.GetComponent<Rigidbody>()            ;
 
-        Apple.GetComponent<Haptics_Pen_v1>().enabled = false ;  // Added the content in "Haptics_Pen_v2" and "Haptics_Pen_v3" to this one //
 
-        Picker_VR_Controller.GetComponent<Haptics_Vive>().enabled = false ;
+        Tool.GetComponent<Haptics_Vive>().enabled = false          ;
+        Tool.GetComponent<SteamVR_TrackedObject>().enabled = false ;
+        Tool.GetComponent<Interactable>().enabled = false          ;
+        Tool.GetComponent<Throwable>().enabled = false             ;
 
+        ToolRigidBody = Apple.GetComponent<Rigidbody>()            ;
+
+        Picker_VR_Controller.GetComponent<Haptics_Vive>().enabled = false         ;
         Picker_Fruit_Picker.GetComponent<SteamVR_TrackedObject>().enabled = false ;
         Picker_VR_Controller.GetComponent<Interactable>().enabled = false         ;
         Picker_VR_Controller.GetComponent<Throwable>().enabled = false            ;
