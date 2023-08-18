@@ -1,0 +1,108 @@
+
+// 2. Colliders (Alternative)
+
+
+{
+    "id": "Capsule_Apple",
+    "type": "collider",
+    "class": "object",
+    "params":
+        {
+            {
+                "device": "props",
+                "enabled": "false"
+            },
+            {
+                "device": "stylus",
+                "enabled": "false",
+            },
+            {
+                "device": "vr_controller",
+                "enabled": "false"
+            }
+        }
+},
+
+{
+    "id": "OuterCube_InTree",
+    "type": "collider",
+    "class": "object",
+    "params":
+        {
+            {
+                "device": "props",
+                "enabled": "false"
+            },
+            {
+                "device": "stylus",
+                "enabled": "true"
+            },
+            {
+                "device": "vr_controller",
+                "enabled": "true"
+            }
+        }
+},
+
+{
+    "id": "InnerCube_InTree",
+    "type": "collider",
+    "class": "object",
+    "params":
+        {
+            {
+                "device": "props",
+                "enabled": "false"
+            },
+            {
+                "device": "stylus",
+                "enabled": "false"
+            },
+            {
+                "device": "vr_controller",
+                "enabled": "true"
+            }
+        }
+},
+
+{
+    "id": "TrunkCube_InTree",
+    "type": "collider",
+    "class": "object",
+    "params":
+        {
+            {
+                "device": "props",
+                "enabled": "false"
+            },
+            {
+                "device": "stylus",
+                "enabled": "true"
+            },
+            {
+                "device": "vr_controller",
+                "enabled": "true"
+            }
+        }
+},
+
+{
+    "id": "LargeCube_InWorld",
+    "type": "collider",
+    "class": "tool",
+    "params":
+        {
+            {
+                "device": "props",
+                "enabled": "false"
+            },
+            {
+                "device": "stylus",
+                "enabled": "false"
+            },
+            {
+                "device": "vr_controller",
+                "enabled": "false"
+            }
+        }
+}
