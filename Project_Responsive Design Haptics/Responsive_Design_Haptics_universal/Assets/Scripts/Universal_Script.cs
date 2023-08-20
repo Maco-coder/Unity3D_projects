@@ -109,6 +109,7 @@ public class Universal_Script : MonoBehaviour
             Picker.GetComponent<SteamVR_TrackedObject>().enabled = false;
             Picker.GetComponent<Interactable>().enabled = true;
             Picker.GetComponent<Throwable>().enabled = true;
+            Picker.GetComponent<HapticGrabber>().enabled = false;
 
             HapticDevice.SetActive(false);
 
@@ -142,6 +143,9 @@ public class Universal_Script : MonoBehaviour
             Picker.GetComponent<SteamVR_TrackedObject>().enabled = false;
             Picker.GetComponent<Interactable>().enabled = false;
             Picker.GetComponent<Throwable>().enabled = false;
+            Picker.GetComponent<HapticGrabber>().enabled = true;
+
+            HapticDevice.SetActive(true);
 
         }
 
@@ -167,6 +171,7 @@ public class Universal_Script : MonoBehaviour
             Picker.GetComponent<SteamVR_TrackedObject>().enabled = true;
             Picker.GetComponent<Interactable>().enabled = false;
             Picker.GetComponent<Throwable>().enabled = false;
+            Picker.GetComponent<HapticGrabber>().enabled = false;
 
             HapticDevice.SetActive(false);
         }
