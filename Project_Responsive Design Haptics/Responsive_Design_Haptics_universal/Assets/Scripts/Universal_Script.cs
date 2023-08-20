@@ -21,9 +21,9 @@ public class Universal_Script : MonoBehaviour
     public GameObject Body3                ;
 
 
-    public GameObject Picker_VR_Controller ;
-    public GameObject Picker_3D_Touch      ;
-    public GameObject Picker_Fruit_Picker  ;
+    //public GameObject Picker_VR_Controller ;
+   // public GameObject Picker_3D_Touch      ;
+   // public GameObject Picker_Fruit_Picker  ;
 
     public GameObject OuterCube_InTree     ;
     public GameObject InnerCube_InTree     ;
@@ -43,9 +43,10 @@ public class Universal_Script : MonoBehaviour
         TrunkCube_InTree.SetActive(false)  ;
         LargeCube_InWorld.SetActive(false) ;
 
-        Picker_VR_Controller.SetActive(false) ;
-        Picker_3D_Touch.SetActive(false)      ;
-        Picker_Fruit_Picker.SetActive(false)  ;
+        Picker.SetActive(true) ;
+        //Picker_VR_Controller.SetActive(false) ;
+        //Picker_3D_Touch.SetActive(false)      ;
+        //Picker_Fruit_Picker.SetActive(false)  ;
         
         Apple.GetComponent<Haptics_Pen_v1>().enabled = false        ;
         Apple.GetComponent<SteamVR_TrackedObject>().enabled = false ;
