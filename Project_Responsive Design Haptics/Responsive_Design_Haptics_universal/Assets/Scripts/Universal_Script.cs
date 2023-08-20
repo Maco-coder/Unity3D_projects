@@ -74,7 +74,6 @@ public class Universal_Script : MonoBehaviour
     void Update()
     {
 
-        transform.Rotate(90, 0, 0);
 
         if (device == 1)  // IF VR CONTROLLER IS CHOSEN IN THE OPENING SCENE //
         {
