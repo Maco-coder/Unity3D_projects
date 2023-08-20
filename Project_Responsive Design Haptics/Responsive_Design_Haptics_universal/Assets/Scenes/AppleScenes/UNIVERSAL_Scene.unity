@@ -226,6 +226,7 @@ MonoBehaviour:
   Apple: {fileID: 476833021}
   Picker: {fileID: 1809148571653436}
   Body3: {fileID: 714822091}
+  HapticDevice: {fileID: 1856731232910276}
   OuterCube_InTree: {fileID: 392468149}
   InnerCube_InTree: {fileID: 1049200228}
   TrunkCube_InTree: {fileID: 985490082}
