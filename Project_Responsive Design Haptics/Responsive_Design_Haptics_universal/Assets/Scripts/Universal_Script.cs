@@ -181,7 +181,8 @@ public class Universal_Script : MonoBehaviour
             Apple.GetComponent<SpringJoint>().breakForce = 0   ;
 
             AppleRigidBody.isKinematic = true                  ;
-            Apple.GetComponent<SteamVR_TrackedObject>().enabled = true ;
+            Apple.GetComponent<SteamVR_TrackedObject>().enabled = true   ;
+            Body3.transform.localPosition = new Vector3(-1.6f, 0, 0)     ;
             Body3.transform.localRotation = Quaternion.Euler(-190, 90, 0);
 
         }
