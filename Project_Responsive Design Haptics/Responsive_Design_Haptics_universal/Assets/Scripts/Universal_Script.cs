@@ -17,8 +17,9 @@ public class Universal_Script : MonoBehaviour
     public GameObject Apple                ;
     private Rigidbody AppleRigidBody       ;
 
-    public GameObject Tool                 ;
-    private Rigidbody ToolRigidBody        ;
+    public GameObject Grabber              ;
+    public GameObject Body3                ;
+    private Rigidbody GrabberRigidBody     ;
 
     public GameObject Picker_VR_Controller ;
     public GameObject Picker_3D_Touch      ;
@@ -41,7 +42,7 @@ public class Universal_Script : MonoBehaviour
         LargeCube_InWorld.SetActive(false) ;
 
         Picker_VR_Controller.SetActive(false) ;
-        Picker_3D_Touch.SetActive(false)      ;
+        Picker_3D_Touch.SetActive(true)      ;
         Picker_Fruit_Picker.SetActive(false)  ;
         
         Apple.GetComponent<Haptics_Pen_v1>().enabled = false        ;
@@ -52,12 +53,13 @@ public class Universal_Script : MonoBehaviour
         AppleRigidBody = Apple.GetComponent<Rigidbody>()            ;
 
 
-        Tool.GetComponent<Haptics_Vive>().enabled = false          ;
-        Tool.GetComponent<SteamVR_TrackedObject>().enabled = false ;
-        Tool.GetComponent<Interactable>().enabled = false          ;
-        Tool.GetComponent<Throwable>().enabled = false             ;
+        Grabber.GetComponent<Haptics_Vive>().enabled = false          ;
+        Grabber.GetComponent<SteamVR_TrackedObject>().enabled = false ;
+        Grabber.GetComponent<Interactable>().enabled = false          ;
+        Grabber.GetComponent<Throwable>().enabled = false             ;
 
-        ToolRigidBody = Apple.GetComponent<Rigidbody>()            ;
+        GrabberRigidBody = Apple.GetComponent<Rigidbody>() ;
+
 
         Picker_VR_Controller.GetComponent<Haptics_Vive>().enabled = false         ;
         Picker_Fruit_Picker.GetComponent<SteamVR_TrackedObject>().enabled = false ;
@@ -104,10 +106,10 @@ public class Universal_Script : MonoBehaviour
 
             OuterCube_InTree.SetActive(true) ;
             TrunkCube_InTree.SetActive(true) ;
-            Picker_3D_Touch.SetActive(true)  ;
+            //Picker_3D_Touch.SetActive(true)  ;
 
-            Apple.GetComponent<Interactable>().enabled = true  ;
-            Apple.GetComponent<Throwable>().enabled = true     ;
+            Apple.GetComponent<Interactable>().enabled = true   ;
+            Apple.GetComponent<Throwable>().enabled = true      ;
 
             Apple.GetComponent<Haptics_Pen_v1>().enabled = true ;
 
