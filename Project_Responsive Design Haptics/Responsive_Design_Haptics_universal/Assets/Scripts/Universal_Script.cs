@@ -20,6 +20,8 @@ public class Universal_Script : MonoBehaviour
     public GameObject Picker               ;
     public GameObject Body3                ;
 
+    public GameObject HapticDevice ;
+
 
     //public GameObject Picker_VR_Controller ;
    // public GameObject Picker_3D_Touch      ;
@@ -70,6 +72,8 @@ public class Universal_Script : MonoBehaviour
             Picker.GetComponent<SteamVR_TrackedObject>().enabled = false ;
             Picker.GetComponent<Interactable>().enabled = true           ;
             Picker.GetComponent<Throwable>().enabled = true              ;
+
+            HapticDevice.SetActive(false) ;
         }
 
 
@@ -99,13 +103,9 @@ public class Universal_Script : MonoBehaviour
             Picker.GetComponent<SteamVR_TrackedObject>().enabled = true;
             Picker.GetComponent<Interactable>().enabled = false;
             Picker.GetComponent<Throwable>().enabled = false;
+
+            HapticDevice.SetActive(false);
         }
-
-
-        Picker_VR_Controller.GetComponent<Haptics_Vive>().enabled = false         ;
-        Picker_Fruit_Picker.GetComponent<SteamVR_TrackedObject>().enabled = false ;
-        Picker_VR_Controller.GetComponent<Interactable>().enabled = false         ;
-        Picker_VR_Controller.GetComponent<Throwable>().enabled = false            ;
 
     }
 
@@ -125,14 +125,9 @@ public class Universal_Script : MonoBehaviour
             OuterCube_InTree.SetActive(true)     ;
             InnerCube_InTree.SetActive(true)     ;
             TrunkCube_InTree.SetActive(true)     ;
-            Picker_VR_Controller.SetActive(true) ;
 
             Apple.GetComponent<Interactable>().enabled = true ;
             Apple.GetComponent<Throwable>().enabled = true    ;
-
-            Picker_VR_Controller.GetComponent<Haptics_Vive>().enabled = true ;
-            Picker_VR_Controller.GetComponent<Interactable>().enabled = true ;
-            Picker_VR_Controller.GetComponent<Throwable>().enabled = true    ;
 
         }
 
@@ -148,11 +143,9 @@ public class Universal_Script : MonoBehaviour
 
             OuterCube_InTree.SetActive(true) ;
             TrunkCube_InTree.SetActive(true) ;
-            Picker_3D_Touch.SetActive(true)  ;
 
             Apple.GetComponent<Interactable>().enabled = true   ;
             Apple.GetComponent<Throwable>().enabled = true      ;
-
             Apple.GetComponent<Haptics_Pen_v1>().enabled = true ;
 
         }
@@ -169,9 +162,6 @@ public class Universal_Script : MonoBehaviour
             Apple.GetComponent<SpringJoint>().breakForce = 0   ;
 
             AppleRigidBody.isKinematic = true                  ;
-
-            Picker_Fruit_Picker.SetActive(true) ;
-
             Apple.GetComponent<SteamVR_TrackedObject>().enabled = true ;
             
         }

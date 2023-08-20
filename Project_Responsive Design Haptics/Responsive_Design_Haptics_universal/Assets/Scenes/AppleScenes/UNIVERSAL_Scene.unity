@@ -224,11 +224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Apple: {fileID: 476833021}
-  Picker: {fileID: 0}
+  Picker: {fileID: 1809148571653436}
   Body3: {fileID: 714822091}
-  Picker_VR_Controller: {fileID: 1917585339}
-  Picker_3D_Touch: {fileID: 1896115744310974}
-  Picker_Fruit_Picker: {fileID: 1448289344}
   OuterCube_InTree: {fileID: 392468149}
   InnerCube_InTree: {fileID: 1049200228}
   TrunkCube_InTree: {fileID: 985490082}
