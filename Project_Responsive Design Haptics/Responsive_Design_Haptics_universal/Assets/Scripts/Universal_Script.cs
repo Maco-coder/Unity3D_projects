@@ -17,9 +17,9 @@ public class Universal_Script : MonoBehaviour
     public GameObject Apple                ;
     private Rigidbody AppleRigidBody       ;
 
-    public GameObject Grabber              ;
+    public GameObject Picker               ;
     public GameObject Body3                ;
-    private Rigidbody GrabberRigidBody     ;
+
 
     public GameObject Picker_VR_Controller ;
     public GameObject Picker_3D_Touch      ;
@@ -36,7 +36,6 @@ public class Universal_Script : MonoBehaviour
     void Start()
     {
 
-        
 
         Capsule_Apple.SetActive(false)     ;
         OuterCube_InTree.SetActive(false)  ;
@@ -56,12 +55,50 @@ public class Universal_Script : MonoBehaviour
         AppleRigidBody = Apple.GetComponent<Rigidbody>()            ;
 
 
-        Grabber.GetComponent<Haptics_Vive>().enabled = false          ;
-        Grabber.GetComponent<SteamVR_TrackedObject>().enabled = false ;
-        Grabber.GetComponent<Interactable>().enabled = false          ;
-        Grabber.GetComponent<Throwable>().enabled = false             ;
 
-        GrabberRigidBody = Apple.GetComponent<Rigidbody>() ;
+        if (device == 1) // THIS IS FOR THE VR CONTROLLER //
+        {
+            Rigidbody PickerRigidBody;
+            PickerRigidBody = Picker.GetComponent<Rigidbody>();
+            PickerRigidBody.mass = 0.1f        ;
+            PickerRigidBody.angularDrag = 0.05f;
+            PickerRigidBody.isKinematic = false;
+            PickerRigidBody.useGravity = true  ;
+
+            Picker.GetComponent<Haptics_Vive>().enabled = true           ;
+            Picker.GetComponent<SteamVR_TrackedObject>().enabled = false ;
+            Picker.GetComponent<Interactable>().enabled = true           ;
+            Picker.GetComponent<Throwable>().enabled = true              ;
+        }
+
+
+        if (device == 2) // THIS IS FOR THE 3D TOUCH //
+        {
+            Rigidbody PickerRigidBody;
+            PickerRigidBody = Picker.GetComponent<Rigidbody>();
+            PickerRigidBody.mass = 0.1f        ;
+            PickerRigidBody.angularDrag = 0.00f;
+            PickerRigidBody.isKinematic = true ;
+            PickerRigidBody.useGravity = false ;
+
+            Picker.GetComponent<Haptics_Vive>().enabled = false          ;
+            Picker.GetComponent<SteamVR_TrackedObject>().enabled = false ;
+            Picker.GetComponent<Interactable>().enabled = false          ;
+            Picker.GetComponent<Throwable>().enabled = false             ;
+        }
+
+
+        if (device == 3) // THIS IS FOR THE FRUIT PICKER PROP //
+        {
+            Rigidbody PickerRigidBody                         ;
+            PickerRigidBody = Picker.GetComponent<Rigidbody>();
+            PickerRigidBody.isKinematic = true                ;
+
+            Picker.GetComponent<Haptics_Vive>().enabled = false;
+            Picker.GetComponent<SteamVR_TrackedObject>().enabled = true;
+            Picker.GetComponent<Interactable>().enabled = false;
+            Picker.GetComponent<Throwable>().enabled = false;
+        }
 
 
         Picker_VR_Controller.GetComponent<Haptics_Vive>().enabled = false         ;
