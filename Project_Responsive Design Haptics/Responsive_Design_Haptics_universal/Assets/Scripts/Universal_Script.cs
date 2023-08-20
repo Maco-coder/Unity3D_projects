@@ -75,6 +75,8 @@ public class Universal_Script : MonoBehaviour
             Picker.GetComponent<HapticGrabber>().enabled = false;
 
             HapticDevice.SetActive(false);
+            Body3.transform.Position(0, 0, 0);
+            Body3.transform.Rotate(0,180,0)  ;
         }
 
 
@@ -94,6 +96,8 @@ public class Universal_Script : MonoBehaviour
             Picker.GetComponent<HapticGrabber>().enabled = true;
 
             HapticDevice.SetActive(true);
+            Body3.transform.Position(0, 0, 0);
+            Body3.transform.Rotate(0, 180, 0);
         }
 
 
@@ -110,9 +114,12 @@ public class Universal_Script : MonoBehaviour
             Picker.GetComponent<HapticGrabber>().enabled = false;
 
             HapticDevice.SetActive(false);
+            Body3.transform.Position(-1.6,0,0) ;
+            Body3.transform.Rotate(-190, 90, 0);
         }
 
     }
+
 
     void Update()
     {
