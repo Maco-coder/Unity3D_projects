@@ -117,8 +117,9 @@ public class Universal_Script : MonoBehaviour
 
             HapticDevice.SetActive(false);
 
-            //Body3.transform.position = new Vector3(-1.6f,0,0);
-            
+            Body3.transform.localPosition = new Vector3(-1.6f, 0, 0);
+            Body3.transform.localRotation = Quaternion.Euler(-190, 90, 0);
+
         }
 
     }
@@ -182,8 +183,7 @@ public class Universal_Script : MonoBehaviour
 
             AppleRigidBody.isKinematic = true                  ;
             Apple.GetComponent<SteamVR_TrackedObject>().enabled = true   ;
-            Body3.transform.localPosition = new Vector3(-1.6f, 0, 0)     ;
-            Body3.transform.localRotation = Quaternion.Euler(-190, 90, 0);
+
 
         }
                 
