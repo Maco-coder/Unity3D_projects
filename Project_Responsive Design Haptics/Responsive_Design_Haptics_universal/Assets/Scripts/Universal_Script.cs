@@ -36,7 +36,7 @@ public class Universal_Script : MonoBehaviour
     void Start()
     {
 
-        transform.Rotate(90,0,0);
+        
 
         Capsule_Apple.SetActive(false)     ;
         OuterCube_InTree.SetActive(false)  ;
@@ -73,6 +73,8 @@ public class Universal_Script : MonoBehaviour
 
     void Update()
     {
+
+        transform.Rotate(90, 0, 0);
 
         if (device == 1)  // IF VR CONTROLLER IS CHOSEN IN THE OPENING SCENE //
         {
