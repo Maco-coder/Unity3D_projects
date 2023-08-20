@@ -46,9 +46,6 @@ public class Universal_Script : MonoBehaviour
         LargeCube_InWorld.SetActive(false) ;
 
         Picker.SetActive(true) ;
-        //Picker_VR_Controller.SetActive(false) ;
-        //Picker_3D_Touch.SetActive(false)      ;
-        //Picker_Fruit_Picker.SetActive(false)  ;
         
         Apple.GetComponent<Haptics_Pen_v1>().enabled = false        ;
         Apple.GetComponent<SteamVR_TrackedObject>().enabled = false ;
@@ -76,8 +73,8 @@ public class Universal_Script : MonoBehaviour
 
             HapticDevice.SetActive(false);
 
-           // Body3.transform.position = new Vector3(0, 0, 0);
-           // Body3.transform.Rotate(0,180,0)                ;
+            Body3.transform.localPosition = new Vector3(0, 0, 0);
+            Body3.transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
 
 
@@ -98,8 +95,8 @@ public class Universal_Script : MonoBehaviour
 
             HapticDevice.SetActive(true);
 
-            //Body3.transform.position = new Vector3(0, 0, 0);
-            //Body3.transform.Rotate(0, 180.0f, -90.0f)      ;
+            Body3.transform.localPosition = new Vector3(0, 0, 0);
+            Body3.transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
 
 
@@ -175,14 +172,13 @@ public class Universal_Script : MonoBehaviour
         {
             //Debug.Log("The device chosen was Fruit picker")    ;
 
-            // We do not require a joint in the scene, as the virtual apple is tracked with the VIVE tracker //
             Apple.GetComponent<SpringJoint>().spring = 50      ;
             Apple.GetComponent<SpringJoint>().damper = 2       ;
             Apple.GetComponent<SpringJoint>().breakTorque = 0  ;
             Apple.GetComponent<SpringJoint>().breakForce = 0   ;
 
             AppleRigidBody.isKinematic = true                  ;
-            Apple.GetComponent<SteamVR_TrackedObject>().enabled = true   ;
+            Apple.GetComponent<SteamVR_TrackedObject>().enabled = true ;
 
 
         }
