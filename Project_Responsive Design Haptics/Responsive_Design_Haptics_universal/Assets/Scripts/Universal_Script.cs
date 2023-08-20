@@ -76,7 +76,7 @@ public class Universal_Script : MonoBehaviour
 
             HapticDevice.SetActive(false);
 
-            Body3.transform.position = new Vector3(0, 0, 0);
+           // Body3.transform.position = new Vector3(0, 0, 0);
             Body3.transform.Rotate(0,180,0)                ;
         }
 
@@ -98,8 +98,8 @@ public class Universal_Script : MonoBehaviour
 
             HapticDevice.SetActive(true);
 
-            Body3.transform.position = new Vector3(0, 0, 0);
-            Body3.transform.Rotate(0, 180, 0)              ;
+            //Body3.transform.position = new Vector3(0, 0, 0);
+            Body3.transform.Rotate(0, 180.0f, -90.0f)      ;
         }
 
 
