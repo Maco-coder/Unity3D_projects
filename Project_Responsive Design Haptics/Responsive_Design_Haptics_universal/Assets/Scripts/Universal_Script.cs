@@ -35,6 +35,9 @@ public class Universal_Script : MonoBehaviour
 
     void Start()
     {
+
+        transform.Rotate(90,0,0);
+
         Capsule_Apple.SetActive(false)     ;
         OuterCube_InTree.SetActive(false)  ;
         InnerCube_InTree.SetActive(false)  ;
@@ -42,7 +45,7 @@ public class Universal_Script : MonoBehaviour
         LargeCube_InWorld.SetActive(false) ;
 
         Picker_VR_Controller.SetActive(false) ;
-        Picker_3D_Touch.SetActive(true)      ;
+        Picker_3D_Touch.SetActive(false)      ;
         Picker_Fruit_Picker.SetActive(false)  ;
         
         Apple.GetComponent<Haptics_Pen_v1>().enabled = false        ;
@@ -106,7 +109,7 @@ public class Universal_Script : MonoBehaviour
 
             OuterCube_InTree.SetActive(true) ;
             TrunkCube_InTree.SetActive(true) ;
-            //Picker_3D_Touch.SetActive(true)  ;
+            Picker_3D_Touch.SetActive(true)  ;
 
             Apple.GetComponent<Interactable>().enabled = true   ;
             Apple.GetComponent<Throwable>().enabled = true      ;
