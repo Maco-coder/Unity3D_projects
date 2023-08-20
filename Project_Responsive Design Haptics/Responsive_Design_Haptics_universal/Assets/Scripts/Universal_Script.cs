@@ -117,8 +117,8 @@ public class Universal_Script : MonoBehaviour
 
             HapticDevice.SetActive(false);
 
-            Body3.transform.position = new Vector3(-1.6f,0,0);
-            Body3.transform.Rotate(-190, 90, 0)              ;
+            //Body3.transform.position = new Vector3(-1.6f,0,0);
+            Body3.transform.eulerAngles = new Vector3(-190, 90, 0) ;
         }
 
     }
