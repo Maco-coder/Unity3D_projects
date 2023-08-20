@@ -182,7 +182,7 @@ public class Universal_Script : MonoBehaviour
 
             AppleRigidBody.isKinematic = true                  ;
             Apple.GetComponent<SteamVR_TrackedObject>().enabled = true ;
-            Body3.transform.eulerAngles = new Vector3(-190, 90, 0);
+            Body3.transform.Rotate(-190, 90, 0, Space.World);
 
         }
                 
