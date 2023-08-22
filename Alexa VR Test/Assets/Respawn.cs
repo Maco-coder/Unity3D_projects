@@ -7,10 +7,12 @@ public class Respawn : MonoBehaviour
 {
     public GameObject bounding_area;
     private Vector3 origin_pos;
-    
+    private Quaternion origin_rot;
+
     void Start()
     {
         origin_pos = transform.position;
+        origin_rot = transform.rotation;
     }
 
     private void OnTriggerExit(Collider other)
@@ -19,6 +21,7 @@ public class Respawn : MonoBehaviour
         {
             print("RESPAWNED " + gameObject.name);
             transform.position = origin_pos;
+            transform.rotation = origin_rot;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
