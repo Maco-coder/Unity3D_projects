@@ -54,7 +54,7 @@ public class Haptics_Pen_v1 : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.name == "Grabber")
+        if (collision.gameObject.name == "Picker")
         {
             feedback_capsule.SetActive(true);
         }
