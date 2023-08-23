@@ -3,8 +3,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO                 ;
 using LitJson                   ;
-
-namespace ToolJSON {
 public class ObjectManager : MonoBehaviour 
 {
     private string JSONstring;
@@ -191,5 +189,4 @@ public class ObjectManager : MonoBehaviour
                 break;
         }
     }
-}
 }
