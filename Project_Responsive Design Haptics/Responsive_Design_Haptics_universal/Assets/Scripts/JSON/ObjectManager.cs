@@ -45,20 +45,33 @@ public class ObjectManager : MonoBehaviour
         }
     } 
 
+    Type GetScriptType(string id)
+    {
+        switch(id)
+        {
+            case "SteamVR_TrackedObject":  return typeof(SteamVR_TrackedObject);
+            case "Interactable": return typeof(Interactable);
+            case "Throwable": return typeof(Throwable);
+            case "Haptics_Vive": return typeof(Haptics_Vive);
+            case "Haptics_Pen_v1": return typeof(Haptics_Pen_v1);
+        }   
+    }
+
     void StartScript(string id, string params_JSON)   
     {
         ParamData = JsonMapper.ToObject(params_JSON);
         switch(device) 
         {
+            Type t = GetScriptType(id);
             // TODO: Write search function for indexing ParamData by device
             case 1: // VR-Controller
-                (MonoBehaviour) GetComponent(id).enabled = ParamData[2]["enabled"];
+                GetComponent<t>().enabled = ParamData[2]["enabled"];
                 break;
             case 2: // Stylus
-                GetComponent<id>().enabled = ParamData[1]["enabled"];
+                GetComponent<t>().enabled = ParamData[1]["enabled"];
                 break;
             case 3: // Prop
-                GetComponent<id>().enabled = ParamData[0]["enabled"];
+                GetComponent<t>().enabled = ParamData[0]["enabled"];
                 break;
         }
     }
