@@ -52,7 +52,7 @@ public class ObjectManager : MonoBehaviour
         {
             // TODO: Write search function for indexing ParamData by device
             case 1: // VR-Controller
-                GetComponent<id>().enabled = ParamData[2]["enabled"];
+                GetComponent(id).enabled = ParamData[2]["enabled"];
                 break;
             case 2: // Stylus
                 GetComponent<id>().enabled = ParamData[1]["enabled"];
