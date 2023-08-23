@@ -13,7 +13,7 @@ public class ParserJSON : MonoBehaviour
     {
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.jsonc") ;
         FileData = JsonMapper.ToObject(JSONstring);
-        Debug.Log("JSON mapped to object: " + FileData);
+        Debug.Log("JSON mapped to object: " + FileData.Count);
     } 
 }
 
