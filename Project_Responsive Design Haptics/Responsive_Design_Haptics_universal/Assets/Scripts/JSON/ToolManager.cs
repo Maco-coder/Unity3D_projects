@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO                 ;
 using LitJson                   ;
-public class ObjectManager : MonoBehaviour 
+public class ToolManager : MonoBehaviour 
 {
     private string JSONstring;
     private JsonData FileData;
@@ -20,7 +20,7 @@ public class ObjectManager : MonoBehaviour
             string class_JSON = FileData[i]["class"];
             List<string> params_JSON = FileData[i]["params"];
             // This is for tool-related JSON data
-            if (class_JSON == "object")   {
+            if (class_JSON == "tool")   {
                 switch (type) {
                 case "script":
                     if (transform.Find(id))
