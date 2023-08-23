@@ -119,7 +119,7 @@ public class ObjectManager : MonoBehaviour
                     Vector3 position, rotation, scale;
                     position = new Vector3(ParamData[0]["metrics"]["transform"]["position"]["x"], ParamData[0]["metrics"]["transform"]["position"]["y"], ParamData[0]["metrics"]["transform"]["position"]["z"]);
                     rotation = new Vector3(ParamData[0]["metrics"]["transform"]["rotation"]["x"], ParamData[0]["metrics"]["transform"]["rotation"]["y"], ParamData[0]["metrics"]["transform"]["rotation"]["z"]);
-                    scale = new Vector3(ParamData[0]["metrics"]["transform"]["scale"]["x"], ParamData[0]["metrics"]["transform"]["scale"]["y"], ParamData[0s]["metrics"]["transform"]["scale"]["z"]);
+                    scale = new Vector3(ParamData[0]["metrics"]["transform"]["scale"]["x"], ParamData[0]["metrics"]["transform"]["scale"]["y"], ParamData[0]["metrics"]["transform"]["scale"]["z"]);
                     if (ParamData[0]["metrics"]["transform"]["origin"] == "relative")   
                     {
                         // Set everything using local transform variables
