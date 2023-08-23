@@ -24,13 +24,16 @@ public class ObjectManager : MonoBehaviour
             if (class_JSON == "object")   {
                 switch (type) {
                 case "script":
-                    StartScript(id, params_JSON);
+                    if (transform.Find(id)) 
+                        StartScript(id, params_JSON);
                     break;
                 case "collider":
-                    StartCollider(id, params_JSON);
+                    if (transform.Find(id)) 
+                        StartCollider(id, params_JSON);
                     break;
                 case "constraint":
-                    StartConstraint(id, params_JSON);
+                    if (transform.Find(id)) 
+                        StartConstraint(id, params_JSON);
                     break;
                 }
             }
