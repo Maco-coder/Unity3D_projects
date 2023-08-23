@@ -12,7 +12,8 @@ public class ParserJSON : MonoBehaviour
     void Start()
     {
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.jsonc") ;
-        Debug.Log("This the data from JSON" + JSONstring);
+        FileData = JsonMapper.ToObject(JSONstring);
+        Debug.Log("JSON mapped to object: " + FileData);
     } 
 }
 
