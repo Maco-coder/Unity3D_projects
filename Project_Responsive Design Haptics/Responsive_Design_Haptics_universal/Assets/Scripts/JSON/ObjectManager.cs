@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO                 ;
 using LitJson                   ;
 
-public class ToolManager : MonoBehaviour 
+public class ObjectManager : MonoBehaviour 
 {
     private string JSONstring;
     private JsonData FileData;
@@ -21,7 +21,7 @@ public class ToolManager : MonoBehaviour
             string class_JSON = FileData[i]["class"];
             List<string> params_JSON = FileData[i]["params"];
             // This is for tool-related JSON data
-            if (class_JSON == "tool")   {
+            if (class_JSON == "object")   {
                 switch (type) {
                 case "script":
                     StartScript(id, params_JSON);
