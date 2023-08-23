@@ -9,6 +9,7 @@ public class ObjectManager : MonoBehaviour
     private JsonData FileData;
     private JsonData ParamData;
     public int device;
+    public int count_devices;
 
     void Start()
     {
@@ -18,7 +19,11 @@ public class ObjectManager : MonoBehaviour
             string id = (string) FileData[i]["id"];
             string type = (string) FileData[i]["type"];
             string class_JSON = (string) FileData[i]["class"];
-            List<string> params_JSON = (List<string>) FileData[i]["params"];
+            List<string> params_JSON;
+            for (int j = 0; j < count_devices; j++) {
+                string param = (string) FileData[i]["params"][j];
+                params_JSON.Add(param);
+            }
             // This is for tool-related JSON data
             if (class_JSON == "object")   {
                 switch (type) {
