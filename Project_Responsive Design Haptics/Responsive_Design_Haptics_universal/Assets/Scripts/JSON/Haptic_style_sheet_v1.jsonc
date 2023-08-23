@@ -1,13 +1,12 @@
-{
 
     // 1. Script-related grammar
-
+[
     {
         "id": "SteamVR_TrackedObject-1",
         "type": "script",
         "class": "object",
         "params": 
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "true"
@@ -20,16 +19,15 @@
                     "device": "vr_controller",
                     "enabled": "false"
                 }
-            }
+            ]
     },
-    
     
     {
         "id": "SteamVR_TrackedObject-2",
         "type": "script",
         "class": "tool",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "true"
@@ -42,7 +40,7 @@
                     "device": "vr_controller",
                     "enabled": "false"
                 }
-            }
+            ]
     },
 
     {
@@ -50,7 +48,7 @@
         "type": "script",
         "class": "object",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -63,7 +61,7 @@
                     "device": "vr_controller",
                     "enabled": "true"
                 }
-            }
+            ]
     },
 
     {
@@ -71,7 +69,7 @@
         "type": "script",
         "class": "tool",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -84,7 +82,7 @@
                     "device": "vr_controller",
                     "enabled": "true"
                 }
-            }
+            ]
     },
 
     {
@@ -92,7 +90,7 @@
         "type": "script",
         "class": "object",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -105,7 +103,7 @@
                     "device": "vr_controller",
                     "enabled": "true"
                 }
-            }
+            ]
     },
 
     {
@@ -113,7 +111,7 @@
         "type": "script",
         "class": "tool",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -126,7 +124,7 @@
                     "device": "vr_controller",
                     "enabled": "true"
                 }
-            }
+            ]
     },
 
     {
@@ -134,7 +132,7 @@
         "type": "script",
         "class": "tool",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -147,7 +145,7 @@
                     "device": "vr_controller",
                     "enabled": "true"
                 }
-            }
+            ]
     },
 
     {
@@ -155,7 +153,7 @@
         "type": "script",
         "class": "object",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -168,7 +166,7 @@
                     "device": "vr_controller",
                     "enabled": "false"
                 }
-            }
+            ]
     },
 
 
@@ -179,20 +177,20 @@
         "type": "collider",
         "class": "object",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false",
+                    "enabled": "false"
                 },
                 {
                     "device": "vr_controller",
                     "enabled": "false"
                 }
-            }
+            ]
     },
 
     {
@@ -200,7 +198,7 @@
         "type": "collider",
         "class": "object",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -213,7 +211,7 @@
                     "device": "vr_controller",
                     "enabled": "true"
                 }
-            }
+            ]
     },
 
     {
@@ -221,7 +219,7 @@
         "type": "collider",
         "class": "object",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -234,7 +232,7 @@
                     "device": "vr_controller",
                     "enabled": "true"
                 }
-            }
+            ]
     },
 
     {
@@ -242,7 +240,7 @@
         "type": "collider",
         "class": "object",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -255,7 +253,7 @@
                     "device": "vr_controller",
                     "enabled": "true"
                 }
-            }
+            ]
     },
 
     {
@@ -263,7 +261,7 @@
         "type": "collider",
         "class": "tool",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -276,8 +274,8 @@
                     "device": "vr_controller",
                     "enabled": "false"
                 }
-            }
-    }
+            ]
+    },
 
 
     // 3. Constraints
@@ -287,7 +285,7 @@
         "type": "constraint",
         "class": "object",
         "params":
-            {
+            [
                 {
                     "device": "props",
                     "enabled": "false"
@@ -306,7 +304,6 @@
                     "breakTorque": 10,
                     "breakForce": 10
                 }
-            }
+            ]
     }
-
-}
+]
