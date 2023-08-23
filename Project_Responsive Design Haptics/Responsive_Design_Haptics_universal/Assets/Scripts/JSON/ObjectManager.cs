@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO                 ;
 using LitJson                   ;
 
+namespace ObjectJSON    {
 public class ObjectManager : MonoBehaviour 
 {
     private string JSONstring;
@@ -190,4 +191,5 @@ public class ObjectManager : MonoBehaviour
                 break;
         }
     }
+}
 }
