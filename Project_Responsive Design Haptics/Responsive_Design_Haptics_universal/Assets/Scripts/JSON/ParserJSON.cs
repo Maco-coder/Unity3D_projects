@@ -11,7 +11,7 @@ public class ParserJSON : MonoBehaviour
 
     void Start()
     {
-        JSONstring = File.ReadAllText(Application.dataPath + "/Haptic_style_sheet_v1.jsonc") ;
+        JSONstring = File.ReadAllText("./Haptic_style_sheet_v1.jsonc") ;
         Debug.Log(JSONstring);
     } 
 }
@@ -20,8 +20,8 @@ public class JSONGrammar
 {
     public string id;
     public string type;
-    public string class;
-    public List<ParamFormat> params;
+    public string class_JSON;
+    public List<ParamFormat> params_JSON;
 }
 
 public class ParamFormat
