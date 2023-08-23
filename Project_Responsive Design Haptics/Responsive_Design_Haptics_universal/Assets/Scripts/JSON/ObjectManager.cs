@@ -60,9 +60,9 @@ public class ObjectManager : MonoBehaviour
     void StartScript(string id, string params_JSON)   
     {
         ParamData = JsonMapper.ToObject(params_JSON);
+        Type t = GetScriptType(id);
         switch(device) 
         {
-            Type t = GetScriptType(id);
             // TODO: Write search function for indexing ParamData by device
             case 1: // VR-Controller
                 GetComponent<t>().enabled = ParamData[2]["enabled"];
