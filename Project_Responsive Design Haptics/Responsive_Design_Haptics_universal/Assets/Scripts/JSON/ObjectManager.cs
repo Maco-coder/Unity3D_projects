@@ -51,7 +51,7 @@ public class ObjectManager : MonoBehaviour
     {
         switch(id)
         {
-            case "SteamVR_TrackedObject":  return typeof(SteamVR_TrackedObject);
+            case "SteamVR_TrackedObject": return typeof(SteamVR_TrackedObject);
             case "Interactable": return typeof(Interactable);
             case "Throwable": return typeof(Throwable);
             case "Haptics_Vive": return typeof(Haptics_Vive);
@@ -64,7 +64,7 @@ public class ObjectManager : MonoBehaviour
     {
         ParamData = JsonMapper.ToObject(params_JSON);
         Type t = GetScriptType(id);
-        switch(device) 
+        switch(device)
         {
             // TODO: Write search function for indexing ParamData by device
             case 1: // VR-Controller
