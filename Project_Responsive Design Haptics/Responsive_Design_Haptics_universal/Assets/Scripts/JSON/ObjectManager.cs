@@ -19,7 +19,7 @@ public class ObjectManager : MonoBehaviour
             string id = (string) FileData[i]["id"];
             string type = (string) FileData[i]["type"];
             string class_JSON = (string) FileData[i]["class"];
-            JsonData params_JSON = FileData[i]["params"];
+            string params_JSON = FileData[i]["params"];
             // List<string> params_JSON = new List<string>;
             // for (int j = 0; j < count_devices; j++) {
             //     string param = (string) FileData[i]["params"][j];
@@ -45,7 +45,7 @@ public class ObjectManager : MonoBehaviour
         }
     } 
 
-    void StartScript(string id, JsonData params_JSON)   
+    void StartScript(string id, string params_JSON)   
     {
         ParamData = JsonMapper.ToObject(params_JSON);
         switch(device) 
@@ -63,7 +63,7 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-    void StartCollider(string id, JsonData params_JSON)
+    void StartCollider(string id, string params_JSON)
     {
         ParamData = JsonMapper.ToObject(params_JSON);
         switch(device)  
@@ -143,7 +143,7 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-    void StartConstraint(string id, JsonData params_JSON)
+    void StartConstraint(string id, string params_JSON)
     {
         ParamData = JsonMapper.ToObject(params_JSON);
         switch(device)
