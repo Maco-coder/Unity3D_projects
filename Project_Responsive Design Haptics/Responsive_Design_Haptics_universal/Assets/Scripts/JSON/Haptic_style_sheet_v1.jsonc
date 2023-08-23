@@ -9,15 +9,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 }
             ]
     },
@@ -30,15 +33,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 }
             ]
     },
@@ -51,15 +57,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": null
                 }
             ]
     },
@@ -72,15 +81,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": null
                 }
             ]
     },
@@ -93,15 +105,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": null
                 }
             ]
     },
@@ -114,15 +129,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": null
                 }
             ]
     },
@@ -135,15 +153,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": null
                 }
             ]
     },
@@ -156,15 +177,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 }
             ]
     },
@@ -180,15 +204,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 }
             ]
     },
@@ -201,15 +228,56 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": {
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": -0.07,
+                                "y": 3.9,
+                                "z": -0.23
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 2.4,
+                                "y": 2.4,
+                                "z": 2.4
+                            }
+                        }
+                    }
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": {
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": -0.07,
+                                "y": 3.9,
+                                "z": -0.23
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 2.4,
+                                "y": 2.4,
+                                "z": 2.4
+                            }
+                        }
+                    }
                 }
             ]
     },
@@ -222,15 +290,37 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics":  { 
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": -0.04,
+                                "y": 3.82,
+                                "z": -0.4
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 2.5,
+                                "y": 1.6,
+                                "z": 1.6
+                            }
+                        }
+                    }
                 }
             ]
     },
@@ -243,15 +333,56 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": {
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": 0,
+                                "y": 1,
+                                "z": -0.116
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 0.25,
+                                "y": 2,
+                                "z": 0.25
+                            }
+                        }
+                    }
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "true"
+                    "enabled": true,
+                    "metrics": {
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": 0,
+                                "y": 1,
+                                "z": -0.116
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 0.25,
+                                "y": 2,
+                                "z": 0.25
+                            }
+                        }
+                    }
                 }
             ]
     },
@@ -264,15 +395,18 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 }
             ]
     },
@@ -288,21 +422,28 @@
             [
                 {
                     "device": "props",
-                    "enabled": "false"
+                    "enabled": false,
+                    "metrics": null
                 },
                 {
                     "device": "stylus",
-                    "spring": 50,
-                    "damper": 2,
-                    "breakTorque": 30,
-                    "breakForce": 30
+                    "enabled": true,
+                    "metrics": {
+                        "spring": 50,
+                        "damper": 2,
+                        "breakTorque": 30,
+                        "breakForce": 30
+                    }
                 },
                 {
                     "device": "vr_controller",
-                    "spring": 50,
-                    "damper": 2,
-                    "breakTorque": 10,
-                    "breakForce": 10
+                    "enabled": true,
+                    "metrics": {
+                        "spring": 50,
+                        "damper": 2,
+                        "breakTorque": 10,
+                        "breakForce": 10
+                    }
                 }
             ]
     }
