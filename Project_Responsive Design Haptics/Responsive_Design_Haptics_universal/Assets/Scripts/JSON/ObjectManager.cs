@@ -15,7 +15,7 @@ public class ObjectManager : MonoBehaviour
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.jsonc") ;
         FileData = JsonMapper.ToObject(JSONstring);
         for (int i = 0; i < FileData.Count; i++)    {
-            string id = FileData[i]["id"];
+            string id = (string) FileData[i]["id"];
             string type = FileData[i]["type"];
             string class_JSON = FileData[i]["class"];
             List<string> params_JSON = FileData[i]["params"];
