@@ -57,6 +57,7 @@ public class ObjectManager : MonoBehaviour
             case "Haptics_Vive": return typeof(Haptics_Vive);
             case "Haptics_Pen_v1": return typeof(Haptics_Pen_v1);
         }   
+        return null;
     }
 
     void StartScript(string id, string params_JSON)   
