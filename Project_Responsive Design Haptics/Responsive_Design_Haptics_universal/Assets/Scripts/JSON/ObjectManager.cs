@@ -16,9 +16,9 @@ public class ObjectManager : MonoBehaviour
         FileData = JsonMapper.ToObject(JSONstring);
         for (int i = 0; i < FileData.Count; i++)    {
             string id = (string) FileData[i]["id"];
-            string type = FileData[i]["type"];
-            string class_JSON = FileData[i]["class"];
-            List<string> params_JSON = FileData[i]["params"];
+            string type = (string) FileData[i]["type"];
+            string class_JSON = (string) FileData[i]["class"];
+            List<string> params_JSON = (List<string>) FileData[i]["params"];
             // This is for tool-related JSON data
             if (class_JSON == "object")   {
                 switch (type) {
