@@ -201,6 +201,7 @@ public class ObjectManager : MonoBehaviour
                         collider.transform.localScale = scale;                        
                     }
                 }
+                break;
         }
     }
 
