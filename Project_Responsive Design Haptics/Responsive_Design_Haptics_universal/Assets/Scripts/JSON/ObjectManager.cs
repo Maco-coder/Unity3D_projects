@@ -13,7 +13,7 @@ public class ObjectManager : MonoBehaviour
     public int device;
     public int count_devices;
 
-    public GameObject object;
+    public GameObject object_carabao;
 
     void Start()
     {
@@ -60,19 +60,19 @@ public class ObjectManager : MonoBehaviour
                 switch(id) 
                 {
                     case "SteamVR_TrackedObject": 
-                        object.GetComponent<SteamVR_TrackedObject>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = ParamData[2]["enabled"];
                         break;
                     case "Interactable":
-                        object.GetComponent<Interactable>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<Interactable>().enabled = ParamData[2]["enabled"];
                         break;
                     case "Throwable":
-                        object.GetComponent<Throwable>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<Throwable>().enabled = ParamData[2]["enabled"];
                         break;
                     case "Haptics_Vive":
-                        object.GetComponent<Haptics_Vive>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<Haptics_Vive>().enabled = ParamData[2]["enabled"];
                         break;
                     case "Haptics_Pen_v1":
-                        object.GetComponent<Haptics_Pen_v1>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<Haptics_Pen_v1>().enabled = ParamData[2]["enabled"];
                         break; 
                 }
                 break;
