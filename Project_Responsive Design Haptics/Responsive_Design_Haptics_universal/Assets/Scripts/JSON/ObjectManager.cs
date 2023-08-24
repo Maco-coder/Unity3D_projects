@@ -143,14 +143,18 @@ public class ObjectManager : MonoBehaviour
                     {
                         // Set everything using local transform variables
                         collider.transform.localPosition = position;
-                        collider.transform.localRotation = rotation;
+                        collider.transform.localRotation.x = rotation.x;
+                        collider.transform.localRotation.y = rotation.y;
+                        collider.transform.localRotation.z = rotation.z;
                         collider.transform.localScale = scale;
                     }
                     else
                     {
                         // Set everything using global transform variables
                         collider.transform.position = position;
-                        collider.transform.rotation = rotation;
+                        collider.transform.rotation.x = rotation.x;
+                        collider.transform.rotation.y = rotation.y;
+                        collider.transform.rotation.z = rotation.z;
                         collider.transform.scale = scale;                        
                     }
                 }
