@@ -28,10 +28,10 @@ public class ObjectManager : MonoBehaviour
             string type = (string) FileData[i]["type"];
             string class_JSON = (string) FileData[i]["class"];
             // string params_JSON = (string) FileData[i]["params"];
-            Debug.Log("Parameter object: " + FileData[i]["params"][0]["device"]);
-            List<string> params_JSON = new List<string>();
+            // Debug.Log("Parameter object: " + FileData[i]["params"][0]["device"]);
+            List<JsonData> params_JSON = new List<JsonData>();
             for (int j = 0; j < count_devices; j++) {
-                string param = JsonMapper.ToJson(FileData[i]["params"][j]);
+                JsonData param = FileData[i]["params"][j];
                 //Debug.Log("Parameter object: " + param);
                 params_JSON.Add(param);
             }
@@ -55,9 +55,9 @@ public class ObjectManager : MonoBehaviour
         }
     } 
 
-    void StartScript(string id, List<string> params_JSON)   
+    void StartScript(string id, List<JsonData> params_JSON)   
     {
-        ParamData = JsonMapper.ToObject(params_JSON[3 - device]);
+        ParamData = params_JSON[3 - device];
         switch(device)
         {
             // TODO: Write search function for indexing ParamData by device
@@ -129,9 +129,9 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-    void StartCollider(string id, List<string> params_JSON)
+    void StartCollider(string id, List<JsonData> params_JSON)
     {
-        ParamData = JsonMapper.ToObject(params_JSON[3 - device]);
+        ParamData = params_JSON[3 - device];
         GameObject collider = GameObject.Find(id);
         Vector3 position, scale;
         Quaternion rotation;
@@ -210,9 +210,9 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-    void StartConstraint(string id, List<string> params_JSON)
+    void StartConstraint(string id, List<JsonData> params_JSON)
     {
-        ParamData = JsonMapper.ToObject(params_JSON[3 - device]);
+        ParamData = params_JSON[3 - device];
         switch(device)
         {
             case 1: // VR-Controller
