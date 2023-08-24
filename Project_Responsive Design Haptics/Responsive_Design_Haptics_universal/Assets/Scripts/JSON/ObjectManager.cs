@@ -133,7 +133,7 @@ public class ObjectManager : MonoBehaviour
             // TODO: Write search function for indexing ParamData by device
             case 1: // VR-Controller
                 collider.SetActive((bool) ParamData[2]["enabled"]);
-                if (ParamData[2]["metrics"])    
+                if ((bool) ParamData[2]["metrics"])    
                 {
                     Vector3 position, rotation, scale;
                     position = new Vector3((float) ParamData[2]["metrics"]["transform"]["position"]["x"], (float) ParamData[2]["metrics"]["transform"]["position"]["y"], (float) ParamData[2]["metrics"]["transform"]["position"]["z"]);
@@ -157,7 +157,7 @@ public class ObjectManager : MonoBehaviour
                 break;
             case 2: // Stylus
                 collider.SetActive((bool) ParamData[1]["enabled"]);
-                if (ParamData[1]["metrics"])
+                if ((bool) ParamData[1]["metrics"])
                 {
                     Vector3 position, rotation, scale;
                     position = new Vector3((float) ParamData[1]["metrics"]["transform"]["position"]["x"], (float) ParamData[1]["metrics"]["transform"]["position"]["y"], (float) ParamData[1]["metrics"]["transform"]["position"]["z"]);
@@ -181,7 +181,7 @@ public class ObjectManager : MonoBehaviour
                 break;
             case 3: // Props
                 collider.SetActive((bool) ParamData[0]["enabled"]);
-                if (ParamData[0]["metrics"])
+                if ((bool) ParamData[0]["metrics"])
                 {
                     Vector3 position, rotation, scale;
                     position = new Vector3((float) ParamData[0]["metrics"]["transform"]["position"]["x"], (float) ParamData[0]["metrics"]["transform"]["position"]["y"], (float) ParamData[0]["metrics"]["transform"]["position"]["z"]);
