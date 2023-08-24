@@ -80,10 +80,46 @@ public class ObjectManager : MonoBehaviour
                 }
                 break;
             case 2: // Stylus
-                GetComponent<t>().enabled = ParamData[1]["enabled"];
+                // condition on type of script
+                switch(id) 
+                {
+                    case "SteamVR_TrackedObject": 
+                        object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData[1]["enabled"];
+                        break;
+                    case "Interactable":
+                        object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData[1]["enabled"];
+                        break;
+                    case "Throwable":
+                        object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData[1]["enabled"];
+                        break;
+                    case "Haptics_Vive":
+                        object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData[1]["enabled"];
+                        break;
+                    case "Haptics_Pen_v1":
+                        object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData[1]["enabled"];
+                        break; 
+                }
                 break;
             case 3: // Prop
-                GetComponent<t>().enabled = ParamData[0]["enabled"];
+                // condition on type of script
+                switch(id) 
+                {
+                    case "SteamVR_TrackedObject": 
+                        object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData[0]["enabled"];
+                        break;
+                    case "Interactable":
+                        object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData[0]["enabled"];
+                        break;
+                    case "Throwable":
+                        object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData[0]["enabled"];
+                        break;
+                    case "Haptics_Vive":
+                        object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData[0]["enabled"];
+                        break;
+                    case "Haptics_Pen_v1":
+                        object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData[0]["enabled"];
+                        break; 
+                }
                 break;
         }
     }
