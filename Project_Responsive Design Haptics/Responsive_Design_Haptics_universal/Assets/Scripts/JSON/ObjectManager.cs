@@ -229,6 +229,7 @@ public class ObjectManager : MonoBehaviour
                             GetComponent<SpringJoint>().breakTorque = 0.0f;
                             GetComponent<SpringJoint>().breakForce = 0.0f;
                         }
+                        break;
                 }
                 break;
             case 2: // Stylus
@@ -250,6 +251,7 @@ public class ObjectManager : MonoBehaviour
                             GetComponent<SpringJoint>().breakTorque = 0.0f;
                             GetComponent<SpringJoint>().breakForce = 0.0f;
                         }
+                        break;
                 }
                 break;
             case 3: // Props
@@ -271,6 +273,7 @@ public class ObjectManager : MonoBehaviour
                             GetComponent<SpringJoint>().breakTorque = 0.0f;
                             GetComponent<SpringJoint>().breakForce = 0.0f;
                         }
+                        break;
                 }
                 break;
         }
