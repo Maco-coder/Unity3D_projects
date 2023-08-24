@@ -28,7 +28,7 @@ public class ObjectManager : MonoBehaviour
             string type = (string) FileData[i]["type"];
             string class_JSON = (string) FileData[i]["class"];
             // string params_JSON = (string) FileData[i]["params"];
-            List<string> params_JSON = new List<string>;
+            List<string> params_JSON = new List<string>();
             for (int j = 0; j < count_devices; j++) {
                 string param = (string) FileData[i]["params"][j];
                 params_JSON.Add(param);
