@@ -20,7 +20,7 @@ public class ObjectManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("ObjectManager running for " + object_carabao);
+        Debug.Log("ObjectManager running for " + object_carabao + " with device ID = " + device);
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.jsonc") ;
         FileData = JsonMapper.ToObject(JSONstring);
         for (int i = 0; i < FileData.Count; i++)    {
