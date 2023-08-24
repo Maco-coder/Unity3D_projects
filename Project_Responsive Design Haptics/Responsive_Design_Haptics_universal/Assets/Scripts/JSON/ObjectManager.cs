@@ -214,13 +214,20 @@ public class ObjectManager : MonoBehaviour
                 switch((string) ParamData[2]["metrics"]["constraint-type"])
                 {
                     case "SpringJoint":
-                        GetComponent<SpringJoint>().SetActive((bool) ParamData[2]["enabled"]);
+                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[2]["enabled"]);
                         if ((bool) ParamData[2]["metrics"])
                         {
                             GetComponent<SpringJoint>().spring = (float) ParamData[2]["metrics"]["spring"];
                             GetComponent<SpringJoint>().damper = (float) ParamData[2]["metrics"]["damper"];
                             GetComponent<SpringJoint>().breakTorque = (float) ParamData[2]["metrics"]["breakTorque"];
                             GetComponent<SpringJoint>().breakForce = (float) ParamData[2]["metrics"]["breakForce"];
+                        } 
+                        else
+                        {
+                            GetComponent<SpringJoint>().spring = 0.0f;
+                            GetComponent<SpringJoint>().damper = 0.0f;
+                            GetComponent<SpringJoint>().breakTorque = 0.0f;
+                            GetComponent<SpringJoint>().breakForce = 0.0f;
                         }
                 }
                 break;
@@ -228,7 +235,7 @@ public class ObjectManager : MonoBehaviour
                 switch((string) ParamData[1]["metrics"]["constraint-type"])
                 {
                     case "SpringJoint":
-                        GetComponent<SpringJoint>().SetActive((bool) ParamData[1]["enabled"]);
+                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[1]["enabled"]);
                         if ((bool) ParamData[1]["metrics"])
                         {
                             GetComponent<SpringJoint>().spring = (float) ParamData[1]["metrics"]["spring"];
@@ -236,19 +243,33 @@ public class ObjectManager : MonoBehaviour
                             GetComponent<SpringJoint>().breakTorque = (float) ParamData[1]["metrics"]["breakTorque"];
                             GetComponent<SpringJoint>().breakForce = (float) ParamData[1]["metrics"]["breakForce"];
                         }
+                        else
+                        {
+                            GetComponent<SpringJoint>().spring = 0.0f;
+                            GetComponent<SpringJoint>().damper = 0.0f;
+                            GetComponent<SpringJoint>().breakTorque = 0.0f;
+                            GetComponent<SpringJoint>().breakForce = 0.0f;
+                        }
                 }
                 break;
             case 3: // Props
                 switch((string) ParamData[0]["metrics"]["constraint-type"])
                 {
                     case "SpringJoint":
-                        GetComponent<SpringJoint>().SetActive((bool) ParamData[0]["enabled"]);
+                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[0]["enabled"]);
                         if ((bool) ParamData[0]["metrics"])
                         {
                             GetComponent<SpringJoint>().spring = (float) ParamData[0]["metrics"]["spring"];
                             GetComponent<SpringJoint>().damper = (float) ParamData[0]["metrics"]["damper"];
                             GetComponent<SpringJoint>().breakTorque = (float) ParamData[0]["metrics"]["breakTorque"];
                             GetComponent<SpringJoint>().breakForce = (float) ParamData[0]["metrics"]["breakForce"];
+                        }
+                        else
+                        {
+                            GetComponent<SpringJoint>().spring = 0.0f;
+                            GetComponent<SpringJoint>().damper = 0.0f;
+                            GetComponent<SpringJoint>().breakTorque = 0.0f;
+                            GetComponent<SpringJoint>().breakForce = 0.0f;
                         }
                 }
                 break;
