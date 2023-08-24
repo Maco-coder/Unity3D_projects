@@ -127,78 +127,79 @@ public class ObjectManager : MonoBehaviour
     void StartCollider(string id, string params_JSON)
     {
         ParamData = JsonMapper.ToObject(params_JSON);
+        GameObject collider = GameObject.Find(id);
         switch(device)  
         {
             // TODO: Write search function for indexing ParamData by device
             case 1: // VR-Controller
-                GetComponent<id>().SetActive(ParamData[2]["enabled"]);
+                collider.SetActive((bool) ParamData[2]["enabled"]);
                 if (ParamData[2]["metrics"])    
                 {
                     Vector3 position, rotation, scale;
-                    position = new Vector3(ParamData[2]["metrics"]["transform"]["position"]["x"], ParamData[2]["metrics"]["transform"]["position"]["y"], ParamData[2]["metrics"]["transform"]["position"]["z"]);
-                    rotation = new Vector3(ParamData[2]["metrics"]["transform"]["rotation"]["x"], ParamData[2]["metrics"]["transform"]["rotation"]["y"], ParamData[2]["metrics"]["transform"]["rotation"]["z"]);
-                    scale = new Vector3(ParamData[2]["metrics"]["transform"]["scale"]["x"], ParamData[2]["metrics"]["transform"]["scale"]["y"], ParamData[2]["metrics"]["transform"]["scale"]["z"]);
-                    if (ParamData[2]["metrics"]["transform"]["origin"] == "relative")   
+                    position = new Vector3((float) ParamData[2]["metrics"]["transform"]["position"]["x"], (float) ParamData[2]["metrics"]["transform"]["position"]["y"], (float) ParamData[2]["metrics"]["transform"]["position"]["z"]);
+                    rotation = new Vector3((float) ParamData[2]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["z"]);
+                    scale = new Vector3((float) ParamData[2]["metrics"]["transform"]["scale"]["x"], (float) ParamData[2]["metrics"]["transform"]["scale"]["y"], (float) ParamData[2]["metrics"]["transform"]["scale"]["z"]);
+                    if ((string) ParamData[2]["metrics"]["transform"]["origin"] == "relative")   
                     {
                         // Set everything using local transform variables
-                        GetComponent<id>().transform.localPosition = position;
-                        GetComponent<id>().transform.localRotation = rotation;
-                        GetComponent<id>().transform.localScale = scale;
+                        collider.transform.localPosition = position;
+                        collider.transform.localRotation = rotation;
+                        collider.transform.localScale = scale;
                     }
                     else
                     {
                         // Set everything using global transform variables
-                        GetComponent<id>().transform.position = position;
-                        GetComponent<id>().transform.rotation = rotation;
-                        GetComponent<id>().transform.scale = scale;                        
+                        collider.transform.position = position;
+                        collider.transform.rotation = rotation;
+                        collider.transform.scale = scale;                        
                     }
                 }
                 break;
             case 2: // Stylus
-                GetComponent<id>().SetActive(ParamData[1]["enabled"]);
+                collider.SetActive((bool) ParamData[1]["enabled"]);
                 if (ParamData[1]["metrics"])
                 {
                     Vector3 position, rotation, scale;
-                    position = new Vector3(ParamData[1]["metrics"]["transform"]["position"]["x"], ParamData[1]["metrics"]["transform"]["position"]["y"], ParamData[1]["metrics"]["transform"]["position"]["z"]);
-                    rotation = new Vector3(ParamData[1]["metrics"]["transform"]["rotation"]["x"], ParamData[1]["metrics"]["transform"]["rotation"]["y"], ParamData[1]["metrics"]["transform"]["rotation"]["z"]);
-                    scale = new Vector3(ParamData[1]["metrics"]["transform"]["scale"]["x"], ParamData[1]["metrics"]["transform"]["scale"]["y"], ParamData[1]["metrics"]["transform"]["scale"]["z"]);
-                    if (ParamData[1]["metrics"]["transform"]["origin"] == "relative")   
+                    position = new Vector3((float) ParamData[1]["metrics"]["transform"]["position"]["x"], (float) ParamData[1]["metrics"]["transform"]["position"]["y"], (float) ParamData[1]["metrics"]["transform"]["position"]["z"]);
+                    rotation = new Vector3((float) ParamData[1]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[1]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[1]["metrics"]["transform"]["rotation"]["z"]);
+                    scale = new Vector3((float) ParamData[1]["metrics"]["transform"]["scale"]["x"], (float) ParamData[1]["metrics"]["transform"]["scale"]["y"], (float) ParamData[1]["metrics"]["transform"]["scale"]["z"]);
+                    if ((string) ParamData[1]["metrics"]["transform"]["origin"] == "relative")   
                     {
                         // Set everything using local transform variables
-                        GetComponent<id>().transform.localPosition = position;
-                        GetComponent<id>().transform.localRotation = rotation;
-                        GetComponent<id>().transform.localScale = scale;
+                        collider.transform.localPosition = position;
+                        collider.transform.localRotation = rotation;
+                        collider.transform.localScale = scale;
                     }   
                     else
                     {
                         // Set everything using global transform variables
-                        GetComponent<id>().transform.position = position;
-                        GetComponent<id>().transform.rotation = rotation;
-                        GetComponent<id>().transform.scale = scale;                        
+                        collider.transform.position = position;
+                        collider.transform.rotation = rotation;
+                        collider.transform.scale = scale;                        
                     }                 
                 }
                 break;
             case 3: // Props
-                GetComponent<id>().SetActive(ParamData[0]["enabled"]);
+                collider.SetActive((bool) ParamData[0]["enabled"]);
                 if (ParamData[0]["metrics"])
                 {
                     Vector3 position, rotation, scale;
-                    position = new Vector3(ParamData[0]["metrics"]["transform"]["position"]["x"], ParamData[0]["metrics"]["transform"]["position"]["y"], ParamData[0]["metrics"]["transform"]["position"]["z"]);
-                    rotation = new Vector3(ParamData[0]["metrics"]["transform"]["rotation"]["x"], ParamData[0]["metrics"]["transform"]["rotation"]["y"], ParamData[0]["metrics"]["transform"]["rotation"]["z"]);
-                    scale = new Vector3(ParamData[0]["metrics"]["transform"]["scale"]["x"], ParamData[0]["metrics"]["transform"]["scale"]["y"], ParamData[0]["metrics"]["transform"]["scale"]["z"]);
-                    if (ParamData[0]["metrics"]["transform"]["origin"] == "relative")   
+                    position = new Vector3((float) ParamData[0]["metrics"]["transform"]["position"]["x"], (float) ParamData[0]["metrics"]["transform"]["position"]["y"], (float) ParamData[0]["metrics"]["transform"]["position"]["z"]);
+                    rotation = new Vector3((float) ParamData[0]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[0]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[0]["metrics"]["transform"]["rotation"]["z"]);
+                    scale = new Vector3((float) ParamData[0]["metrics"]["transform"]["scale"]["x"], (float) ParamData[0]["metrics"]["transform"]["scale"]["y"], (float) ParamData[0]["metrics"]["transform"]["scale"]["z"]);
+                    if ((string) ParamData[0]["metrics"]["transform"]["origin"] == "relative")   
                     {
                         // Set everything using local transform variables
-                        GetComponent<id>().transform.localPosition = position;
-                        GetComponent<id>().transform.localRotation = rotation;
-                        GetComponent<id>().transform.localScale = scale;
+                        collider.transform.localPosition = position;
+                        collider.transform.localRotation = rotation;
+                        collider.transform.localScale = scale;
                     } 
                     else
                     {
                         // Set everything using global transform variables
-                        GetComponent<id>().transform.position = position;
-                        GetComponent<id>().transform.rotation = rotation;
-                        GetComponent<id>().transform.scale = scale;                        
+                        collider.transform.position = position;
+                        collider.transform.rotation = rotation;
+                        collider.transform.scale = scale;                        
                     }
                 }
         }
