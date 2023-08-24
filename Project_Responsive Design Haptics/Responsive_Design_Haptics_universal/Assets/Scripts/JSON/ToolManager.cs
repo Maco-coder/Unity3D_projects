@@ -3,35 +3,48 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO                 ;
 using LitJson                   ;
+using System;
+using Valve.VR                   ; // Needed to enable and disable VR trackers //
+using Valve.VR.InteractionSystem ; // Needed to enable and disable VR controllers //
+
+
 public class ToolManager : MonoBehaviour 
 {
     private string JSONstring;
     private JsonData FileData;
     private JsonData ParamData;
     public int device;
+    public int count_devices;
+
+    public GameObject object_carabao;
 
     void Start()
     {
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.jsonc") ;
         FileData = JsonMapper.ToObject(JSONstring);
         for (int i = 0; i < FileData.Count; i++)    {
-            string id = FileData[i]["id"];
-            string type = FileData[i]["type"];
-            string class_JSON = FileData[i]["class"];
-            List<string> params_JSON = FileData[i]["params"];
+            string id = (string) FileData[i]["id"];
+            string type = (string) FileData[i]["type"];
+            string class_JSON = (string) FileData[i]["class"];
+            string params_JSON = (string) FileData[i]["params"];
+            // List<string> params_JSON = new List<string>;
+            // for (int j = 0; j < count_devices; j++) {
+            //     string param = (string) FileData[i]["params"][j];
+            //     params_JSON.Add(param);
+            // }
             // This is for tool-related JSON data
             if (class_JSON == "tool")   {
                 switch (type) {
                 case "script":
-                    if (transform.Find(id))
+                    if (transform.Find(id)) 
                         StartScript(id, params_JSON);
                     break;
                 case "collider":
-                    if (transform.Find(id))
+                    if (transform.Find(id)) 
                         StartCollider(id, params_JSON);
                     break;
                 case "constraint":
-                    if (transform.Find(id))
+                    if (transform.Find(id)) 
                         StartConstraint(id, params_JSON);
                     break;
                 }
@@ -39,152 +52,228 @@ public class ToolManager : MonoBehaviour
         }
     } 
 
-    void StartScript(string id, List<string> params_JSON)   
+    void StartScript(string id, string params_JSON)   
     {
         ParamData = JsonMapper.ToObject(params_JSON);
-        switch(device) 
+        switch(device)
         {
             // TODO: Write search function for indexing ParamData by device
             case 1: // VR-Controller
-                GetComponent<id>().enabled = ParamData[2]["enabled"];
+                // condition on type of script
+                switch(id) 
+                {
+                    case "SteamVR_TrackedObject": 
+                        object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData[2]["enabled"];
+                        break;
+                    case "Interactable":
+                        object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData[2]["enabled"];
+                        break;
+                    case "Throwable":
+                        object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData[2]["enabled"];
+                        break;
+                    case "Haptics_Vive":
+                        object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData[2]["enabled"];
+                        break;
+                    case "Haptics_Pen_v1":
+                        object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData[2]["enabled"];
+                        break; 
+                }
                 break;
             case 2: // Stylus
-                GetComponent<id>().enabled = ParamData[1]["enabled"];
+                // condition on type of script
+                switch(id) 
+                {
+                    case "SteamVR_TrackedObject": 
+                        object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData[1]["enabled"];
+                        break;
+                    case "Interactable":
+                        object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData[1]["enabled"];
+                        break;
+                    case "Throwable":
+                        object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData[1]["enabled"];
+                        break;
+                    case "Haptics_Vive":
+                        object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData[1]["enabled"];
+                        break;
+                    case "Haptics_Pen_v1":
+                        object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData[1]["enabled"];
+                        break; 
+                }
                 break;
             case 3: // Prop
-                GetComponent<id>().enabled = ParamData[0]["enabled"];
+                // condition on type of script
+                switch(id) 
+                {
+                    case "SteamVR_TrackedObject": 
+                        object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData[0]["enabled"];
+                        break;
+                    case "Interactable":
+                        object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData[0]["enabled"];
+                        break;
+                    case "Throwable":
+                        object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData[0]["enabled"];
+                        break;
+                    case "Haptics_Vive":
+                        object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData[0]["enabled"];
+                        break;
+                    case "Haptics_Pen_v1":
+                        object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData[0]["enabled"];
+                        break; 
+                }
                 break;
         }
     }
 
-    void StartCollider(string id, List<string> params_JSON)
+    void StartCollider(string id, string params_JSON)
     {
         ParamData = JsonMapper.ToObject(params_JSON);
+        GameObject collider = GameObject.Find(id);
+        Vector3 position, scale;
+        Quaternion rotation;
         switch(device)  
         {
             // TODO: Write search function for indexing ParamData by device
             case 1: // VR-Controller
-                GetComponent<id>().SetActive(ParamData[2]["enabled"]);
-                if (ParamData[2]["metrics"])    
+                collider.SetActive((bool) ParamData[2]["enabled"]);
+                if ((bool) ParamData[2]["metrics"])    
                 {
-                    Vector3 position, rotation, scale;
-                    position = new Vector3(ParamData[2]["metrics"]["transform"]["position"]["x"], ParamData[2]["metrics"]["transform"]["position"]["y"], ParamData[2]["metrics"]["transform"]["position"]["z"]);
-                    rotation = new Vector3(ParamData[2]["metrics"]["transform"]["rotation"]["x"], ParamData[2]["metrics"]["transform"]["rotation"]["y"], ParamData[2]["metrics"]["transform"]["rotation"]["z"]);
-                    scale = new Vector3(ParamData[2]["metrics"]["transform"]["scale"]["x"], ParamData[2]["metrics"]["transform"]["scale"]["y"], ParamData[2]["metrics"]["transform"]["scale"]["z"]);
-                    if (ParamData[2]["metrics"]["transform"]["origin"] == "relative")   
+                    position = new Vector3((float) ParamData[2]["metrics"]["transform"]["position"]["x"], (float) ParamData[2]["metrics"]["transform"]["position"]["y"], (float) ParamData[2]["metrics"]["transform"]["position"]["z"]);
+                    rotation = Quaternion.Euler((float) ParamData[2]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["z"]);
+                    scale = new Vector3((float) ParamData[2]["metrics"]["transform"]["scale"]["x"], (float) ParamData[2]["metrics"]["transform"]["scale"]["y"], (float) ParamData[2]["metrics"]["transform"]["scale"]["z"]);
+                    if ((string) ParamData[2]["metrics"]["transform"]["origin"] == "relative")   
                     {
                         // Set everything using local transform variables
-                        GetComponent<id>().transform.localPosition = position;
-                        GetComponent<id>().transform.localRotation = rotation;
-                        GetComponent<id>().transform.localScale = scale;
+                        collider.transform.localPosition = position;
+                        collider.transform.localRotation = rotation;
+                        collider.transform.localScale = scale;
                     }
                     else
                     {
                         // Set everything using global transform variables
-                        GetComponent<id>().transform.position = position;
-                        GetComponent<id>().transform.rotation = rotation;
-                        GetComponent<id>().transform.scale = scale;                        
+                        collider.transform.position = position;
+                        collider.transform.rotation = rotation;
+                        collider.transform.localScale = scale;                        
                     }
                 }
                 break;
             case 2: // Stylus
-                GetComponent<id>().SetActive(ParamData[1]["enabled"]);
-                if (ParamData[1]["metrics"])
+                collider.SetActive((bool) ParamData[1]["enabled"]);
+                if ((bool) ParamData[1]["metrics"])
                 {
-                    Vector3 position, rotation, scale;
-                    position = new Vector3(ParamData[1]["metrics"]["transform"]["position"]["x"], ParamData[1]["metrics"]["transform"]["position"]["y"], ParamData[1]["metrics"]["transform"]["position"]["z"]);
-                    rotation = new Vector3(ParamData[1]["metrics"]["transform"]["rotation"]["x"], ParamData[1]["metrics"]["transform"]["rotation"]["y"], ParamData[1]["metrics"]["transform"]["rotation"]["z"]);
-                    scale = new Vector3(ParamData[1]["metrics"]["transform"]["scale"]["x"], ParamData[1]["metrics"]["transform"]["scale"]["y"], ParamData[1]["metrics"]["transform"]["scale"]["z"]);
-                    if (ParamData[1]["metrics"]["transform"]["origin"] == "relative")   
+                    position = new Vector3((float) ParamData[1]["metrics"]["transform"]["position"]["x"], (float) ParamData[1]["metrics"]["transform"]["position"]["y"], (float) ParamData[1]["metrics"]["transform"]["position"]["z"]);
+                    rotation = Quaternion.Euler((float) ParamData[1]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[1]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[1]["metrics"]["transform"]["rotation"]["z"]);
+                    scale = new Vector3((float) ParamData[1]["metrics"]["transform"]["scale"]["x"], (float) ParamData[1]["metrics"]["transform"]["scale"]["y"], (float) ParamData[1]["metrics"]["transform"]["scale"]["z"]);
+                    if ((string) ParamData[1]["metrics"]["transform"]["origin"] == "relative")   
                     {
                         // Set everything using local transform variables
-                        GetComponent<id>().transform.localPosition = position;
-                        GetComponent<id>().transform.localRotation = rotation;
-                        GetComponent<id>().transform.localScale = scale;
+                        collider.transform.localPosition = position;
+                        collider.transform.localRotation = rotation;
+                        collider.transform.localScale = scale;
                     }   
                     else
                     {
                         // Set everything using global transform variables
-                        GetComponent<id>().transform.position = position;
-                        GetComponent<id>().transform.rotation = rotation;
-                        GetComponent<id>().transform.scale = scale;                        
+                        collider.transform.position = position;
+                        collider.transform.rotation = rotation;
+                        collider.transform.localScale = scale;                        
                     }                 
                 }
                 break;
             case 3: // Props
-                GetComponent<id>().SetActive(ParamData[0]["enabled"]);
-                if (ParamData[0]["metrics"])
+                collider.SetActive((bool) ParamData[0]["enabled"]);
+                if ((bool) ParamData[0]["metrics"])
                 {
-                    Vector3 position, rotation, scale;
-                    position = new Vector3(ParamData[0]["metrics"]["transform"]["position"]["x"], ParamData[0]["metrics"]["transform"]["position"]["y"], ParamData[0]["metrics"]["transform"]["position"]["z"]);
-                    rotation = new Vector3(ParamData[0]["metrics"]["transform"]["rotation"]["x"], ParamData[0]["metrics"]["transform"]["rotation"]["y"], ParamData[0]["metrics"]["transform"]["rotation"]["z"]);
-                    scale = new Vector3(ParamData[0]["metrics"]["transform"]["scale"]["x"], ParamData[0]["metrics"]["transform"]["scale"]["y"], ParamData[0]["metrics"]["transform"]["scale"]["z"]);
-                    if (ParamData[0]["metrics"]["transform"]["origin"] == "relative")   
+                    position = new Vector3((float) ParamData[0]["metrics"]["transform"]["position"]["x"], (float) ParamData[0]["metrics"]["transform"]["position"]["y"], (float) ParamData[0]["metrics"]["transform"]["position"]["z"]);
+                    rotation = Quaternion.Euler((float) ParamData[0]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[0]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[0]["metrics"]["transform"]["rotation"]["z"]);
+                    scale = new Vector3((float) ParamData[0]["metrics"]["transform"]["scale"]["x"], (float) ParamData[0]["metrics"]["transform"]["scale"]["y"], (float) ParamData[0]["metrics"]["transform"]["scale"]["z"]);
+                    if ((string) ParamData[0]["metrics"]["transform"]["origin"] == "relative")   
                     {
                         // Set everything using local transform variables
-                        GetComponent<id>().transform.localPosition = position;
-                        GetComponent<id>().transform.localRotation = rotation;
-                        GetComponent<id>().transform.localScale = scale;
+                        collider.transform.localPosition = position;
+                        collider.transform.localRotation = rotation;
+                        collider.transform.localScale = scale;
                     } 
                     else
                     {
                         // Set everything using global transform variables
-                        GetComponent<id>().transform.position = position;
-                        GetComponent<id>().transform.rotation = rotation;
-                        GetComponent<id>().transform.scale = scale;                        
+                        collider.transform.position = position;
+                        collider.transform.rotation = rotation;
+                        collider.transform.localScale = scale;                        
                     }
                 }
+                break;
         }
     }
 
-    void StartConstraint(string id, List<string> params_JSON)
+    void StartConstraint(string id, string params_JSON)
     {
         ParamData = JsonMapper.ToObject(params_JSON);
         switch(device)
         {
             case 1: // VR-Controller
-                GetComponent<id>().SetActive(ParamData[2]["enabled"]);
-                if (ParamData[2]["metrics"])    
+                switch((string) ParamData[2]["metrics"]["constraint-type"])
                 {
-                    switch(ParamData[2]["metrics"]["constraint-type"]) 
-                    {
-                        case "SpringJoint":
-                            GetComponent<id>().spring = ParamData[2]["metrics"]["spring"];
-                            GetComponent<id>().damper = ParamData[2]["metrics"]["damper"];
-                            GetComponent<id>().breakTorque = ParamData[2]["metrics"]["breakTorque"];
-                            GetComponent<id>().breakForce = ParamData[2]["metrics"]["breakForce"];
-                            break;
-                    }
+                    case "SpringJoint":
+                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[2]["enabled"]);
+                        if ((bool) ParamData[2]["metrics"])
+                        {
+                            GetComponent<SpringJoint>().spring = (float) ParamData[2]["metrics"]["spring"];
+                            GetComponent<SpringJoint>().damper = (float) ParamData[2]["metrics"]["damper"];
+                            GetComponent<SpringJoint>().breakTorque = (float) ParamData[2]["metrics"]["breakTorque"];
+                            GetComponent<SpringJoint>().breakForce = (float) ParamData[2]["metrics"]["breakForce"];
+                        } 
+                        else
+                        {
+                            GetComponent<SpringJoint>().spring = 0.0f;
+                            GetComponent<SpringJoint>().damper = 0.0f;
+                            GetComponent<SpringJoint>().breakTorque = 0.0f;
+                            GetComponent<SpringJoint>().breakForce = 0.0f;
+                        }
+                        break;
                 }
                 break;
             case 2: // Stylus
-                GetComponent<id>().SetActive(ParamData[1]["enabled"]);
-                if (ParamData[1]["metrics"])
+                switch((string) ParamData[1]["metrics"]["constraint-type"])
                 {
-                    switch(ParamData[1]["metrics"]["constraint-type"]) 
-                    {
-                        case "SpringJoint":
-                            GetComponent<id>().spring = ParamData[1]["metrics"]["spring"];
-                            GetComponent<id>().damper = ParamData[1]["metrics"]["damper"];
-                            GetComponent<id>().breakTorque = ParamData[1]["metrics"]["breakTorque"];
-                            GetComponent<id>().breakForce = ParamData[1]["metrics"]["breakForce"];
-                            break;
-                    }                    
+                    case "SpringJoint":
+                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[1]["enabled"]);
+                        if ((bool) ParamData[1]["metrics"])
+                        {
+                            GetComponent<SpringJoint>().spring = (float) ParamData[1]["metrics"]["spring"];
+                            GetComponent<SpringJoint>().damper = (float) ParamData[1]["metrics"]["damper"];
+                            GetComponent<SpringJoint>().breakTorque = (float) ParamData[1]["metrics"]["breakTorque"];
+                            GetComponent<SpringJoint>().breakForce = (float) ParamData[1]["metrics"]["breakForce"];
+                        }
+                        else
+                        {
+                            GetComponent<SpringJoint>().spring = 0.0f;
+                            GetComponent<SpringJoint>().damper = 0.0f;
+                            GetComponent<SpringJoint>().breakTorque = 0.0f;
+                            GetComponent<SpringJoint>().breakForce = 0.0f;
+                        }
+                        break;
                 }
                 break;
             case 3: // Props
-                GetComponent<id>().SetActive(ParamData[0]["enabled"]);
-                if (ParamData[0]["metrics"])    
+                switch((string) ParamData[0]["metrics"]["constraint-type"])
                 {
-                    switch(ParamData[0]["metrics"]["constraint-type"])
-                    {
-                        case "SpringJoint":
-                            GetComponent<id>().spring = ParamData[0]["metrics"]["spring"];
-                            GetComponent<id>().damper = ParamData[0]["metrics"]["damper"];
-                            GetComponent<id>().breakTorque = ParamData[0]["metrics"]["breakTorque"];
-                            GetComponent<id>().breakForce = ParamData[0]["metrics"]["breakForce"];
-                            break;
-                    }
+                    case "SpringJoint":
+                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[0]["enabled"]);
+                        if ((bool) ParamData[0]["metrics"])
+                        {
+                            GetComponent<SpringJoint>().spring = (float) ParamData[0]["metrics"]["spring"];
+                            GetComponent<SpringJoint>().damper = (float) ParamData[0]["metrics"]["damper"];
+                            GetComponent<SpringJoint>().breakTorque = (float) ParamData[0]["metrics"]["breakTorque"];
+                            GetComponent<SpringJoint>().breakForce = (float) ParamData[0]["metrics"]["breakForce"];
+                        }
+                        else
+                        {
+                            GetComponent<SpringJoint>().spring = 0.0f;
+                            GetComponent<SpringJoint>().damper = 0.0f;
+                            GetComponent<SpringJoint>().breakTorque = 0.0f;
+                            GetComponent<SpringJoint>().breakForce = 0.0f;
+                        }
+                        break;
                 }
                 break;
         }
