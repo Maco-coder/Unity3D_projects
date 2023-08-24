@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -526,9 +526,10 @@ GameObject:
   - component: {fileID: 328316532}
   - component: {fileID: 328316531}
   - component: {fileID: 328316537}
+  - component: {fileID: 328316539}
   m_Layer: 0
   m_Name: Tennis Ball
-  m_TagString: apple
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -807,6 +808,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
+  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
+--- !u!114 &328316539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328316530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331c38c907dd0d546b37a7cbffa27e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle_sound: {fileID: 8300000, guid: df689c31c8fe16048bd49d3ed49127b9, type: 3}
+  table_sound: {fileID: 8300000, guid: 8e71eca0e89a38e4b81e387a820cc87a, type: 3}
 --- !u!1 &363248283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 542db402fe675ec47a3cce2e215b1aaf, type: 3}
@@ -1597,6 +1613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
+  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
 --- !u!1 &644387498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7276476002905887410, guid: 1a1867dbe2d94034bb017a59ddf141b3, type: 3}
@@ -2537,6 +2554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
+  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
 --- !u!1 &932095544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,7 +2571,7 @@ GameObject:
   - component: {fileID: 932095550}
   m_Layer: 0
   m_Name: Ping Pong Paddle
-  m_TagString: Untagged
+  m_TagString: paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2806,6 +2824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
+  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
 --- !u!1 &997162057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,6 +3780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table Tennis Table
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a69933bf02761434483b5a6646ccf3e2, type: 3}
+      propertyPath: m_TagString
+      value: table
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4057,7 +4080,7 @@ GameObject:
   - component: {fileID: 1688796494}
   m_Layer: 0
   m_Name: Court
-  m_TagString: Untagged
+  m_TagString: table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4478,6 +4501,10 @@ PrefabInstance:
       propertyPath: m_Colliders.Array.data[0]
       value: 
       objectReference: {fileID: 4296281791801383703}
+    - target: {fileID: 8005935495332361812, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
+      propertyPath: m_Drag
+      value: 0.59
+      objectReference: {fileID: 0}
     - target: {fileID: 8133089914722508006, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
       propertyPath: m_Name
       value: Ping Pong Ball
@@ -4533,6 +4560,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8133089914722508006, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4296281791801383700}
+    - targetCorrespondingSourceObject: {fileID: 8133089914722508006, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4296281791801383710}
   m_SourcePrefab: {fileID: 100100000, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
 --- !u!1 &4296281791801383693 stripped
 GameObject:
@@ -4552,8 +4582,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
+  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
 --- !u!135 &4296281791801383703 stripped
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 8270780130063346731, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
   m_PrefabInstance: {fileID: 4296281791801383692}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4296281791801383710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296281791801383693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331c38c907dd0d546b37a7cbffa27e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle_sound: {fileID: 8300000, guid: df689c31c8fe16048bd49d3ed49127b9, type: 3}
+  table_sound: {fileID: 8300000, guid: 8e71eca0e89a38e4b81e387a820cc87a, type: 3}
