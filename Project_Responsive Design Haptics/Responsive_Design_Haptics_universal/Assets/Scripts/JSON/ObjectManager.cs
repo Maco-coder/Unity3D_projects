@@ -36,15 +36,15 @@ public class ObjectManager : MonoBehaviour
             if (class_JSON == "object")   {
                 switch (type) {
                 case "script":
-                    if (transform.Find(id)) 
+                    if (object_carabao.transform.Find(id)) 
                         StartScript(id, params_JSON);
                     break;
                 case "collider":
-                    if (transform.Find(id)) 
+                    if (object_carabao.transform.Find(id)) 
                         StartCollider(id, params_JSON);
                     break;
                 case "constraint":
-                    if (transform.Find(id)) 
+                    if (object_carabao.transform.Find(id)) 
                         StartConstraint(id, params_JSON);
                     break;
                 }
@@ -63,6 +63,7 @@ public class ObjectManager : MonoBehaviour
                 switch(id) 
                 {
                     case "SteamVR_TrackedObject": 
+                        Debug.Log("Value of enabled for SteamVR_TrackedObject: " + (bool) ParamData[2]["enabled"]);
                         object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData[2]["enabled"];
                         break;
                     case "Interactable":
@@ -75,6 +76,7 @@ public class ObjectManager : MonoBehaviour
                         object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData[2]["enabled"];
                         break;
                     case "Haptics_Pen_v1":
+                        Debug.Log("Value of enabled for Haptics_Pen_v1: " + (bool) ParamData[2]["enabled"]);
                         object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData[2]["enabled"];
                         break; 
                 }
