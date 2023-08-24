@@ -63,19 +63,19 @@ public class ObjectManager : MonoBehaviour
                 switch(id) 
                 {
                     case "SteamVR_TrackedObject": 
-                        object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData[2]["enabled"];
                         break;
                     case "Interactable":
-                        object_carabao.GetComponent<Interactable>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData[2]["enabled"];
                         break;
                     case "Throwable":
-                        object_carabao.GetComponent<Throwable>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData[2]["enabled"];
                         break;
                     case "Haptics_Vive":
-                        object_carabao.GetComponent<Haptics_Vive>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData[2]["enabled"];
                         break;
                     case "Haptics_Pen_v1":
-                        object_carabao.GetComponent<Haptics_Pen_v1>().enabled = ParamData[2]["enabled"];
+                        object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData[2]["enabled"];
                         break; 
                 }
                 break;
