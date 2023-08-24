@@ -135,9 +135,10 @@ public class ObjectManager : MonoBehaviour
                 collider.SetActive((bool) ParamData[2]["enabled"]);
                 if ((bool) ParamData[2]["metrics"])    
                 {
-                    Vector3 position, rotation, scale;
+                    Vector3 position, scale;
+                    Quaternion rotation;
                     position = new Vector3((float) ParamData[2]["metrics"]["transform"]["position"]["x"], (float) ParamData[2]["metrics"]["transform"]["position"]["y"], (float) ParamData[2]["metrics"]["transform"]["position"]["z"]);
-                    rotation = new Quaternion.Euler((float) ParamData[2]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["z"]);
+                    rotation = Quaternion.Euler((float) ParamData[2]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["z"]);
                     scale = new Vector3((float) ParamData[2]["metrics"]["transform"]["scale"]["x"], (float) ParamData[2]["metrics"]["transform"]["scale"]["y"], (float) ParamData[2]["metrics"]["transform"]["scale"]["z"]);
                     if ((string) ParamData[2]["metrics"]["transform"]["origin"] == "relative")   
                     {
