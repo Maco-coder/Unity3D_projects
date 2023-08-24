@@ -28,10 +28,11 @@ public class ObjectManager : MonoBehaviour
             string type = (string) FileData[i]["type"];
             string class_JSON = (string) FileData[i]["class"];
             // string params_JSON = (string) FileData[i]["params"];
+            Debug.Log("Parameter object: " + FileData[i]["params"]);
             List<string> params_JSON = new List<string>();
             for (int j = 0; j < count_devices; j++) {
                 string param = JsonMapper.ToJson(FileData[i]["params"][j]);
-                Debug.Log("Parameter object: " + param);
+                //Debug.Log("Parameter object: " + param);
                 params_JSON.Add(param);
             }
             // This is for tool-related JSON data
