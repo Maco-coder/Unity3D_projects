@@ -183,7 +183,6 @@ public class ObjectManager : MonoBehaviour
                 collider.SetActive((bool) ParamData[0]["enabled"]);
                 if ((bool) ParamData[0]["metrics"])
                 {
-                    Vector3 position, rotation, scale;
                     position = new Vector3((float) ParamData[0]["metrics"]["transform"]["position"]["x"], (float) ParamData[0]["metrics"]["transform"]["position"]["y"], (float) ParamData[0]["metrics"]["transform"]["position"]["z"]);
                     rotation = Quaternion.Euler((float) ParamData[0]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[0]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[0]["metrics"]["transform"]["rotation"]["z"]);
                     scale = new Vector3((float) ParamData[0]["metrics"]["transform"]["scale"]["x"], (float) ParamData[0]["metrics"]["transform"]["scale"]["y"], (float) ParamData[0]["metrics"]["transform"]["scale"]["z"]);
