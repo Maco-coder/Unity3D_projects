@@ -31,6 +31,7 @@ public class ObjectManager : MonoBehaviour
             List<string> params_JSON = new List<string>();
             for (int j = 0; j < count_devices; j++) {
                 string param = (string) FileData[i]["params"][j];
+                Debug.Log("Parameter string: " + param);
                 params_JSON.Add(param);
             }
             // This is for tool-related JSON data
