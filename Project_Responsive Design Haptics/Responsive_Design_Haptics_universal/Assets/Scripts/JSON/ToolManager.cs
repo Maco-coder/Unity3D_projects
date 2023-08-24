@@ -13,7 +13,7 @@ public class ToolManager : MonoBehaviour
     private string JSONstring;
     private JsonData FileData;
     private JsonData ParamData;
-    public int device;
+    public int device = OpeningScene_Devices.chosen_device;
     public int count_devices;
 
     public GameObject object_carabao;
@@ -40,7 +40,6 @@ public class ToolManager : MonoBehaviour
                         StartScript(id, params_JSON);
                     break;
                 case "collider":
-                    if (transform.Find(id)) 
                         StartCollider(id, params_JSON);
                     break;
                 case "constraint":

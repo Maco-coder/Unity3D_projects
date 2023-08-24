@@ -13,7 +13,7 @@ public class ObjectManager : MonoBehaviour
     private string JSONstring;
     private JsonData FileData;
     private JsonData ParamData;
-    public int device;
+    public int device = OpeningScene_Devices.chosen_device;
     public int count_devices;
 
     public GameObject object_carabao;
