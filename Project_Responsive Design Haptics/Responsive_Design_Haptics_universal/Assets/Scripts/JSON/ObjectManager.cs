@@ -137,24 +137,20 @@ public class ObjectManager : MonoBehaviour
                 {
                     Vector3 position, rotation, scale;
                     position = new Vector3((float) ParamData[2]["metrics"]["transform"]["position"]["x"], (float) ParamData[2]["metrics"]["transform"]["position"]["y"], (float) ParamData[2]["metrics"]["transform"]["position"]["z"]);
-                    rotation = new Vector3((float) ParamData[2]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["z"]);
+                    rotation = new Quaternion.Euler((float) ParamData[2]["metrics"]["transform"]["rotation"]["x"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["y"], (float) ParamData[2]["metrics"]["transform"]["rotation"]["z"]);
                     scale = new Vector3((float) ParamData[2]["metrics"]["transform"]["scale"]["x"], (float) ParamData[2]["metrics"]["transform"]["scale"]["y"], (float) ParamData[2]["metrics"]["transform"]["scale"]["z"]);
                     if ((string) ParamData[2]["metrics"]["transform"]["origin"] == "relative")   
                     {
                         // Set everything using local transform variables
                         collider.transform.localPosition = position;
-                        collider.transform.localRotation.x = rotation.x;
-                        collider.transform.localRotation.y = rotation.y;
-                        collider.transform.localRotation.z = rotation.z;
+                        collider.transform.localRotation = rotation;
                         collider.transform.localScale = scale;
                     }
                     else
                     {
                         // Set everything using global transform variables
                         collider.transform.position = position;
-                        collider.transform.rotation.x = rotation.x;
-                        collider.transform.rotation.y = rotation.y;
-                        collider.transform.rotation.z = rotation.z;
+                        collider.transform.rotation = rotation;
                         collider.transform.scale = scale;                        
                     }
                 }
