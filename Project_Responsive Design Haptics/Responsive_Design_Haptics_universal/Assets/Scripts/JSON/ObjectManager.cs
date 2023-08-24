@@ -13,6 +13,8 @@ public class ObjectManager : MonoBehaviour
     public int device;
     public int count_devices;
 
+    public GameObject object;
+
     void Start()
     {
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.jsonc") ;
@@ -58,19 +60,19 @@ public class ObjectManager : MonoBehaviour
                 switch(id) 
                 {
                     case "SteamVR_TrackedObject": 
-                        GetComponent<SteamVR_TrackedObject>().enabled = ParamData[2]["enabled"];
+                        object.GetComponent<SteamVR_TrackedObject>().enabled = ParamData[2]["enabled"];
                         break;
                     case "Interactable":
-                        GetComponent<Interactable>().enabled = ParamData[2]["enabled"];
+                        object.GetComponent<Interactable>().enabled = ParamData[2]["enabled"];
                         break;
                     case "Throwable":
-                        GetComponent<Throwable>().enabled = ParamData[2]["enabled"];
+                        object.GetComponent<Throwable>().enabled = ParamData[2]["enabled"];
                         break;
                     case "Haptics_Vive":
-                        GetComponent<Haptics_Vive>().enabled = ParamData[2]["enabled"];
+                        object.GetComponent<Haptics_Vive>().enabled = ParamData[2]["enabled"];
                         break;
                     case "Haptics_Pen_v1":
-                        GetComponent<Haptics_Pen_v1>().enabled = ParamData[2]["enabled"];
+                        object.GetComponent<Haptics_Pen_v1>().enabled = ParamData[2]["enabled"];
                         break; 
                 }
                 break;
