@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -511,53 +511,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &323046106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 323046108}
-  - component: {fileID: 323046107}
-  m_Layer: 0
-  m_Name: SceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &323046107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323046106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acacd3cb218b6fc4a9e10f147f5744c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnObjects:
-  - obj: {fileID: 4296281791801383693}
-    loc: {x: 9.5249, y: 0.803, z: -0.596}
---- !u!4 &323046108
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323046106}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &328316530
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +526,6 @@ GameObject:
   - component: {fileID: 328316532}
   - component: {fileID: 328316531}
   - component: {fileID: 328316537}
-  - component: {fileID: 328316538}
   m_Layer: 0
   m_Name: Tennis Ball
   m_TagString: apple
@@ -691,7 +643,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 1
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -855,20 +807,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
-  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
---- !u!114 &328316538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328316530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb0307a33ff195e4a97d6f29302a2ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Speed: 5
 --- !u!1 &363248283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 542db402fe675ec47a3cce2e215b1aaf, type: 3}
@@ -962,14 +900,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403848505}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.147, y: 0, z: 0}
+  m_LocalRotation: {x: 0.18301266, y: -0.6830127, z: -0.18301266, w: 0.6830127}
+  m_LocalPosition: {x: 0.084, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 932095549}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -30}
 --- !u!1 &427829614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,7 +1317,7 @@ GameObject:
   - component: {fileID: 574675299}
   - component: {fileID: 574675301}
   m_Layer: 0
-  m_Name: Volleyball
+  m_Name: Basketball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1581,7 +1519,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -1659,7 +1597,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
-  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
 --- !u!1 &644387498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7276476002905887410, guid: 1a1867dbe2d94034bb017a59ddf141b3, type: 3}
@@ -1864,7 +1801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663170280}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.029, y: 0, z: 0}
+  m_LocalPosition: {x: -0.229, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2579,7 +2516,7 @@ Transform:
   m_GameObject: {fileID: 842408736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.736, y: 0.2, z: -1.491}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 668317417}
@@ -2600,7 +2537,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
-  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
 --- !u!1 &932095544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,7 +2806,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
-  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
 --- !u!1 &997162057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3481,7 +3416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277658421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.03, y: 6.35, z: 0}
+  m_LocalPosition: {x: 9.03, y: 4.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4119,6 +4054,7 @@ GameObject:
   - component: {fileID: 1688796492}
   - component: {fileID: 1688796491}
   - component: {fileID: 1688796490}
+  - component: {fileID: 1688796494}
   m_Layer: 0
   m_Name: Court
   m_TagString: Untagged
@@ -4212,6 +4148,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1688796494
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688796489}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &1795618672
 GameObject:
   m_ObjectHideFlags: 0
@@ -4503,6 +4466,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4386878310966461561, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386878310966461561, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386878310966461561, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
+      propertyPath: m_Colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 4296281791801383703}
     - target: {fileID: 8133089914722508006, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
       propertyPath: m_Name
       value: Ping Pong Ball
@@ -4577,4 +4552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounding_area: {fileID: 1277658421}
-  respawn_sound: {fileID: 8300000, guid: ad1d0094757cb314a80c26c87eed9a02, type: 3}
+--- !u!135 &4296281791801383703 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 8270780130063346731, guid: d35d38e7f4e54a84296db635523dd84a, type: 3}
+  m_PrefabInstance: {fileID: 4296281791801383692}
+  m_PrefabAsset: {fileID: 0}

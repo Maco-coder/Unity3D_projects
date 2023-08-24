@@ -421,6 +421,7 @@
                     "device": "stylus",
                     "enabled": true,
                     "metrics": {
+                        "constraint-type": "SpringJoint",
                         "spring": 50,
                         "damper": 2,
                         "breakTorque": 30,
@@ -431,6 +432,7 @@
                     "device": "vr_controller",
                     "enabled": true,
                     "metrics": {
+                        "constraint-type": "SpringJoint",
                         "spring": 50,
                         "damper": 2,
                         "breakTorque": 10,
