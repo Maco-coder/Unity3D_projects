@@ -13,7 +13,7 @@ public class ToolManager : MonoBehaviour
     private string JSONstring;
     private JsonData FileData;
     private JsonData ParamData;
-    public int device = OpeningScene_Devices.chosen_device;
+    public static int device = OpeningScene_Devices.chosen_device;
     public int count_devices;
 
     public GameObject object_carabao;
