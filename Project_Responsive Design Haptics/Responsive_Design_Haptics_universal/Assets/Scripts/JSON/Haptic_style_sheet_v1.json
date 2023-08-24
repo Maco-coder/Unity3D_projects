@@ -1,6 +1,6 @@
 [
     {
-        "id": "SteamVR_TrackedObject-1",
+        "id": "SteamVR_TrackedObject",
         "type": "script",
         "class": "object",
         "params": 
@@ -24,7 +24,7 @@
     },
     
     {
-        "id": "SteamVR_TrackedObject-2",
+        "id": "SteamVR_TrackedObject",
         "type": "script",
         "class": "tool",
         "params":
@@ -48,7 +48,7 @@
     },
 
     {
-        "id": "Interactable-1",
+        "id": "Interactable",
         "type": "script",
         "class": "object",
         "params":
@@ -72,7 +72,7 @@
     },
 
     {
-        "id": "Interactable-2",
+        "id": "Interactable",
         "type": "script",
         "class": "tool",
         "params":
@@ -96,7 +96,7 @@
     },
 
     {
-        "id": "Throwable-1",
+        "id": "Throwable",
         "type": "script",
         "class": "object",
         "params":
@@ -120,7 +120,7 @@
     },
 
     {
-        "id": "Throwable-2",
+        "id": "Throwable",
         "type": "script",
         "class": "tool",
         "params":
