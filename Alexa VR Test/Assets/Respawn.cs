@@ -7,6 +7,7 @@ public class Respawn : MonoBehaviour
 {
     public GameObject bounding_area;
     private Vector3 origin_pos;
+    public AudioClip respawn_sound;
     
     void Start()
     {
@@ -22,6 +23,7 @@ public class Respawn : MonoBehaviour
     {
         if (other.gameObject == bounding_area)
         {
+            AudioSource.PlayClipAtPoint(respawn_sound, origin_pos);
             transform.position = origin_pos;
         }
     }

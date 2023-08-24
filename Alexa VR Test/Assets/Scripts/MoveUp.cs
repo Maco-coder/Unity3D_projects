@@ -16,6 +16,6 @@ public class MoveUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_Rigidbody.MovePosition(transform.position + new Vector3(0,1,0) * Time.deltaTime * m_Speed);
+        m_Rigidbody.MovePosition(transform.position + new Vector3(1,0,0) * Time.deltaTime * m_Speed);
     }
 }
