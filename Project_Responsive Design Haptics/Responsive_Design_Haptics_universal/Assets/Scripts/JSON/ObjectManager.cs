@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.IO                 ;
 using LitJson                   ;
 using System;
+using Valve.VR                   ; // Needed to enable and disable VR trackers //
+using Valve.VR.InteractionSystem ; // Needed to enable and disable VR controllers //
+
 
 public class ObjectManager : MonoBehaviour 
 {
