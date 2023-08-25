@@ -39,21 +39,16 @@ public class ObjectManager : MonoBehaviour
             if (class_JSON == "object")   {
                 switch (type) {
                 case "script":
-                    if (object_carabao.transform.Find(id)) {
-                        Debug.Log("Found script " + id);
-                        StartScript(id, params_JSON);
-                    }
+                    Debug.Log("Found script " + id);
+                    StartScript(id, params_JSON);
                     break;
                 case "collider":
                     Debug.Log("Found collider " + id);
                     StartCollider(id, params_JSON);
                     break;
                 case "constraint":
-                    if (object_carabao.transform.Find(id))
-                    {
-                        Debug.Log("Found constraint " + id);
-                        StartConstraint(id, params_JSON);
-                    } 
+                    Debug.Log("Found constraint " + id);
+                    StartConstraint(id, params_JSON); 
                     break;
                 }
             }
