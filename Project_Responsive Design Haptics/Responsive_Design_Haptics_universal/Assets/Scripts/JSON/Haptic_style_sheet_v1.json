@@ -161,7 +161,7 @@
                 },
                 {
                     "device": "vr_controller",
-                    "enabled": false,
+                    "enabled": true,
                     "metrics": null
                 }
             ]
