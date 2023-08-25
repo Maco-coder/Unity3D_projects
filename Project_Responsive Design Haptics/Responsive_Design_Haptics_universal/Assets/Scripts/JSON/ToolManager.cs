@@ -20,42 +20,41 @@ public class ToolManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("ToolManager running for " + object_carabao);
-        JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.jsonc") ;
+        Debug.Log("ToolManager running for " + object_carabao + " with device ID = " + device);
+        JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.json") ;
         FileData = JsonMapper.ToObject(JSONstring);
         for (int i = 0; i < FileData.Count; i++)    {
             string id = (string) FileData[i]["id"];
             string type = (string) FileData[i]["type"];
             string class_JSON = (string) FileData[i]["class"];
-            // string params_JSON = (string) FileData[i]["params"];
-            List<string> params_JSON = new List<string>();
+            List<JsonData> params_JSON = new List<JsonData>();
             for (int j = 0; j < count_devices; j++) {
-                string param = JsonMapper.ToJson(FileData[i]["params"][j]);
+                JsonData param = FileData[i]["params"][j];
                 params_JSON.Add(param);
             }
             // This is for tool-related JSON data
             if (class_JSON == "tool")   {
                 switch (type) {
                 case "script":
-                    if (object_carabao.transform.Find(id)) 
-                        StartScript(id, params_JSON);
+                    Debug.Log("Found script " + id);
+                    StartScript(id, params_JSON);
                     break;
                 case "collider":
-                    if (object_carabao.transform.Find(id)) 
-                        StartCollider(id, params_JSON);
+                    Debug.Log("Found collider " + id);
+                    StartCollider(id, params_JSON);
                     break;
                 case "constraint":
-                    if (object_carabao.transform.Find(id)) 
-                        StartConstraint(id, params_JSON);
+                    Debug.Log("Found constraint " + id);
+                    StartConstraint(id, params_JSON); 
                     break;
                 }
             }
         }
     } 
 
-    void StartScript(string id, List<string> params_JSON)   
+    void StartScript(string id, List<JsonData> params_JSON)   
     {
-        ParamData = JsonMapper.ToObject(params_JSON[3 - device]);
+        ParamData = params_JSON[3 - device];
         switch(device)
         {
             // TODO: Write search function for indexing ParamData by device
@@ -127,9 +126,9 @@ public class ToolManager : MonoBehaviour
         }
     }
 
-    void StartCollider(string id, List<string> params_JSON)
+    void StartCollider(string id, List<JsonData> params_JSON)
     {
-        ParamData = JsonMapper.ToObject(params_JSON[3 - device]);
+        ParamData = params_JSON[3 - device];
         GameObject collider = GameObject.Find(id);
         Vector3 position, scale;
         Quaternion rotation;
@@ -208,16 +207,15 @@ public class ToolManager : MonoBehaviour
         }
     }
 
-    void StartConstraint(string id, List<string> params_JSON)
+    void StartConstraint(string id, List<JsonData> params_JSON)
     {
-        ParamData = JsonMapper.ToObject(params_JSON[3 - device]);
+        ParamData = params_JSON[3 - device];
         switch(device)
         {
             case 1: // VR-Controller
                 switch((string) ParamData["metrics"]["constraint-type"])
                 {
                     case "SpringJoint":
-                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[2]["enabled"]);
                         if ((bool) ParamData["metrics"])
                         {
                             GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
@@ -239,7 +237,6 @@ public class ToolManager : MonoBehaviour
                 switch((string) ParamData["metrics"]["constraint-type"])
                 {
                     case "SpringJoint":
-                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[1]["enabled"]);
                         if ((bool) ParamData["metrics"])
                         {
                             GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
@@ -261,7 +258,6 @@ public class ToolManager : MonoBehaviour
                 switch((string) ParamData["metrics"]["constraint-type"])
                 {
                     case "SpringJoint":
-                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[0]["enabled"]);
                         if ((bool) ParamData["metrics"])
                         {
                             GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];

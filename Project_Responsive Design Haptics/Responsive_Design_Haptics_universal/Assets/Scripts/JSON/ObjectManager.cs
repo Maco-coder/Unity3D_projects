@@ -27,12 +27,9 @@ public class ObjectManager : MonoBehaviour
             string id = (string) FileData[i]["id"];
             string type = (string) FileData[i]["type"];
             string class_JSON = (string) FileData[i]["class"];
-            // string params_JSON = (string) FileData[i]["params"];
-            // Debug.Log("Parameter object: " + FileData[i]["params"][0]["device"]);
             List<JsonData> params_JSON = new List<JsonData>();
             for (int j = 0; j < count_devices; j++) {
                 JsonData param = FileData[i]["params"][j];
-                //Debug.Log("Parameter object: " + param);
                 params_JSON.Add(param);
             }
             // This is for tool-related JSON data
@@ -219,7 +216,6 @@ public class ObjectManager : MonoBehaviour
                 switch((string) ParamData["metrics"]["constraint-type"])
                 {
                     case "SpringJoint":
-                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[2]["enabled"]);
                         if ((bool) ParamData["metrics"])
                         {
                             GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
@@ -241,7 +237,6 @@ public class ObjectManager : MonoBehaviour
                 switch((string) ParamData["metrics"]["constraint-type"])
                 {
                     case "SpringJoint":
-                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[1]["enabled"]);
                         if ((bool) ParamData["metrics"])
                         {
                             GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
@@ -263,7 +258,6 @@ public class ObjectManager : MonoBehaviour
                 switch((string) ParamData["metrics"]["constraint-type"])
                 {
                     case "SpringJoint":
-                        //GetComponent<SpringJoint>().SetActive((bool) ParamData[0]["enabled"]);
                         if ((bool) ParamData["metrics"])
                         {
                             GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
