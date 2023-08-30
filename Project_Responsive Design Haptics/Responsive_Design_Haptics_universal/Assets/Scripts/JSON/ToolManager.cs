@@ -77,14 +77,14 @@ public class ToolManager : MonoBehaviour
                 Debug.Log("Haptic Grabber set to: " + (bool) ParamData["enabled"]);
                 object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
                 break;
-            case "HapticPlugin":
-                Debug.Log("Haptic Plugin set to: " + (bool) ParamData["enabled"]);
-                object_carabao.GetComponent<HapticPlugin>().enabled = (bool) ParamData["enabled"];
-                break;
-            case "HapticPluginSafetyScript":
-                Debug.Log("Haptic Plugin Safety Script set to: " + (bool) ParamData["enabled"]);
-                object_carabao.GetComponent<HapticPluginSafetyScript>().enabled = (bool) ParamData["enabled"];
-                break;
+            // case "HapticPlugin":
+            //     Debug.Log("Haptic Plugin set to: " + (bool) ParamData["enabled"]);
+            //     object_carabao.GetComponent<HapticPlugin>().enabled = (bool) ParamData["enabled"];
+            //     break;
+            // case "HapticPluginSafetyScript":
+            //     Debug.Log("Haptic Plugin Safety Script set to: " + (bool) ParamData["enabled"]);
+            //     object_carabao.GetComponent<HapticPluginSafetyScript>().enabled = (bool) ParamData["enabled"];
+            //     break;
         }
         // switch(device)
         // {

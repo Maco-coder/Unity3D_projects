@@ -216,54 +216,6 @@
     },
 
     {
-        "id": "HapticPlugin",
-        "type": "script",
-        "class": "tool",
-        "params":
-            [
-                {
-                    "device": "props",
-                    "enabled": false,
-                    "metrics": null
-                },
-                {
-                    "device": "stylus",
-                    "enabled": true,
-                    "metrics": null
-                },
-                {
-                    "device": "vr_controller",
-                    "enabled": false,
-                    "metrics": null
-                }
-            ]
-    },
-
-    {
-        "id": "HapticPluginSafetyScript",
-        "type": "script",
-        "class": "tool",
-        "params":
-            [
-                {
-                    "device": "props",
-                    "enabled": false,
-                    "metrics": null
-                },
-                {
-                    "device": "stylus",
-                    "enabled": true,
-                    "metrics": null
-                },
-                {
-                    "device": "vr_controller",
-                    "enabled": false,
-                    "metrics": null
-                }
-            ]
-    },
-
-    {
         "id": "HapticDevice",
         "type": "collider",
         "class": "tool",
