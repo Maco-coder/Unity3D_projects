@@ -608,10 +608,10 @@
                     "enabled": true,
                     "metrics": {
                         "constraint-type": "SpringJoint",
-                        "spring": 50,
-                        "damper": 2,
-                        "breakTorque": 30,
-                        "breakForce": 30
+                        "spring": 50.0,
+                        "damper": 2.0,
+                        "breakTorque": 30.0,
+                        "breakForce": 30.0
                     }
                 },
                 {
@@ -619,10 +619,10 @@
                     "enabled": true,
                     "metrics": {
                         "constraint-type": "SpringJoint",
-                        "spring": 50,
-                        "damper": 2,
-                        "breakTorque": 10,
-                        "breakForce": 10
+                        "spring": 50.0,
+                        "damper": 2.0,
+                        "breakTorque": 10.0,
+                        "breakForce": 10.0
                     }
                 }
             ]

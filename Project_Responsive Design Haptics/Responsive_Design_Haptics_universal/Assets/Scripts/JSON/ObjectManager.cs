@@ -271,7 +271,7 @@ public class ObjectManager : MonoBehaviour
         switch((string) ParamData["metrics"]["constraint-type"])
         {
             case "SpringJoint":
-                if ((bool) ParamData["metrics"])    
+                if (ParamData["metrics"] != null)    
                 {
                     GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
                     GetComponent<SpringJoint>().damper = (float) ParamData["metrics"]["damper"];
