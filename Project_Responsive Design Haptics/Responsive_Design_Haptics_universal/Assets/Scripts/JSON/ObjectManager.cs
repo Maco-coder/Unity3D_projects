@@ -268,23 +268,21 @@ public class ObjectManager : MonoBehaviour
     void StartConstraint(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
+        if (!ParamData["metrics"])
+        {
+            GetComponent<SpringJoint>().spring = 0.0f;
+            GetComponent<SpringJoint>().damper = 0.0f;
+            GetComponent<SpringJoint>().breakTorque = 0.0f;
+            GetComponent<SpringJoint>().breakForce = 0.0f;
+            return;
+        }
         switch((string) ParamData["metrics"]["constraint-type"])
         {
             case "SpringJoint":
-                if (ParamData["metrics"] != null)    
-                {
-                    GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
-                    GetComponent<SpringJoint>().damper = (float) ParamData["metrics"]["damper"];
-                    GetComponent<SpringJoint>().breakTorque = (float) ParamData["metrics"]["breakTorque"];
-                    GetComponent<SpringJoint>().breakForce = (float) ParamData["metrics"]["breakForce"];
-                }
-                else
-                {
-                    GetComponent<SpringJoint>().spring = 0.0f;
-                    GetComponent<SpringJoint>().damper = 0.0f;
-                    GetComponent<SpringJoint>().breakTorque = 0.0f;
-                    GetComponent<SpringJoint>().breakForce = 0.0f;
-                }
+                GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
+                GetComponent<SpringJoint>().damper = (float) ParamData["metrics"]["damper"];
+                GetComponent<SpringJoint>().breakTorque = (float) ParamData["metrics"]["breakTorque"];
+                GetComponent<SpringJoint>().breakForce = (float) ParamData["metrics"]["breakForce"];
                 break;
         }
     }
