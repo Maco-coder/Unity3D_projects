@@ -75,10 +75,13 @@ public class ToolManager : MonoBehaviour
                 break; 
             case "HapticGrabber":
                 object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
+                break;
             case "HapticPlugin":
                 object_carabao.GetComponent<HapticPlugin>().enabled = (bool) ParamData["enabled"];
+                break;
             case "HapticPluginSafetyScript":
                 object_carabao.GetComponent<HapticPluginSafetyScript>().enabled = (bool) ParamData["enabled"];
+                break;
         }
         // switch(device)
         // {
