@@ -1068,7 +1068,7 @@ GameObject:
   - component: {fileID: 392468151}
   - component: {fileID: 392468155}
   m_Layer: 0
-  m_Name: OuterCube_VRController_3DTouch-scenes
+  m_Name: OuterCube_InTree
   m_TagString: Outer_Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1658,7 +1658,7 @@ GameObject:
   - component: {fileID: 985490084}
   - component: {fileID: 985490088}
   m_Layer: 0
-  m_Name: TrunkCube_VRController_3DTouch_scenes
+  m_Name: TrunkCube_InTree
   m_TagString: Trunk_Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1790,7 +1790,7 @@ GameObject:
   - component: {fileID: 1049200231}
   - component: {fileID: 1049200230}
   m_Layer: 0
-  m_Name: InnerCube_VRController-scene
+  m_Name: InnerCube_InTree
   m_TagString: Inner_Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1904,7 +1904,7 @@ GameObject:
   - component: {fileID: 1215903177}
   - component: {fileID: 1215903176}
   m_Layer: 0
-  m_Name: Cube_outter_apple-3D_Touch_Scene
+  m_Name: LargeCube_InWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3100,7 +3100,7 @@ GameObject:
   - component: {fileID: 2026721125}
   - component: {fileID: 2026721124}
   m_Layer: 0
-  m_Name: Red(FRICTION)_3DTouch-scene
+  m_Name: Capsule_Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
