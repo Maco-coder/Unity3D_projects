@@ -50,6 +50,7 @@ public class ToolManager : MonoBehaviour
                 }
             }
         }
+        GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
     } 
 
     void StartScript(string id, List<JsonData> params_JSON)   
