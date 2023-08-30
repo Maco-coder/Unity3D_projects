@@ -277,7 +277,26 @@
                 {
                     "device": "stylus",
                     "enabled": true,
-                    "metrics": null
+                    "metrics": {
+                        "transform": {
+                            "origin": "absolute",
+                            "position": {
+                                "x": 0,
+                                "y": -0.25,
+                                "z": 0
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 180,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 0.03125,
+                                "y": 0.03125,
+                                "z": 0.03125
+                            }
+                        }
+                    }
                 },
                 {
                     "device": "vr_controller",
@@ -300,8 +319,27 @@
                 },
                 {
                     "device": "stylus",
-                    "enabled": false,
-                    "metrics": null
+                    "enabled": true,
+                    "metrics": {
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": -0.687,
+                                "y": 3.15,
+                                "z": -1.404001
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 132.452,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 1,
+                                "y": 0.3,
+                                "z": 1
+                            }
+                        }
+                    }
                 },
                 {
                     "device": "vr_controller",
@@ -491,8 +529,27 @@
                 },
                 {
                     "device": "stylus",
-                    "enabled": false,
-                    "metrics": null
+                    "enabled": true,
+                    "metrics": {
+                        "transform": {
+                            "origin": "absolute",
+                            "position": {
+                                "x": 0,
+                                "y": -0.25,
+                                "z": 0
+                            },
+                            "rotation": {
+                                "x": -90,
+                                "y": 0,
+                                "z": 160
+                            },
+                            "scale": {
+                                "x": 33.75001,
+                                "y": 33.75001,
+                                "z": 33.75001
+                            }
+                        }
+                    }
                 },
                 {
                     "device": "vr_controller",
