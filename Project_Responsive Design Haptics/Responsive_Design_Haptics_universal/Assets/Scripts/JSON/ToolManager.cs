@@ -161,6 +161,7 @@ public class ToolManager : MonoBehaviour
         GameObject collider = GameObject.Find(id);
         Vector3 position, scale;
         Quaternion rotation;
+        if (id == "HapticDevice") Debug.Log("Set HapticDevice to " + (bool) ParamData["enabled"]);
         collider.SetActive((bool) ParamData["enabled"]);
         if ((bool) ParamData["metrics"])
         {
