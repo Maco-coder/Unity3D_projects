@@ -32,7 +32,7 @@ public class ObjectManager : MonoBehaviour
                 JsonData param = FileData[i]["params"][j];
                 params_JSON.Add(param);
             }
-            // This is for object-related JSON data
+            // This is for tool-related JSON data
             if (class_JSON == "object")   {
                 switch (type) {
                 case "script":
@@ -50,6 +50,7 @@ public class ObjectManager : MonoBehaviour
                 }
             }
         }
+        GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
     } 
 
     void StartScript(string id, List<JsonData> params_JSON)   
@@ -72,6 +73,18 @@ public class ObjectManager : MonoBehaviour
             case "Haptics_Pen_v1":
                 object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
                 break; 
+            case "HapticGrabber":
+                Debug.Log("Haptic Grabber set to: " + (bool) ParamData["enabled"]);
+                object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
+                break;
+            // case "HapticPlugin":
+            //     Debug.Log("Haptic Plugin set to: " + (bool) ParamData["enabled"]);
+            //     object_carabao.GetComponent<HapticPlugin>().enabled = (bool) ParamData["enabled"];
+            //     break;
+            // case "HapticPluginSafetyScript":
+            //     Debug.Log("Haptic Plugin Safety Script set to: " + (bool) ParamData["enabled"]);
+            //     object_carabao.GetComponent<HapticPluginSafetyScript>().enabled = (bool) ParamData["enabled"];
+            //     break;
         }
         // switch(device)
         // {
@@ -146,6 +159,14 @@ public class ObjectManager : MonoBehaviour
     {
         ParamData = params_JSON[count_devices - device];
         GameObject collider = GameObject.Find(id);
+        Debug.Log("Here's the collider object, get a job " + collider.name);
+        if (collider is null)
+        { 
+            Debug.Log("Could not find collider " + id);
+        } else
+        {
+            Debug.Log("Found collider " + id);
+        }
         Vector3 position, scale;
         Quaternion rotation;
         collider.SetActive((bool) ParamData["enabled"]);

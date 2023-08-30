@@ -159,6 +159,7 @@ public class ToolManager : MonoBehaviour
     {
         ParamData = params_JSON[count_devices - device];
         GameObject collider = GameObject.Find(id);
+        Debug.Log("Here's the collider object, get a job " + collider.name);
         if (collider is null)
         { 
             Debug.Log("Could not find collider " + id);
