@@ -159,10 +159,15 @@ public class ToolManager : MonoBehaviour
     {
         ParamData = params_JSON[count_devices - device];
         GameObject collider = GameObject.Find(id);
-        if (collider == null) Debug.Log("Could not find collider " + id);
+        if (collider is null)
+        { 
+            Debug.Log("Could not find collider " + id);
+        } else
+        {
+            Debug.Log("Found collider " + id);
+        }
         Vector3 position, scale;
         Quaternion rotation;
-        if (id == "Picker/Body3") Debug.Log("Found Body3");
         collider.SetActive((bool) ParamData["enabled"]);
         if ((bool) ParamData["metrics"])
         {
