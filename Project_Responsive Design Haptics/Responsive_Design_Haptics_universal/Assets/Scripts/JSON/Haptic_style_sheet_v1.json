@@ -512,6 +512,87 @@
     },
 
     {
+        "id": "Body3",
+        "type": "collider",
+        "class": "tool",
+        "params":
+            [
+                {
+                    "device": "props",
+                    "enabled": true,
+                    "metrics": {
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": -1.60,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "rotation": {
+                                "x": -190,
+                                "y": 90,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 105,
+                                "y": 105,
+                                "z": 105
+                            }
+                        }
+                    }
+                },
+                {
+                    "device": "stylus",
+                    "enabled": true,
+                    "metrics": {
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 180,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 105,
+                                "y": 105,
+                                "z": 105
+                            }
+                        }
+                    }
+                },
+                {
+                    "device": "vr_controller",
+                    "enabled": true,
+                    "metrics": {
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "rotation": {
+                                "x": 0,
+                                "y": 180,
+                                "z": 0
+                            },
+                            "scale": {
+                                "x": 105,
+                                "y": 105,
+                                "z": 105
+                            }
+                        }
+                    }
+                }
+            ]
+    },
+
+    {
         "id": "SpringJoint",
         "type": "constraint",
         "class": "object",
