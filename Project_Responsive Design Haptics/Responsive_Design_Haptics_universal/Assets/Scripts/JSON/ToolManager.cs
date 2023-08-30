@@ -161,7 +161,7 @@ public class ToolManager : MonoBehaviour
         GameObject collider = GameObject.Find(id);
         Vector3 position, scale;
         Quaternion rotation;
-        if (id == "Body3") Debug.Log("Found Body3 ");
+        if (id == "Picker/Body3") Debug.Log("Found Body3 ");
         collider.SetActive((bool) ParamData["enabled"]);
         if ((bool) ParamData["metrics"])
         {

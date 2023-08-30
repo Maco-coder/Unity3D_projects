@@ -512,7 +512,7 @@
     },
 
     {
-        "id": "Body3",
+        "id": "Picker/Body3",
         "type": "collider",
         "class": "tool",
         "params":
