@@ -48,16 +48,6 @@ public class Haptics_Vive : MonoBehaviour
 
     void OnCollisionEnter(Collision collision){
 
-        //if (collision.gameObject.tag == "apple_VIVE"){
-        //    Debug.Log("collision detected")   ;
-        //    isCurrentlyCollidingWApple = true ;
-        //}
-
-        //if (collision.gameObject.tag == "box_VIVE"){
-        //    print("collision detected")     ;
-        //    isCurrentlyCollidingWBox = true ;
-        //}
-
         if (collision.gameObject.tag == "tree_VIVE"){
             isCurrentlyCollidingWTree = true ;
         }
