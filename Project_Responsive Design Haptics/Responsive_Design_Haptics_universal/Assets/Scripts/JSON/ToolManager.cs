@@ -159,7 +159,7 @@ public class ToolManager : MonoBehaviour
     {
         ParamData = params_JSON[count_devices - device];
         GameObject collider = transform.Find(id).gameObject;
-        Debug.Log("Found this object " + ParamData);
+        Debug.Log("Found this object " + ParamData["device"]);
         Vector3 position, scale;
         Quaternion rotation;
         collider.SetActive((bool) ParamData["enabled"]);
