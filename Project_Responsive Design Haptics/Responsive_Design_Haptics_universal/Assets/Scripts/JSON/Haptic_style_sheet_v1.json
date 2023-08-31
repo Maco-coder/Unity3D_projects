@@ -259,7 +259,7 @@
     },
 
     {
-        "id": "TREE-general/Capsule_Apple",
+        "id": "Capsule_Apple",
         "type": "collider",
         "class": "object",
         "params":
@@ -283,7 +283,7 @@
     },
 
     {
-        "id": "TREE-general/OuterCube_InTree",
+        "id": "OuterCube_InTree",
         "type": "collider",
         "class": "object",
         "params":
@@ -345,7 +345,7 @@
     },
 
     {
-        "id": "TREE-general/InnerCube_InTree",
+        "id": "InnerCube_InTree",
         "type": "collider",
         "class": "object",
         "params":
@@ -388,7 +388,7 @@
     },
 
     {
-        "id": "TREE-general/TrunkCube_InTree",
+        "id": "TrunkCube_InTree",
         "type": "collider",
         "class": "object",
         "params":
@@ -450,7 +450,7 @@
     },
 
     {
-        "id": "TREE-general/LargeCube_InWorld",
+        "id": "LargeCube_InWorld",
         "type": "collider",
         "class": "object",
         "params":
