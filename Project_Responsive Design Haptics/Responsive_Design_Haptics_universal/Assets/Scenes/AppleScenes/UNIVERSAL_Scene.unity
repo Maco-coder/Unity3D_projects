@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 240247806}
   m_Layer: 0
   m_Name: Cube-Joint
-  m_TagString: Cube_Joint_Apple
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 392468155}
   m_Layer: 0
   m_Name: OuterCube_InTree
-  m_TagString: Outer_Cube
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1199,7 +1199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1829371231341652, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_TagString
-      value: apple_VIVE
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4411128782263238, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
       propertyPath: m_RootOrder
@@ -1659,7 +1659,7 @@ GameObject:
   - component: {fileID: 985490088}
   m_Layer: 0
   m_Name: TrunkCube_InTree
-  m_TagString: Trunk_Cube
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1791,7 +1791,7 @@ GameObject:
   - component: {fileID: 1049200230}
   m_Layer: 0
   m_Name: InnerCube_InTree
-  m_TagString: Inner_Cube
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3298,7 +3298,7 @@ PrefabInstance:
     - target: {fileID: 6695003846789727565, guid: bae468b3a6b9ea141967f3cfbe601352,
         type: 3}
       propertyPath: m_TagString
-      value: tree_VIVE
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bae468b3a6b9ea141967f3cfbe601352, type: 3}
