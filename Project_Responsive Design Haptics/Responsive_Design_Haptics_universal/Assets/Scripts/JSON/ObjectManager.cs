@@ -158,6 +158,7 @@ public class ObjectManager : MonoBehaviour
     void StartCollider(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
+        GameObject collider;
         try
         {
             GameObject collider = transform.Find(id).gameObject;
