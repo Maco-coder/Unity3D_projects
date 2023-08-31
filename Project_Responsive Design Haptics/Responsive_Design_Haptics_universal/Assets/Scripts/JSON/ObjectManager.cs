@@ -59,23 +59,65 @@ public class ObjectManager : MonoBehaviour
         switch(id) 
         {
             case "SteamVR_TrackedObject": 
-                object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData["enabled"];
+                try 
+                {
+                    object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData["enabled"];
+                }
+                catch (Exception ex)
+                {
+                    break;
+                }
                 break;
             case "Interactable":
-                object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData["enabled"];
+                try 
+                {
+                    object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData["enabled"];
+                }
+                catch (Exception ex)
+                {
+                    break;
+                }
                 break;
             case "Throwable":
-                object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData["enabled"];
+                try 
+                {
+                    object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData["enabled"];
+                }
+                catch (Exception ex)
+                {
+                    break;
+                }
                 break;
             case "Haptics_Vive":
-                object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
+                try 
+                {
+                    object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
+                }
+                catch (Exception ex)
+                {
+                    break;
+                }
                 break;
             case "Haptics_Pen_v1":
-                object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
-                break; 
+                try 
+                {
+                    object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
+                }
+                catch (Exception ex)
+                {
+                    break;
+                }
+                break;
             case "HapticGrabber":
                 //Debug.Log("Haptic Grabber set to: " + (bool) ParamData["enabled"]);
-                object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
+                try 
+                {
+                    object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
+                }
+                catch (Exception ex)
+                {
+                    break;
+                }
                 break;
             // case "HapticPlugin":
             //     Debug.Log("Haptic Plugin set to: " + (bool) ParamData["enabled"]);
