@@ -323,14 +323,21 @@ public class ObjectManager : MonoBehaviour
             GetComponent<SpringJoint>().breakForce = 0.0f;
             return;
         }
-        switch((string) ParamData["metrics"]["constraint-type"])
+        try
         {
-            case "SpringJoint":
-                GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
-                GetComponent<SpringJoint>().damper = (float) ParamData["metrics"]["damper"];
-                GetComponent<SpringJoint>().breakTorque = (float) ParamData["metrics"]["breakTorque"];
-                GetComponent<SpringJoint>().breakForce = (float) ParamData["metrics"]["breakForce"];
-                break;
+            switch((string) ParamData["metrics"]["constraint-type"])
+            {
+                case "SpringJoint":
+                    GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
+                    GetComponent<SpringJoint>().damper = (float) ParamData["metrics"]["damper"];
+                    GetComponent<SpringJoint>().breakTorque = (float) ParamData["metrics"]["breakTorque"];
+                    GetComponent<SpringJoint>().breakForce = (float) ParamData["metrics"]["breakForce"];
+                    break;
+            }
+        }
+        catch(Exception ex)
+        {
+            return;
         }
     }
 }
