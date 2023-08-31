@@ -160,7 +160,7 @@ public class ObjectManager : MonoBehaviour
         ParamData = params_JSON[count_devices - device];
         try
         {
-            GameObject collider = transform.Find(id).gameObject;
+            GameObject collider = object_carabao.transform.Find(id).gameObject;
             Debug.Log("Found this object " + collider.name);
             Vector3 position, scale;
             Quaternion rotation;
@@ -275,7 +275,7 @@ public class ObjectManager : MonoBehaviour
     void StartConstraint(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
-        if (ParamData["metrics"] != null)
+        if (ParamData["metrics"] == null)
         {
             GetComponent<SpringJoint>().spring = 0.0f;
             GetComponent<SpringJoint>().damper = 0.0f;
