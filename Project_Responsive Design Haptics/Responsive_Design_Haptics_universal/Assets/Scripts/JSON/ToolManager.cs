@@ -165,23 +165,29 @@ public class ToolManager : MonoBehaviour
         collider.SetActive((bool) ParamData["enabled"]);
         if (ParamData["metrics"] != null)
         {
-            position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
-            rotation = Quaternion.Euler((float) ParamData["metrics"]["transform"]["rotation"]["x"], (float) ParamData["metrics"]["transform"]["rotation"]["y"], (float) ParamData["metrics"]["transform"]["rotation"]["z"]);
-            scale = new Vector3((float) ParamData["metrics"]["transform"]["scale"]["x"], (float) ParamData["metrics"]["transform"]["scale"]["y"], (float) ParamData["metrics"]["transform"]["scale"]["z"]);
-            if ((string) ParamData["metrics"]["transform"]["origin"] == "relative")
-            {
-                // Set everything using local transform variables
-                collider.transform.localPosition = position;
-                collider.transform.localRotation = rotation;
-                collider.transform.localScale = scale;
+            try {
+                position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
+                rotation = Quaternion.Euler((float) ParamData["metrics"]["transform"]["rotation"]["x"], (float) ParamData["metrics"]["transform"]["rotation"]["y"], (float) ParamData["metrics"]["transform"]["rotation"]["z"]);
+                scale = new Vector3((float) ParamData["metrics"]["transform"]["scale"]["x"], (float) ParamData["metrics"]["transform"]["scale"]["y"], (float) ParamData["metrics"]["transform"]["scale"]["z"]);
+                if ((string) ParamData["metrics"]["transform"]["origin"] == "relative")
+                {
+                    // Set everything using local transform variables
+                    collider.transform.localPosition = position;
+                    collider.transform.localRotation = rotation;
+                    collider.transform.localScale = scale;
+                }
+                else
+                {
+                    // Set everything using global transform variables
+                    collider.transform.position = position;
+                    collider.transform.rotation = rotation;
+                    collider.transform.localScale = scale;
+                }
             }
-            else
-            {
-                // Set everything using global transform variables
-                collider.transform.position = position;
-                collider.transform.rotation = rotation;
-                collider.transform.localScale = scale;
+            catch(Exception ex){
+                Debug.LogError("Exception for object with id " + id);
             }
+            
         }
         // switch(device)  
         // {
