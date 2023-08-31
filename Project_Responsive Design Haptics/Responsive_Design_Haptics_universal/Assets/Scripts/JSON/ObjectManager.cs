@@ -158,7 +158,14 @@ public class ObjectManager : MonoBehaviour
     void StartCollider(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
-        GameObject collider = transform.Find(id).gameObject;
+        try
+        {
+            GameObject collider = transform.Find(id).gameObject;
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Could not find gameobject for collider " + id);
+        }
         Debug.Log("Found this object " + collider.name);
         Vector3 position, scale;
         Quaternion rotation;
