@@ -273,7 +273,7 @@ public class ObjectManager : MonoBehaviour
     void StartConstraint(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
-        if (ParamData["metrics"] != null)
+        if (! (bool) ParamData["metrics"])
         {
             GetComponent<SpringJoint>().spring = 0.0f;
             GetComponent<SpringJoint>().damper = 0.0f;
