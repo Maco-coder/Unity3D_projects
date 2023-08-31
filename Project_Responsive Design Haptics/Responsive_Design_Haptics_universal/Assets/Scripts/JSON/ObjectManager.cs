@@ -158,8 +158,8 @@ public class ObjectManager : MonoBehaviour
     void StartCollider(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
-        GameObject collider = GameObject.Find(id);
-        Debug.Log("Here's the collider object, get a job " + id);
+        GameObject collider = transform.Find(id).gameObject;
+        Debug.Log("Found this object " + id);
         Vector3 position, scale;
         Quaternion rotation;
         collider.SetActive((bool) ParamData["enabled"]);
