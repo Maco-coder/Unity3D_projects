@@ -186,6 +186,7 @@ public class ToolManager : MonoBehaviour
             }
             catch(Exception ex){
                 Debug.LogError("Exception for object with id " + id);
+                Debug.LogError(ex);
             }
             
         }
