@@ -163,7 +163,7 @@ public class ToolManager : MonoBehaviour
         Vector3 position, scale;
         Quaternion rotation;
         collider.SetActive((bool) ParamData["enabled"]);
-        if (ParamData["metrics"] != null)
+        if ((bool) ParamData["enabled"])
         {
             try {
                 position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
@@ -267,7 +267,7 @@ public class ToolManager : MonoBehaviour
     void StartConstraint(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
-        if (ParamData["metrics"] != null)
+        if (! (bool) ParamData["enabled"])
         {
             GetComponent<SpringJoint>().spring = 0.0f;
             GetComponent<SpringJoint>().damper = 0.0f;
