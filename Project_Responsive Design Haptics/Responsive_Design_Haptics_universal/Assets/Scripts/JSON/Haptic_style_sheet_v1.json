@@ -390,7 +390,7 @@
     {
         "id": "TrunkCubeInTree",
         "type": "collider",
-        "class": "object",
+        "class": "tool",
         "params":
             [
                 {
