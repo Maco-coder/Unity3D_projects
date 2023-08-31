@@ -160,12 +160,12 @@ public class ObjectManager : MonoBehaviour
         ParamData = params_JSON[count_devices - device];
         try
         {
-            GameObject collider = object_carabao.transform.Find(id).gameObject;
+            GameObject collider = transform.Find(id).gameObject;
             Debug.Log("Found this object " + collider.name);
             Vector3 position, scale;
             Quaternion rotation;
             collider.SetActive((bool) ParamData["enabled"]);
-            if ((bool) ParamData["enabled"])
+            if (ParamData["metrics"] != null)
             {
                 try {
                     position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
@@ -191,12 +191,10 @@ public class ObjectManager : MonoBehaviour
                 }
             }
         }
-        catch (Exception e)
+        catch (Exception ex)
         {
-            Debug.Log("Could not find gameobject for collider " + id);
+            Debug.Log("Could not find object " + id);
         }
-        
-            
         // switch(device)  
         // {
         //     // TODO: Write search function for indexing ParamData by device
@@ -275,7 +273,7 @@ public class ObjectManager : MonoBehaviour
     void StartConstraint(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
-        if (ParamData["metrics"] == null)
+        if (ParamData["metrics"] != null)
         {
             GetComponent<SpringJoint>().spring = 0.0f;
             GetComponent<SpringJoint>().damper = 0.0f;
