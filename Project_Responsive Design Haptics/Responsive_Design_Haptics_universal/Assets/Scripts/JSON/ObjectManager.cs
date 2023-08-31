@@ -36,15 +36,15 @@ public class ObjectManager : MonoBehaviour
             if (class_JSON == "object")   {
                 switch (type) {
                 case "script":
-                    Debug.Log("Found script " + id);
+                    //Debug.Log("Found script " + id);
                     StartScript(id, params_JSON);
                     break;
                 case "collider":
-                    Debug.Log("Found collider " + id);
+                    //Debug.Log("Found collider " + id);
                     StartCollider(id, params_JSON);
                     break;
                 case "constraint":
-                    Debug.Log("Found constraint " + id);
+                    //Debug.Log("Found constraint " + id);
                     StartConstraint(id, params_JSON); 
                     break;
                 }
@@ -74,7 +74,7 @@ public class ObjectManager : MonoBehaviour
                 object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
                 break; 
             case "HapticGrabber":
-                Debug.Log("Haptic Grabber set to: " + (bool) ParamData["enabled"]);
+                //Debug.Log("Haptic Grabber set to: " + (bool) ParamData["enabled"]);
                 object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
                 break;
             // case "HapticPlugin":
