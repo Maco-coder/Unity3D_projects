@@ -165,7 +165,7 @@ public class ObjectManager : MonoBehaviour
             Vector3 position, scale;
             Quaternion rotation;
             collider.SetActive((bool) ParamData["enabled"]);
-            if (ParamData["metrics"] != null)
+            if ((bool) ParamData["enabled"])
             {
                 try {
                     position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
