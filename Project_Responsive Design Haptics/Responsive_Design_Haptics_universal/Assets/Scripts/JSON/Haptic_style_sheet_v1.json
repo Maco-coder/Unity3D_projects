@@ -259,7 +259,7 @@
     },
 
     {
-        "id": "Capsule_Apple",
+        "id": "TREE-general/Capsule_Apple",
         "type": "collider",
         "class": "tool",
         "params":
@@ -302,7 +302,7 @@
     },
 
     {
-        "id": "OuterCube_InTree",
+        "id": "TREE-general/OuterCube_InTree",
         "type": "collider",
         "class": "tool",
         "params":
@@ -364,7 +364,7 @@
     },
 
     {
-        "id": "InnerCube_InTree",
+        "id": "TREE-general/InnerCube_InTree",
         "type": "collider",
         "class": "tool",
         "params":
@@ -407,7 +407,7 @@
     },
 
     {
-        "id": "TrunkCube_InTree",
+        "id": "TREE-general/TrunkCube_InTree",
         "type": "collider",
         "class": "tool",
         "params":
@@ -512,7 +512,7 @@
     },
 
     {
-        "id": "Body3",
+        "id": "Picker/Body3",
         "type": "collider",
         "class": "tool",
         "params":
