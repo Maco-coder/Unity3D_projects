@@ -193,7 +193,7 @@ public class ObjectManager : MonoBehaviour
         }
         catch (Exception ex)
         {
-            Debug.Log("Could not find object " + id);
+            Debug.Log("Could not find object " + id + " from object: " + object_carabao.name);
         }
         // switch(device)  
         // {
