@@ -167,8 +167,8 @@ public class ToolManager : MonoBehaviour
         {
             try {
                 position = new Vector3(float.Parse((string) ParamData["metrics"]["transform"]["position"]["x"]), float.Parse((string) ParamData["metrics"]["transform"]["position"]["y"]), float.Parse((string) ParamData["metrics"]["transform"]["position"]["z"]));
-                rotation = Quaternion.Euler((float) ParamData["metrics"]["transform"]["rotation"]["x"], (float) ParamData["metrics"]["transform"]["rotation"]["y"], (float) ParamData["metrics"]["transform"]["rotation"]["z"]);
-                scale = new Vector3((float) ParamData["metrics"]["transform"]["scale"]["x"], (float) ParamData["metrics"]["transform"]["scale"]["y"], (float) ParamData["metrics"]["transform"]["scale"]["z"]);
+                rotation = Quaternion.Euler(float.Parse((string) ParamData["metrics"]["transform"]["rotation"]["x"]), float.Parse((string) ParamData["metrics"]["transform"]["rotation"]["y"]), float.Parse((string) ParamData["metrics"]["transform"]["rotation"]["z"]));
+                scale = new Vector3(float.Parse(ParamData["metrics"]["transform"]["scale"]["x"]), float.Parse(ParamData["metrics"]["transform"]["scale"]["y"]), float.Parse(ParamData["metrics"]["transform"]["scale"]["z"]));
                 if ((string) ParamData["metrics"]["transform"]["origin"] == "relative")
                 {
                     // Set everything using local transform variables
