@@ -160,17 +160,10 @@ public class ObjectManager : MonoBehaviour
         ParamData = params_JSON[count_devices - device];
         GameObject collider = GameObject.Find(id);
         Debug.Log("Here's the collider object, get a job " + collider.name);
-        if (collider is null)
-        { 
-            Debug.Log("Could not find collider " + id);
-        } else
-        {
-            Debug.Log("Found collider " + id);
-        }
         Vector3 position, scale;
         Quaternion rotation;
         collider.SetActive((bool) ParamData["enabled"]);
-        if (ParamData["metrics"].ContainsKey("transform"))
+        if (! ParamData["metrics"] == null)
         {
             position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
             rotation = Quaternion.Euler((float) ParamData["metrics"]["transform"]["rotation"]["x"], (float) ParamData["metrics"]["transform"]["rotation"]["y"], (float) ParamData["metrics"]["transform"]["rotation"]["z"]);
@@ -268,7 +261,7 @@ public class ObjectManager : MonoBehaviour
     void StartConstraint(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
-        if (! ParamData["metrics"].ContainsKey("constraint-type"))
+        if (! ParamData["metrics"] == null)
         {
             GetComponent<SpringJoint>().spring = 0.0f;
             GetComponent<SpringJoint>().damper = 0.0f;
