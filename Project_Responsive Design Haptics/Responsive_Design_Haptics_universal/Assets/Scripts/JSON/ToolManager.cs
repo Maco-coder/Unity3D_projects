@@ -166,7 +166,7 @@ public class ToolManager : MonoBehaviour
         if ((bool) ParamData["enabled"])
         {
             try {
-                position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
+                position = new Vector3(float.Parse(ParamData["metrics"]["transform"]["position"]["x"]), float.Parse(ParamData["metrics"]["transform"]["position"]["y"]), float.Parse(ParamData["metrics"]["transform"]["position"]["z"]));
                 rotation = Quaternion.Euler((float) ParamData["metrics"]["transform"]["rotation"]["x"], (float) ParamData["metrics"]["transform"]["rotation"]["y"], (float) ParamData["metrics"]["transform"]["rotation"]["z"]);
                 scale = new Vector3((float) ParamData["metrics"]["transform"]["scale"]["x"], (float) ParamData["metrics"]["transform"]["scale"]["y"], (float) ParamData["metrics"]["transform"]["scale"]["z"]);
                 if ((string) ParamData["metrics"]["transform"]["origin"] == "relative")
