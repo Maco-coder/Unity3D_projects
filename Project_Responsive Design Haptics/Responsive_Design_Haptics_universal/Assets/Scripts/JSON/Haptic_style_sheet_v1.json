@@ -511,7 +511,7 @@
                             "origin": "relative",
                             "position": {
                                 "x": "0",
-                                "y": "0",
+                                "y": "0.1",
                                 "z": "0"
                             },
                             "rotation": {
