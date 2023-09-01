@@ -11,6 +11,8 @@ public class Haptics_Pen_v1 : MonoBehaviour
     public GameObject apple             ;
     public GameObject cube_outter_apple ;
     public GameObject feedback_capsule  ;
+
+    public GameObject hapticdevice_api  ; // DISABLED BY DEFAULT IN THE SCENE
     
     public static float velocity = 0f ;
     public static float value = 0f    ;
@@ -20,6 +22,7 @@ public class Haptics_Pen_v1 : MonoBehaviour
     {
         cube_outter_apple.SetActive(false);
         feedback_capsule.SetActive(false) ;
+        hapticdevice_api.SetActive(true)  ;
     }
 
     void Update()
