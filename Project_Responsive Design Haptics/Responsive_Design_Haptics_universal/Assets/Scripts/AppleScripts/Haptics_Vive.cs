@@ -106,5 +106,4 @@ public class Haptics_Vive : MonoBehaviour
 
     }
 
-
 }
