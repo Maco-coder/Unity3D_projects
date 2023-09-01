@@ -1374,6 +1374,7 @@ MonoBehaviour:
   apple: {fileID: 1829371291887784}
   cube_outter_apple: {fileID: 1215903175}
   feedback_capsule: {fileID: 2026721122}
+  hapticdevice_api: {fileID: 1856731232910276}
 --- !u!114 &476833029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3230,7 +3231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4080526184693906
 Transform:
   m_ObjectHideFlags: 0
