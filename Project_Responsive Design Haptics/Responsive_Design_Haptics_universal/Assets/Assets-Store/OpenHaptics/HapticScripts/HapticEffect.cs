@@ -16,12 +16,12 @@ using UnityEditor;
 
 public class HapticEffect : MonoBehaviour {
 
-	
 	public enum EFFECT_TYPE { CONSTANT, VISCOUS, SPRING, FRICTION, VIBRATE };
 
+	public int feedback_type ;
 
 	// Public, User-Adjustable Settings
-	public EFFECT_TYPE effectType = EFFECT_TYPE.VISCOUS   ; //!< Which type of effect occurs within this zone?
+	public EFFECT_TYPE effectType = EFFECT_TYPE.SPRING    ; //!< Which type of effect occurs within this zone?
 	[Range(0.0f,1.0f)] public double Gain = 0.333f        ;	
 	[Range(0.0f,1.0f)] public double Magnitude = 0.333f   ;
 	[Range(1.0f,1000.0f)] public double Frequency = 200.0f;
@@ -51,6 +51,7 @@ public class HapticEffect : MonoBehaviour {
 
 	void Start () 
 	{
+
 		//Initialize the list of haptic devices.
 		devices = (HapticPlugin[]) Object.FindObjectsOfType(typeof(HapticPlugin));
 		inTheZone = new bool[devices.Length];
@@ -97,6 +98,7 @@ public class HapticEffect : MonoBehaviour {
 			HapticPlugin device = devices [ii];
 			bool oldInTheZone = inTheZone[ii] ;
 			int ID = FXID [ii] ;
+			//int ID = 1 ;
 
 			// If a haptic effect has not been assigned through Open Haptics, assign one now.
 			if (ID == -1)
