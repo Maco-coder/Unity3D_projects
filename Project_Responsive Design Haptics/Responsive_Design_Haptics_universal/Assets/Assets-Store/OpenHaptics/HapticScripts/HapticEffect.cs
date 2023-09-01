@@ -79,16 +79,6 @@ public class HapticEffect : MonoBehaviour {
 	void Update () 
 	{
 
-
-		public EFFECT_TYPE effectType = EFFECT_TYPE.VISCOUS   ; //!< Which type of effect occurs within this zone?
-	[Range(0.0f,1.0f)] public double Gain = 0.333f        ;	
-	[Range(0.0f,1.0f)] public double Magnitude = 0.333f   ;
-	[Range(1.0f,1000.0f)] public double Frequency = 200.0f;
-	private double Duration = 1.0f        ;
-	public Vector3 Position = Vector3.zero;
-	public Vector3 Direction = Vector3.up ;
-
-
 		// Find the pointer to the collider that defines the "zone". 
 		Collider collider = gameObject.GetComponent<Collider>();
 		if (collider == null)
