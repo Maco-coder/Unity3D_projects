@@ -51,6 +51,11 @@ public class ToolManager : MonoBehaviour
             }
         }
         // GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
+        if (device == 2 && object_carabao.name == "Picker")
+        {
+            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<Rigidbody>().useGravity = false;
+        }
     } 
 
     void StartScript(string id, List<JsonData> params_JSON)   
