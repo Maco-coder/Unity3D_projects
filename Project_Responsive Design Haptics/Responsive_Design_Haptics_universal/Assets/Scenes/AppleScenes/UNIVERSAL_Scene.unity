@@ -2731,6 +2731,16 @@ MonoBehaviour:
   hapticAction:
     actionPath: /actions/default/out/Haptic
     needsReinit: 0
+  OuterCubeInTree_amplitude: 1
+  OuterCubeInTree_frequency: 200
+  InnerCubeInTree_amplitude: 30
+  InnerCubeInTree_frequency: 30
+  TrunkCubeInTree_amplitude: 1
+  TrunkCubeInTree_frequency: 300
+  PluckApple_amplitude: 50
+  PluckApple_frequency_factor: 500
+  CarryApple_amplitude: 1
+  CarryApple_frequency: 150
 --- !u!114 &1917585342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3486,6 +3496,16 @@ MonoBehaviour:
   hapticAction:
     actionPath: /actions/default/out/Haptic
     needsReinit: 0
+  OuterCubeInTree_amplitude: 1
+  OuterCubeInTree_frequency: 200
+  InnerCubeInTree_amplitude: 30
+  InnerCubeInTree_frequency: 30
+  TrunkCubeInTree_amplitude: 1
+  TrunkCubeInTree_frequency: 300
+  PluckApple_amplitude: 50
+  PluckApple_frequency_factor: 500
+  CarryApple_amplitude: 1
+  CarryApple_frequency: 150
 --- !u!114 &114040887073973570
 MonoBehaviour:
   m_ObjectHideFlags: 0

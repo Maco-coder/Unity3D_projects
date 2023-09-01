@@ -20,6 +20,23 @@ public class Haptics_Vive : MonoBehaviour
     bool isCurrentlyCollidingWApple ;
     bool isCurrentlyCollidingWBox   ;
 
+    public float OuterCubeInTree_amplitude ;
+    public float OuterCubeInTree_frequency ;
+
+    public float InnerCubeInTree_amplitude ;
+    public float InnerCubeInTree_frequency ;
+
+    public float TrunkCubeInTree_amplitude ;
+    public float TrunkCubeInTree_frequency ;
+
+    public float PluckApple_amplitude        ;
+    public float PluckApple_frequency_factor ;
+
+    public float CarryApple_amplitude ;
+    public float CarryApple_frequency ;
+
+
+
 
     void Update()
     {
@@ -33,7 +50,7 @@ public class Haptics_Vive : MonoBehaviour
         if ( (distance_apple_tree > 0.17) && (distance_apple_tree < 0.3) && (triggerValueR > 0.0f) )
         {
             Debug.Log(distance_apple_tree.ToString())                              ;
-            Pulse(1, 50, distance_apple_tree*500, SteamVR_Input_Sources.RightHand) ;
+            Pulse(1, PluckApple_amplitude, distance_apple_tree*PluckApple_frequency_factor, SteamVR_Input_Sources.RightHand) ;
         }
 
     }
@@ -48,16 +65,16 @@ public class Haptics_Vive : MonoBehaviour
 
     void OnCollisionEnter(Collision collision){
 
-        if (collision.gameObject.name == "TREE-general"){
+        if (collision.gameObject.name == "TREE"){
             isCurrentlyCollidingWTree = true ;
         }
 
-        if (collision.gameObject.name == "OuterCube_InTree")
-            Pulse(0.2f, 1, 200, SteamVR_Input_Sources.RightHand);
+        if (collision.gameObject.name == "OuterCubeInTree")
+            Pulse(0.2f, OuterCubeInTree_amplitude, OuterCubeInTree_frequency, SteamVR_Input_Sources.RightHand);
 
 
-        if (collision.gameObject.name == "TrunkCube_InTree")
-            Pulse(0.5f, 1, 300, SteamVR_Input_Sources.RightHand);
+        if (collision.gameObject.name == "TrunkCubeInTree")
+            Pulse(0.5f, TrunkCubeInTree_amplitude, TrunkCubeInTree_frequency, SteamVR_Input_Sources.RightHand);
 
 
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand);
@@ -67,7 +84,7 @@ public class Haptics_Vive : MonoBehaviour
         if ( (collision.gameObject.name == "Apple") && (distance_apple_tree > 0.22) && (triggerValueR > 0.0f))
         {
             Debug.Log(distance_apple_tree.ToString());
-            Pulse(0.2f, 1, 150, SteamVR_Input_Sources.RightHand);
+            Pulse(0.2f, CarryApple_amplitude, CarryApple_frequency, SteamVR_Input_Sources.RightHand);
         }
 
 
@@ -77,38 +94,15 @@ public class Haptics_Vive : MonoBehaviour
     void OnCollisionStay(Collision collision)
     {
 
-        //if (collision.gameObject.tag == "apple_VIVE"){
-        //    Debug.Log("collision detected")   ;
-        //    isCurrentlyCollidingWApple = true ;
-        //}
-
-        //if (collision.gameObject.tag == "box_VIVE"){
-        //    print("collision detected")     ;
-        //    isCurrentlyCollidingWBox = true ;
-        //}
-
-        //if (collision.gameObject.tag == "tree_VIVE")
-        //{
-         //   isCurrentlyCollidingWTree = true;
-        //}
-        //Pulse(0.2f, 1, 300, SteamVR_Input_Sources.RightHand);
-
-        //if (isCurrentlyCollidingWTree == true)
-        //{
-        //    Pulse(1, 30, 30, SteamVR_Input_Sources.RightHand);
-        //}
-
-        if (collision.gameObject.tag == "InnerCube_InTree")
-            Pulse(1, 30, 30, SteamVR_Input_Sources.RightHand);
+        if (collision.gameObject.name == "InnerCubeInTree")
+            Pulse(1, InnerCubeInTree_amplitude, InnerCubeInTree_frequency, SteamVR_Input_Sources.RightHand) ;
 
     }
 
 
     void OnCollisionExit(Collision collision){
 
-        //isCurrentlyCollidingWApple = false ;
         isCurrentlyCollidingWTree = false  ;
-        //isCurrentlyCollidingWBox = false   ;
 
     }
 
