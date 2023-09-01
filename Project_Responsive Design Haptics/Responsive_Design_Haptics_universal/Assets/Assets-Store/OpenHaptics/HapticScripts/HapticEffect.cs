@@ -16,18 +16,18 @@ using UnityEditor;
 
 public class HapticEffect : MonoBehaviour {
 
-
+	
 	public enum EFFECT_TYPE { CONSTANT, VISCOUS, SPRING, FRICTION, VIBRATE };
 
 
 	// Public, User-Adjustable Settings
-	public EFFECT_TYPE effectType = EFFECT_TYPE.VISCOUS; //!< Which type of effect occurs within this zone?
-	[Range(0.0f,1.0f)] public double Gain = 0.333f;	
-	[Range(0.0f,1.0f)] public double Magnitude = 0.333f;
+	public EFFECT_TYPE effectType = EFFECT_TYPE.VISCOUS   ; //!< Which type of effect occurs within this zone?
+	[Range(0.0f,1.0f)] public double Gain = 0.333f        ;	
+	[Range(0.0f,1.0f)] public double Magnitude = 0.333f   ;
 	[Range(1.0f,1000.0f)] public double Frequency = 200.0f;
-	private double Duration = 1.0f;
+	private double Duration = 1.0f        ;
 	public Vector3 Position = Vector3.zero;
-	public Vector3 Direction = Vector3.up;
+	public Vector3 Direction = Vector3.up ;
 
 
 	// Keep track of the Haptic Devices
@@ -39,7 +39,7 @@ public class HapticEffect : MonoBehaviour {
 
 	// These are the user adjustable vectors, converted to world-space. 
 	private Vector3 focusPointWorld = Vector3.zero;
-	private Vector3 directionWorld = Vector3.up;
+	private Vector3 directionWorld = Vector3.up   ;
 
 
 	//! Start() is called at the beginning of the simulation.
@@ -47,6 +47,8 @@ public class HapticEffect : MonoBehaviour {
 	//! It will identify the Haptic devices, initizlize variables internal to this script, 
 	//! and request an Effect ID from Open Haptics. (One for each device.)
 	//!
+
+
 	void Start () 
 	{
 		//Initialize the list of haptic devices.
@@ -66,15 +68,27 @@ public class HapticEffect : MonoBehaviour {
 		}
 	}
 	
-	 
 	//!  Update() is called once per frame.
  	//! 
 	//! This function 
 	//! - Determines if a haptic stylus is inside the collider
 	//! - Updates the effect settings.
 	//! - Starts and stops the effect when appropriate.
+	
+
 	void Update () 
 	{
+
+
+		public EFFECT_TYPE effectType = EFFECT_TYPE.VISCOUS   ; //!< Which type of effect occurs within this zone?
+	[Range(0.0f,1.0f)] public double Gain = 0.333f        ;	
+	[Range(0.0f,1.0f)] public double Magnitude = 0.333f   ;
+	[Range(1.0f,1000.0f)] public double Frequency = 200.0f;
+	private double Duration = 1.0f        ;
+	public Vector3 Position = Vector3.zero;
+	public Vector3 Direction = Vector3.up ;
+
+
 		// Find the pointer to the collider that defines the "zone". 
 		Collider collider = gameObject.GetComponent<Collider>();
 		if (collider == null)
