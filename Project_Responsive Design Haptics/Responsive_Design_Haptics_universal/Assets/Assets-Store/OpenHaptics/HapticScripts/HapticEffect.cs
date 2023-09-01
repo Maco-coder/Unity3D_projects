@@ -91,8 +91,8 @@ public class HapticEffect : MonoBehaviour {
 		for( int ii = 0; ii < devices.Length; ii++ )
 		{
 			HapticPlugin device = devices [ii];
-			bool oldInTheZone = inTheZone[ii];
-			int ID = FXID [ii];
+			bool oldInTheZone = inTheZone[ii] ;
+			int ID = FXID [ii] ;
 
 			// If a haptic effect has not been assigned through Open Haptics, assign one now.
 			if (ID == -1)
@@ -277,11 +277,9 @@ public class HapticEffectEditor : Editor
 
 			case HapticEffect.EFFECT_TYPE.SPRING:
 				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
-				
 				//HE.Gain = StoreVariables.Touch_SPRING_spring_gain;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 				
 				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
-
 				//HE.Magnitude = StoreVariables.Touch_SPRING_spring_magnitude;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 
 				HE.Position = EditorGUILayout.Vector3Field("Position", HE.Position);
@@ -291,8 +289,8 @@ public class HapticEffectEditor : Editor
 			case HapticEffect.EFFECT_TYPE.VIBRATE:
 				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
 				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
-				HE.Frequency = Haptics_Pen_v3.value  ;
-				//HE.Frequency = EditorGUILayout.Slider("Frequency", (float)HE.Frequency, 1.0f, 1000.0f);
+				//HE.Frequency = Haptics_Pen_v3.value  ;
+				HE.Frequency = EditorGUILayout.Slider("Frequency", (float)HE.Frequency, 1.0f, 1000.0f);
 				HE.Direction = EditorGUILayout.Vector3Field("Direction", HE.Direction);
 				break;
 
