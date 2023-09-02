@@ -293,10 +293,10 @@ public class ObjectManager : MonoBehaviour
             switch((string) ParamData["metrics"]["constraint-type"])
             {
                 case "SpringJoint":
-                    GetComponent<SpringJoint>().spring = (float) ParamData["metrics"]["spring"];
-                    GetComponent<SpringJoint>().damper = (float) ParamData["metrics"]["damper"];
-                    GetComponent<SpringJoint>().breakTorque = (float) ParamData["metrics"]["breakTorque"];
-                    GetComponent<SpringJoint>().breakForce = (float) ParamData["metrics"]["breakForce"];
+                    GetComponent<SpringJoint>().spring = float.Parse((string) ParamData["metrics"]["spring"]);
+                    GetComponent<SpringJoint>().damper = float.Parse((string) ParamData["metrics"]["damper"]);
+                    GetComponent<SpringJoint>().breakTorque = float.Parse((string) ParamData["metrics"]["breakTorque"]);
+                    GetComponent<SpringJoint>().breakForce = float.Parse((string) ParamData["metrics"]["breakForce"]);
                     break;
             }
         }
