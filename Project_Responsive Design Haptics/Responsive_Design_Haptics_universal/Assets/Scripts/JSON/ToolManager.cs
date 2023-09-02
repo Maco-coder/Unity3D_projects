@@ -20,7 +20,7 @@ public class ToolManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("ToolManager running for " + object_carabao + " with device ID = " + device);
+        Debug.Log("ToolManager running for " + object_carabao.name + " with device ID = " + device);
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.json") ;
         FileData = JsonMapper.ToObject(JSONstring);
         for (int i = 0; i < FileData.Count; i++)    {
@@ -50,6 +50,7 @@ public class ToolManager : MonoBehaviour
                 }
             }
         }
+        // NEED TO ADD TO GRAMMAR
         if ((device == 2 || device == 3) && object_carabao.name == "Picker")
         {
             GetComponent<Rigidbody>().isKinematic = true;
@@ -66,6 +67,7 @@ public class ToolManager : MonoBehaviour
                 try 
                 {
                     object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData["enabled"];
+                    Debug.Log("Manager for object " + object_carabao.name + " set SteamVR_TrackedObject to " + (bool) ParamData["enabled"]);
                 }
                 catch (Exception ex)
                 {
@@ -77,6 +79,7 @@ public class ToolManager : MonoBehaviour
                 try 
                 {
                     object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData["enabled"];
+                    Debug.Log("Manager for object " + object_carabao.name + " set Interactable to " + (bool) ParamData["enabled"]);
                 }
                 catch (Exception ex)
                 {
@@ -88,6 +91,7 @@ public class ToolManager : MonoBehaviour
                 try 
                 {
                     object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData["enabled"];
+                    Debug.Log("Manager for object " + object_carabao.name + " set Throwable to " + (bool) ParamData["enabled"]);
                 }
                 catch (Exception ex)
                 {
@@ -98,8 +102,8 @@ public class ToolManager : MonoBehaviour
             case "Haptics_Vive":
                 try 
                 {
-                    
                     object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
+                    Debug.Log("Manager for object " + object_carabao.name + " set Haptics_Vive to " + (bool) ParamData["enabled"]);
                 }
                 catch (Exception ex)
                 {
@@ -111,6 +115,7 @@ public class ToolManager : MonoBehaviour
                 try 
                 {
                     object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
+                    Debug.Log("Manager for object " + object_carabao.name + " set Haptics_Pen_v1 to " + (bool) ParamData["enabled"]);
                 }
                 catch (Exception ex)
                 {
@@ -122,6 +127,7 @@ public class ToolManager : MonoBehaviour
                 try 
                 {
                     object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
+                    Debug.Log("Manager for object " + object_carabao.name + " set HapticGrabber to " + (bool) ParamData["enabled"]);
                 }
                 catch (Exception ex)
                 {
@@ -149,7 +155,8 @@ public class ToolManager : MonoBehaviour
                 position = new Vector3(float.Parse((string) ParamData["metrics"]["transform"]["position"]["x"]), float.Parse((string) ParamData["metrics"]["transform"]["position"]["y"]), float.Parse((string) ParamData["metrics"]["transform"]["position"]["z"]));
                 if ((string) ParamData["metrics"]["transform"]["origin"] == "relative") collider.transform.localPosition = position;
                 if ((string) ParamData["metrics"]["transform"]["origin"] == "absolute") collider.transform.position = position;
-            }  
+                Debug.Log("Manager for object " + object_carabao.name + " successfully set position for collider with id: " + id);
+            }   
             catch (Exception ex)
             {
                 Debug.Log("Manager for object " + object_carabao.name + " could not set the position for collider with id: " + id);
@@ -161,6 +168,7 @@ public class ToolManager : MonoBehaviour
                 rotation = Quaternion.Euler(float.Parse((string) ParamData["metrics"]["transform"]["rotation"]["x"]), float.Parse((string) ParamData["metrics"]["transform"]["rotation"]["y"]), float.Parse((string) ParamData["metrics"]["transform"]["rotation"]["z"]));
                 if ((string) ParamData["metrics"]["transform"]["origin"] == "relative") collider.transform.localRotation = rotation;
                 if ((string) ParamData["metrics"]["transform"]["origin"] == "absolute") collider.transform.rotation = rotation;
+                Debug.Log("Manager for object " + object_carabao.name + " successfully set rotation for collider with id: " + id);
             }
             catch (Exception ex)
             {
@@ -172,6 +180,7 @@ public class ToolManager : MonoBehaviour
             {
                 scale = new Vector3(float.Parse((string) ParamData["metrics"]["transform"]["scale"]["x"]), float.Parse((string) ParamData["metrics"]["transform"]["scale"]["y"]), float.Parse((string) ParamData["metrics"]["transform"]["scale"]["z"]));
                 collider.transform.localScale = scale; // Scale is always locally specified in Unity
+                Debug.Log("Manager for object " + object_carabao.name + " successfully set scale for collider with id: " + id);
             }
             catch (Exception ex)
             {
@@ -193,10 +202,11 @@ public class ToolManager : MonoBehaviour
                             {
                                 collider.GetComponent<Collider_HapticPen>().friction_gain = float.Parse((string) ParamData["metrics"]["gain"]);
                                 collider.GetComponent<Collider_HapticPen>().friction_magnitude = float.Parse((string) ParamData["metrics"]["magnitude"]);
+                                Debug.Log("Manager for object " + object_carabao.name + " successfully set friction parameters for collider with id: " + id);
                             }
                             catch (Exception ex)
                             {
-                                Debug.Log("Manager for object " + object_carabao.name + " could not set the friction parameters for object with id: " + id);
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the friction parameters for collider with id: " + id);
                             }
                             break;
                         case "spring":
@@ -205,10 +215,11 @@ public class ToolManager : MonoBehaviour
                             {
                                 collider.GetComponent<Collider_HapticPen>().spring_gain = float.Parse((string) ParamData["metrics"]["gain"]);
                                 collider.GetComponent<Collider_HapticPen>().spring_magnitude = float.Parse((string) ParamData["metrics"]["magnitude"]);
+                                Debug.Log("Manager for object " + object_carabao.name + " successfully set spring parameters for collider with id: " + id);
                             }
                             catch (Exception ex)
                             {
-                                Debug.Log("Manager for object " + object_carabao.name + " could not set the spring parameters for object with id: " + id);
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the spring parameters for collider with id: " + id);
                             }
                             break;
                         case "vibrate":
@@ -220,10 +231,11 @@ public class ToolManager : MonoBehaviour
                                 collider.GetComponent<Collider_HapticPen>().vibrate_direction_x = float.Parse((string) ParamData["metrics"]["direction"]["x"]);
                                 collider.GetComponent<Collider_HapticPen>().vibrate_direction_y = float.Parse((string) ParamData["metrics"]["direction"]["y"]);
                                 collider.GetComponent<Collider_HapticPen>().vibrate_direction_z = float.Parse((string) ParamData["metrics"]["direction"]["z"]);
+                                Debug.Log("Manager for object " + object_carabao.name + " successfully set vibration parameters for collider with id: " + id);
                             }
                             catch (Exception ex)
                             {
-                                Debug.Log("Manager for object " + object_carabao.name + " could not set the vibration parameters for object with id: " + id);
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the vibration parameters for collider with id: " + id);
                             }
                             break;
                         case "viscous":
@@ -232,10 +244,11 @@ public class ToolManager : MonoBehaviour
                             {
                                 collider.GetComponent<Collider_HapticPen>().viscous_gain = float.Parse((string) ParamData["metrics"]["gain"]);
                                 collider.GetComponent<Collider_HapticPen>().viscous_magnitude = float.Parse((string) ParamData["metrics"]["magnitude"]);
+                                Debug.Log("Manager for object " + object_carabao.name + " successfully set viscosity parameters for collider with id: " + id);
                             }
                             catch (Exception ex)
                             {
-                                Debug.Log("Manager for object " + object_carabao.name + " could not set the viscosity parameters for object with id: " + id);
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the viscosity parameters for collider with id: " + id);
                             }
                             break;
                         case "constant":
@@ -246,10 +259,11 @@ public class ToolManager : MonoBehaviour
                                 collider.GetComponent<Collider_HapticPen>().constant_direction_x = float.Parse((string) ParamData["metrics"]["direction"]["x"]);
                                 collider.GetComponent<Collider_HapticPen>().constant_direction_y = float.Parse((string) ParamData["metrics"]["direction"]["y"]);
                                 collider.GetComponent<Collider_HapticPen>().constant_direction_z = float.Parse((string) ParamData["metrics"]["direction"]["z"]);
+                                Debug.Log("Manager for object " + object_carabao.name + " successfully set constant parameters for collider with id: " + id);
                             }
                             catch (Exception ex)
                             {
-                                Debug.Log("Manager for object " + object_carabao.name + " could not set the constant force parameters for object with id: " + id);
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the constant force parameters for collider with id: " + id);
                             }
                             break;
                     }
@@ -257,14 +271,14 @@ public class ToolManager : MonoBehaviour
                 catch (Exception ex)
                 {
                     // In case the manager does not find a valid feedback-type field
-                    Debug.Log("Manager for object " + object_carabao.name + " could not find a valid configuration for haptic effects for object with id: " + id);
+                    Debug.Log("Manager for object " + object_carabao.name + " could not find a valid configuration for haptic effects for collider with id: " + id);
                 }
             }
         }
         catch (Exception ex)
         {
             // In case the manager fails to find the collider object
-            Debug.Log("Could not find collider object " + id + " from object: " + object_carabao.name);
+            Debug.Log("Manager for object " + object_carabao.name + " could not find collider with id: " + id);
         }
     }
 
@@ -297,13 +311,14 @@ public class ToolManager : MonoBehaviour
                     GetComponent<SpringJoint>().damper = float.Parse((string) ParamData["metrics"]["damper"]);
                     GetComponent<SpringJoint>().breakTorque = float.Parse((string) ParamData["metrics"]["breakTorque"]);
                     GetComponent<SpringJoint>().breakForce = float.Parse((string) ParamData["metrics"]["breakForce"]);
+                    Debug.Log("Manager for object " + object_carabao.name + " successfully set constraint parameters for constraint with id: " + id);
                     break;
             }
         }
         catch(Exception ex)
         {
             // In case the constraint parameters are missing/incomplete
-            Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing constraint with id " + id);
+            Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing constraint with id: " + id);
             return;
         }
     }
