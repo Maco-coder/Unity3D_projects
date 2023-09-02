@@ -179,7 +179,7 @@ public class ToolManager : MonoBehaviour
             }
 
             // 4. Set the parameters for haptic effects (in the case of force-feedback devices)
-            if (ParamData["device"] == "stylus")
+            if ((string) ParamData["device"] == "stylus")
             {
                 try
                 {
