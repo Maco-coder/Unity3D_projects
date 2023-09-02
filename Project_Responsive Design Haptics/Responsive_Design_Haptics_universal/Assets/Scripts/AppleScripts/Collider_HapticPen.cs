@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,8 +15,8 @@ public class Collider_HapticPen : MonoBehaviour
     public float constant_magnitude   ;
 
     // VISCOUS effect parameters //
-    public float viscous_gain      ;
-    public float viscous_magnitude ;
+     float viscous_gain      ;
+     float viscous_magnitude ;
 
     // SPRING effect parameters //
     public float spring_gain       ;
