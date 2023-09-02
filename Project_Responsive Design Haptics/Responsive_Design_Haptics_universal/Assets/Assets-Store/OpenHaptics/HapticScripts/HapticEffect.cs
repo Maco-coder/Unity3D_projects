@@ -259,7 +259,6 @@ public class HapticEffectEditor : Editor
 	{
 		HapticEffect HE = (HapticEffect)target;
 
-
 		if (HE.gameObject.gameObject.GetComponent<Collider>() == null)
 		{
 			EditorGUILayout.LabelField("*********************************************************");
@@ -269,8 +268,7 @@ public class HapticEffectEditor : Editor
 		} else
 
 		{
-			
-			
+				
 			// CRAPPY PROGRAMMING BEGINS HERE //
 
 			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "constant"){
@@ -278,7 +276,7 @@ public class HapticEffectEditor : Editor
 			}
 
 			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "viscous"){
-				HE.effectType = HapticEffect.EFFECT_TYPE.FRICTION ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+				HE.effectType = HapticEffect.EFFECT_TYPE.VISCOUS ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 			}
 
 			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "spring"){
@@ -286,7 +284,7 @@ public class HapticEffectEditor : Editor
 			}
 
 			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "friction"){
-				HE.effectType = HapticEffect.EFFECT_TYPE.VIBRATE ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+				HE.effectType = HapticEffect.EFFECT_TYPE.FRICTION ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 			}
 
 			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "vibrate"){
@@ -294,7 +292,6 @@ public class HapticEffectEditor : Editor
 			}
 
 			// CRAPPY PROGRAMMING ENDS HERE //
-
 
 			//HE.effectType = HapticEffect.EFFECT_TYPE.CONSTANT ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 			//HE.effectType = (HapticEffect.EFFECT_TYPE)EditorGUILayout.EnumPopup("Effect Type", HE.effectType);  // ORIGINAL LINE //
@@ -304,20 +301,33 @@ public class HapticEffectEditor : Editor
 			{
 
 			case HapticEffect.EFFECT_TYPE.CONSTANT:
-				HE.Direction = EditorGUILayout.Vector3Field("Direction", HE.Direction);
-				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				
+				//HE.Direction = EditorGUILayout.Vector3Field("Direction", HE.Direction);
+				HE.Direction = new Vector3(HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_direction_x, HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_direction_y, HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_direction_z);
+				
+				//HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				HE.Magnitude = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_magnitude;
+
 				break;
 
 			case HapticEffect.EFFECT_TYPE.FRICTION:
-				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
-				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				
+				//HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
+				HE.Gain = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().friction_gain;
+
+				//HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				HE.Magnitude = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().friction_magnitude;
+				
 				break;
 
 			case HapticEffect.EFFECT_TYPE.SPRING:
-				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
+				
+				//HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
+				HE.Gain = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().spring_gain;
 				//HE.Gain = StoreVariables.Touch_SPRING_spring_gain;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 				
-				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				//HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				HE.Magnitude = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().spring_magnitude;
 				//HE.Magnitude = StoreVariables.Touch_SPRING_spring_magnitude;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 
 				HE.Position = EditorGUILayout.Vector3Field("Position", HE.Position);
@@ -325,23 +335,34 @@ public class HapticEffectEditor : Editor
 				break;
 
 			case HapticEffect.EFFECT_TYPE.VIBRATE:
-				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
-				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
-				//HE.Frequency = Haptics_Pen_v3.value  ;
-				HE.Frequency = EditorGUILayout.Slider("Frequency", (float)HE.Frequency, 1.0f, 1000.0f);
-				HE.Direction = EditorGUILayout.Vector3Field("Direction", HE.Direction);
+
+				//HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
+				HE.Gain = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().vibrate_gain;
+
+				//HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				HE.Magnitude = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().vibrate_magnitude;
+				
+				//HE.Frequency = EditorGUILayout.Slider("Frequency", (float)HE.Frequency, 1.0f, 1000.0f);
+				HE.Frequency = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().vibrate_frequency;
+
+				//HE.Direction = EditorGUILayout.Vector3Field("Direction", HE.Direction);
+				HE.Direction = new Vector3(HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().vibrate_direction_x, HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().vibrate_direction_y, HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().vibrate_direction_z);
+			
 				break;
 
 			case HapticEffect.EFFECT_TYPE.VISCOUS:
-				HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
-				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				
+				//HE.Gain = EditorGUILayout.Slider("Gain", (float)HE.Gain, 0.0f, 1.0f);
+				HE.Gain = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().viscous_gain;
+
+				//HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				HE.Magnitude = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().viscous_magnitude;
+				
 				break;
 
 			}
 		}
-
 	}
-
 }
 
 //#endif

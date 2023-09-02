@@ -1199,7 +1199,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324aef83f50912b4e80f37fc69cc628e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  feedback_choice: friction
+  feedback_choice: vibrate
+  constant_direction_x: 0
+  constant_direction_y: 0
+  constant_direction_z: 0
+  constant_magnitude: 0
+  viscous_gain: 0
+  viscous_magnitude: 0
+  spring_gain: 0
+  spring_magnitude: 0
+  friction_gain: 0
+  friction_magnitude: 0
+  vibrate_gain: 0
+  vibrate_magnitude: 0
+  vibrate_frequency: 0
+  vibrate_direction_x: 0
+  vibrate_direction_y: 0
+  vibrate_direction_z: 0
 --- !u!114 &476833022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,6 +1742,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedback_choice: friction
+  constant_direction_x: 0
+  constant_direction_y: 0
+  constant_direction_z: 0
+  constant_magnitude: 0
+  viscous_gain: 0
+  viscous_magnitude: 0
+  spring_gain: 0
+  spring_magnitude: 0
+  friction_gain: 0
+  friction_magnitude: 0
+  vibrate_gain: 0
+  vibrate_magnitude: 0
+  vibrate_frequency: 0
+  vibrate_direction_x: 0
+  vibrate_direction_y: 0
+  vibrate_direction_z: 0
 --- !u!1 &1049200228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +2002,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedback_choice: vibrate
+  constant_direction_x: 0
+  constant_direction_y: 0
+  constant_direction_z: 0
+  constant_magnitude: 0
+  viscous_gain: 0
+  viscous_magnitude: 0
+  spring_gain: 0
+  spring_magnitude: 0
+  friction_gain: 0
+  friction_magnitude: 0
+  vibrate_gain: 0
+  vibrate_magnitude: 0
+  vibrate_frequency: 0
+  vibrate_direction_x: 0
+  vibrate_direction_y: 0
+  vibrate_direction_z: 0
 --- !u!1001 &1448289343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3191,6 +3239,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedback_choice: friction
+  constant_direction_x: 0
+  constant_direction_y: 0
+  constant_direction_z: 0
+  constant_magnitude: 0
+  viscous_gain: 0
+  viscous_magnitude: 0
+  spring_gain: 0
+  spring_magnitude: 0
+  friction_gain: 0
+  friction_magnitude: 0
+  vibrate_gain: 0
+  vibrate_magnitude: 0
+  vibrate_frequency: 0
+  vibrate_direction_x: 0
+  vibrate_direction_y: 0
+  vibrate_direction_z: 0
 --- !u!54 &2120319052
 Rigidbody:
   m_ObjectHideFlags: 0
