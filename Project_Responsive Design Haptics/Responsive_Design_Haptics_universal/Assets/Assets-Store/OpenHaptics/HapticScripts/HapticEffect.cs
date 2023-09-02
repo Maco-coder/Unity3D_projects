@@ -14,14 +14,13 @@ using UnityEditor;
 //! to any haptic stylus that is within the boundries of the collider.
 //! The parameters can be adjusted on the fly.
 
-public class HapticEffect : MonoBehaviour {
+public class HapticEffect : MonoBehaviour {	
+
 
 	public enum EFFECT_TYPE { CONSTANT, VISCOUS, SPRING, FRICTION, VIBRATE };
 
-	public int feedback_type ;
-
 	// Public, User-Adjustable Settings
-	public EFFECT_TYPE effectType = EFFECT_TYPE.SPRING    ; //!< Which type of effect occurs within this zone?
+	public EFFECT_TYPE effectType = EFFECT_TYPE.VISCOUS   ; //!< Which type of effect occurs within this zone?
 	[Range(0.0f,1.0f)] public double Gain = 0.333f        ;	
 	[Range(0.0f,1.0f)] public double Magnitude = 0.333f   ;
 	[Range(1.0f,1000.0f)] public double Frequency = 200.0f;
@@ -51,13 +50,12 @@ public class HapticEffect : MonoBehaviour {
 
 	void Start () 
 	{
-
 		//Initialize the list of haptic devices.
 		devices = (HapticPlugin[]) Object.FindObjectsOfType(typeof(HapticPlugin));
-		inTheZone = new bool[devices.Length];
+		inTheZone = new bool[devices.Length]     ;
 		devicePoint = new Vector3[devices.Length];
-		delta = new float[devices.Length];
-		FXID = new int[devices.Length];
+		delta = new float[devices.Length]        ;
+		FXID = new int[devices.Length]           ;
 
 		// Generate an OpenHaptics effect ID for each of the devices.
 		for (int ii = 0; ii < devices.Length; ii++)
@@ -67,6 +65,8 @@ public class HapticEffect : MonoBehaviour {
 			delta [ii] = 0.0f;
 			FXID [ii] = HapticPlugin.effects_assignEffect(devices [ii].configName);
 		}
+
+
 	}
 	
 	//!  Update() is called once per frame.
@@ -98,7 +98,6 @@ public class HapticEffect : MonoBehaviour {
 			HapticPlugin device = devices [ii];
 			bool oldInTheZone = inTheZone[ii] ;
 			int ID = FXID [ii] ;
-			//int ID = 1 ;
 
 			// If a haptic effect has not been assigned through Open Haptics, assign one now.
 			if (ID == -1)
@@ -252,10 +251,12 @@ public class HapticEffect : MonoBehaviour {
 
 public class HapticEffectEditor : Editor 
 {
+
 	public int i = 0;
 	override public void OnInspectorGUI()
 	{
 		HapticEffect HE = (HapticEffect)target;
+
 
 		if (HE.gameObject.gameObject.GetComponent<Collider>() == null)
 		{
@@ -265,7 +266,21 @@ public class HapticEffectEditor : Editor
 
 		} else
 		{
-			HE.effectType = (HapticEffect.EFFECT_TYPE)EditorGUILayout.EnumPopup("Effect Type", HE.effectType);
+
+			// CRAPPY PROGRAMMING BEGINS HERE //
+
+
+			if (CollidersHapticEffect.colliding_object == 1 )
+			{
+				HE.effectType = HapticEffect.EFFECT_TYPE.VISCOUS ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+			}
+
+			// CRAPPY PROGRAMMING ENDS HERE //
+
+			//HE.effectType = HapticEffect.EFFECT_TYPE.CONSTANT ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+
+
+			//HE.effectType = (HapticEffect.EFFECT_TYPE)EditorGUILayout.EnumPopup("Effect Type", HE.effectType);  // ORIGINAL LINE //
 
 
 			switch (HE.effectType)
