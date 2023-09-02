@@ -1067,7 +1067,6 @@ GameObject:
   - component: {fileID: 392468152}
   - component: {fileID: 392468151}
   - component: {fileID: 392468155}
-  - component: {fileID: 392468156}
   m_Layer: 0
   m_Name: OuterCubeInTree
   m_TagString: Outer_Cube
@@ -1181,24 +1180,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad3557e55d4326498774f659558e89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectType: 4
+  effectType: 0
   Gain: 0.75
   Magnitude: 0.75
   Frequency: 200
   Position: {x: 0, y: 0, z: 0}
   Direction: {x: 0, y: 1, z: 0}
---- !u!114 &392468156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392468149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d2f6d182bc5804ba365858f2fa1484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &476833022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1592,7 +1579,6 @@ GameObject:
   - component: {fileID: 985490085}
   - component: {fileID: 985490084}
   - component: {fileID: 985490088}
-  - component: {fileID: 985490089}
   m_Layer: 0
   m_Name: TrunkCubeInTree
   m_TagString: Untagged
@@ -1706,24 +1692,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad3557e55d4326498774f659558e89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectType: 4
+  effectType: 0
   Gain: 1
   Magnitude: 1
   Frequency: 200
   Position: {x: 0, y: 0, z: 0}
   Direction: {x: 0, y: 1, z: 0}
---- !u!114 &985490089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985490082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d2f6d182bc5804ba365858f2fa1484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1049200228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1825,6 @@ GameObject:
   - component: {fileID: 1215903178}
   - component: {fileID: 1215903177}
   - component: {fileID: 1215903176}
-  - component: {fileID: 1215903181}
   m_Layer: 0
   m_Name: LargeCubeInWorld
   m_TagString: Untagged
@@ -1871,7 +1844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad3557e55d4326498774f659558e89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectType: 4
+  effectType: 0
   Gain: 0.75
   Magnitude: 0.75
   Frequency: 1
@@ -1955,18 +1928,6 @@ Transform:
   m_Father: {fileID: 6695003845411510564}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1215903181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215903175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d2f6d182bc5804ba365858f2fa1484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1448289343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3070,7 +3031,6 @@ GameObject:
   - component: {fileID: 2026721126}
   - component: {fileID: 2026721125}
   - component: {fileID: 2026721124}
-  - component: {fileID: 2026721128}
   m_Layer: 0
   m_Name: CapsuleApple
   m_TagString: Untagged
@@ -3105,7 +3065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad3557e55d4326498774f659558e89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectType: 4
+  effectType: 0
   Gain: 0.6000000238418579
   Magnitude: 0.6000000238418579
   Frequency: 200
@@ -3175,18 +3135,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026721122}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2026721128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026721122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d2f6d182bc5804ba365858f2fa1484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &2120319052
 Rigidbody:
   m_ObjectHideFlags: 0

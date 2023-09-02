@@ -16,6 +16,8 @@ using UnityEditor;
 
 public class HapticEffect : MonoBehaviour {	
 
+	public static float variable = 1 ;
+
 
 	public enum EFFECT_TYPE { CONSTANT, VISCOUS, SPRING, FRICTION, VIBRATE };
 
@@ -65,7 +67,6 @@ public class HapticEffect : MonoBehaviour {
 			delta [ii] = 0.0f;
 			FXID [ii] = HapticPlugin.effects_assignEffect(devices [ii].configName);
 		}
-
 
 	}
 	
@@ -243,8 +244,8 @@ public class HapticEffect : MonoBehaviour {
 
 	}
 
-
 }
+
 
 //#if UNITY_EDITOR
 [CustomEditor(typeof(HapticEffect))]
@@ -252,7 +253,9 @@ public class HapticEffect : MonoBehaviour {
 public class HapticEffectEditor : Editor 
 {
 
-	public int i = 0;
+	public int i = 0 ;
+
+
 	override public void OnInspectorGUI()
 	{
 		HapticEffect HE = (HapticEffect)target;
@@ -265,21 +268,32 @@ public class HapticEffectEditor : Editor
 			EditorGUILayout.LabelField("*********************************************************");
 
 		} else
-		{
 
+		{
+			
+			
 			// CRAPPY PROGRAMMING BEGINS HERE //
 
+			if (HapticEffect.variable == 1){
+				HE.effectType = HapticEffect.EFFECT_TYPE.CONSTANT ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+			}
 
-			if (CollidersHapticEffect.colliding_object == 1 )
-			{
-				HE.effectType = HapticEffect.EFFECT_TYPE.VISCOUS ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+			if (HapticEffect.variable == 2){
+				HE.effectType = HapticEffect.EFFECT_TYPE.FRICTION ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+			}
+
+			if (HapticEffect.variable == 3){
+				HE.effectType = HapticEffect.EFFECT_TYPE.SPRING ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+			}
+
+			if (HapticEffect.variable == 4){
+				HE.effectType = HapticEffect.EFFECT_TYPE.VIBRATE ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 			}
 
 			// CRAPPY PROGRAMMING ENDS HERE //
 
+
 			//HE.effectType = HapticEffect.EFFECT_TYPE.CONSTANT ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
-
-
 			//HE.effectType = (HapticEffect.EFFECT_TYPE)EditorGUILayout.EnumPopup("Effect Type", HE.effectType);  // ORIGINAL LINE //
 
 
