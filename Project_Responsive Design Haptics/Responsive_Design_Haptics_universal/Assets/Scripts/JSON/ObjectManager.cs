@@ -35,22 +35,26 @@ public class ObjectManager : MonoBehaviour
             // This is for tool-related JSON data
             if (class_JSON == "object")   {
                 switch (type) {
-                case "script":
-                    //Debug.Log("Found script " + id);
-                    StartScript(id, params_JSON);
-                    break;
-                case "collider":
-                    //Debug.Log("Found collider " + id);
-                    StartCollider(id, params_JSON);
-                    break;
-                case "constraint":
-                    //Debug.Log("Found constraint " + id);
-                    StartConstraint(id, params_JSON); 
-                    break;
+                    case "script":
+                        Debug.Log("Manager for object: " + object_carabao.name + " processing script: " + id);
+                        StartScript(id, params_JSON);
+                        break;
+                    case "collider":
+                        Debug.Log("Manager for object: " + object_carabao.name + " processing collider: " + id);
+                        StartCollider(id, params_JSON);
+                        break;
+                    case "constraint":
+                        Debug.Log("Manager for object: " + object_carabao.name + " processing constraint: " + id);
+                        StartConstraint(id, params_JSON); 
+                        break;
                 }
             }
         }
-        //GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
+        if ((device == 2 || device == 3) && object_carabao.name == "Picker")
+        {
+            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<Rigidbody>().useGravity = false;
+        }
     } 
 
     void StartScript(string id, List<JsonData> params_JSON)   
@@ -65,6 +69,7 @@ public class ObjectManager : MonoBehaviour
                 }
                 catch (Exception ex)
                 {
+                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing SteamVR_TrackedObject");
                     break;
                 }
                 break;
@@ -75,6 +80,7 @@ public class ObjectManager : MonoBehaviour
                 }
                 catch (Exception ex)
                 {
+                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Interactable");
                     break;
                 }
                 break;
@@ -85,16 +91,19 @@ public class ObjectManager : MonoBehaviour
                 }
                 catch (Exception ex)
                 {
+                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Throwable");
                     break;
                 }
                 break;
             case "Haptics_Vive":
                 try 
                 {
+                    
                     object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
                 }
                 catch (Exception ex)
                 {
+                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Haptics_Vive");
                     break;
                 }
                 break;
@@ -105,96 +114,22 @@ public class ObjectManager : MonoBehaviour
                 }
                 catch (Exception ex)
                 {
+                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Haptics_Pen_v1");
                     break;
                 }
                 break;
             case "HapticGrabber":
-                //Debug.Log("Haptic Grabber set to: " + (bool) ParamData["enabled"]);
                 try 
                 {
                     object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
                 }
                 catch (Exception ex)
                 {
+                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing HapticGrabber");
                     break;
                 }
                 break;
-            // case "HapticPlugin":
-            //     Debug.Log("Haptic Plugin set to: " + (bool) ParamData["enabled"]);
-            //     object_carabao.GetComponent<HapticPlugin>().enabled = (bool) ParamData["enabled"];
-            //     break;
-            // case "HapticPluginSafetyScript":
-            //     Debug.Log("Haptic Plugin Safety Script set to: " + (bool) ParamData["enabled"]);
-            //     object_carabao.GetComponent<HapticPluginSafetyScript>().enabled = (bool) ParamData["enabled"];
-            //     break;
         }
-        // switch(device)
-        // {
-        //     // TODO: Write search function for indexing ParamData by device
-        //     case 1: // VR-Controller
-        //         // condition on type of script
-        //         switch(id) 
-        //         {
-        //             case "SteamVR_TrackedObject": 
-        //                 object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Interactable":
-        //                 object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Throwable":
-        //                 object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Haptics_Vive":
-        //                 object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Haptics_Pen_v1":
-        //                 object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
-        //                 break; 
-        //         }
-        //         break;
-        //     case 2: // Stylus
-        //         // condition on type of script
-        //         switch(id) 
-        //         {
-        //             case "SteamVR_TrackedObject": 
-        //                 object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Interactable":
-        //                 object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Throwable":
-        //                 object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Haptics_Vive":
-        //                 object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Haptics_Pen_v1":
-        //                 object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
-        //                 break; 
-        //         }
-        //         break;
-        //     case 3: // Prop
-        //         // condition on type of script
-        //         switch(id) 
-        //         {
-        //             case "SteamVR_TrackedObject": 
-        //                 object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Interactable":
-        //                 object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Throwable":
-        //                 object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Haptics_Vive":
-        //                 object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
-        //                 break;
-        //             case "Haptics_Pen_v1":
-        //                 object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
-        //                 break; 
-        //         }
-        //         break;
-        // }
     }
 
     void StartCollider(string id, List<JsonData> params_JSON)
@@ -203,128 +138,158 @@ public class ObjectManager : MonoBehaviour
         try
         {
             GameObject collider = transform.Find(id).gameObject;
-            Debug.Log("Found this object " + collider.name);
+            Debug.Log("Manager for object " + object_carabao.name + " found collider object named " + collider.name);
             Vector3 position, scale;
             Quaternion rotation;
             collider.SetActive((bool) ParamData["enabled"]);
-            if ((bool) ParamData["enabled"])
+
+            // 1. Start by trying to set the position component of the collider
+            try
             {
-                try {
-                    position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
-                    rotation = Quaternion.Euler((float) ParamData["metrics"]["transform"]["rotation"]["x"], (float) ParamData["metrics"]["transform"]["rotation"]["y"], (float) ParamData["metrics"]["transform"]["rotation"]["z"]);
-                    scale = new Vector3((float) ParamData["metrics"]["transform"]["scale"]["x"], (float) ParamData["metrics"]["transform"]["scale"]["y"], (float) ParamData["metrics"]["transform"]["scale"]["z"]);
-                    if ((string) ParamData["metrics"]["transform"]["origin"] == "relative")
+                position = new Vector3(float.Parse((string) ParamData["metrics"]["transform"]["position"]["x"]), float.Parse((string) ParamData["metrics"]["transform"]["position"]["y"]), float.Parse((string) ParamData["metrics"]["transform"]["position"]["z"]));
+                if ((string) ParamData["metrics"]["transform"]["origin"] == "relative") collider.transform.localPosition = position;
+                if ((string) ParamData["metrics"]["transform"]["origin"] == "absolute") collider.transform.position = position;
+            }  
+            catch (Exception ex)
+            {
+                Debug.Log("Manager for object " + object_carabao.name + " could not set the position for collider with id: " + id);
+            }
+
+            // 2. Set the rotation of the collider
+            try
+            {
+                rotation = Quaternion.Euler(float.Parse((string) ParamData["metrics"]["transform"]["rotation"]["x"]), float.Parse((string) ParamData["metrics"]["transform"]["rotation"]["y"]), float.Parse((string) ParamData["metrics"]["transform"]["rotation"]["z"]));
+                if ((string) ParamData["metrics"]["transform"]["origin"] == "relative") collider.transform.localRotation = rotation;
+                if ((string) ParamData["metrics"]["transform"]["origin"] == "absolute") collider.transform.rotation = rotation;
+            }
+            catch (Exception ex)
+            {
+                Debug.Log("Manager for object " + object_carabao.name + " could not set the rotation for collider with id: " + id);
+            } 
+
+            // 3. Set the scale of the collider
+            try
+            {
+                scale = new Vector3(float.Parse((string) ParamData["metrics"]["transform"]["scale"]["x"]), float.Parse((string) ParamData["metrics"]["transform"]["scale"]["y"]), float.Parse((string) ParamData["metrics"]["transform"]["scale"]["z"]));
+                collider.transform.localScale = scale; // Scale is always locally specified in Unity
+            }
+            catch (Exception ex)
+            {
+                Debug.Log("Manager for object " + object_carabao.name + " could not set the scale for collider with id: " + id);
+            }
+
+            // 4. Set the parameters for haptic effects (in the case of force-feedback devices)
+            if (ParamData["device"] == "stylus")
+            {
+                try
+                {
+                    // Check for the type of feedback that is being applied 
+                    collider.GetComponent<Collider_HapticPen>().feedback_choice = (string) ParamData["metrics"]["feedback-type"];
+                    switch((string) ParamData["metrics"]["feedback-type"])
                     {
-                        // Set everything using local transform variables
-                        collider.transform.localPosition = position;
-                        collider.transform.localRotation = rotation;
-                        collider.transform.localScale = scale;
-                    }
-                    else
-                    {
-                        // Set everything using global transform variables
-                        collider.transform.position = position;
-                        collider.transform.rotation = rotation;
-                        collider.transform.localScale = scale;
+                        case "friction": 
+                            // Friction parameters = {gain, magnitude}
+                            try
+                            {
+                                collider.GetComponent<Collider_HapticPen>().friction_gain = float.Parse((string) ParamData["metrics"]["gain"]);
+                                collider.GetComponent<Collider_HapticPen>().friction_magnitude = float.Parse((string) ParamData["metrics"]["magnitude"]);
+                            }
+                            catch (Exception ex)
+                            {
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the friction parameters for object with id: " + id);
+                            }
+                            break;
+                        case "spring":
+                            // Spring parameters = {gain, magnitude}
+                            try
+                            {
+                                collider.GetComponent<Collider_HapticPen>().spring_gain = float.Parse((string) ParamData["metrics"]["gain"]);
+                                collider.GetComponent<Collider_HapticPen>().spring_magnitude = float.Parse((string) ParamData["metrics"]["magnitude"]);
+                            }
+                            catch (Exception ex)
+                            {
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the spring parameters for object with id: " + id);
+                            }
+                            break;
+                        case "vibrate":
+                            // Vibration parameters = {gain, magnitude, direction_x, direction_y, direction_z}
+                            try
+                            {
+                                collider.GetComponent<Collider_HapticPen>().vibrate_gain = float.Parse((string) ParamData["metrics"]["gain"]);
+                                collider.GetComponent<Collider_HapticPen>().vibrate_magnitude = float.Parse((string) ParamData["metrics"]["magnitude"]);
+                                collider.GetComponent<Collider_HapticPen>().vibrate_direction_x = float.Parse((string) ParamData["metrics"]["direction"]["x"]);
+                                collider.GetComponent<Collider_HapticPen>().vibrate_direction_y = float.Parse((string) ParamData["metrics"]["direction"]["y"]);
+                                collider.GetComponent<Collider_HapticPen>().vibrate_direction_z = float.Parse((string) ParamData["metrics"]["direction"]["z"]);
+                            }
+                            catch (Exception ex)
+                            {
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the vibration parameters for object with id: " + id);
+                            }
+                            break;
+                        case "viscous":
+                            // Viscosity parameters = {gain, magnitude}
+                            try
+                            {
+                                collider.GetComponent<Collider_HapticPen>().viscous_gain = float.Parse((string) ParamData["metrics"]["gain"]);
+                                collider.GetComponent<Collider_HapticPen>().viscous_magnitude = float.Parse((string) ParamData["metrics"]["magnitude"]);
+                            }
+                            catch (Exception ex)
+                            {
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the viscosity parameters for object with id: " + id);
+                            }
+                            break;
+                        case "constant":
+                            // Constant parameters = {magnitude, direction_x, direction_y, direction_z}
+                            try
+                            {
+                                collider.GetComponent<Collider_HapticPen>().constant_magnitude = float.Parse((string) ParamData["metrics"]["magnitude"]);
+                                collider.GetComponent<Collider_HapticPen>().constant_direction_x = float.Parse((string) ParamData["metrics"]["direction"]["x"]);
+                                collider.GetComponent<Collider_HapticPen>().constant_direction_y = float.Parse((string) ParamData["metrics"]["direction"]["y"]);
+                                collider.GetComponent<Collider_HapticPen>().constant_direction_z = float.Parse((string) ParamData["metrics"]["direction"]["z"]);
+                            }
+                            catch (Exception ex)
+                            {
+                                Debug.Log("Manager for object " + object_carabao.name + " could not set the constant force parameters for object with id: " + id);
+                            }
+                            break;
                     }
                 }
-                catch(Exception ex){
-                    Debug.LogError("Exception for object with id " + id);
+                catch (Exception ex)
+                {
+                    // In case the manager does not find a valid feedback-type field
+                    Debug.Log("Manager for object " + object_carabao.name + " could not find a valid configuration for haptic effects for object with id: " + id);
                 }
             }
         }
         catch (Exception ex)
         {
-            Debug.Log("Could not find object " + id + " from object: " + object_carabao.name);
+            // In case the manager fails to find the collider object
+            Debug.Log("Could not find collider object " + id + " from object: " + object_carabao.name);
         }
-        // switch(device)  
-        // {
-        //     // TODO: Write search function for indexing ParamData by device
-        //     case 1: // VR-Controller
-        //         collider.SetActive((bool) ParamData["enabled"]);
-        //         if ((bool) ParamData["metrics"])    
-        //         {
-        //             position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
-        //             rotation = Quaternion.Euler((float) ParamData["metrics"]["transform"]["rotation"]["x"], (float) ParamData["metrics"]["transform"]["rotation"]["y"], (float) ParamData["metrics"]["transform"]["rotation"]["z"]);
-        //             scale = new Vector3((float) ParamData["metrics"]["transform"]["scale"]["x"], (float) ParamData["metrics"]["transform"]["scale"]["y"], (float) ParamData["metrics"]["transform"]["scale"]["z"]);
-        //             if ((string) ParamData["metrics"]["transform"]["origin"] == "relative")   
-        //             {
-        //                 // Set everything using local transform variables
-        //                 collider.transform.localPosition = position;
-        //                 collider.transform.localRotation = rotation;
-        //                 collider.transform.localScale = scale;
-        //             }
-        //             else
-        //             {
-        //                 // Set everything using global transform variables
-        //                 collider.transform.position = position;
-        //                 collider.transform.rotation = rotation;
-        //                 collider.transform.localScale = scale;                        
-        //             }
-        //         }
-        //         break;
-        //     case 2: // Stylus
-        //         collider.SetActive((bool) ParamData["enabled"]);
-        //         if ((bool) ParamData["metrics"])
-        //         {
-        //             position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
-        //             rotation = Quaternion.Euler((float) ParamData["metrics"]["transform"]["rotation"]["x"], (float) ParamData["metrics"]["transform"]["rotation"]["y"], (float) ParamData["metrics"]["transform"]["rotation"]["z"]);
-        //             scale = new Vector3((float) ParamData["metrics"]["transform"]["scale"]["x"], (float) ParamData["metrics"]["transform"]["scale"]["y"], (float) ParamData["metrics"]["transform"]["scale"]["z"]);
-        //             if ((string) ParamData["metrics"]["transform"]["origin"] == "relative")   
-        //             {
-        //                 // Set everything using local transform variables
-        //                 collider.transform.localPosition = position;
-        //                 collider.transform.localRotation = rotation;
-        //                 collider.transform.localScale = scale;
-        //             }   
-        //             else
-        //             {
-        //                 // Set everything using global transform variables
-        //                 collider.transform.position = position;
-        //                 collider.transform.rotation = rotation;
-        //                 collider.transform.localScale = scale;                        
-        //             }                 
-        //         }
-        //         break;
-        //     case 3: // Props
-        //         collider.SetActive((bool) ParamData["enabled"]);
-        //         if ((bool) ParamData["metrics"])
-        //         {
-        //             position = new Vector3((float) ParamData["metrics"]["transform"]["position"]["x"], (float) ParamData["metrics"]["transform"]["position"]["y"], (float) ParamData["metrics"]["transform"]["position"]["z"]);
-        //             rotation = Quaternion.Euler((float) ParamData["metrics"]["transform"]["rotation"]["x"], (float) ParamData["metrics"]["transform"]["rotation"]["y"], (float) ParamData["metrics"]["transform"]["rotation"]["z"]);
-        //             scale = new Vector3((float) ParamData["metrics"]["transform"]["scale"]["x"], (float) ParamData["metrics"]["transform"]["scale"]["y"], (float) ParamData["metrics"]["transform"]["scale"]["z"]);
-        //             if ((string) ParamData["metrics"]["transform"]["origin"] == "relative")   
-        //             {
-        //                 // Set everything using local transform variables
-        //                 collider.transform.localPosition = position;
-        //                 collider.transform.localRotation = rotation;
-        //                 collider.transform.localScale = scale;
-        //             } 
-        //             else
-        //             {
-        //                 // Set everything using global transform variables
-        //                 collider.transform.position = position;
-        //                 collider.transform.rotation = rotation;
-        //                 collider.transform.localScale = scale;                        
-        //             }
-        //         }
-        //         break;
-        // }
     }
 
     void StartConstraint(string id, List<JsonData> params_JSON)
     {
         ParamData = params_JSON[count_devices - device];
+
+        // Check if the constraint is supposed to be enabled in the first place
         if (! (bool) ParamData["enabled"])
         {
-            GetComponent<SpringJoint>().spring = 0.0f;
-            GetComponent<SpringJoint>().damper = 0.0f;
-            GetComponent<SpringJoint>().breakTorque = 0.0f;
-            GetComponent<SpringJoint>().breakForce = 0.0f;
+            // If not, then set all constraint parameters to zero to disable the constraint
+            switch(id)
+            {
+                case "SpringJoint":
+                    GetComponent<SpringJoint>().spring = 0.0f;
+                    GetComponent<SpringJoint>().damper = 0.0f;
+                    GetComponent<SpringJoint>().breakTorque = 0.0f;
+                    GetComponent<SpringJoint>().breakForce = 0.0f;
+                    break;
+            }
             return;
         }
         try
         {
+            // If the constraint is enabled, it should specify the parameters to be set 
             switch((string) ParamData["metrics"]["constraint-type"])
             {
                 case "SpringJoint":
@@ -337,6 +302,8 @@ public class ObjectManager : MonoBehaviour
         }
         catch(Exception ex)
         {
+            // In case the constraint parameters are missing/incomplete
+            Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing constraint with id " + id);
             return;
         }
     }

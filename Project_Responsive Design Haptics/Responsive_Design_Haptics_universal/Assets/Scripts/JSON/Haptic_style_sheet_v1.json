@@ -229,7 +229,12 @@
                 {
                     "device": "stylus",
                     "enabled": false,
-                    "metrics": null
+                    "metrics": 
+                    {
+                        "feedback-type": "spring",
+                        "gain": "0.75",
+                        "magnitude": "0.75"
+                    }
                 },
                 {
                     "device": "vr_controller",
@@ -254,6 +259,9 @@
                     "device": "stylus",
                     "enabled": true,
                     "metrics": {
+                        "feedback-type": "friction",
+                        "gain": "0.5",
+                        "magnitude": "0.5",
                         "transform": {
                             "origin": "relative",
                             "position": {
@@ -359,6 +367,9 @@
                     "device": "stylus",
                     "enabled": true,
                     "metrics": {
+                        "feedback-type": "friction",
+                        "gain": "1.0",
+                        "magnitude": "1.0",
                         "transform": {
                             "origin": "relative",
                             "position": {
@@ -420,7 +431,19 @@
                 {
                     "device": "stylus",
                     "enabled": false,
-                    "metrics": null
+                    "metrics": 
+                    {
+                        "feedback-type": "vibrate",
+                        "gain": "1.0",
+                        "magnitude": "1.0",
+                        "frequency": "200",
+                        "direction":
+                        {
+                            "x": "0",
+                            "y": "1",
+                            "z": "0"
+                        }
+                    }
                 },
                 {
                     "device": "vr_controller",
