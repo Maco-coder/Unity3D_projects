@@ -16,8 +16,7 @@ using UnityEditor;
 
 public class HapticEffect : MonoBehaviour {	
 
-	public static float variable = 1 ;
-
+	//public int variable = 2 ;
 
 	public enum EFFECT_TYPE { CONSTANT, VISCOUS, SPRING, FRICTION, VIBRATE };
 
@@ -274,19 +273,23 @@ public class HapticEffectEditor : Editor
 			
 			// CRAPPY PROGRAMMING BEGINS HERE //
 
-			if (HapticEffect.variable == 1){
+			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "constant"){
 				HE.effectType = HapticEffect.EFFECT_TYPE.CONSTANT ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 			}
 
-			if (HapticEffect.variable == 2){
+			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "viscous"){
 				HE.effectType = HapticEffect.EFFECT_TYPE.FRICTION ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 			}
 
-			if (HapticEffect.variable == 3){
+			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "spring"){
 				HE.effectType = HapticEffect.EFFECT_TYPE.SPRING ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 			}
 
-			if (HapticEffect.variable == 4){
+			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "friction"){
+				HE.effectType = HapticEffect.EFFECT_TYPE.VIBRATE ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+			}
+
+			if (HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().feedback_choice == "vibrate"){
 				HE.effectType = HapticEffect.EFFECT_TYPE.VIBRATE ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
 			}
 
