@@ -79,11 +79,11 @@ public class Haptics_Vive : HMonoBehaviour
         }
 
         if (collision.gameObject.name == "OuterCubeInTree")
-            Pulse(0.2f, gameObject.GetComponent<Collider_HapticsVive>().OuterCubeInTree_amplitude, gameObject.GetComponent<Collider_HapticsVive>().OuterCubeInTree_frequency, SteamVR_Input_Sources.RightHand);
+            Pulse(0.2f, collision.gameObject.GetComponent<Collider_HapticsVive>().amplitude, collision.gameObject.GetComponent<Collider_HapticsVive>().frequency, SteamVR_Input_Sources.RightHand);
 
 
         if (collision.gameObject.name == "TrunkCubeInTree")
-            Pulse(0.5f, gameObject.GetComponent<Collider_HapticsVive>().TrunkCubeInTree_amplitude, gameObject.GetComponent<Collider_HapticsVive>().TrunkCubeInTree_frequency, SteamVR_Input_Sources.RightHand);
+            Pulse(0.5f, collision.gameObject.GetComponent<Collider_HapticsVive>().amplitude, collision.gameObject.GetComponent<Collider_HapticsVive>().frequency, SteamVR_Input_Sources.RightHand);
 
 
         float triggerValueR = squeezeAction.GetAxis(SteamVR_Input_Sources.RightHand);
@@ -93,7 +93,7 @@ public class Haptics_Vive : HMonoBehaviour
         if ( (collision.gameObject.name == "Apple") && (distance_apple_tree > 0.22) && (triggerValueR > 0.0f))
         {
             Debug.Log(distance_apple_tree.ToString());
-            Pulse(0.2f, gameObject.GetComponent<Collider_HapticsVive>().InnerCubeInTree_amplitude, gameObject.GetComponent<Collider_HapticsVive>().InnerCubeInTree_frequency, SteamVR_Input_Sources.RightHand);
+            Pulse(0.2f, gameObject.GetComponent<Collider_HapticsVive>().CarryApple_amplitude, gameObject.GetComponent<Collider_HapticsVive>().CarryApple_frequency, SteamVR_Input_Sources.RightHand);
         }
 
 
@@ -104,7 +104,7 @@ public class Haptics_Vive : HMonoBehaviour
     {
 
         if (collision.gameObject.name == "InnerCubeInTree")
-            Pulse(1, gameObject.GetComponent<Collider_HapticsVive>().CarryApple_amplitude, gameObject.GetComponent<Collider_HapticsVive>().CarryApple_amplitude, SteamVR_Input_Sources.RightHand) ;
+            Pulse(1, collision.gameObject.GetComponent<Collider_HapticsVive>().amplitude, collision.gameObject.GetComponent<Collider_HapticsVive>().frequency, SteamVR_Input_Sources.RightHand) ;
 
     }
 
