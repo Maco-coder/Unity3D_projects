@@ -93,7 +93,10 @@ public class ObjectManager : MonoBehaviour
                 script.SetVariables(variable_dictionary);
             }
         }
-
+        catch (Exception e)
+        {
+            Debug.Log("Manager for object " + object_carabao.name + " failed to pass parameters for the script " + id);
+        }
     }
 
     void StartCollider(string id, List<JsonData> params_JSON)
