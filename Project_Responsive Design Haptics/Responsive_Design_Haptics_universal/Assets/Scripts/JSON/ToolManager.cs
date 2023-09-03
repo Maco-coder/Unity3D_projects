@@ -84,7 +84,7 @@ public class ToolManager : MonoBehaviour
             {
                 // Loop through the parameters in the metrics object
                 var metrics_dictionary = JsonMapper.ToObject((string) ParamData["metrics"]);
-                var count = metrics_dictionary.Count;
+                var count = metrics_dictionary.Keys;
                 foreach(var key in metrics_dictionary.Keys)
                 {
                     Debug.Log("Manager for object " + object_carabao.name + " setting parameter " + (string) key + " to " + (string) metrics_dictionary[key]);
