@@ -23,6 +23,7 @@ public class ToolManager : MonoBehaviour
         Debug.Log("ToolManager running for " + object_carabao.name + " with device ID = " + device);
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.json") ;
         FileData = JsonMapper.ToObject(JSONstring);
+        var count = FileData.Keys;
         for (int i = 0; i < FileData.Count; i++)    {
             string id = (string) FileData[i]["id"];
             string type = (string) FileData[i]["type"];
@@ -84,7 +85,6 @@ public class ToolManager : MonoBehaviour
             {
                 // Loop through the parameters in the metrics object
                 var metrics_dictionary = JsonMapper.ToObject((string) ParamData["metrics"]);
-                var count = metrics_dictionary.Keys;
                 foreach(var key in metrics_dictionary.Keys)
                 {
                     Debug.Log("Manager for object " + object_carabao.name + " setting parameter " + (string) key + " to " + (string) metrics_dictionary[key]);
