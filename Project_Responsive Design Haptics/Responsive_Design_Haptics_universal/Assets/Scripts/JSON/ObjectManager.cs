@@ -78,7 +78,7 @@ public class ObjectManager : MonoBehaviour
         try
         {
             // Create a dictionary for passing parameters to the script
-            Dictionary<string, string> variable_dictionary = new Dictionary();
+            Dictionary<string, string> variable_dictionary = new Dictionary<string, string>();
             Debug.Log("Manager for object " + object_carabao.name + " created a dictionary for the script " + id);
             if ((bool) ParamData["enabled"])
             {
