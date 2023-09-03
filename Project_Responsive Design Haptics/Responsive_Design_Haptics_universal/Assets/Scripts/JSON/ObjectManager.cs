@@ -90,7 +90,6 @@ public class ObjectManager : MonoBehaviour
                 }
                 // Attempt to pass the parameters to the script
                 MonoBehaviour script = object_carabao.GetComponent(id) as MonoBehaviour;
-                IEnumerator coroutine = SetVariables(variable_dictionary);
                 script.SetVariables(variable_dictionary);
             }
         }
