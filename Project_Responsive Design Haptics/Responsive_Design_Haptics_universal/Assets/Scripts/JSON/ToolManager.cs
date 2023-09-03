@@ -83,10 +83,11 @@ public class ToolManager : MonoBehaviour
             if ((bool) ParamData["enabled"])
             {
                 // Loop through the parameters in the metrics object
-                foreach(var item in JsonMapper.ToObject((string) ParamData["metrics"]))
+                var metrics_dictionary = JsonMapper.ToObject((string) ParamData["metrics"]);
+                foreach(var key in metrics_dictionary.Keys)
                 {
-                    Debug.Log("Manager for object " + object_carabao.name + " setting parameter " + (string) item.Key + " to " + (string) item.Value);
-                    variable_dictionary.Add((string) item.Key, (string) item.Value);
+                    Debug.Log("Manager for object " + object_carabao.name + " setting parameter " + (string) key + " to " + (string) metrics_dictionary[key]);
+                    variable_dictionary.Add((string) key, (string) metrics_dictionary[key]);
                 }
                 // Attempt to pass the parameters to the script
                 MonoBehaviour script = object_carabao.GetComponent(id) as MonoBehaviour;
