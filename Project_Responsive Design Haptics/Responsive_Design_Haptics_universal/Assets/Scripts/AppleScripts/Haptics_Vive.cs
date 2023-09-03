@@ -23,6 +23,30 @@ public class Haptics_Vive : MonoBehaviour
     bool isCurrentlyCollidingWBox   ;
 
 
+    void SetVariables(Dictionary variable_dictionary)
+    {
+        foreach(var item in variable_dictionary)
+        {
+            switch(item.Key)
+            {
+                case "CarryApple_amplitude":
+                    gameObject.GetComponent<Collider_HapticsVive>().CarryApple_amplitude = float.Parse((string) item.Value);
+                    break;
+                case "CarryApple_frequency":
+                    gameObject.GetComponent<Collider_HapticsVive>().CarryApple_frequency = float.Parse((string) item.Value);
+                    break;
+                case "PluckApple_amplitude":
+                    gameObject.GetComponent<Collider_HapticsVive>().PluckApple_amplitude = float.Parse((string) item.Value);
+                    break;
+                case "PluckApple_frequency":
+                    gameObject.GetComponent<Collider_HapticsVive>().PluckApple_frequency = float.Parse((string) item.Value);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     void Update()
     {
         float distance_apple_tree = Vector3.Distance(cube_in_tree.transform.position, apple_in_tree.transform.position);

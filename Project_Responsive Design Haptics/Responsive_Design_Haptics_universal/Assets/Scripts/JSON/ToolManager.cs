@@ -62,7 +62,7 @@ public class ToolManager : MonoBehaviour
     {
         ParamData = params_JSON[count_devices - device];
         
-        // Try to see if GetComponent(string name) works for us
+        // 1. Enable/Disable script as specified in the file
         try
         {
             MonoBehaviour script = object_carabao.GetComponent(id) as MonoBehaviour;
@@ -72,6 +72,26 @@ public class ToolManager : MonoBehaviour
         catch (Exception e)
         {
             Debug.Log("Manager for object " + object_carabao.name + " could not use the GetComponent(string) function for " + id); 
+        }
+
+        // 2. Assign parameters for enabled scripts
+        try
+        {
+            // Create a dictionary for passing parameters to the script
+            Dictionary variable_dictionary = new Dictionary();
+            Debug.Log("Manager for object " + object_carabao.name + " created a dictionary for the script " + id);
+            if ((bool) ParamData["enabled"])
+            {
+                // Loop through the parameters in the metrics object
+                foreach(var parameter in JsonMapper.ToObject((string) ParamData["metrics"]).Keys())
+                {
+                    Debug.Log("Manager for object " + object_carabao.name + " setting parameter " + (string) parameter + " to " + (string) ParamData["metrics"][(string) parameter]);
+                    variable_dictionary.Add((string) parameter, (string) ParamData["metrics"][(string) parameter]);
+                }
+                // Attempt to pass the parameters to the script
+                MonoBehaviour script = object_carabao.GetComponent(id) as MonoBehaviour;
+                script.SetVariables(variable_dictionary);
+            }
         }
 
     }
@@ -215,6 +235,20 @@ public class ToolManager : MonoBehaviour
 
             // Set the parameters for haptic effects (in the case of VR-Controller devices)
             if ((string) ParamData["device"] == "vr_controller")
+            {
+                try
+                {
+                    // Vibrotactile feedback only cares about amplitude, frequency (and duration, if we want to specify that here)
+                    collider.GetComponent<Collider_HapticsVive>().amplitude = float.Parse((string) ParamData["metrics"]["amplitude"]);
+                    collider.GetComponent<Collider_HapticsVive>().frequency = float.Parse((string) ParamData["metrics"]["frequency"]);
+                    Debug.Log("Manager for object " + object_carabao.name + " successfully assigned amplitude, frequency parameters for collider with id: " + id);
+                }
+                catch (Exception e)
+                {
+                    // In case the manager does not find a valid feedback-type field
+                    Debug.Log("Manager for object " + object_carabao.name + " could not find a valid configuration for haptic effects for collider with id: " + id);
+                }
+            }
         }
         catch (Exception ex)
         {

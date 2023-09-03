@@ -20,7 +20,7 @@ public class ObjectManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("ObjectManager running for " + object_carabao.name + " with device ID = " + device);
+        Debug.Log("ToolManager running for " + object_carabao.name + " with device ID = " + device);
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.json") ;
         FileData = JsonMapper.ToObject(JSONstring);
         for (int i = 0; i < FileData.Count; i++)    {
@@ -62,7 +62,7 @@ public class ObjectManager : MonoBehaviour
     {
         ParamData = params_JSON[count_devices - device];
         
-        // Try to see if GetComponent(string name) works for us
+        // 1. Enable/Disable script as specified in the file
         try
         {
             MonoBehaviour script = object_carabao.GetComponent(id) as MonoBehaviour;
@@ -74,82 +74,26 @@ public class ObjectManager : MonoBehaviour
             Debug.Log("Manager for object " + object_carabao.name + " could not use the GetComponent(string) function for " + id); 
         }
 
+        // 2. Assign parameters for enabled scripts
+        try
+        {
+            // Create a dictionary for passing parameters to the script
+            Dictionary variable_dictionary = new Dictionary();
+            Debug.Log("Manager for object " + object_carabao.name + " created a dictionary for the script " + id);
+            if ((bool) ParamData["enabled"])
+            {
+                // Loop through the parameters in the metrics object
+                foreach(var parameter in JsonMapper.ToObject((string) ParamData["metrics"]).Keys())
+                {
+                    Debug.Log("Manager for object " + object_carabao.name + " setting parameter " + (string) parameter + " to " + (string) ParamData["metrics"][(string) parameter]);
+                    variable_dictionary.Add((string) parameter, (string) ParamData["metrics"][(string) parameter]);
+                }
+                // Attempt to pass the parameters to the script
+                MonoBehaviour script = object_carabao.GetComponent(id) as MonoBehaviour;
+                script.SetVariables(variable_dictionary);
+            }
+        }
 
-        // switch(id) 
-        // {
-        //     case "SteamVR_TrackedObject": 
-        //         try 
-        //         {
-        //             object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData["enabled"];
-        //             Debug.Log("Manager for object " + object_carabao.name + " set SteamVR_TrackedObject to " + (bool) ParamData["enabled"]);
-        //         }
-        //         catch (Exception ex)
-        //         {
-        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing SteamVR_TrackedObject");
-        //             break;
-        //         }
-        //         break;
-        //     case "Interactable":
-        //         try 
-        //         {
-        //             object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData["enabled"];
-        //             Debug.Log("Manager for object " + object_carabao.name + " set Interactable to " + (bool) ParamData["enabled"]);
-        //         }
-        //         catch (Exception ex)
-        //         {
-        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Interactable");
-        //             break;
-        //         }
-        //         break;
-        //     case "Throwable":
-        //         try 
-        //         {
-        //             object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData["enabled"];
-        //             Debug.Log("Manager for object " + object_carabao.name + " set Throwable to " + (bool) ParamData["enabled"]);
-        //         }
-        //         catch (Exception ex)
-        //         {
-        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Throwable");
-        //             break;
-        //         }
-        //         break;
-        //     case "Haptics_Vive":
-        //         try 
-        //         {
-        //             object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
-        //             Debug.Log("Manager for object " + object_carabao.name + " set Haptics_Vive to " + (bool) ParamData["enabled"]);
-        //         }
-        //         catch (Exception ex)
-        //         {
-        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Haptics_Vive");
-        //             break;
-        //         }
-        //         break;
-        //     case "Haptics_Pen_v1":
-        //         try 
-        //         {
-        //             object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
-        //             Debug.Log("Manager for object " + object_carabao.name + " set Haptics_Pen_v1 to " + (bool) ParamData["enabled"]);
-        //         }
-        //         catch (Exception ex)
-        //         {
-        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Haptics_Pen_v1");
-        //             break;
-        //         }
-        //         break;
-        //     case "HapticGrabber":
-        //         try 
-        //         {
-        //             object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
-        //             Debug.Log("Manager for object " + object_carabao.name + " set HapticGrabber to " + (bool) ParamData["enabled"]);
-        //         }
-        //         catch (Exception ex)
-        //         {
-        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing HapticGrabber");
-        //             break;
-        //         }
-        //         break;
-        // }
     }
 
     void StartCollider(string id, List<JsonData> params_JSON)
@@ -283,6 +227,23 @@ public class ObjectManager : MonoBehaviour
                     }
                 }
                 catch (Exception ex)
+                {
+                    // In case the manager does not find a valid feedback-type field
+                    Debug.Log("Manager for object " + object_carabao.name + " could not find a valid configuration for haptic effects for collider with id: " + id);
+                }
+            }
+
+            // Set the parameters for haptic effects (in the case of VR-Controller devices)
+            if ((string) ParamData["device"] == "vr_controller")
+            {
+                try
+                {
+                    // Vibrotactile feedback only cares about amplitude, frequency (and duration, if we want to specify that here)
+                    collider.GetComponent<Collider_HapticsVive>().amplitude = float.Parse((string) ParamData["metrics"]["amplitude"]);
+                    collider.GetComponent<Collider_HapticsVive>().frequency = float.Parse((string) ParamData["metrics"]["frequency"]);
+                    Debug.Log("Manager for object " + object_carabao.name + " successfully assigned amplitude, frequency parameters for collider with id: " + id);
+                }
+                catch (Exception e)
                 {
                     // In case the manager does not find a valid feedback-type field
                     Debug.Log("Manager for object " + object_carabao.name + " could not find a valid configuration for haptic effects for collider with id: " + id);
