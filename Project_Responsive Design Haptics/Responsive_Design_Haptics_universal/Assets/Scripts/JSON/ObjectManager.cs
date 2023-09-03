@@ -90,7 +90,7 @@ public class ObjectManager : MonoBehaviour
                     variable_dictionary.Add((string) key, (string) metrics_dictionary[key]);
                 }
                 // Attempt to pass the parameters to the script
-                MonoBehaviour script = object_carabao.GetComponent(id) as MonoBehaviour;
+                MonoBehaviour script = object_carabao.GetComponent(id) as HMonoBehaviour; // HMonoBehaviour contains an extra method definition to parse dictionaries
                 script.SetVariables(variable_dictionary);
             }
         }

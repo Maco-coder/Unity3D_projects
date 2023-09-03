@@ -9,7 +9,7 @@ using System                    ;
 using Valve.VR                  ;
 
 
-public class Haptics_Vive : MonoBehaviour
+public class Haptics_Vive : HMonoBehaviour
 {
 
     public GameObject cube_in_tree ;
