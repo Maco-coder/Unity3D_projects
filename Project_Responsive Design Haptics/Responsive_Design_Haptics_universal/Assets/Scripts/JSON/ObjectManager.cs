@@ -83,13 +83,14 @@ public class ObjectManager : MonoBehaviour
             if ((bool) ParamData["enabled"])
             {
                 // Loop through the parameters in the metrics object
-                foreach(var parameter in JsonMapper.ToObject((string) ParamData["metrics"]).Keys)
+                foreach(var parameter in JsonMapper.ToObject((string) ParamData["metrics"]).keys)
                 {
                     Debug.Log("Manager for object " + object_carabao.name + " setting parameter " + (string) parameter + " to " + (string) ParamData["metrics"][(string) parameter]);
                     variable_dictionary.Add((string) parameter, (string) ParamData["metrics"][(string) parameter]);
                 }
                 // Attempt to pass the parameters to the script
                 MonoBehaviour script = object_carabao.GetComponent(id) as MonoBehaviour;
+                IEnumerator coroutine = SetVariables(variable_dictionary);
                 script.SetVariables(variable_dictionary);
             }
         }
