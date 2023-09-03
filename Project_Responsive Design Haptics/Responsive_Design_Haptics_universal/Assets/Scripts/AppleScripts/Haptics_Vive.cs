@@ -27,19 +27,20 @@ public class Haptics_Vive : HMonoBehaviour
     {
         foreach(var item in variable_dictionary)
         {
+            Debug.Log("Haptics_Vive SetVariables() is setting the field " + item.Key + " to the value " + item.Value);
             switch(item.Key)
             {
                 case "CarryApple_amplitude":
-                    gameObject.GetComponent<Collider_HapticsVive>().CarryApple_amplitude = float.Parse((string) item.Value);
+                    GetComponent<Collider_HapticsVive>().CarryApple_amplitude = float.Parse((string) item.Value);
                     break;
                 case "CarryApple_frequency":
-                    gameObject.GetComponent<Collider_HapticsVive>().CarryApple_frequency = float.Parse((string) item.Value);
+                    GetComponent<Collider_HapticsVive>().CarryApple_frequency = float.Parse((string) item.Value);
                     break;
                 case "PluckApple_amplitude":
-                    gameObject.GetComponent<Collider_HapticsVive>().PluckApple_amplitude = float.Parse((string) item.Value);
+                    GetComponent<Collider_HapticsVive>().PluckApple_amplitude = float.Parse((string) item.Value);
                     break;
                 case "PluckApple_frequency":
-                    gameObject.GetComponent<Collider_HapticsVive>().PluckApple_frequency = float.Parse((string) item.Value);
+                    GetComponent<Collider_HapticsVive>().PluckApple_frequency = float.Parse((string) item.Value);
                     break;
                 default:
                     break;
