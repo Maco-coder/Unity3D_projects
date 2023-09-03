@@ -61,81 +61,94 @@ public class ToolManager : MonoBehaviour
     void StartScript(string id, List<JsonData> params_JSON)   
     {
         ParamData = params_JSON[count_devices - device];
-        switch(id) 
+        
+        // Try to see if GetComponent(string name) works for us
+        try
         {
-            case "SteamVR_TrackedObject": 
-                try 
-                {
-                    object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData["enabled"];
-                    Debug.Log("Manager for object " + object_carabao.name + " set SteamVR_TrackedObject to " + (bool) ParamData["enabled"]);
-                }
-                catch (Exception ex)
-                {
-                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing SteamVR_TrackedObject");
-                    break;
-                }
-                break;
-            case "Interactable":
-                try 
-                {
-                    object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData["enabled"];
-                    Debug.Log("Manager for object " + object_carabao.name + " set Interactable to " + (bool) ParamData["enabled"]);
-                }
-                catch (Exception ex)
-                {
-                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Interactable");
-                    break;
-                }
-                break;
-            case "Throwable":
-                try 
-                {
-                    object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData["enabled"];
-                    Debug.Log("Manager for object " + object_carabao.name + " set Throwable to " + (bool) ParamData["enabled"]);
-                }
-                catch (Exception ex)
-                {
-                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Throwable");
-                    break;
-                }
-                break;
-            case "Haptics_Vive":
-                try 
-                {
-                    object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
-                    Debug.Log("Manager for object " + object_carabao.name + " set Haptics_Vive to " + (bool) ParamData["enabled"]);
-                }
-                catch (Exception ex)
-                {
-                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Haptics_Vive");
-                    break;
-                }
-                break;
-            case "Haptics_Pen_v1":
-                try 
-                {
-                    object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
-                    Debug.Log("Manager for object " + object_carabao.name + " set Haptics_Pen_v1 to " + (bool) ParamData["enabled"]);
-                }
-                catch (Exception ex)
-                {
-                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Haptics_Pen_v1");
-                    break;
-                }
-                break;
-            case "HapticGrabber":
-                try 
-                {
-                    object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
-                    Debug.Log("Manager for object " + object_carabao.name + " set HapticGrabber to " + (bool) ParamData["enabled"]);
-                }
-                catch (Exception ex)
-                {
-                    Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing HapticGrabber");
-                    break;
-                }
-                break;
+            object_carabao.GetComponent(id).enabled = (bool) ParamData["enabled"];
+            Debug.Log("Manager for object " + object_carabao.name + " set " + id + " to " + (bool) ParamData["enabled"]);
         }
+        catch (Exception e)
+        {
+            Debug.Log("Manager for object " + object_carabao.name + " could not use the GetComponent(string) function for " + id); 
+        }
+
+
+        // switch(id) 
+        // {
+        //     case "SteamVR_TrackedObject": 
+        //         try 
+        //         {
+        //             object_carabao.GetComponent<SteamVR_TrackedObject>().enabled = (bool) ParamData["enabled"];
+        //             Debug.Log("Manager for object " + object_carabao.name + " set SteamVR_TrackedObject to " + (bool) ParamData["enabled"]);
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing SteamVR_TrackedObject");
+        //             break;
+        //         }
+        //         break;
+        //     case "Interactable":
+        //         try 
+        //         {
+        //             object_carabao.GetComponent<Interactable>().enabled = (bool) ParamData["enabled"];
+        //             Debug.Log("Manager for object " + object_carabao.name + " set Interactable to " + (bool) ParamData["enabled"]);
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Interactable");
+        //             break;
+        //         }
+        //         break;
+        //     case "Throwable":
+        //         try 
+        //         {
+        //             object_carabao.GetComponent<Throwable>().enabled = (bool) ParamData["enabled"];
+        //             Debug.Log("Manager for object " + object_carabao.name + " set Throwable to " + (bool) ParamData["enabled"]);
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Throwable");
+        //             break;
+        //         }
+        //         break;
+        //     case "Haptics_Vive":
+        //         try 
+        //         {
+        //             object_carabao.GetComponent<Haptics_Vive>().enabled = (bool) ParamData["enabled"];
+        //             Debug.Log("Manager for object " + object_carabao.name + " set Haptics_Vive to " + (bool) ParamData["enabled"]);
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Haptics_Vive");
+        //             break;
+        //         }
+        //         break;
+        //     case "Haptics_Pen_v1":
+        //         try 
+        //         {
+        //             object_carabao.GetComponent<Haptics_Pen_v1>().enabled = (bool) ParamData["enabled"];
+        //             Debug.Log("Manager for object " + object_carabao.name + " set Haptics_Pen_v1 to " + (bool) ParamData["enabled"]);
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing Haptics_Pen_v1");
+        //             break;
+        //         }
+        //         break;
+        //     case "HapticGrabber":
+        //         try 
+        //         {
+        //             object_carabao.GetComponent<HapticGrabber>().enabled = (bool) ParamData["enabled"];
+        //             Debug.Log("Manager for object " + object_carabao.name + " set HapticGrabber to " + (bool) ParamData["enabled"]);
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             Debug.Log("Manager for object " + object_carabao.name + " encountered an error while initializing HapticGrabber");
+        //             break;
+        //         }
+        //         break;
+        // }
     }
 
     void StartCollider(string id, List<JsonData> params_JSON)
