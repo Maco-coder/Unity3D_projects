@@ -10,7 +10,7 @@ using System                    ;
 public class HMonoBehaviour : MonoBehaviour
 {
 
-    void SetVariables(Dictionary<string, string> variable_dictionary)
+    public void SetVariables(Dictionary<string, string> variable_dictionary)
     {
     
     }
