@@ -65,7 +65,8 @@ public class ObjectManager : MonoBehaviour
         // Try to see if GetComponent(string name) works for us
         try
         {
-            object_carabao.GetComponent(id).enabled = (bool) ParamData["enabled"];
+            MonoBehaviour script = object_carabao.GetComponent(id) as MonoBehaviour;
+            script.enabled = (bool) ParamData["enabled"];
             Debug.Log("Manager for object " + object_carabao.name + " set " + id + " to " + (bool) ParamData["enabled"]);
         }
         catch (Exception e)
