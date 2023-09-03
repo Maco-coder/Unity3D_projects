@@ -97,6 +97,7 @@ public class ToolManager : MonoBehaviour
         catch (Exception e)
         {
             Debug.Log("Manager for object " + object_carabao.name + " failed to pass parameters for the script " + id);
+            Debug.LogError(e);
         }
     }
 
