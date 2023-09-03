@@ -23,7 +23,6 @@ public class ToolManager : MonoBehaviour
         Debug.Log("ToolManager running for " + object_carabao.name + " with device ID = " + device);
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/Haptic_style_sheet_v1.json") ;
         FileData = JsonMapper.ToObject(JSONstring);
-        var count = FileData.Keys;
         for (int i = 0; i < FileData.Count; i++)    {
             string id = (string) FileData[i]["id"];
             string type = (string) FileData[i]["type"];
