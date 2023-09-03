@@ -93,6 +93,7 @@ public class ToolManager : MonoBehaviour
                 // Attempt to pass the parameters to the script
                 HMonoBehaviour script = object_carabao.GetComponent(id) as HMonoBehaviour;
                 script.SetVariables(variable_dictionary);
+                Debug.Log("Manager for object " + object_carabao.name + " set the variables for script " + id);
             }
         }
         catch (Exception e)
