@@ -59,7 +59,7 @@ public class Haptics_Vive : HMonoBehaviour
         if ( (distance_apple_tree > 0.17) && (distance_apple_tree < 0.3) && (triggerValueR > 0.0f) )
         {
             Debug.Log(distance_apple_tree.ToString()) ;
-            Pulse(1, gameObject.GetComponent<Collider_HapticsVive>().PluckApple_amplitude, distance_apple_tree*gameObject.GetComponent<Collider_HapticsVive>().PluckApple_frequency_factor, SteamVR_Input_Sources.RightHand) ;
+            Pulse(1, gameObject.GetComponent<Collider_HapticsVive>().PluckApple_amplitude, distance_apple_tree*gameObject.GetComponent<Collider_HapticsVive>().PluckApple_frequency, SteamVR_Input_Sources.RightHand) ;
         }
 
     }
