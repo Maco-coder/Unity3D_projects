@@ -23,7 +23,7 @@ public class Haptics_Vive : MonoBehaviour
     bool isCurrentlyCollidingWBox   ;
 
 
-    void SetVariables(Dictionary variable_dictionary)
+    void SetVariables(Dictionary<string, string> variable_dictionary)
     {
         foreach(var item in variable_dictionary)
         {
