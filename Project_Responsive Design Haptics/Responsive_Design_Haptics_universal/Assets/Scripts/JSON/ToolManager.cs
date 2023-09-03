@@ -84,7 +84,7 @@ public class ToolManager : MonoBehaviour
             {
                 // Loop through the parameters in the metrics object
                 var metrics_dictionary = ParamData["metrics"];
-                Debug.Log("Manager for object " + object_carabao.name + " created dict object from JSON with type " + typeof(metrics_dictionary));
+                Debug.Log("Manager for object " + object_carabao.name + " created dict object from JSON");
                 foreach(var key in metrics_dictionary.Keys)
                 {
                     Debug.Log("Manager for object " + object_carabao.name + " setting parameter " + (string) key + " to " + (string) metrics_dictionary[key]);
