@@ -22,6 +22,8 @@ public class Haptics_Vive : HMonoBehaviour
     bool isCurrentlyCollidingWApple ;
     bool isCurrentlyCollidingWBox   ;
 
+    public bool isSet = false;
+
 
     void SetVariables(Dictionary<string, string> variable_dictionary)
     {
@@ -47,6 +49,7 @@ public class Haptics_Vive : HMonoBehaviour
                     break;
             }
         }
+        isSet = true;
     }
 
     void Update()
