@@ -9,10 +9,5 @@ using System                    ;
 
 public abstract class HMonoBehaviour : MonoBehaviour
 {
-
-    public abstract void SetVariables(Dictionary<string, string> variable_dictionary)
-    {
-    
-    }
-
+    public abstract void SetVariables(Dictionary<string, string> variable_dictionary);
 }
