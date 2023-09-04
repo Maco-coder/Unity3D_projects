@@ -25,6 +25,7 @@ public class Haptics_Vive : HMonoBehaviour
 
     void SetVariables(Dictionary<string, string> variable_dictionary)
     {
+        Debug.Log("Haptics_Vive SetVariables() is running...");
         foreach(var item in variable_dictionary)
         {
             Debug.Log("Haptics_Vive SetVariables() is setting the field " + item.Key + " to the value " + item.Value);
