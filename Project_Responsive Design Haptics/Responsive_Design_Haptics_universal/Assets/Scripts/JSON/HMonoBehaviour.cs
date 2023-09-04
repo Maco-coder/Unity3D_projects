@@ -7,7 +7,7 @@ using UnityEngine               ;
 using System.IO                 ;
 using System                    ;
 
-abstract class HMonoBehaviour : MonoBehaviour
+public abstract class HMonoBehaviour : MonoBehaviour
 {
 
     public abstract void SetVariables(Dictionary<string, string> variable_dictionary)
