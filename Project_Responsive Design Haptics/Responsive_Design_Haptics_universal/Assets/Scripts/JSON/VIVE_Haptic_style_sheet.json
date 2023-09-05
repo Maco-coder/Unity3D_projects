@@ -117,27 +117,7 @@
         "class": "object",
         "params": {
             "metrics":{
-                "enabled": "true",
-                "amplitude": "1.0",
-                "frequency": "200",
-                "transform": {
-                    "origin": "relative",
-                    "position": {
-                        "x": "-0.07",
-                        "y": "3.90",
-                        "z": "-0.23"
-                    },
-                    "rotation": {
-                        "x": "0",
-                        "y": "0",
-                        "z": "0"
-                    },
-                    "scale": {
-                        "x": "2.40",
-                        "y": "2.40",
-                        "z": "2.40"
-                    }
-                }
+                "enabled": "true"
             }
         }
     },
