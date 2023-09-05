@@ -11,31 +11,31 @@
                     "id": "SteamVR_TrackedObject",
                     "enabled": "true",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "SteamVR_Interactable",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "SteamVR_Throwable",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "HapticGrabber",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "Haptics_Vive",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "Haptics_Pen_v1",
@@ -51,25 +51,25 @@
                     "id": "OuterCubeInTree",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "InnerCubeInTree",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "TreeCubeInTree",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "CapsuleApple",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "LargeCubeInWorld",
@@ -85,9 +85,7 @@
                     "enabled": "false",
                     "metrics": null
                 }
-
             ]
-
         }
     }
 
@@ -101,31 +99,31 @@
                     "id": "SteamVR_TrackedObject",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "SteamVR_Interactable",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "SteamVR_Throwable",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "HapticGrabber",
                     "enabled": "true",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "Haptics_Vive",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "Haptics_Pen_v1",
@@ -163,13 +161,13 @@
                             }
                         }
                     }
-                }
+                },
 
                 {
                     "id": "InnerCubeInTree",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "TrunkCubeInTree",
@@ -197,7 +195,7 @@
                             }
                         }
                     }
-                }
+                },
 
                 {
                     "id": "CapsuleApple",
@@ -225,7 +223,7 @@
                             }
                         } 
                     }
-                }
+                },
 
                 {
                     "id": "LargeCubeInWorld",
@@ -345,7 +343,7 @@
                             }
                         }
                     }
-                }
+                },
 
                 {
                     "id": "InnerCubeInTree",
@@ -372,7 +370,7 @@
                             }
                         }
                     }
-                }
+                },
 
                 {
                     "id": "TrunkCubeInTree",
@@ -400,13 +398,13 @@
                             }
                         }
                     }
-                }
+                },
 
                 {
                     "id": "CapsuleApple",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "LargeCubeInWorld",
