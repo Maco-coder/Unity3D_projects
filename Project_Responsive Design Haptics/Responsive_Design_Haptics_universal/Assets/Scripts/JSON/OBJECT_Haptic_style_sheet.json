@@ -1,6 +1,3 @@
-
-// OBJECT JSON FILE //
-
 [
     {
         "device": "props",
@@ -21,18 +18,6 @@
 
                 {
                     "id": "SteamVR_Throwable",
-                    "enabled": "false",
-                    "metrics": null
-                },
-
-                {
-                    "id": "HapticGrabber",
-                    "enabled": "false",
-                    "metrics": null
-                },
-
-                {
-                    "id": "Haptics_Vive",
                     "enabled": "false",
                     "metrics": null
                 },
@@ -87,7 +72,7 @@
                 }
             ]
         }
-    }
+    },
 
 
     {
@@ -109,18 +94,6 @@
 
                 {
                     "id": "SteamVR_Throwable",
-                    "enabled": "false",
-                    "metrics": null
-                },
-
-                {
-                    "id": "HapticGrabber",
-                    "enabled": "true",
-                    "metrics": null
-                },
-
-                {
-                    "id": "Haptics_Vive",
                     "enabled": "false",
                     "metrics": null
                 },
@@ -270,7 +243,7 @@
                 }
             ]
         }
-    }
+    },
 
 
     {
@@ -282,31 +255,19 @@
                     "id": "SteamVR_TrackedObject",
                     "enabled": "false",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "SteamVR_Interactable",
                     "enabled": "true",
                     "metrics": null
-                }
+                },
 
                 {
                     "id": "SteamVR_Throwable",
                     "enabled": "true",
                     "metrics": null
-                }
-
-                {
-                    "id": "HapticGrabber",
-                    "enabled": "false",
-                    "metrics": null
-                }
-
-                {
-                    "id": "Haptics_Vive",
-                    "enabled": "true",
-                    "metrics": null
-                }
+                },
 
                 {
                     "id": "Haptics_Pen_v1",
