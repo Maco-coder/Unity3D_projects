@@ -1,0 +1,267 @@
+
+// HAPTIC STYLE SHEET FOR THE FOLLOWING DEVICE: VIVE //
+
+[
+
+    // Scripts //
+
+    {
+        "id": "SteamVR_TrackedObject",
+        "type": "script",
+        "class": "object",
+        "params":{
+            "metrics":{
+                "enabled": "false"
+            }
+        }    
+    }
+
+    {
+        "id": "SteamVR_TrackedObject",
+        "type": "script",
+        "class": "tool",
+        "params":{
+            "metrics":{
+                "enabled": "false"
+            }
+        }    
+    }
+
+    {
+        "id": "SteamVR_Interactable",
+        "type": "script",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "true"
+            }
+        }
+    }
+
+    {
+        "id": "SteamVR_Interactable",
+        "type": "script",
+        "class": "tool",
+        "params": {
+            "metrics":{
+                "enabled": "true"
+            }
+        }
+    }
+    
+    {
+        "id": "SteamVR_Throwable",
+        "type": "script",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "true"
+            }
+        }
+    }
+
+    {
+        "id": "SteamVR_Throwable",
+        "type": "script",
+        "class": "tool",
+        "params": {
+            "metrics":{
+                "enabled": "true"
+            }
+        }
+    }
+
+    {
+        "id": "SteamVR_Interactable",
+        "type": "script",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "true"
+            }
+        }
+    }
+
+    {
+        "id": "Haptics_Vive",
+        "type": "script",
+        "class": "tool",
+        "params": {
+            "metrics":{
+                "enabled": "true",
+                "PluckApple_amplitude": "50.0",
+                "PluckApple_frequency": "500",
+                "CarryApple_amplitude": "1.0",
+                "CarryApple_frequency": "150",
+            }
+        }
+    }
+
+    {
+        "id": "Haptics_Pen_v1",
+        "type": "script",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "false"
+            }
+        }
+    }
+
+    {
+        "id": "HapticGrabber",
+        "type": "script",
+        "class": "tool",
+        "params": {
+            "metrics":{
+                "enabled": "false"
+            }
+        }
+    }
+
+
+    // Colliders //
+
+    {
+        "id": "OuterCubeInTree",
+        "type": "collider",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "true",
+                "amplitude": "1.0",
+                "frequency": "200",
+                "transform": {
+                    "origin": "relative",
+                    "position": {
+                        "x": "-0.07",
+                        "y": "3.90",
+                        "z": "-0.23"
+                    },
+                    "rotation": {
+                        "x": "0",
+                        "y": "0",
+                        "z": "0"
+                    },
+                    "scale": {
+                        "x": "2.40",
+                        "y": "2.40",
+                        "z": "2.40"
+                    }
+                }
+            }
+        }
+    }
+
+    {
+        "id": "InnerCubeInTree",
+        "type": "collider",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "true",
+                "amplitude": "30.0",
+                "frequency": "30.0",
+                "transform": {
+                    "origin": "relative",
+                    "position": {
+                        "x": "-0.04",
+                        "y": "3.82",
+                        "z": "-0.40"
+                    },
+                    "rotation": {
+                        "x": "0",
+                        "y": "0",
+                        "z": "0"
+                    },
+                    "scale": {
+                        "x": "2.50",
+                        "y": "1.60",
+                        "z": "1.60"
+                    }
+                }
+            }
+        }
+    }
+
+    {
+        "id": "TrunkCubeInTree",
+        "type": "collider",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "true",
+                "amplitude": "1.0",
+                "frequency": "300",
+                "transform": {
+                    "origin": "relative",
+                    "position": {
+                        "x": "0",
+                        "y": "1",
+                        "z": "-0.116"
+                    },
+                    "rotation": {
+                        "x": "0",
+                        "y": "0",
+                        "z": "0"
+                    },
+                    "scale": {
+                        "x": "0.25",
+                        "y": "2",
+                        "z": "0.25"
+                    }
+                }
+            }
+        }
+    }
+
+    {
+        "id": "Body3",
+        "type": "collider",
+        "class": "tool",
+        "params": {
+            "metrics":{
+                "enabled": "true",
+                "transform": {
+                    "origin": "relative",
+                    "position": {
+                        "x": "0",
+                        "y": "0.10",
+                        "z": "0"
+                    },
+                    "rotation": {
+                        "x": "0",
+                        "y": "180",
+                        "z": "0"
+                    },
+                    "scale": {
+                        "x": "105",
+                        "y": "105",
+                        "z": "105"
+                    }
+                }
+            }
+        }
+    }
+
+
+    // Constraints //
+
+    {
+        "id": "SpringJoint",
+        "type": "constraint",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "true",
+                "constaint-type": "SpringJoint",
+                "spring": "60.0",
+                "damper": "2.0",
+                "breakForce": "10.0",
+                "breakTorque": "10.0",
+            }
+        }
+    }
+
+]
+
