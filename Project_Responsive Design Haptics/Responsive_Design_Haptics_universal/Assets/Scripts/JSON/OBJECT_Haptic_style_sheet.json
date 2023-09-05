@@ -1,0 +1,55 @@
+
+// OBJECT JSON FILE //
+
+[
+    {
+        "device": "props",
+        "params": {
+            "scripts":[
+
+                {
+                    "id": "SteamVR_TrackedObject",
+                    "enabled": "true",
+                    "metrics": "null"
+                }
+                
+            ],
+
+            "colliders":[
+
+                {
+                    "id": "OuterCubeInTree",
+                    "enabled": "true",
+                    "metrics": {
+                        "amplitude":"1.0",
+                        "frequency": "200",
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": "-0.07",
+                                "y": "3.90",
+                                "z": "-0.23"
+                            },
+                            "rotation": {
+                                "x": "-0.07",
+                                "y": "3.90",
+                                "z": "-0.23"
+                            },
+                            "scale": {
+                                "x": "-0.07",
+                                "y": "3.90",
+                                "z": "-0.23"
+                            },
+                            }
+
+
+                        }
+                        }
+                    }
+                }
+
+            ]
+        }
+    }
+
+]
