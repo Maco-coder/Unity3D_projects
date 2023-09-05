@@ -1,0 +1,69 @@
+
+// HAPTIC STYLE SHEET FOR ELEMENTS PRESENT NEEDED BY ALL DEVICES: VIVE, STYLUS, AND PROPS //
+
+[
+
+    // Scripts //
+
+    // none //
+
+
+    // Colliders //
+
+    {
+        "id": "Body3",
+        "type": "collider",
+        "class": "tool",
+        "params": {
+            "metrics":{
+                "enabled": "true",
+                "transform": {
+                    "origin": "relative",
+                    "position": {
+                        "x": "0",
+                        "y": "0.10",
+                        "z": "0"
+                    },
+                    "rotation": {
+                        "x": "0",
+                        "y": "180",
+                        "z": "0"
+                    },
+                    "scale": {
+                        "x": "105",
+                        "y": "105",
+                        "z": "105"
+                    }
+                }
+            }
+        }
+    },
+
+    {
+        "id": "LargeCubeInWorld",
+        "type": "collider",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "false",
+            }
+        }
+    },
+
+    {
+        "id": "CapsuleApple",
+        "type": "collider",
+        "class": "object",
+        "params": {
+            "metrics":{
+                "enabled": "false",
+            }
+        }
+    },
+
+
+    // Constraints //
+
+    // none //
+
+]

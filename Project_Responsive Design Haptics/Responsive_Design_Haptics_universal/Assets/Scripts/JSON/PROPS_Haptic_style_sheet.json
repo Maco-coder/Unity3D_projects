@@ -1,5 +1,5 @@
 
-// HAPTIC STYLE SHEET FOR THE FOLLOWING DEVICE: 3D TOUCH STYLUS PEN //
+// HAPTIC STYLE SHEET FOR THE FOLLOWING DEVICE: PROPS //
 
 [
 
@@ -11,7 +11,7 @@
         "class": "object",
         "params":{
             "metrics":{
-                "enabled": "false"
+                "enabled": "true"
             }
         }    
     },
@@ -22,10 +22,10 @@
         "class": "tool",
         "params":{
             "metrics":{
-                "enabled": "false"
+                "enabled": "true"
             }
         }    
-    },
+    }
 
     {
         "id": "SteamVR_Interactable",
@@ -36,7 +36,7 @@
                 "enabled": "false"
             }
         }
-    },
+    }
 
     {
         "id": "SteamVR_Interactable",
@@ -47,7 +47,7 @@
                 "enabled": "false"
             }
         }
-    },
+    }
     
     {
         "id": "SteamVR_Throwable",
@@ -69,7 +69,7 @@
                 "enabled": "false"
             }
         }
-    },
+    }
 
     {
         "id": "Haptics_Vive",
@@ -80,7 +80,7 @@
                 "enabled": "false",
             }
         }
-    },
+    }
 
     {
         "id": "Haptics_Pen_v1",
@@ -88,10 +88,10 @@
         "class": "object",
         "params": {
             "metrics":{
-                "enabled": "true"
+                "enabled": "false"
             }
         }
-    },
+    }
 
     {
         "id": "HapticGrabber",
@@ -99,10 +99,10 @@
         "class": "tool",
         "params": {
             "metrics":{
-                "enabled": "true"
+                "enabled": "false"
             }
         }
-    },
+    }
 
 
     // Colliders //
@@ -113,31 +113,10 @@
         "class": "object",
         "params": {
             "metrics":{
-                "enabled": "true",
-                "feedback-type": "friction",
-                "gain": "0.50",
-                "magnitude": "0.50",
-                "transform": {
-                    "origin": "relative",
-                    "position": {
-                        "x": "-0.07",
-                        "y": "3.90",
-                        "z": "-0.23"
-                    },
-                    "rotation": {
-                        "x": "0",
-                        "y": "0",
-                        "z": "0"
-                    },
-                    "scale": {
-                        "x": "2.40",
-                        "y": "2.40",
-                        "z": "2.40"
-                    }
-                }
+                "enabled": "false",
             }
         }
-    },
+    }
 
     {
         "id": "InnerCubeInTree",
@@ -148,7 +127,7 @@
                 "enabled": "false",
             }
         }
-    },
+    }
 
     {
         "id": "TrunkCubeInTree",
@@ -156,31 +135,10 @@
         "class": "object",
         "params": {
             "metrics":{
-                "enabled": "true",
-                "feedback-type": "friction",
-                "gain": "1.0",
-                "magnitude": "1.0",
-                "transform": {
-                    "origin": "relative",
-                    "position": {
-                        "x": "0",
-                        "y": "1",
-                        "z": "-0.116"
-                    },
-                    "rotation": {
-                        "x": "0",
-                        "y": "0",
-                        "z": "0"
-                    },
-                    "scale": {
-                        "x": "0.25",
-                        "y": "2",
-                        "z": "0.25"
-                    }
-                }
+                "enabled": "false",
             }
         }
-    },
+    }
 
     {
         "id": "Body3",
@@ -192,13 +150,13 @@
                 "transform": {
                     "origin": "relative",
                     "position": {
-                        "x": "0",
-                        "y": "0.10",
+                        "x": "-1.60",
+                        "y": "0",
                         "z": "0"
                     },
                     "rotation": {
-                        "x": "0",
-                        "y": "180",
+                        "x": "-190",
+                        "y": "90",
                         "z": "0"
                     },
                     "scale": {
@@ -210,41 +168,7 @@
             }
         }
     },
-
-    {
-        "id": "LargeCubeInWorld",
-        "type": "collider",
-        "class": "object",
-        "params": {
-            "metrics":{
-                //"enabled": "false",
-                "feedback-type": "vibrate",
-                "gain": "1.0",
-                "magnitude": "1.0",
-                "frequency": "200",
-                "direction": {
-                    "x": "0",
-                    "y": "1",
-                    "z": "0"
-                }
-            }
-        }
-    },
-
-    {
-        "id": "CapsuleApple",
-        "type": "collider",
-        "class": "object",
-        "params": {
-            "metrics":{
-                //"enabled": "false",
-                "feedback-type": "spring",
-                "gain": "0.75",
-                "magnitude": "0.75",
-            }
-        }
-    },
-
+    
 
     // Constraints //
 
@@ -254,12 +178,7 @@
         "class": "object",
         "params": {
             "metrics":{
-                "enabled": "true",
-                "constaint-type": "SpringJoint",
-                "spring": "60.0",
-                "damper": "2.0",
-                "breakForce": "30.0",
-                "breakTorque": "30.0",
+                "enabled": "false",
             }
         }
     }
