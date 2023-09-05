@@ -10,7 +10,264 @@
                 {
                     "id": "SteamVR_TrackedObject",
                     "enabled": "true",
-                    "metrics": "null"
+                    "metrics": null
+                }
+
+                {
+                    "id": "SteamVR_Interactable",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "SteamVR_Throwable",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "HapticGrabber",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "Haptics_Vive",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "Haptics_Pen_v1",
+                    "enabled": "false",
+                    "metrics": null
+                }
+                
+            ],
+
+            "colliders":[
+
+                {
+                    "id": "OuterCubeInTree",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "InnerCubeInTree",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "TreeCubeInTree",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "CapsuleApple",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "LargeCubeInWorld",
+                    "enabled": "false",
+                    "metrics": null
+                }
+            ],
+
+            "constraints":[
+
+                {
+                    "id": "SpringJoint",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+            ]
+
+        }
+    }
+
+
+    {
+        "device": "stylus",
+        "params": {
+            "scripts":[
+
+                {
+                    "id": "SteamVR_TrackedObject",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "SteamVR_Interactable",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "SteamVR_Throwable",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "HapticGrabber",
+                    "enabled": "true",
+                    "metrics": null
+                }
+
+                {
+                    "id": "Haptics_Vive",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "Haptics_Pen_v1",
+                    "enabled": "true",
+                    "metrics": null
+                }
+                
+            ],
+
+            "colliders":[
+
+                {
+                    "id": "OuterCubeInTree",
+                    "enabled": "true",
+                    "metrics": {
+                        "feedback-type":"friction",
+                        "gain": "0.50",
+                        "magnitude": "0.50",
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": "-0.07",
+                                "y": "3.90",
+                                "z": "-0.23"
+                            },
+                            "rotation": {
+                                "x": "0",
+                                "y": "0",
+                                "z": "0"
+                            },
+                            "scale": {
+                                "x": "2.40",
+                                "y": "2.40",
+                                "z": "2.40"
+                            }
+                        }
+                    }
+                }
+
+                {
+                    "id": "InnerCubeInTree",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "TrunkCubeInTree",
+                    "enabled": "true",
+                    "metrics": {
+                        "feedback-type":"friction",
+                        "gain": "1.0",
+                        "magnitude": "1.0",
+                        "transform": {
+                            "origin": "relative",
+                            "position": {
+                                "x": "0",
+                                "y": "1",
+                                "z": "-116"
+                            },
+                            "rotation": {
+                                "x": "0",
+                                "y": "0",
+                                "z": "0"
+                            },
+                            "scale": {
+                                "x": "0.25",
+                                "y": "2.0" ,
+                                "z": "0.25"
+                            }
+                        }
+                    }
+                }
+
+                {
+                    "id": "CapsuleApple",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "LargeCubeInWorld",
+                    "enabled": "false",
+                    "metrics": null
+                }
+            ],
+
+
+            "constraints":[
+
+                {
+                    "id": "SpringJoint",
+                    "enabled": "false",
+                    "metrics": null
+                }
+                
+            ]
+
+        }
+    }
+
+
+
+
+    {
+        "device": "vr_controller",
+        "params": {
+            "scripts":[
+
+                {
+                    "id": "SteamVR_TrackedObject",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "SteamVR_Interactable",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "SteamVR_Throwable",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "HapticGrabber",
+                    "enabled": "true",
+                    "metrics": null
+                }
+
+                {
+                    "id": "Haptics_Vive",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "Haptics_Pen_v1",
+                    "enabled": "true",
+                    "metrics": null
                 }
                 
             ],
@@ -31,24 +288,55 @@
                                 "z": "-0.23"
                             },
                             "rotation": {
-                                "x": "-0.07",
-                                "y": "3.90",
-                                "z": "-0.23"
+                                "x": "0",
+                                "y": "0",
+                                "z": "0"
                             },
                             "scale": {
-                                "x": "-0.07",
-                                "y": "3.90",
-                                "z": "-0.23"
-                            },
+                                "x": "2.40",
+                                "y": "2.40",
+                                "z": "2.40"
                             }
-
-
-                        }
                         }
                     }
                 }
 
+                {
+                    "id": "InnerCubeInTree",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "TreeCubeInTree",
+                    "enabled": "true",
+                    "metrics": null
+                }
+
+                {
+                    "id": "CapsuleApple",
+                    "enabled": "false",
+                    "metrics": null
+                }
+
+                {
+                    "id": "LargeCubeInWorld",
+                    "enabled": "false",
+                    "metrics": null
+                }
+            ],
+
+
+            "constraints":[
+
+                {
+                    "id": "SpringJoint",
+                    "enabled": "false",
+                    "metrics": null
+                }
+                
             ]
+
         }
     }
 
