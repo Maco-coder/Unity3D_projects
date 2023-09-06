@@ -1229,14 +1229,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec9e5d28f8c73c4d890319fa4693d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OuterCubeInTree_amplitude: 0
-  OuterCubeInTree_frequency: 0
-  InnerCubeInTree_amplitude: 0
-  InnerCubeInTree_frequency: 0
-  TrunkCubeInTree_amplitude: 0
-  TrunkCubeInTree_frequency: 0
+  amplitude: 0
+  frequency: 0
   PluckApple_amplitude: 0
-  PluckApple_frequency_factor: 0
+  PluckApple_frequency: 0
   CarryApple_amplitude: 0
   CarryApple_frequency: 0
 --- !u!114 &476833022
@@ -2844,16 +2840,7 @@ MonoBehaviour:
   hapticAction:
     actionPath: /actions/default/out/Haptic
     needsReinit: 0
-  OuterCubeInTree_amplitude: 1
-  OuterCubeInTree_frequency: 200
-  InnerCubeInTree_amplitude: 30
-  InnerCubeInTree_frequency: 30
-  TrunkCubeInTree_amplitude: 1
-  TrunkCubeInTree_frequency: 300
-  PluckApple_amplitude: 50
-  PluckApple_frequency_factor: 500
-  CarryApple_amplitude: 1
-  CarryApple_frequency: 150
+  isSet: 0
 --- !u!114 &1917585342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3639,16 +3626,7 @@ MonoBehaviour:
   hapticAction:
     actionPath: /actions/default/out/Haptic
     needsReinit: 0
-  OuterCubeInTree_amplitude: 1
-  OuterCubeInTree_frequency: 200
-  InnerCubeInTree_amplitude: 30
-  InnerCubeInTree_frequency: 30
-  TrunkCubeInTree_amplitude: 1
-  TrunkCubeInTree_frequency: 300
-  PluckApple_amplitude: 50
-  PluckApple_frequency_factor: 500
-  CarryApple_amplitude: 1
-  CarryApple_frequency: 150
+  isSet: 0
 --- !u!114 &114040887073973570
 MonoBehaviour:
   m_ObjectHideFlags: 0
