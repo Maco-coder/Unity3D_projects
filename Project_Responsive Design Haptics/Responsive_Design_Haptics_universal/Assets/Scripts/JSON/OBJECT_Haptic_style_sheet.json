@@ -271,7 +271,7 @@
 
                 {
                     "id": "Haptics_Pen_v1",
-                    "enabled": "true",
+                    "enabled": "false",
                     "metrics": null
                 }
                 

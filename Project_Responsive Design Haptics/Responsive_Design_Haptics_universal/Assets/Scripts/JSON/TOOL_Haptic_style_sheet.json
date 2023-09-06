@@ -103,7 +103,7 @@
                     "id": "Haptics_Vive",
                     "enabled": "false",
                     "metrics": null
-                },
+                }
 
                 
             ],
@@ -179,7 +179,7 @@
                         "CarryApple_amplitude": "1.0",
                         "CarryApple_frequency": "150"
                     }
-                },
+                }
                 
             ],
 
