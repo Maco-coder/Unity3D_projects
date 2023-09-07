@@ -14,9 +14,7 @@ public class ObjectManager : MonoBehaviour
     private JsonData FileData;
     public static int device = OpeningScene_Devices.chosen_device;
     public int count_devices;
-
     public GameObject object_carabao;
-
     public string selected_device;
 
     void Start()
@@ -24,29 +22,23 @@ public class ObjectManager : MonoBehaviour
         Debug.Log("ObjectManager running for " + object_carabao.name + " with device ID = " + device);
         JSONstring = File.ReadAllText("./Assets/Scripts/JSON/OBJECT_Haptic_style_sheet.json") ;
         FileData = JsonMapper.ToObject(JSONstring);
-        // FileData has only 3 items, one for each device
-        // We should select the device that we care about first, 
-        // then make a second pass to disable stuff
         selected_device = (string) FileData[count_devices - device]["device"];
         List<JsonData> script_list = FileData[count_devices - device]["scripts"];
         List<JsonData> collider_list = FileData[count_devices - device]["colliders"];
         List<JsonData> constraint_list = FileData[count_devices - device]["constraints"];
 
-        // 1. Parse all scripts
         foreach (JsonData script in script_list)
         {
             Debug.Log("ObjectManager for object " + object_carabao.name + " starting script with id " + script["id"]);
             StartScript(script);
         }
 
-        // 2. Parse all colliders
         foreach (JsonData collider in collider_list)
         {
             Debug.Log("ObjectManager for object " + object_carabao.name + " starting collider with id " + collider["id"]);
             StartCollider(collider);
         }
 
-        // 3. Parse all constraints
         foreach (JsonData constraint in constraint_list)
         {
             Debug.Log("ObjectManager for object " + object_carabao.name + " starting constraint with id " + constraint["id"]);
@@ -71,12 +63,10 @@ public class ObjectManager : MonoBehaviour
         // 2. Set the metrics for the script, if provided
         try
         {
-            // Create a dictionary for passing parameters to the script
             Dictionary<string, string> parameter_dictionary = new Dictionary<string, string>;
             Debug.Log("ObjectManager for object " + object_carabao.name + " created a parameter dictionary for script " + script["id"]);
             if ((bool) script["enabled"])
             {
-                // Loop through the parameters in the metrics object
                 var metrics_dictionary = script["metrics"];
                 Debug.Log("ObjectManager for object " + object_carabao.name + " created dictionary object from the JSON files");
                 foreach (var key in metrics_dictionary.Keys)
@@ -84,7 +74,6 @@ public class ObjectManager : MonoBehaviour
                     Debug.Log("ObjectManager for object " + object_carabao.name + " setting parameter " + (string) key + " to " + (string) metrics_dictionary[key]);
                     parameter_dictionary.Add((string) key, (string) metrics_dictionary[key]);
                 }
-                // Attempt to pass the parameters to the script
                 HMonoBehaviour script = object_carabao.GetComponent(script["id"]) as HMonoBehaviour;
                 script.SetVariables(parameter_dictionary);
                 Debug.Log("ObjectManager for object " + object_carabao.name + " set the parameters for script " + script["id"]);
@@ -143,7 +132,6 @@ public class ObjectManager : MonoBehaviour
         try
         {
             Vector3 scale = new Vector3(float.Parse((string) collider["metrics"]["transform"]["scale"]["x"]), float.Parse((string) collider["metrics"]["transform"]["scale"]["y"]), float.Parse((string) collider["metrics"]["transform"]["scale"]["z"]));
-            // Scale has only the local option
             colliderObject.transform.localScale = scale;
             Debug.Log("ObjectManager for object " + object_carabao.name + " successfully set scale for collider with id: " + collider["id"]);
         }
@@ -157,7 +145,6 @@ public class ObjectManager : MonoBehaviour
         {
             try
             {
-                // check for the type of effect being applied
                 colliderObject.GetComponent<Collider_HapticPen>().feedback_choice = (string) collider["metrics"]["feedback-type"];
                 switch((string) collider["metrics"]["feedback-type"])
                 {
