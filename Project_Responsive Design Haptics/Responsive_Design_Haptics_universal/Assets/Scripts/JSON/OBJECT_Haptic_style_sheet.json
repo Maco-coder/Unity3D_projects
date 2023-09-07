@@ -4,27 +4,19 @@
         "scripts":[
 
             {
-                "id": "SteamVR_TrackedObject",
-                "enabled": "true",
-                "metrics": null
+                "id": "SteamVR_TrackedObject", "enabled": "true", "metrics": null
             },
 
             {
-                "id": "SteamVR_Interactable",
-                "enabled": "false",
-                "metrics": null
+                "id": "SteamVR_Interactable", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "SteamVR_Throwable",
-                "enabled": "false",
-                "metrics": null
+                "id": "SteamVR_Throwable", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "Haptics_Pen_v1",
-                "enabled": "false",
-                "metrics": null
+                "id": "Haptics_Pen_v1", "enabled": "false", "metrics": null
             }
                 
         ],
@@ -32,42 +24,30 @@
         "colliders":[
 
             {
-                "id": "OuterCubeInTree",
-                "enabled": "false",
-                "metrics": null
+                "id": "OuterCubeInTree", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "InnerCubeInTree",
-                "enabled": "false",
-                "metrics": null
+                "id": "InnerCubeInTree", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "TreeCubeInTree",
-                "enabled": "false",
-                "metrics": null
+                "id": "TreeCubeInTree", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "CapsuleApple",
-                "enabled": "false",
-                "metrics": null
+                "id": "CapsuleApple", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "LargeCubeInWorld",
-                "enabled": "false",
-                "metrics": null
+                "id": "LargeCubeInWorld", "enabled": "false", "metrics": null
             }
         ],
 
         "constraints":[
 
             {
-                "id": "SpringJoint",
-                "enabled": "false",
-                "metrics": null
+                "id": "SpringJoint", "enabled": "false", "metrics": null
             }
         ]
     },
@@ -78,27 +58,19 @@
         "scripts":[
 
             {
-                "id": "SteamVR_TrackedObject",
-                "enabled": "false",
-                "metrics": null
+                "id": "SteamVR_TrackedObject", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "SteamVR_Interactable",
-                "enabled": "false",
-                "metrics": null
+                "id": "SteamVR_Interactable", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "SteamVR_Throwable",
-                "enabled": "false",
-                "metrics": null
+                "id": "SteamVR_Throwable", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "Haptics_Pen_v1",
-                "enabled": "true",
-                "metrics": null
+                "id": "Haptics_Pen_v1", "enabled": "true", "metrics": null
             }
                 
         ],
@@ -109,89 +81,43 @@
                 "id": "OuterCubeInTree",
                 "enabled": "true",
                 "metrics": {
-                    "feedback-type":"friction",
-                    "gain": "0.50",
-                    "magnitude": "0.50",
+                    "feedback-type": "friction", "gain": "0.50", "magnitude": "0.50",
                     "transform": {
                         "origin": "relative",
-                        "position": {
-                            "x": "-0.07",
-                            "y": "3.90",
-                            "z": "-0.23"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "0",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "2.40",
-                            "y": "2.40",
-                            "z": "2.40"
-                        }
+                        "position": {"x": "-0.07", "y": "3.90", "z": "-0.23"},
+                        "rotation": {"x": "0", "y": "0", "z": "0"},
+                        "scale": {"x": "2.40", "y": "2.40", "z": "2.40"}
                     }
                 }
             },
 
             {
-                "id": "InnerCubeInTree",
-                "enabled": "false",
-                "metrics": null
+                "id": "InnerCubeInTree", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "TrunkCubeInTree",
-                "enabled": "true",
+                "id": "TrunkCubeInTree", "enabled": "true",
                 "metrics": {
-                    "feedback-type":"friction",
-                    "gain": "1.0",
-                    "magnitude": "1.0",
+                    "feedback-type": "friction", "gain": "1.0", "magnitude": "1.0",
                     "transform": {
                         "origin": "relative",
-                        "position": {
-                            "x": "0",
-                            "y": "1",
-                            "z": "-0.116"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "0",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "0.25",
-                            "y": "2.0" ,
-                            "z": "0.25"
-                        }
+                        "position": {"x": "0", "y": "1", "z": "-0.116"},
+                        "rotation": {"x": "0", "y": "0", "z": "0"},
+                        "scale": {"x": "0.25", "y": "2.0", "z": "0.25"}
                     }
                 }
             },
 
             {
-                "id": "CapsuleApple",
-                "enabled": "true",
+                "id": "CapsuleApple", "enabled": "true",
                 "metrics": {
-                    "feedback-type":"spring",
-                    "gain": "0.75",
-                    "magnitude": "0.75",
+                    "feedback-type":"spring", "gain": "0.75", "magnitude": "0.75",
                     "transform": {
                         "origin": "relative",
-                        "position": {
-                            "x": "-0.687",
-                            "y": "3.15",
-                            "z": "-1.404001"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "132.452",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "1.0" ,
-                            "y": "0.30",
-                            "z": "1.0"
-                        }
-                    } 
+                        "position": {"x": "-0.687", "y": "3.15", "z": "-1.404001"},
+                        "rotation": {"x": "0", "y": "132.452", "z": "0"},
+                        "scale": {"x": "1.0" , "y": "0.30", "z": "1.0"}
+                    }
                 }
             },
 
@@ -328,43 +254,24 @@
             },
 
             {
-                "id": "TrunkCubeInTree",
-                "enabled": "true",
+                "id": "TrunkCubeInTree", "enabled": "true",
                 "metrics": {
-                    "feedback-type":"friction",
-                    "amplitude": "1.0",
-                    "frequency": "300",
+                    "feedback-type":"friction", "amplitude": "1.0", "frequency": "300",
                     "transform": {
                         "origin": "relative",
-                        "position": {
-                            "x": "0",
-                            "y": "1",
-                            "z": "-0.116"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "0",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "0.25",
-                            "y": "2.0" ,
-                            "z": "0.25"
-                        }
+                        "position": { "x": "0", "y": "1", "z": "-0.116" },
+                        "rotation": { "x": "0", "y": "0", "z": "0" },
+                        "scale": { "x": "0.25", "y": "2.0" , "z": "0.25" }
                     }
                 }
             },
 
             {
-                "id": "CapsuleApple",
-                "enabled": "false",
-                "metrics": null
+                "id": "CapsuleApple", "enabled": "false", "metrics": null
             },
 
             {
-                "id": "LargeCubeInWorld",
-                "enabled": "false",
-                "metrics": null
+                "id": "LargeCubeInWorld", "enabled": "false", "metrics": null
             }
         ],
 
