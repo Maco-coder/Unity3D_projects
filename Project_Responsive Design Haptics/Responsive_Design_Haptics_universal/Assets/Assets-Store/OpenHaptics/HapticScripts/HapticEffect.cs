@@ -14,9 +14,11 @@ using UnityEditor;
 //! to any haptic stylus that is within the boundries of the collider.
 //! The parameters can be adjusted on the fly.
 
-public class HapticEffect : MonoBehaviour {	
+public class HapticEffect : MonoBehaviour {
 
 	//public int variable = 2 ;
+
+	public Vector3 temp;
 
 	public enum EFFECT_TYPE { CONSTANT, VISCOUS, SPRING, FRICTION, VIBRATE };
 
@@ -293,8 +295,8 @@ public class HapticEffectEditor : Editor
 
 			// CRAPPY PROGRAMMING ENDS HERE //
 
-			//HE.effectType = HapticEffect.EFFECT_TYPE.CONSTANT ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
-			//HE.effectType = (HapticEffect.EFFECT_TYPE)EditorGUILayout.EnumPopup("Effect Type", HE.effectType);  // ORIGINAL LINE //
+			//HE.effectType = HapticEffect.EFFECT_TYPE.FRICTION ;  // INCORPORATED BY MARCO FOR RESPONSIVE DESIGN PROJECT //
+			HE.effectType = (HapticEffect.EFFECT_TYPE)EditorGUILayout.EnumPopup("Effect Type", HE.effectType);  // ORIGINAL LINE //
 
 
 			switch (HE.effectType)
@@ -302,11 +304,12 @@ public class HapticEffectEditor : Editor
 
 			case HapticEffect.EFFECT_TYPE.CONSTANT:
 				
-				//HE.Direction = EditorGUILayout.Vector3Field("Direction", HE.Direction);
-				HE.Direction = new Vector3(HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_direction_x, HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_direction_y, HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_direction_z);
+				HE.Direction = EditorGUILayout.Vector3Field("Direction", HE.Direction);
+				//HE.temp = EditorGUILayout.Vector3Field("Direction", HE.temp);
+				//HE.Direction = new Vector3(HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_direction_x, HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_direction_y, HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_direction_z);
 				
-				//HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
-				HE.Magnitude = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_magnitude;
+				HE.Magnitude = EditorGUILayout.Slider("Magnitude", (float)HE.Magnitude, 0.0f, 1.0f);
+				//HE.Magnitude = HE.gameObject.gameObject.GetComponent<Collider_HapticPen>().constant_magnitude;
 
 				break;
 
