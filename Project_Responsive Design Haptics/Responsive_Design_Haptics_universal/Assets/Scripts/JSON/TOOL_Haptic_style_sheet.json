@@ -1,217 +1,209 @@
 [
     {
         "device": "props",
-        "params": {
-            "scripts":[
+        "scripts":[
 
-                {
-                    "id": "SteamVR_TrackedObject",
-                    "enabled": "true",
-                    "metrics": null
-                },
+            {
+                "id": "SteamVR_TrackedObject",
+                "enabled": "true",
+                "metrics": null
+            },
 
-                {
-                    "id": "SteamVR_Interactable",
-                    "enabled": "false",
-                    "metrics": null
-                },
+            {
+                "id": "SteamVR_Interactable",
+                "enabled": "false",
+                "metrics": null
+            },
+            
+            {
+                "id": "SteamVR_Throwable",
+                "enabled": "false",
+                "metrics": null
+            },
 
-                {
-                    "id": "SteamVR_Throwable",
-                    "enabled": "false",
-                    "metrics": null
-                },
+            {
+                "id": "HapticGrabber",
+                "enabled": "false",
+                "metrics": null
+            },
 
-                {
-                    "id": "HapticGrabber",
-                    "enabled": "false",
-                    "metrics": null
-                },
-
-                {
-                    "id": "Haptics_Vive",
-                    "enabled": "false",
-                    "metrics": null
-                },
-
+            {
+                "id": "Haptics_Vive",
+                "enabled": "false",
+                "metrics": null
+            }
                 
-            ],
+        ],
 
-            "colliders":[
+        "colliders":[
 
-                {
-                    "id": "Body3",
-                    "enabled": "true",
-                    "metrics": {
-                        "transform": {
-                            "origin": "relative",
-                            "position": {
-                                "x": "-1.60",
-                                "y": "0",
-                                "z": "0"
-                            },
-                            "rotation": {
-                                "x": "-190",
-                                "y": "90",
-                                "z": "0"
-                            },
-                            "scale": {
-                                "x": "105",
-                                "y": "105",
-                                "z": "105"
-                            }
+            {
+                "id": "Body3",
+                "enabled": "true",
+                "metrics": {
+                    "transform": {
+                        "origin": "relative",
+                        "position": {
+                            "x": "-1.60",
+                            "y": "0",
+                            "z": "0"
+                        },
+                        "rotation": {
+                            "x": "-190",
+                            "y": "90",
+                            "z": "0"
+                        },
+                        "scale": {
+                            "x": "105",
+                            "y": "105",
+                            "z": "105"
                         }
                     }
                 }
-            ],
+            }
+        ],
 
-            "constraints": null
-        }
+        "constraints": null
     },
-
 
     {
         "device": "stylus",
-        "params": {
-            "scripts":[
+        "scripts":[
 
-                {
-                    "id": "SteamVR_TrackedObject",
-                    "enabled": "false",
-                    "metrics": null
-                },
+            {
+                "id": "SteamVR_TrackedObject",
+                "enabled": "false",
+                "metrics": null
+            },
 
-                {
-                    "id": "SteamVR_Interactable",
-                    "enabled": "false",
-                    "metrics": null
-                },
+            {
+                "id": "SteamVR_Interactable",
+                "enabled": "false",
+                "metrics": null
+            },
 
-                {
-                    "id": "SteamVR_Throwable",
-                    "enabled": "false",
-                    "metrics": null
-                },
+            {
+                "id": "SteamVR_Throwable",
+                "enabled": "false",
+                "metrics": null
+            },
 
-                {
-                    "id": "HapticGrabber",
-                    "enabled": "true",
-                    "metrics": null
-                },
+            {
+                "id": "HapticGrabber",
+                "enabled": "true",
+                "metrics": null
+            },
 
-                {
-                    "id": "Haptics_Vive",
-                    "enabled": "false",
-                    "metrics": null
-                }
-
+            {
+                "id": "Haptics_Vive",
+                "enabled": "false",
+                "metrics": null
+            }
                 
-            ],
+        ],
 
-            "colliders":[
+        "colliders":[
 
-                {
-                    "id": "Body3",
-                    "enabled": "true",
-                    "metrics": {
-                        "transform": {
-                            "origin": "relative",
-                            "position": {
-                                "x": "0",
-                                "y": "0.10",
-                                "z": "0"
-                            },
-                            "rotation": {
-                                "x": "0",
-                                "y": "180",
-                                "z": "0"
-                            },
-                            "scale": {
-                                "x": "105",
-                                "y": "105",
-                                "z": "105"
-                            }
+            {
+                "id": "Body3",
+                "enabled": "true",
+                "metrics": {
+                    "transform": {
+                        "origin": "relative",
+                        "position": {
+                            "x": "0",
+                            "y": "0.10",
+                            "z": "0"
+                        },
+                        "rotation": {
+                            "x": "0",
+                            "y": "180",
+                            "z": "0"
+                        },
+                        "scale": {
+                            "x": "105",
+                            "y": "105",
+                            "z": "105"
                         }
                     }
                 }
-            ],
+            }
+        ],
 
-            "constraints": null
-        }
+        "constraints": null
+
     },
 
 
     {
         "device": "vr_controller",
-        "params": {
-            "scripts":[
+        "scripts":[
 
-                {
-                    "id": "SteamVR_TrackedObject",
-                    "enabled": "false",
-                    "metrics": null
+            {
+                "id": "SteamVR_TrackedObject",
+                "enabled": "false",
+                "metrics": null
+            },
+
+            {
+                "id": "SteamVR_Interactable",
+                "enabled": "true",
+                "metrics": null
+            },
+
+            {
+                "id": "SteamVR_Throwable",
+                "enabled": "true",
+                "metrics": null
+            },
+
+            {
+                "id": "HapticGrabber",
+                "enabled": "false",
+                "metrics": null
+            },
+
+            {
+                "id": "Haptics_Vive",
+                "enabled": "true",
+                "metrics": {
+                    "PluckApple_amplitude": "50.0",
+                    "PluckApple_frequency": "500",
+                    "CarryApple_amplitude": "1.0",
+                    "CarryApple_frequency": "150"
                 }
+            }    
+        ],
 
-                {
-                    "id": "SteamVR_Interactable",
-                    "enabled": "true",
-                    "metrics": null
-                }
+        "colliders":[
 
-                {
-                    "id": "SteamVR_Throwable",
-                    "enabled": "true",
-                    "metrics": null
-                }
-
-                {
-                    "id": "HapticGrabber",
-                    "enabled": "false",
-                    "metrics": null
-                },
-
-                {
-                    "id": "Haptics_Vive",
-                    "enabled": "true",
-                    "metrics": {
-                        "PluckApple_amplitude": "50.0",
-                        "PluckApple_frequency": "500",
-                        "CarryApple_amplitude": "1.0",
-                        "CarryApple_frequency": "150"
-                    }
-                }
-                
-            ],
-
-            "colliders":[
-
-                {
-                    "id": "Body3",
-                    "enabled": "true",
-                    "metrics": {
-                        "transform": {
-                            "origin": "relative",
-                            "position": {
-                                "x": "0",
-                                "y": "0.10",
-                                "z": "0"
-                            },
-                            "rotation": {
-                                "x": "0",
-                                "y": "180",
-                                "z": "0"
-                            },
-                            "scale": {
-                                "x": "105",
-                                "y": "105",
-                                "z": "105"
-                            }
+            {
+                "id": "Body3",
+                "enabled": "true",
+                "metrics": {
+                    "transform": {
+                        "origin": "relative",
+                        "position": {
+                            "x": "0",
+                            "y": "0.10",
+                            "z": "0"
+                        },
+                        "rotation": {
+                            "x": "0",
+                            "y": "180",
+                            "z": "0"
+                        },
+                        "scale": {
+                            "x": "105",
+                            "y": "105",
+                            "z": "105"
                         }
                     }
                 }
-            ],
+            }
+        ],
+        
+        "constraints": null
 
-            "constraints": null
-        }
     }
 ]
