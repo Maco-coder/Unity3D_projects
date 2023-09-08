@@ -1,0 +1,129 @@
+[
+    {
+        "device": "props",
+        "scripts":[
+            {
+                "id": "SteamVR_TrackedObject", "enabled": "true", "metrics": null
+            },
+
+            {
+                "id": "SteamVR_Interactable", "enabled": "false", "metrics": null
+            },
+            
+            {
+                "id": "SteamVR_Throwable", "enabled": "false", "metrics": null
+            },
+
+            {
+                "id": "HapticGrabber", "enabled": "false", "metrics": null
+            },
+
+            {
+                "id": "Haptics_Vive", "enabled": "false", "metrics": null
+            }
+        ],
+
+        "colliders":[
+
+            {
+                "id": "Saber",
+                "enabled": "true",
+                "metrics": {
+                    "transform": {
+                        "origin": "relative",
+                        "position": {"x": "1", "y": "1", "z": "1"},
+                        "rotation": {"x": "0", "y": "0", "z": "0"},
+                        "scale":    {"x": "0", "y": "0", "z": "0"}
+                    }
+                }
+            }
+        ],
+
+        "constraints": null
+    },
+
+
+    {
+        "device": "stylus",
+        "scripts":[
+            {
+                "id": "SteamVR_TrackedObject", "enabled": "false", "metrics": null
+            },
+
+            {
+                "id": "SteamVR_Interactable", "enabled": "false", "metrics": null
+            },
+            
+            {
+                "id": "SteamVR_Throwable", "enabled": "false", "metrics": null
+            },
+
+            {
+                "id": "HapticGrabber", "enabled": "true", "metrics": null
+            },
+
+            {
+                "id": "Haptics_Vive", "enabled": "false", "metrics": null
+            }
+        ],
+
+        "colliders":[
+
+            {
+                "id": "Cube",
+                "enabled": "true",
+                "metrics": {
+                    "RigidBody": {
+                        "UseGravity": false,
+                        "IsKinematic": true
+                    },
+                    "feedback-type": "constant",
+                    "magnitude": "1",
+                    "direction": {"x": "1", "y": "1", "z": "1"}
+                }
+            }
+        ],
+
+        "constraints": null
+    },
+
+
+    {
+        "device": "vr_controller",
+        "scripts":[
+
+            {
+                "id": "Cube",
+                "enabled": "true",
+                "metrics": {
+                    "RigidBody": {
+                        "UseGravity": false,
+                        "IsKinematic": true
+                    },
+                    "amplitude": "1",
+                    "frequency": "1",
+                }
+            }
+
+        ],
+
+        "colliders":[
+
+            {
+                "id": "Saber",
+                "enabled": "true",
+                "metrics": {
+                    "transform": {
+                        "origin": "relative",
+                        "position": {"x": "1", "y": "1", "z": "1"},
+                        "rotation": {"x": "0", "y": "0", "z": "0"},
+                        "scale":    {"x": "0", "y": "0", "z": "0"}
+                    }
+                }
+            }
+        ],
+
+        "constraints": null
+
+    }
+]
