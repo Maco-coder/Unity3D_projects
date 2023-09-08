@@ -2,27 +2,7 @@
 [
     {
         "device": "props",
-        "scripts":[
-
-            {
-                "id": "SteamVR_TrackedObject",
-                "enabled": "true",
-                "metrics": null
-            },
-
-            {
-                "id": "SteamVR_Interactable",
-                "enabled": "false",
-                "metrics": null
-            },
-
-            {
-                "id": "SteamVR_Throwable",
-                "enabled": "false",
-                "metrics": null
-            }
-                
-        ],
+        "scripts": null,
 
         "colliders":[
 
@@ -44,169 +24,26 @@
 
     {
         "device": "stylus",
-        "scripts":[
-
-            {
-                "id": "SteamVR_TrackedObject",
-                "enabled": "false",
-                "metrics": null
-            },
-
-            {
-                "id": "SteamVR_Interactable",
-                "enabled": "false",
-                "metrics": null
-            },
-
-            {
-                "id": "SteamVR_Throwable",
-                "enabled": "false",
-                "metrics": null
-            },
-
-            {
-                "id": "Haptics_Pen_v1",
-                "enabled": "true",
-                "metrics": null
-            }
-                
-        ],
+        "scripts": null,
 
         "colliders":[
 
             {
-                "id": "OuterCubeInTree",
+                "id": "Cube",
                 "enabled": "true",
                 "metrics": {
-                    "feedback-type":"friction",
-                    "gain": "0.50",
-                    "magnitude": "0.50",
-                    "transform": {
-                        "origin": "relative",
-                        "position": {
-                            "x": "-0.07",
-                            "y": "3.90",
-                            "z": "-0.23"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "0",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "2.40",
-                            "y": "2.40",
-                            "z": "2.40"
-                        }
-                    }
-                }
-            },
-
-            {
-                "id": "InnerCubeInTree",
-                "enabled": "false",
-                "metrics": null
-            },
-
-            {
-                "id": "TrunkCubeInTree",
-                "enabled": "true",
-                "metrics": {
-                    "feedback-type":"friction",
-                    "gain": "1.0",
-                    "magnitude": "1.0",
-                    "transform": {
-                        "origin": "relative",
-                        "position": {
-                            "x": "0",
-                            "y": "1",
-                            "z": "-0.116"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "0",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "0.25",
-                            "y": "2.0" ,
-                            "z": "0.25"
-                        }
-                    }
-                }
-            },
-
-            {
-                "id": "CapsuleApple",
-                "enabled": "true",
-                "metrics": {
-                    "feedback-type":"spring",
-                    "gain": "0.75",
-                    "magnitude": "0.75",
-                    "transform": {
-                        "origin": "relative",
-                        "position": {
-                            "x": "-0.687",
-                            "y": "3.15",
-                            "z": "-1.404001"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "132.452",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "1.0" ,
-                            "y": "0.30",
-                            "z": "1.0"
-                        }
-                    } 
-                }
-            },
-
-            {
-                "id": "LargeCubeInWorld",
-                "enabled": "true",
-                "metrics": {
-                    "feedback-type":"vibrate",
-                    "gain": "1.0",
-                    "magnitude": "1.0",
-                    "transform": {
-                        "origin": "relative",
-                        "position": {
-                            "x": "-1.760",
-                            "y": "-0.309",
-                            "z": "-2.083"
-                        },
-                        "rotation": {
-                            "x": "-90.0",
-                            "y": "0",
-                            "z": "15.0"
-                        },
-                        "scale": {
-                            "x": "41.67",
-                            "y": "41.67",
-                            "z": "41.67"
-                        }
-                    }                         
+                    "RigidBody": {
+                        "UseGravity": false,
+                        "IsKinematic": true
+                    },
+                    "feedback-type": "constant",
+                    "magnitude": "1",
+                    "direction": {"x": "1", "y": "1", "z": "1"}
                 }
             }
         ],
 
-        "constraints":[
-
-            {
-                "id": "SpringJoint",
-                "enabled": "false",
-                "metrics": {
-                    "constraint-type": "SpringJoint",
-                    "spring": "60.0",
-                    "damper": "2.0",
-                    "breakTorque": "30.0",
-                    "breakForce": "30.0"
-                }
-            }
-        ]
+        "constraints": null
     },
 
 
@@ -215,142 +52,38 @@
         "scripts":[
 
             {
-                "id": "SteamVR_TrackedObject",
-                "enabled": "false",
-                "metrics": null
-            },
-
-            {
-                "id": "SteamVR_Interactable",
+                "id": "Cube",
                 "enabled": "true",
-                "metrics": null
-            },
-
-            {
-                "id": "SteamVR_Throwable",
-                "enabled": "true",
-                "metrics": null
-            },
-
-            {
-                "id": "Haptics_Pen_v1",
-                "enabled": "false",
-                "metrics": null
+                "metrics": {
+                    "RigidBody": {
+                        "UseGravity": false,
+                        "IsKinematic": true
+                    },
+                    "amplitude": "1",
+                    "frequency": "1",
+                }
             }
-                
+
         ],
 
         "colliders":[
 
             {
-                "id": "OuterCubeInTree",
+                "id": "Cube",
                 "enabled": "true",
                 "metrics": {
-                    "amplitude": "1.0",
-                    "frequency": "200",
-                    "transform": {
-                        "origin": "relative",
-                        "position": {
-                            "x": "-0.07",
-                            "y": "3.90",
-                            "z": "-0.23"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "0",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "2.40",
-                            "y": "2.40",
-                            "z": "2.40"
-                        }
-                    }
+                    "RigidBody": {
+                        "UseGravity": false,
+                        "IsKinematic": true
+                    },
+                    "feedback-type": "constant",
+                    "magnitude": "1",
+                    "direction": {"x": "1", "y": "1", "z": "1"}
                 }
-            },
-
-            {
-                "id": "InnerCubeInTree",
-                "enabled": "true",
-                "metrics": {
-                    "amplitude": "30.0",
-                    "frequency": "30.0",
-                    "transform": {
-                        "origin": "relative",
-                        "position": {
-                            "x": "-0.04",
-                            "y": "3.82",
-                            "z": "-0.40"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "0",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "2.50",
-                            "y": "1.60",
-                            "z": "1.60"
-                        }
-                    }
-                }
-            },
-
-            {
-                "id": "TrunkCubeInTree",
-                "enabled": "true",
-                "metrics": {
-                    "feedback-type":"friction",
-                    "amplitude": "1.0",
-                    "frequency": "300",
-                    "transform": {
-                        "origin": "relative",
-                        "position": {
-                            "x": "0",
-                            "y": "1",
-                            "z": "-0.116"
-                        },
-                        "rotation": {
-                            "x": "0",
-                            "y": "0",
-                            "z": "0"
-                        },
-                        "scale": {
-                            "x": "0.25",
-                            "y": "2.0" ,
-                            "z": "0.25"
-                        }
-                    }
-                }
-            },
-
-            {
-                "id": "CapsuleApple",
-                "enabled": "false",
-                "metrics": null
-            },
-
-            {
-                "id": "LargeCubeInWorld",
-                "enabled": "false",
-                "metrics": null
             }
         ],
 
+        "constraints": null
 
-        "constraints":[
-
-            {
-                "id": "SpringJoint",
-                "enabled": "false",
-                "metrics": {
-                    "constraint-type": "SpringJoint",
-                    "spring": "60.0",
-                    "damper": "2.0",
-                    "breakTorque": "10.0",
-                    "breakForce": "10.0"
-                }
-            }
-        ]
     }
 ]
