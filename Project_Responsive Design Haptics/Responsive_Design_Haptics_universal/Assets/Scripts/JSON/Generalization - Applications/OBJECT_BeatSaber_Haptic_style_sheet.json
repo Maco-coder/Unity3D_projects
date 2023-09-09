@@ -1,0 +1,89 @@
+
+[
+    {
+        "device": "props",
+        "scripts": null,
+
+        "colliders":[
+
+            {
+                "id": "Cube",
+                "enabled": "true",
+                "metrics": {
+                    "RigidBody": {
+                        "UseGravity": false,
+                        "IsKinematic": true
+                    }
+                }
+            }
+        ],
+
+        "constraints": null
+    },
+
+
+    {
+        "device": "stylus",
+        "scripts": null,
+
+        "colliders":[
+
+            {
+                "id": "Cube",
+                "enabled": "true",
+                "metrics": {
+                    "RigidBody": {
+                        "UseGravity": false,
+                        "IsKinematic": true
+                    },
+                    "feedback-type": "constant",
+                    "magnitude": "1",
+                    "direction": {"x": "1", "y": "1", "z": "1"}
+                }
+            }
+        ],
+
+        "constraints": null
+    },
+
+
+    {
+        "device": "vr_controller",
+        "scripts":[
+
+            {
+                "id": "Cube",
+                "enabled": "true",
+                "metrics": {
+                    "RigidBody": {
+                        "UseGravity": false,
+                        "IsKinematic": true
+                    },
+                    "amplitude": "1",
+                    "frequency": "1",
+                }
+            }
+
+        ],
+
+        "colliders":[
+
+            {
+                "id": "Cube",
+                "enabled": "true",
+                "metrics": {
+                    "RigidBody": {
+                        "UseGravity": false,
+                        "IsKinematic": true
+                    },
+                    "feedback-type": "constant",
+                    "magnitude": "1",
+                    "direction": {"x": "1", "y": "1", "z": "1"}
+                }
+            }
+        ],
+
+        "constraints": null
+
+    }
+]
