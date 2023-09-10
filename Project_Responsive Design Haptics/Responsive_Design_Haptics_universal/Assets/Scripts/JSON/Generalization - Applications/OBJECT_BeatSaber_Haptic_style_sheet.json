@@ -49,8 +49,9 @@
 
     {
         "device": "vr_controller",
-        "scripts":[
+        "scripts": null,
 
+        "colliders":[
             {
                 "id": "Cube",
                 "enabled": "true",
@@ -60,25 +61,7 @@
                         "IsKinematic": true
                     },
                     "amplitude": "1",
-                    "frequency": "1",
-                }
-            }
-
-        ],
-
-        "colliders":[
-
-            {
-                "id": "Cube",
-                "enabled": "true",
-                "metrics": {
-                    "RigidBody": {
-                        "UseGravity": false,
-                        "IsKinematic": true
-                    },
-                    "feedback-type": "constant",
-                    "magnitude": "1",
-                    "direction": {"x": "1", "y": "1", "z": "1"}
+                    "frequency": "1"
                 }
             }
         ],
