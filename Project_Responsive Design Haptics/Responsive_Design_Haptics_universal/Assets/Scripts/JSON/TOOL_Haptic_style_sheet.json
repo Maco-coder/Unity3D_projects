@@ -111,7 +111,12 @@
 
             {
                 "id": "Haptics_Vive", "enabled": "true",
-                "metrics": {"PluckApple_amplitude": "50.0", "PluckApple_frequency": "500", "CarryApple_amplitude": "1.0", "CarryApple_frequency": "150"}
+                "metrics": {
+                    "PluckApple_amplitude": "50.0",
+                    "PluckApple_frequency": "500", 
+                    "CarryApple_amplitude": "1.0", 
+                    "CarryApple_frequency": "150"
+                }
             }    
         ],
 

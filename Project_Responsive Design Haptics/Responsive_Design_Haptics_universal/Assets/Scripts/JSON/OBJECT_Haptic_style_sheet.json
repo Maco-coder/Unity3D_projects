@@ -1,5 +1,28 @@
 [
     {
+        "device": "PSVR2",
+        "scripts":[
+            {
+
+            }
+
+        ],
+        "colliders":[
+            {
+                "id":"brown_box",
+                "enabled": "true",
+                "params": 
+                {
+                    "force": "1",
+                    "amplitude": "1",
+                    "frequency": "1"
+                }
+            }
+        ],
+        "constraints": null
+    },
+
+    {
         "device": "props",
         "scripts":[
 
@@ -181,7 +204,7 @@
                     }
                 }
             },
-
+``
             {
                 "id": "InnerCubeInTree", "enabled": "true",
                 "metrics": {
