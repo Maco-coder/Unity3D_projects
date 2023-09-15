@@ -1,45 +1,22 @@
 [
     {
-        "device": "PSVR2",
-        "scripts":[
-            {
-
-            }
-
-        ],
-        "colliders":[
-            {
-                "id":"brown_box",
-                "enabled": "true",
-                "params": 
-                {
-                    "force": "1",
-                    "amplitude": "1",
-                    "frequency": "1"
-                }
-            }
-        ],
-        "constraints": null
-    },
-
-    {
         "device": "props",
         "scripts":[
 
             {
-                "id": "SteamVR_TrackedObject", "enabled": "true", "metrics": null
+                "id": "SteamVR_TrackedObject", "enabled": "true", "params": null
             },
 
             {
-                "id": "SteamVR_Interactable", "enabled": "false", "metrics": null
+                "id": "SteamVR_Interactable", "enabled": "false", "params": null
             },
 
             {
-                "id": "SteamVR_Throwable", "enabled": "false", "metrics": null
+                "id": "SteamVR_Throwable", "enabled": "false", "params": null
             },
 
             {
-                "id": "Haptics_Pen_v1", "enabled": "false", "metrics": null
+                "id": "Haptics_Pen_v1", "enabled": "false", "params": null
             }
                 
         ],
@@ -47,30 +24,30 @@
         "colliders":[
 
             {
-                "id": "OuterCubeInTree", "enabled": "false", "metrics": null
+                "id": "OuterCubeInTree", "enabled": "false", "params": null
             },
 
             {
-                "id": "InnerCubeInTree", "enabled": "false", "metrics": null
+                "id": "InnerCubeInTree", "enabled": "false", "params": null
             },
 
             {
-                "id": "TreeCubeInTree", "enabled": "false", "metrics": null
+                "id": "TreeCubeInTree", "enabled": "false", "params": null
             },
 
             {
-                "id": "CapsuleApple", "enabled": "false", "metrics": null
+                "id": "CapsuleApple", "enabled": "false", "params": null
             },
 
             {
-                "id": "LargeCubeInWorld", "enabled": "false", "metrics": null
+                "id": "LargeCubeInWorld", "enabled": "false", "params": null
             }
         ],
 
         "constraints":[
 
             {
-                "id": "SpringJoint", "enabled": "false", "metrics": null
+                "id": "SpringJoint", "enabled": "false", "params": null
             }
         ]
     },
@@ -81,19 +58,19 @@
         "scripts":[
 
             {
-                "id": "SteamVR_TrackedObject", "enabled": "false", "metrics": null
+                "id": "SteamVR_TrackedObject", "enabled": "false", "params": null
             },
 
             {
-                "id": "SteamVR_Interactable", "enabled": "false", "metrics": null
+                "id": "SteamVR_Interactable", "enabled": "false", "params": null
             },
 
             {
-                "id": "SteamVR_Throwable", "enabled": "false", "metrics": null
+                "id": "SteamVR_Throwable", "enabled": "false", "params": null
             },
 
             {
-                "id": "Haptics_Pen_v1", "enabled": "true", "metrics": null
+                "id": "Haptics_Pen_v1", "enabled": "true", "params": null
             }
                 
         ],
@@ -103,7 +80,7 @@
             {
                 "id": "OuterCubeInTree",
                 "enabled": "true",
-                "metrics": {
+                "params": {
                     "feedback-type": "friction", "gain": "0.50", "magnitude": "0.50",
                     "transform": {
                         "origin": "relative",
@@ -115,12 +92,12 @@
             },
 
             {
-                "id": "InnerCubeInTree", "enabled": "false", "metrics": null
+                "id": "InnerCubeInTree", "enabled": "false", "params": null
             },
 
             {
                 "id": "TrunkCubeInTree", "enabled": "true",
-                "metrics": {
+                "params": {
                     "feedback-type": "friction", "gain": "1.0", "magnitude": "1.0",
                     "transform": {
                         "origin": "relative",
@@ -133,7 +110,7 @@
 
             {
                 "id": "CapsuleApple", "enabled": "true",
-                "metrics": {
+                "params": {
                     "feedback-type":"spring", "gain": "0.75", "magnitude": "0.75",
                     "transform": {
                         "origin": "relative",
@@ -146,7 +123,7 @@
 
             {
                 "id": "LargeCubeInWorld", "enabled": "true",
-                "metrics": {
+                "params": {
                     "feedback-type":"vibrate", "gain": "1.0", "magnitude": "1.0",
                     "transform": {
                         "origin": "relative",
@@ -162,7 +139,7 @@
 
             {
                 "id": "SpringJoint", "enabled": "false",
-                "metrics": {"constraint-type": "SpringJoint", "spring": "60.0", "damper": "2.0", "breakTorque": "30.0", "breakForce": "30.0"}
+                "params": {"constraint-type": "SpringJoint", "spring": "60.0", "damper": "2.0", "breakTorque": "30.0", "breakForce": "30.0"}
             }
         ]
     },
@@ -173,19 +150,19 @@
         "scripts":[
 
             {
-                "id": "SteamVR_TrackedObject", "enabled": "false", "metrics": null
+                "id": "SteamVR_TrackedObject", "enabled": "false", "params": null
             },
 
             {
-                "id": "SteamVR_Interactable", "enabled": "true", "metrics": null
+                "id": "SteamVR_Interactable", "enabled": "true", "params": null
             },
 
             {
-                "id": "SteamVR_Throwable", "enabled": "true", "metrics": null
+                "id": "SteamVR_Throwable", "enabled": "true", "params": null
             },
 
             {
-                "id": "Haptics_Pen_v1", "enabled": "false", "metrics": null
+                "id": "Haptics_Pen_v1", "enabled": "false", "params": null
             }
                 
         ],
@@ -194,7 +171,7 @@
 
             {
                 "id": "OuterCubeInTree", "enabled": "true",
-                "metrics": {
+                "params": {
                     "amplitude": "1.0", "frequency": "200",
                     "transform": {
                         "origin": "relative",
@@ -207,7 +184,7 @@
 ``
             {
                 "id": "InnerCubeInTree", "enabled": "true",
-                "metrics": {
+                "params": {
                     "amplitude": "30.0", "frequency": "30.0",
                     "transform": {
                         "origin": "relative",
@@ -220,7 +197,7 @@
 
             {
                 "id": "TrunkCubeInTree", "enabled": "true",
-                "metrics": {
+                "params": {
                     "amplitude": "1.0", "frequency": "300",
                     "transform": {
                         "origin": "relative",
@@ -232,11 +209,11 @@
             },
 
             {
-                "id": "CapsuleApple", "enabled": "false", "metrics": null
+                "id": "CapsuleApple", "enabled": "false", "params": null
             },
 
             {
-                "id": "LargeCubeInWorld", "enabled": "false", "metrics": null
+                "id": "LargeCubeInWorld", "enabled": "false", "params": null
             }
         ],
 
@@ -245,7 +222,7 @@
 
             {
                 "id": "SpringJoint", "enabled": "false",
-                "metrics": {"constraint-type": "SpringJoint", "spring": "60.0", "damper": "2.0", "breakTorque": "10.0", "breakForce": "10.0"}
+                "params": {"constraint-type": "SpringJoint", "spring": "60.0", "damper": "2.0", "breakTorque": "10.0", "breakForce": "10.0"}
             }
         ]
     }

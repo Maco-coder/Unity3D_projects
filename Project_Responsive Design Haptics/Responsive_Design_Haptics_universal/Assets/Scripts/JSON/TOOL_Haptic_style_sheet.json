@@ -72,7 +72,7 @@
         "colliders":[
 
             {
-                "id": "Body3", "enabled": "true",
+                "id": "Picker_child", "enabled": "true",
                 "params": {
                     "transform": {
                         "origin": "relative",
@@ -123,7 +123,7 @@
         "colliders":[
 
             {
-                "id": "Body3", "enabled": "true",
+                "id": "Picker_child", "enabled": "true",
                 "params": {
                     "transform": {
                         "origin": "relative",
