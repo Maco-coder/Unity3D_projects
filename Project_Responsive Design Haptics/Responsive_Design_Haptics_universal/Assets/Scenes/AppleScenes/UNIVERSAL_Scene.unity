@@ -1182,6 +1182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad3557e55d4326498774f659558e89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temp: {x: 0, y: 0, z: 0}
   effectType: 4
   Gain: 0
   Magnitude: 0
@@ -1742,6 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad3557e55d4326498774f659558e89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temp: {x: 0, y: 0, z: 0}
   effectType: 4
   Gain: 1
   Magnitude: 1
@@ -1924,6 +1926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad3557e55d4326498774f659558e89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temp: {x: 0, y: 0, z: 0}
   effectType: 4
   Gain: 0.75
   Magnitude: 0.75
@@ -3166,6 +3169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad3557e55d4326498774f659558e89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temp: {x: 0, y: 0, z: 0}
   effectType: 4
   Gain: 0.6000000238418579
   Magnitude: 0.6000000238418579
@@ -3395,7 +3399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809148571653436}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.155, y: 0, z: -1.37}
   m_LocalScale: {x: 0.112500004, y: 0.112500004, z: 0.112500004}
   m_ConstrainProportionsScale: 0
   m_Children:
