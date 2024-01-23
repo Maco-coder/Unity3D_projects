@@ -43,7 +43,7 @@ public class Sensors : MonoBehaviour
     public Slider Tension  ;
     public int max_tension ;
 
-    public Slider FSRupper  ;
+    public Slider FSRUpper  ;
     public int max_FSRupper ;
     
     public Slider FSRlower1  ;
@@ -77,8 +77,8 @@ public class Sensors : MonoBehaviour
         //if (data[0] != "" && data[1] != "" && data[2] != "" && data[3] != "" && data[4] != "" && data[5] != "")
         //{
 
-        //data_received[0] = data[0];
-        //int.TryParse(data[0], out tension_gauge);
+        data_received[0] = data[0];
+        int.TryParse(data[0], out tension_gauge);
 
         data_received[1] = data[1];
         int.TryParse(data[1], out Upper_value);
@@ -98,10 +98,10 @@ public class Sensors : MonoBehaviour
         //force_Lower2.text = Lower2_value.ToString("0") ;
 
         //Tension.value = tension_gauge ;
-        FSRupper.value = Upper_value   ;
+        FSRUpper.value = Upper_value ;
         FSRlower1.value = Lower1_value ;
         FSRlower2.value = Lower2_value ;
-        FSRlower2.value = Lower3_value ;
+        FSRlower3.value = Lower3_value ;
 
 
         if (Input.GetKeyDown("s"))
@@ -147,7 +147,6 @@ public class Sensors : MonoBehaviour
 //        {
 //            grade_injury.text = ("3");
 //        }
-
 
         System.IO.File.AppendAllText(filePath, receivedstring + "\n");
 
