@@ -31,6 +31,7 @@ public class Sensors : MonoBehaviour
     public int Upper_value ;
     public int Lower1_value;
     public int Lower2_value;
+    public int Lower3_value;
 
     // Displaying data //
     public Text tension_sensor ;
@@ -50,6 +51,9 @@ public class Sensors : MonoBehaviour
 
     public Slider FSRlower2  ;
     public int max_FSRlower2 ;
+
+    public Slider FSRlower3  ;
+    public int max_FSRlower3 ;
 
     bool read_tension = true ;
 
@@ -85,6 +89,9 @@ public class Sensors : MonoBehaviour
         data_received[3] = data[3];
         int.TryParse(data[3], out Lower2_value);
 
+        data_received[4] = data[4];
+        int.TryParse(data[3], out Lower2_value);
+
         tension_sensor.text = tension_gauge.ToString("0");
         //force_Upper.text = Upper_value.ToString("0")   ;
         //force_Lower1.text = Lower1_value.ToString("0") ;
@@ -94,6 +101,7 @@ public class Sensors : MonoBehaviour
         FSRupper.value = Upper_value   ;
         FSRlower1.value = Lower1_value ;
         FSRlower2.value = Lower2_value ;
+        FSRlower2.value = Lower3_value ;
 
 
         if (Input.GetKeyDown("s"))
