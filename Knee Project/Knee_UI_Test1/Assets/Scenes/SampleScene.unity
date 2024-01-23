@@ -3939,7 +3939,7 @@ MonoBehaviour:
   grade_injury: {fileID: 360819831}
   Tension: {fileID: 2134643653}
   max_tension: 1000
-  Thigh: {fileID: 0}
+  FSRUpper: {fileID: 1282063263}
   max_FSRupper: 1000
   FSRlower1: {fileID: 161436281}
   max_FSRlower1: 1000
@@ -5521,16 +5521,4 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1470458587}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
