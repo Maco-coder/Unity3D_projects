@@ -3917,11 +3917,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   receivedstring: 
   data:
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   data_received:
   - 
   - 
