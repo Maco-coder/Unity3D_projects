@@ -31,6 +31,7 @@ public class Sensors : MonoBehaviour
     public int Upper_value ;
     public int Lower1_value;
     public int Lower2_value;
+    public int Lower3_value;
 
     // Displaying data //
     public Text tension_sensor ;
@@ -42,7 +43,7 @@ public class Sensors : MonoBehaviour
     public Slider Tension  ;
     public int max_tension ;
 
-    public Slider FSRupper  ;
+    public Slider FSRUpper  ;
     public int max_FSRupper ;
     
     public Slider FSRlower1  ;
@@ -50,6 +51,9 @@ public class Sensors : MonoBehaviour
 
     public Slider FSRlower2  ;
     public int max_FSRlower2 ;
+
+    public Slider FSRlower3  ;
+    public int max_FSRlower3 ;
 
     bool read_tension = true ;
 
@@ -73,8 +77,9 @@ public class Sensors : MonoBehaviour
         //if (data[0] != "" && data[1] != "" && data[2] != "" && data[3] != "" && data[4] != "" && data[5] != "")
         //{
 
-        //data_received[0] = data[0];
-        //int.TryParse(data[0], out tension_gauge);
+        data_received[0] = data[0];
+        int.TryParse(data[0], out tension_gauge);
+        //Debug.Log(tension_gauge);
 
         data_received[1] = data[1];
         int.TryParse(data[1], out Upper_value);
@@ -85,39 +90,43 @@ public class Sensors : MonoBehaviour
         data_received[3] = data[3];
         int.TryParse(data[3], out Lower2_value);
 
+        data_received[4] = data[4];
+        int.TryParse(data[3], out Lower2_value);
+
         tension_sensor.text = tension_gauge.ToString("0");
         //force_Upper.text = Upper_value.ToString("0")   ;
         //force_Lower1.text = Lower1_value.ToString("0") ;
         //force_Lower2.text = Lower2_value.ToString("0") ;
 
-        //Tension.value = tension_gauge ;
-        FSRupper.value = Upper_value   ;
+        Tension.value = tension_gauge ;
+        FSRUpper.value = Upper_value  ;
         FSRlower1.value = Lower1_value ;
         FSRlower2.value = Lower2_value ;
+        FSRlower3.value = Lower3_value ;
 
 
-        if (Input.GetKeyDown("s"))
-        {   
-            read_tension = !read_tension             ;
-            print("Tension reading " + read_tension) ;
-        }
+//        if (Input.GetKeyDown("s"))
+//        {   
+//            read_tension = !read_tension             ;
+//            print("Tension reading " + read_tension) ;
+//        }
 
-        if (read_tension == true)
-        {
-            data_received[0] = data[0]               ;
-            int.TryParse(data[0], out tension_gauge) ;
-            Tension.value = tension_gauge            ;
-            ON_indicator.SetActive(true)             ;
-            OFF_indicator.SetActive(false)           ;
-        }
+//        if (read_tension == true)
+//        {
+//            data_received[0] = data[0]               ;
+//            int.TryParse(data[0], out tension_gauge) ;
+//            Tension.value = tension_gauge            ;
+//            ON_indicator.SetActive(true)             ;
+//            OFF_indicator.SetActive(false)           ;
+//        }
 
-        if (read_tension == false)
-        {
-            data[0] = "0"                 ;
-            Tension.value = tension_gauge ;
-            ON_indicator.SetActive(false) ;
-            OFF_indicator.SetActive(true) ;
-        }
+//        if (read_tension == false)
+//        {
+//            data[0] = "0"                 ;
+//            Tension.value = tension_gauge ;
+//            ON_indicator.SetActive(false) ;
+//            OFF_indicator.SetActive(true) ;
+//       }
 
 
 //        if ((tension_gauge) >= 70 && (tension_gauge) <90)
@@ -140,39 +149,38 @@ public class Sensors : MonoBehaviour
 //            grade_injury.text = ("3");
 //        }
 
+//        System.IO.File.AppendAllText(filePath, receivedstring + "\n");
 
-        System.IO.File.AppendAllText(filePath, receivedstring + "\n");
 
+//       if (Input.GetKeyDown("space"))
+//        {
+//            print("space key has been pressed")                              ;
+//            System.IO.File.AppendAllText(filePath_staircase, data[0] + "\n") ;
+//        }
 
-        if (Input.GetKeyDown("space"))
-        {
-            print("space key has been pressed")                              ;
-            System.IO.File.AppendAllText(filePath_staircase, data[0] + "\n") ;
-        }
+//        if (Input.GetKeyDown("1"))
+//        {
+//            print("A grade 1 has been sensed")                      ;
+//            System.IO.File.AppendAllText(filePath_grades, 1 + "\n") ;
+//        }
 
-        if (Input.GetKeyDown("1"))
-        {
-            print("A grade 1 has been sensed")                      ;
-            System.IO.File.AppendAllText(filePath_grades, 1 + "\n") ;
-        }
+//        if (Input.GetKeyDown("2"))
+//        {
+//            print("A grade 2 has been sensed")                      ;
+//            System.IO.File.AppendAllText(filePath_grades, 2 + "\n") ;
+//        }
 
-        if (Input.GetKeyDown("2"))
-        {
-            print("A grade 2 has been sensed")                      ;
-            System.IO.File.AppendAllText(filePath_grades, 2 + "\n") ;
-        }
+//        if (Input.GetKeyDown("3"))
+//        {
+//            print("A grade 3 has been sensed")                      ;
+//            System.IO.File.AppendAllText(filePath_grades, 3 + "\n") ;
+//       }
 
-        if (Input.GetKeyDown("3"))
-        {
-            print("A grade 3 has been sensed")                      ;
-            System.IO.File.AppendAllText(filePath_grades, 3 + "\n") ;
-        }
-
-        if (Input.GetKeyDown("h"))
-        {
-            print("A healthy knee has been sensed")                 ;
-            System.IO.File.AppendAllText(filePath_grades, 0 + "\n") ;
-        }
+//        if (Input.GetKeyDown("h"))
+//        {
+//            print("A healthy knee has been sensed")                 ;
+//            System.IO.File.AppendAllText(filePath_grades, 0 + "\n") ;
+//       }
 
     }
 
