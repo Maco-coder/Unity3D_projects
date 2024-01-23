@@ -93,7 +93,7 @@ public class Sensors : MonoBehaviour
         data_received[4] = data[4];
         int.TryParse(data[4], out Lower3_value);
 
-        tension_sensor.text = tension_gauge.ToString("0");
+        tension_sensor.text = tension_gauge.ToString();
         //force_Upper.text = Upper_value.ToString("0")   ;
         //force_Lower1.text = Lower1_value.ToString("0") ;
         //force_Lower2.text = Lower2_value.ToString("0") ;
