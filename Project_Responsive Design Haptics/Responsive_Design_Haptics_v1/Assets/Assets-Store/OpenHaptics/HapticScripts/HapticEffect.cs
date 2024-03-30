@@ -73,6 +73,7 @@ public class HapticEffect : MonoBehaviour {
 	//! - Determines if a haptic stylus is inside the collider
 	//! - Updates the effect settings.
 	//! - Starts and stops the effect when appropriate.
+
 	void Update () 
 	{
 		// Find the pointer to the collider that defines the "zone". 
