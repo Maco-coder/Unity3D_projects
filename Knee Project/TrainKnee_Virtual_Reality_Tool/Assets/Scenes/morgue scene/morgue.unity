@@ -404,7 +404,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   receivedstring: 
   data: []
-  data_received: []
+  data_received:
+  - 
+  - 
+  - 
   Cube: {fileID: 740396687}
   x_value: 0
   y_value: 0

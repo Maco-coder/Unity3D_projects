@@ -8,7 +8,7 @@ using System.IO.Ports            ;
 public class MPU_Knee_Biomechanics : MonoBehaviour
 {
     
-    SerialPort stream = new SerialPort("COM3", 115200) ;
+    SerialPort stream = new SerialPort("COM3", 38400) ;
 
     public string receivedstring  ;
     public string[] data          ;
