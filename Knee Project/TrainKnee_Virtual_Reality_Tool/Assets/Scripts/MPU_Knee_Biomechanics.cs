@@ -29,6 +29,7 @@ public class MPU_Knee_Biomechanics : MonoBehaviour
     
     void Update()
     {
+
         receivedstring = stream.ReadLine();
         stream.BaseStream.Flush()         ;
 
@@ -42,5 +43,9 @@ public class MPU_Knee_Biomechanics : MonoBehaviour
 
         data_received[2] = data[2];
         int.TryParse(data[2], out z_value);
+
+
+        Cube.transform.rotation = Quaternion.Euler(x_value, y_value, z_value);
+
     }
 }
