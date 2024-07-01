@@ -3,7 +3,7 @@ using System.Collections        ;
 using System.Collections.Generic;
 using UnityEngine               ;
 
-public class Knee_Biomechanics : MonoBehaviour
+public class KEYBOARD_Knee_Biomechanics : MonoBehaviour
 {
     
     public int selector      ;
