@@ -15,6 +15,7 @@ public class MPU_Knee_Biomechanics : MonoBehaviour
     public string[] data_received ;
 
     public GameObject Cube;
+    public GameObject Hip ;
 
     public int x_value ;
     public int y_value ;
