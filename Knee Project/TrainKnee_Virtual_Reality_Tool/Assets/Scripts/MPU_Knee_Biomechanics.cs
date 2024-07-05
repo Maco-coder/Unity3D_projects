@@ -30,7 +30,8 @@ public class MPU_Knee_Biomechanics : MonoBehaviour
     {
         stream.Open();
         
-        Vector3 eulerRotation = Cube.transform.eulerAngles;
+        //Vector3 eulerRotation = Leg.transform.eulerAngles;
+        Vector3 eulerRotation = Leg.transform.localEulerAngles;
 
         off_x = (int)eulerRotation.x ;
         off_y = (int)eulerRotation.y ;
@@ -48,18 +49,20 @@ public class MPU_Knee_Biomechanics : MonoBehaviour
         string[] data = receivedstring.Split(',');
 
         data_received[0] = data[0];
-        int.TryParse(data[0], out z_value);
+        int.TryParse(data[0], out x_value);
 
         data_received[1] = data[1];
-        int.TryParse(data[1], out x_value);
+        int.TryParse(data[1], out y_value);
 
         data_received[2] = data[2];
-        int.TryParse(data[2], out y_value);
+        int.TryParse(data[2], out z_value);
 
 
         //Cube.transform.rotation = Quaternion.Euler((x_value + off_x), (y_value + off_y), (z_value + off_z));
         
-        Leg.transform.rotation = Quaternion.Euler((x_value + off_x), (y_value + off_y), (z_value + off_z));
+        //Leg.transform.rotation = Quaternion.Euler((x_value + off_x), (y_value + off_y), (z_value + off_z));
+
+        Leg.transform.localEulerAngles = new Vector3((-x_value + off_x), (y_value + off_y), (-z_value + off_z));
 
     }
 }
