@@ -79,9 +79,9 @@ public class ALL_MPU_Knee_Biomechanics : MonoBehaviour
         //Cube.transform.rotation = Quaternion.Euler((x_value + off_x), (y_value + off_y), (z_value + off_z));
         //Leg.transform.rotation = Quaternion.Euler((x_value + off_x), (y_value + off_y), (z_value + off_z));
 
-        Leg.transform.localEulerAngles = new Vector3((-x_value_hip + off_x_hip), (y_value_hip + off_y_hip), (-z_value_hip + off_z_hip));
+        Leg.transform.localEulerAngles = new Vector3((-x_value_hip + off_x_hip), (y_value_hip + off_y_hip), (-z_value_hip + off_z_hip)) ;
 
-        //Leg.transform.localEulerAngles = new Vector3((-x_value + off_x), (y_value + off_y), (-z_value + off_z));
+        //Knee.transform.localEulerAngles = new Vector3((-x_value + off_x), (y_value + off_y), (-z_value + off_z));
 
     }
 }
