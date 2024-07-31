@@ -432,6 +432,10 @@ MonoBehaviour:
   - 
   - 
   - 
+  - 
+  - 
+  - 
+  - 
   Cube: {fileID: 740396687}
   Leg: {fileID: 1966618427}
   Knee: {fileID: 1714484667}
@@ -441,6 +445,7 @@ MonoBehaviour:
   x_value_knee: 0
   y_value_knee: 0
   z_value_knee: 0
+  flex_ext: 0
 --- !u!1 &78475014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,6 +2423,34 @@ PrefabInstance:
     - target: {fileID: 1668005473308108988, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
       propertyPath: m_Name
       value: Left_Arm_Shoulder
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999486
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.009337375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000036994028
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0039617266
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.454
       objectReference: {fileID: 0}
     - target: {fileID: 2807231755144388993, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
       propertyPath: m_Name

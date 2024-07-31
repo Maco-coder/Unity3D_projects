@@ -27,7 +27,6 @@ public class ALL_MPU_Knee_Biomechanics : MonoBehaviour
     private int off_y_hip ;
     private int off_z_hip ;
 
-
     // Knee (lower leg) Variables //
     public int x_value_knee ;
     public int y_value_knee ;
@@ -36,6 +35,9 @@ public class ALL_MPU_Knee_Biomechanics : MonoBehaviour
     private int off_x_knee ;
     private int off_y_knee ;
     private int off_z_knee ;
+
+    // Flexion Angle //
+    public int flex_ext ;
 
 
 
@@ -75,13 +77,24 @@ public class ALL_MPU_Knee_Biomechanics : MonoBehaviour
         data_received[2] = data[2];
         int.TryParse(data[2], out z_value_hip);
 
+        data_received[3] = data[3];
+        int.TryParse(data[3], out x_value_knee);
+
+        data_received[4] = data[4];
+        int.TryParse(data[4], out y_value_knee);
+
+        data_received[5] = data[5];
+        int.TryParse(data[5], out z_value_knee);
+
+        data_received[6] = data[6];
+        int.TryParse(data[6], out flex_ext);
+
 
         //Cube.transform.rotation = Quaternion.Euler((x_value + off_x), (y_value + off_y), (z_value + off_z));
         //Leg.transform.rotation = Quaternion.Euler((x_value + off_x), (y_value + off_y), (z_value + off_z));
 
         Leg.transform.localEulerAngles = new Vector3((-x_value_hip + off_x_hip), (y_value_hip + off_y_hip), (-z_value_hip + off_z_hip)) ;
-
-        //Knee.transform.localEulerAngles = new Vector3((-x_value + off_x), (y_value + off_y), (-z_value + off_z));
+        Knee.transform.localEulerAngles = new Vector3((-flex_ext + off_x_knee), (0), (-z_value_knee + off_z_knee));
 
     }
 }
