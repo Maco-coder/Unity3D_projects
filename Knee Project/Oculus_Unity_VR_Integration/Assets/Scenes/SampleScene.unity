@@ -547,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b5750d4379112e44993b8d4081f09b4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b5750d4379112e44993b8d4081f09b4, type: 3}
@@ -1445,9 +1445,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54fded3df46624841b86fa6c09c95936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _squishableObject: {fileID: 1590780165}
-  _maxSquish: 0.6
-  _maxStretch: 0.4
+  _squishableObject: {fileID: 199129658}
+  _maxSquish: 0.813
+  _maxStretch: 0.561
 --- !u!114 &661481617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,15 +1517,19 @@ PrefabInstance:
       objectReference: {fileID: 1300883137}
     - target: {fileID: 2225697885797083731, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: _rotation.x
-      value: 0.105225004
+      value: 0.105225
       objectReference: {fileID: 0}
     - target: {fileID: 2225697885797083731, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: _rotation.z
-      value: 0.013933301
+      value: 0.013933297
       objectReference: {fileID: 0}
     - target: {fileID: 2781004746544239580, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3282029262929392819, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3282029263655771826, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: m_RootOrder
@@ -3178,7 +3182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1590780166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3829,6 +3833,10 @@ PrefabInstance:
     - target: {fileID: 2781004746544239580, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3282029262929392819, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3282029263655771826, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: m_RootOrder
