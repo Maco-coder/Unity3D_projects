@@ -3360,6 +3360,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Body
       objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9997477
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.022114912
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00016131689
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0039552855
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 2.534
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.454
+      objectReference: {fileID: 0}
     - target: {fileID: 4702939792406662091, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
       propertyPath: m_Name
       value: Right_Leg_Knee
