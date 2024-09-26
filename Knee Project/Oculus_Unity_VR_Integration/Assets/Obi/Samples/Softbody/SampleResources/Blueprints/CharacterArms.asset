@@ -6103,7 +6103,7 @@ MonoBehaviour:
   skeleton: {fileID: 0}
   rootBone: {fileID: 0}
   boneRotation: {x: 0, y: 0, z: 0, w: 0}
-  maxAnisotropy: 2
+  maxAnisotropy: 4.2
   smoothing: 0.25
   shapeResolution: 64
   generatedMesh: {fileID: 4300000, guid: d060a01af072c4f61a867564297730f2, type: 3}
