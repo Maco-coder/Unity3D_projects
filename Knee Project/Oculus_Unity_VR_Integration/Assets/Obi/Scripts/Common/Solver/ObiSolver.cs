@@ -589,7 +589,7 @@ namespace Obi
         {
             get
             {
-                if (m_RestPositions == null)
+               if (m_RestPositions == null)
                     m_RestPositions = new ObiNativeVector4List();
                 return m_RestPositions;
             }
@@ -1349,7 +1349,7 @@ namespace Obi
             colors.Dispose();
             cellCoords.Dispose();
             startPositions.Dispose();
-            endPositions.Dispose();
+            //endPositions.Dispose();
             startOrientations.Dispose();
             endOrientations.Dispose();
             positions.Dispose();
