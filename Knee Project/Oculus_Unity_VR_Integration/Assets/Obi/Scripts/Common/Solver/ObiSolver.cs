@@ -1349,7 +1349,7 @@ namespace Obi
             colors.Dispose();
             cellCoords.Dispose();
             startPositions.Dispose();
-            //endPositions.Dispose();
+            endPositions.Dispose();
             startOrientations.Dispose();
             endOrientations.Dispose();
             positions.Dispose();
