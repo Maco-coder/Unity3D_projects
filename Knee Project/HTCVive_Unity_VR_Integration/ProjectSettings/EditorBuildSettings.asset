@@ -7,5 +7,6 @@ EditorBuildSettings:
   m_Scenes: []
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: db5c52eab6eea614cbf9d295014e0036, type: 2}
+    com.htc.upm.wave.xrsdk.xrsettings: {fileID: 11400000, guid: 4864227d6eadcde4c8d76cb2f145839d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1dc2a412aa9e56048a2bca113ea240fb, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 83c1c9a548bb73e40a1dfe9188ec61c5, type: 2}
