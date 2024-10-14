@@ -1,5 +1,33 @@
 {
   "dependencies": {
+    "com.htc.upm.wave.essence": {
+      "version": "https://github.com/ViveSoftware/VIVE-Wave.git?path=com.htc.upm.wave.essence",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.htc.upm.wave.xrsdk": "6.1.0-r.8",
+        "com.htc.upm.wave.native": "6.1.0-r.8"
+      },
+      "hash": "ea23ff810a89aedaf4a84b0de46f0f59191fbb52"
+    },
+    "com.htc.upm.wave.native": {
+      "version": "https://github.com/ViveSoftware/VIVE-Wave.git?path=com.htc.upm.wave.native",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.htc.upm.wave.xrsdk": "6.1.0-r.8"
+      },
+      "hash": "ea23ff810a89aedaf4a84b0de46f0f59191fbb52"
+    },
+    "com.htc.upm.wave.xrsdk": {
+      "version": "https://github.com/ViveSoftware/VIVE-Wave.git?path=com.htc.upm.wave.xrsdk",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.xr.management": "3.2.4"
+      },
+      "hash": "ea23ff810a89aedaf4a84b0de46f0f59191fbb52"
+    },
     "com.unity.collab-proxy": {
       "version": "2.0.0",
       "depth": 0,
