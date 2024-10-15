@@ -9,7 +9,7 @@ using System.IO.Ports            ;
 public class Sensors : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM3", 38400) ;
+    SerialPort stream = new SerialPort("COM4", 38400) ;
     
     string filePath = "Assets/SavedData/savedData.txt";
     string filePath_grades = "Assets/SavedData/Grades.txt";
