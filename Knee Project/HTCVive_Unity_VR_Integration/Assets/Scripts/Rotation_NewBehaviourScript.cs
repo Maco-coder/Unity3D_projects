@@ -28,8 +28,8 @@ public class Rotation_NewBehaviourScript : MonoBehaviour
         Vector3 rotationViveTracker1 = viveTracker1.transform.localEulerAngles;
         Vector3 rotationKnee = knee.transform.localEulerAngles;
         
-        //rotationKnee.x = -(rotationViveTracker1.x + (offset_x_tracker1 - offset_x_knee));
-        rotationKnee.z = (rotationViveTracker1.y + (offset_y_tracker1 - offset_y_knee)) + 84.6f;
+        rotationKnee.x = -(rotationViveTracker1.x + (offset_x_tracker1 - offset_x_knee));
+        //rotationKnee.z = (rotationViveTracker1.y + (offset_y_tracker1 - offset_y_knee)) ;
 
         knee.transform.localEulerAngles = rotationKnee;
 
