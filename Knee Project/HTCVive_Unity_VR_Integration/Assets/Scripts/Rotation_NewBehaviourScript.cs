@@ -5,8 +5,13 @@ using UnityEngine               ;
 public class Rotation_NewBehaviourScript : MonoBehaviour
 {
 
-    public GameObject viveTracker;
-    
+    public GameObject viveTracker1;
+    public GameObject knee        ;
+
+    public int offset_x_tracker1;
+    public int offset_y_tracker1;
+    public int offset_z_tracker1;
+
     void Start()
     {
         
@@ -14,9 +19,9 @@ public class Rotation_NewBehaviourScript : MonoBehaviour
 
     void Update()
     {
-        if (viveTracker != null)
+        if (viveTracker1 != null)
         {
-            transform.rotation = viveTracker.transform.rotation;
+            transform.rotation = viveTracker1.transform.rotation;
         }   
     }
 }
