@@ -2479,6 +2479,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manikin-Aurora
       objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e6b25df91458b4fb16b153d2985ed0, type: 3}
 --- !u!1 &419655438
