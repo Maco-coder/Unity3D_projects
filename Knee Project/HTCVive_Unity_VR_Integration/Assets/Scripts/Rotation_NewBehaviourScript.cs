@@ -25,17 +25,38 @@ public class Rotation_NewBehaviourScript : MonoBehaviour
     void Update()
     {
 
-        Vector3 rotationViveTracker1 = viveTracker1.transform.localEulerAngles;
-        Vector3 rotationKnee = knee.transform.localEulerAngles;
-        
-        rotationKnee.x = -(rotationViveTracker1.x + (offset_x_tracker1 - offset_x_knee));
+        Quaternion rotationViveTracker1 = viveTracker1.transform.rotation  ;
+        Vector3 eulerRotationViveTracker1 = viveTracker1.transform.eulerAngles;
+
+        eulerRotationViveTracker1.x = NormalizeAngle(eulerRotationViveTracker1.x);
+        eulerRotationViveTracker1.y = NormalizeAngle(eulerRotationViveTracker1.y);
+        eulerRotationViveTracker1.z = NormalizeAngle(eulerRotationViveTracker1.z);
+
+
+        Vector3 eulerRotationKnee = knee.transform.eulerAngles;
+        eulerRotationKnee.x = eulerRotationViveTracker1.x     ;
+        eulerRotationKnee.y = eulerRotationViveTracker1.y     ;
+        eulerRotationKnee.z = eulerRotationViveTracker1.z     ;
+
+        //rotationKnee.x = -(rotationViveTracker1.x + (offset_x_tracker1 - offset_x_knee));
         //rotationKnee.z = (rotationViveTracker1.y + (offset_y_tracker1 - offset_y_knee)) ;
 
-        knee.transform.localEulerAngles = rotationKnee;
+        knee.transform.eulerAngles = eulerRotationKnee;
 
-        //float rotationX = knee.transform.localEulerAngles.x;
+        //float rotationX = knee.transform.eulerAngles.x;
+        //float rotationY = knee.transform.eulerAngles.y;
 
-        //Debug.Log("Knee X Rotation: " + rotationX.ToString("F2"));
+        Debug.Log("Tracker X Rotation: " + eulerRotationKnee.x.ToString("F2") + " Tracker Y Rotation: " + eulerRotationKnee.y.ToString("F2"));
 
+    }
+
+    float NormalizeAngle(float angle)
+    {
+        if (angle > 180)
+            angle -= 360;
+        else if (angle < -180)
+            angle += 360;
+
+        return angle;
     }
 }
