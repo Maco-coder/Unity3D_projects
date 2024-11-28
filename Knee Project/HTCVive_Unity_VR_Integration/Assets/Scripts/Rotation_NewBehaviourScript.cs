@@ -1,6 +1,6 @@
-using System.Collections        ;
-using System.Collections.Generic;
-using UnityEngine               ;
+using System.Collections         ;
+using System.Collections.Generic ;
+using UnityEngine                ;
 
 public class Rotation_NewBehaviourScript : MonoBehaviour
 {
@@ -25,13 +25,12 @@ public class Rotation_NewBehaviourScript : MonoBehaviour
     void Update()
     {
 
-        Quaternion rotationViveTracker1 = viveTracker1.transform.rotation  ;
+        Quaternion rotationViveTracker1 = viveTracker1.transform.rotation     ;
         Vector3 eulerRotationViveTracker1 = viveTracker1.transform.eulerAngles;
 
         eulerRotationViveTracker1.x = NormalizeAngle(eulerRotationViveTracker1.x);
         eulerRotationViveTracker1.y = NormalizeAngle(eulerRotationViveTracker1.y);
         eulerRotationViveTracker1.z = NormalizeAngle(eulerRotationViveTracker1.z);
-
 
         Vector3 eulerRotationKnee = knee.transform.eulerAngles;
         eulerRotationKnee.x = eulerRotationViveTracker1.x     ;
