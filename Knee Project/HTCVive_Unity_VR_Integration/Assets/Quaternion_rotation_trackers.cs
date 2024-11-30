@@ -6,10 +6,12 @@ public class Quaternion_rotation_trackers : MonoBehaviour
 {
 
     public GameObject knee ;
+    public GameObject hip  ;
 
-    public Transform tracker1   ;
-    public Transform tracker2   ;
-    public Transform virtualKnee;
+    public Transform tracker1 ;
+    public Transform tracker2 ;
+    //public Transform virtualKnee;
+    public Transform virtualHip ;
 
 
     void Start()
@@ -23,21 +25,48 @@ public class Quaternion_rotation_trackers : MonoBehaviour
         Quaternion VIVErotation1 = tracker1.rotation ;
         Quaternion VIVErotation2 = tracker2.rotation ;
 
+
+        // KNEE JOINT //
+
         // Calculate the relative rotation between the two trackers
         Quaternion relativeRotation = Quaternion.Inverse(VIVErotation1)*VIVErotation2 ;
-        Vector3 relativeEulerAngles = relativeRotation.eulerAngles                    ;
+        Vector3 relativeEulerAngles_knee = relativeRotation.eulerAngles               ;
 
         Vector3 eulerRotationKnee = knee.transform.localEulerAngles ;
-        eulerRotationKnee.x = NormalizeAngle(relativeEulerAngles.x) ;
+        eulerRotationKnee.x = NormalizeAngle(relativeEulerAngles_knee.x) - 1.66f ;
         //eulerRotationKnee.y = NormalizeAngle(relativeEulerAngles.y) ;
-        eulerRotationKnee.z = NormalizeAngle(relativeEulerAngles.z) - 32.0f ;
+        eulerRotationKnee.z = NormalizeAngle(relativeEulerAngles_knee.z) - 32.0f ;
 
         // Apply the relative rotation to the virtual knee
-        
-        virtualKnee.rotation = relativeRotation            ;
+        //virtualKnee.rotation = relativeRotation;
         knee.transform.localEulerAngles = eulerRotationKnee;
 
-        Debug.Log("X Rotation: " + eulerRotationKnee.x.ToString("F2") + " Tracker Y Rotation: " + eulerRotationKnee.y.ToString("F2"));
+
+        // HIP JOINT //
+
+        Vector3 relativeEulerAngles_hip = VIVErotation2.eulerAngles ;
+
+        Vector3 eulerRotationHip = hip.transform.localEulerAngles   ;
+        eulerRotationHip.x = -(NormalizeAngle(relativeEulerAngles_hip.x) + 87.6f);
+        //eulerRotationHip.y = -(NormalizeAngle(relativeEulerAngles_hip.y));
+        //eulerRotationHip.z = -180.0f -(NormalizeAngle(relativeEulerAngles_hip.y)) ;
+        //eulerRotationHip.z = NormalizeAngle(relativeEulerAngles_hip.z + 359.8f );
+
+        hip.transform.localEulerAngles = eulerRotationHip ;
+
+
+        //float modifiedX = VIVErotation2.x;
+        //float modifiedY = 0f;  // Zero out the Y component
+        //float modifiedZ = 0f;
+
+        //Quaternion modifiedRotation = new Quaternion(modifiedX, modifiedY, modifiedZ, VIVErotation2.w);
+        
+        //virtualHip.rotation = VIVErotation2;
+
+        //Debug.Log("Knee X Rotation: " + eulerRotationKnee.x.ToString("F2") + " Knee Y Rotation: " + eulerRotationKnee.y.ToString("F2"));
+        //Debug.Log("Hip X Rotation: " + eulerRotationHip.x.ToString("F2") + " Hip Y Rotation: " + eulerRotationHip.y.ToString("F2"));
+
+        //Debug.Log("Knee X Rotation: " + virtualHip.rotation.x.ToString("F2") + " Knee Y Rotation: " + virtualHip.rotation.y.ToString("F2") + " Knee Z Rotation: " + virtualHip.rotation.z.ToString("F2"));
     }
 
 
