@@ -33,9 +33,9 @@ public class Quaternion_rotation_trackers : MonoBehaviour
         Vector3 relativeEulerAngles_knee = relativeRotation.eulerAngles               ;
 
         Vector3 eulerRotationKnee = knee.transform.localEulerAngles ;
-        eulerRotationKnee.x = NormalizeAngle(relativeEulerAngles_knee.x) - 1.66f ;
+        eulerRotationKnee.x = NormalizeAngle(relativeEulerAngles_knee.x) - 0.80f ;
         //eulerRotationKnee.y = NormalizeAngle(relativeEulerAngles.y) ;
-        eulerRotationKnee.z = NormalizeAngle(relativeEulerAngles_knee.z) - 32.0f ;
+        eulerRotationKnee.z = - (NormalizeAngle(relativeEulerAngles_knee.z) + 38.6f) ;
 
         // Apply the relative rotation to the virtual knee
         //virtualKnee.rotation = relativeRotation;
@@ -47,7 +47,7 @@ public class Quaternion_rotation_trackers : MonoBehaviour
         Vector3 relativeEulerAngles_hip = VIVErotation2.eulerAngles ;
 
         Vector3 eulerRotationHip = hip.transform.localEulerAngles   ;
-        eulerRotationHip.x = -(NormalizeAngle(relativeEulerAngles_hip.x) + 87.6f);
+        eulerRotationHip.x = -(NormalizeAngle(relativeEulerAngles_hip.x) + 88.3f) ;
         //eulerRotationHip.y = -(NormalizeAngle(relativeEulerAngles_hip.y));
         //eulerRotationHip.z = -180.0f -(NormalizeAngle(relativeEulerAngles_hip.y)) ;
         //eulerRotationHip.z = NormalizeAngle(relativeEulerAngles_hip.z + 359.8f );
