@@ -10,8 +10,9 @@ public class Quaternion_rotation_trackers : MonoBehaviour
 
     public Transform tracker1 ;
     public Transform tracker2 ;
+    public Transform trackerTransform ;
     //public Transform virtualKnee;
-    public Transform virtualHip ;
+    //public Transform virtualHip ;
 
 
     void Start()
@@ -24,6 +25,13 @@ public class Quaternion_rotation_trackers : MonoBehaviour
         // Get the rotation of both trackers (in world space)
         Quaternion VIVErotation1 = tracker1.rotation ;
         Quaternion VIVErotation2 = tracker2.rotation ;
+
+
+        // CORRECTING HIP JOINT ROTATION //
+
+        Quaternion trackerRotation = trackerTransform.rotation ;
+        Quaternion additionalRotation = Quaternion.Euler(0, 90, 0);
+        trackerTransform.rotation = trackerRotation * additionalRotation ;
 
 
         // KNEE JOINT //
@@ -55,6 +63,9 @@ public class Quaternion_rotation_trackers : MonoBehaviour
         hip.transform.localEulerAngles = eulerRotationHip ;
 
 
+
+
+
         //float modifiedX = VIVErotation2.x;
         //float modifiedY = 0f;  // Zero out the Y component
         //float modifiedZ = 0f;
@@ -65,7 +76,6 @@ public class Quaternion_rotation_trackers : MonoBehaviour
 
         //Debug.Log("Knee X Rotation: " + eulerRotationKnee.x.ToString("F2") + " Knee Y Rotation: " + eulerRotationKnee.y.ToString("F2"));
         //Debug.Log("Hip X Rotation: " + eulerRotationHip.x.ToString("F2") + " Hip Y Rotation: " + eulerRotationHip.y.ToString("F2"));
-
         //Debug.Log("Knee X Rotation: " + virtualHip.rotation.x.ToString("F2") + " Knee Y Rotation: " + virtualHip.rotation.y.ToString("F2") + " Knee Z Rotation: " + virtualHip.rotation.z.ToString("F2"));
     }
 
