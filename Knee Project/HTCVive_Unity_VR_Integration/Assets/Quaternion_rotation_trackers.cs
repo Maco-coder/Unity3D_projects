@@ -7,17 +7,22 @@ public class Quaternion_rotation_trackers : MonoBehaviour
 
     public GameObject knee ;
     public GameObject hip  ;
+    public GameObject redCube;
 
     public Transform tracker1 ;
     public Transform tracker2 ;
-    public Transform trackerTransform ;
+
+    public Transform trackerTransform   ;
+    private Quaternion initialTrackerRotation ;
+    private bool hasInitialized = false ;
+    
     //public Transform virtualKnee;
     //public Transform virtualHip ;
 
 
     void Start()
     {
-        
+        //initialTrackerRotation = trackerTransform.rotation;
     }
 
     void Update()
@@ -27,11 +32,30 @@ public class Quaternion_rotation_trackers : MonoBehaviour
         Quaternion VIVErotation2 = tracker2.rotation ;
 
 
+
+
         // CORRECTING HIP JOINT ROTATION //
 
-        Quaternion trackerRotation = trackerTransform.rotation ;
-        Quaternion additionalRotation = Quaternion.Euler(0, 90, 0);
-        trackerTransform.rotation = trackerRotation * additionalRotation ;
+        //Quaternion additionalRotation = Quaternion.Euler(50,10,88.05f);
+        //redCube.transform.rotation = trackerRotation * additionalRotation ;
+
+        if (!hasInitialized && trackerTransform != null)
+        {
+            // Capture the initial rotation of the tracker
+            initialTrackerRotation = trackerTransform.rotation;
+            Debug.Log("Initial Tracker Rotation: " + initialTrackerRotation.eulerAngles);
+            hasInitialized = true;
+        }
+
+        if (hasInitialized && trackerTransform != null)
+        {
+            Quaternion currentTrackerRotation = trackerTransform.rotation;
+            Quaternion relativeInitialRotation = currentTrackerRotation * Quaternion.Inverse(initialTrackerRotation);
+            redCube.transform.rotation = relativeInitialRotation;
+            Debug.Log("Initial Tracker Rotation: " + initialTrackerRotation.eulerAngles);
+            Debug.Log("Current Tracker Rotation: " + currentTrackerRotation.eulerAngles);
+            Debug.Log("Relative Rotation: " + relativeInitialRotation.eulerAngles);
+        }
 
 
         // KNEE JOINT //
