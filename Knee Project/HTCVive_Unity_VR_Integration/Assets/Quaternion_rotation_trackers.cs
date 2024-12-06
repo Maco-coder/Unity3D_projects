@@ -1,27 +1,28 @@
 
-using System.Collections        ;
-using System.Collections.Generic;
-using UnityEngine               ;
+using System.Collections         ;
+using System.Collections.Generic ;
+using UnityEngine                ;
 
 public class Quaternion_rotation_trackers : MonoBehaviour
 {
 
-    public GameObject knee ;
-    public GameObject hip  ;
-    public GameObject redCube;
+    public GameObject knee    ;
+    public GameObject hip     ;
+    public GameObject redCube ;
 
     public Transform tracker1 ;
     public Transform tracker2 ;
 
-    public Transform trackerTransform   ;
+    public Transform trackerTransform         ;
     private Quaternion initialTrackerRotation ;
-    private bool hasInitialized = false ;
+    private bool hasInitialized = false       ;
 
 
     void Start()
     {
         //initialTrackerRotation = trackerTransform.rotation;
     }
+
 
     void Update()
     {
@@ -39,15 +40,15 @@ public class Quaternion_rotation_trackers : MonoBehaviour
             Debug.Log("Initial Tracker Rotation: " + initialTrackerRotation.eulerAngles);
             hasInitialized = true;
         }
-
+        
         if (hasInitialized && trackerTransform != null)
         {
             Quaternion currentTrackerRotation = trackerTransform.rotation;
             Quaternion relativeInitialRotation = currentTrackerRotation * Quaternion.Inverse(initialTrackerRotation);
-            redCube.transform.rotation = relativeInitialRotation;
+            redCube.transform.rotation = relativeInitialRotation ;
             //Debug.Log("Initial Tracker Rotation: " + initialTrackerRotation.eulerAngles);
             //Debug.Log("Current Tracker Rotation: " + currentTrackerRotation.eulerAngles);
-            //Debug.Log("Relative Rotation: " + relativeInitialRotation.eulerAngles);
+            //Debug.Log("Relative Rotation: " + relativeInitialRotation.eulerAngles)      ;
 
 
             // KNEE JOINT //
@@ -57,9 +58,9 @@ public class Quaternion_rotation_trackers : MonoBehaviour
             Vector3 relativeEulerAngles_knee = relativeRotation.eulerAngles;
 
             Vector3 eulerRotationKnee = knee.transform.localEulerAngles;
-            eulerRotationKnee.x = NormalizeAngle(relativeEulerAngles_knee.x) - 0.80f;
+            eulerRotationKnee.x = NormalizeAngle(relativeEulerAngles_knee.x) + 0.508f;
             //eulerRotationKnee.y = NormalizeAngle(relativeEulerAngles.y) ;
-            eulerRotationKnee.z = -(NormalizeAngle(relativeEulerAngles_knee.z) + 38.6f);
+            eulerRotationKnee.z = - NormalizeAngle(relativeEulerAngles_knee.z) + 1.90f;
 
             // Apply the relative rotation to the virtual knee
             knee.transform.localEulerAngles = eulerRotationKnee;
@@ -70,7 +71,7 @@ public class Quaternion_rotation_trackers : MonoBehaviour
             //Vector3 relativeEulerAngles_hip = VIVErotation2.eulerAngles;
             Vector3 relativeEulerAngles_hip = relativeInitialRotation.eulerAngles;
 
-            Vector3 eulerRotationHip = hip.transform.localEulerAngles;
+            Vector3 eulerRotationHip = hip.transform.localEulerAngles        ;
             eulerRotationHip.x = (NormalizeAngle(relativeEulerAngles_hip.z)) ;
             eulerRotationHip.y = (NormalizeAngle(relativeEulerAngles_hip.x)) ;
             eulerRotationHip.z = 180 + (NormalizeAngle(relativeEulerAngles_hip.y)) ;
