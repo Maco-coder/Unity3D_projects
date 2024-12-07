@@ -1,4 +1,3 @@
-
 using System.Collections         ;
 using System.Collections.Generic ;
 using UnityEngine                ;
@@ -20,7 +19,7 @@ public class Quaternion_rotation_trackers : MonoBehaviour
 
     void Start()
     {
-        //initialTrackerRotation = trackerTransform.rotation;
+
     }
 
 
@@ -37,14 +36,15 @@ public class Quaternion_rotation_trackers : MonoBehaviour
         {
             // Capture the initial rotation of the tracker
             initialTrackerRotation = trackerTransform.rotation;
-            Debug.Log("Initial Tracker Rotation: " + initialTrackerRotation.eulerAngles);
+            //Debug.Log("Initial Tracker Rotation: " + initialTrackerRotation.eulerAngles);
             hasInitialized = true;
         }
         
         if (hasInitialized && trackerTransform != null)
         {
-            Quaternion currentTrackerRotation = trackerTransform.rotation;
-            Quaternion relativeInitialRotation = currentTrackerRotation * Quaternion.Inverse(initialTrackerRotation);
+            Quaternion currentTrackerRotation = trackerTransform.rotation ;
+            //Quaternion relativeInitialRotation = currentTrackerRotation * Quaternion.Inverse(initialTrackerRotation);
+            Quaternion relativeInitialRotation = Quaternion.Inverse(initialTrackerRotation) * currentTrackerRotation ;
             redCube.transform.rotation = relativeInitialRotation ;
             //Debug.Log("Initial Tracker Rotation: " + initialTrackerRotation.eulerAngles);
             //Debug.Log("Current Tracker Rotation: " + currentTrackerRotation.eulerAngles);
@@ -72,9 +72,9 @@ public class Quaternion_rotation_trackers : MonoBehaviour
             Vector3 relativeEulerAngles_hip = relativeInitialRotation.eulerAngles;
 
             Vector3 eulerRotationHip = hip.transform.localEulerAngles        ;
-            eulerRotationHip.x = (NormalizeAngle(relativeEulerAngles_hip.z)) ;
-            eulerRotationHip.y = (NormalizeAngle(relativeEulerAngles_hip.x)) ;
-            eulerRotationHip.z = 180 + (NormalizeAngle(relativeEulerAngles_hip.y)) ;
+            eulerRotationHip.x = (NormalizeAngle(relativeEulerAngles_hip.x)) ;
+            //eulerRotationHip.y = (NormalizeAngle(relativeEulerAngles_hip.y)) ;
+            eulerRotationHip.z = 180 + (NormalizeAngle(relativeEulerAngles_hip.z)) ;
 
             hip.transform.localEulerAngles = eulerRotationHip;
 
