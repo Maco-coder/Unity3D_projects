@@ -44,7 +44,7 @@ public class Quaternion_rotation_trackers : MonoBehaviour
         {
             Quaternion currentTrackerRotation = trackerTransform.rotation ;
             //Quaternion relativeInitialRotation = currentTrackerRotation * Quaternion.Inverse(initialTrackerRotation);
-            Quaternion relativeInitialRotation = Quaternion.Inverse(initialTrackerRotation) * currentTrackerRotation ;
+            Quaternion relativeInitialRotation = Quaternion.Inverse(initialTrackerRotation) * currentTrackerRotation  ;
             redCube.transform.rotation = relativeInitialRotation ;
             //Debug.Log("Initial Tracker Rotation: " + initialTrackerRotation.eulerAngles);
             //Debug.Log("Current Tracker Rotation: " + currentTrackerRotation.eulerAngles);
