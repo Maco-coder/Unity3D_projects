@@ -1,18 +1,33 @@
-using System.Collections;
+using System.Collections        ;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine               ;
 
 public class Knee_Physical_Virtual_Collocation : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public Transform tracker            ;
+    private bool hasInitialized = false ;
+    private Vector3 initialTrackerPosition;
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
+        if(!hasInitialized && tracker != null)
+        {
+            initialTrackerPosition = tracker.position ;
+            hasInitialized = true                     ;
+        }
+
+        if (hasInitialized && tracker != null)
+        {
+
+            //Debug.Log("Initial Tracker Position: " + initialTrackerPosition);
+
+        }
     }
-}
