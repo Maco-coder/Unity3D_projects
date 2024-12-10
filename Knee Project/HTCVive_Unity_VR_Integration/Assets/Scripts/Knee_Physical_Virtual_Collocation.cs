@@ -17,6 +17,10 @@ public class Knee_Physical_Virtual_Collocation : MonoBehaviour
     private Vector3 initialTracker1Position    ;
     private Quaternion initialTracker1Rotation ;
 
+    private float initialOffset_knee_x ;
+    private float initialOffset_knee_y ;
+    private float initialOffset_knee_z ;
+
 
     void Start()
     {
