@@ -33,16 +33,31 @@ public class Knee_Physical_Virtual_Collocation : MonoBehaviour
         Quaternion VIVErotation1 = tracker1.rotation ;
         Quaternion VIVErotation2 = tracker2.rotation ;
 
-        if (hasInitialized == false && tracker1 != null)
+        if (hasInitialized == false && tracker1 != null && tracker2 != null)
         {
+
+            // Hip //
+
             initialTracker1Position = tracker1.position ;
             initialTracker1Rotation = tracker1.rotation ;
             manikin.transform.position = initialTracker1Position ;
             manikin.transform.rotation = initialTracker1Rotation ;
+
+
+            // Knee //
+
+            Quaternion relativeRotation = Quaternion.Inverse(VIVErotation2) * VIVErotation1 ;
+            Vector3 relativeEulerAngles_knee = relativeRotation.eulerAngles ;
+
+            initialOffset_knee_x = NormalizeAngles(relativeEulerAngles_knee.x) ;
+            //initialOffset_knee_y = NormalizeAngles(relativeEulerAngles_knee.y) ;
+            initialOffset_knee_z = NormalizeAngles(relativeEulerAngles_knee.z) ;
+
             hasInitialized = true ;
+
         }
 
-        if (hasInitialized == true && tracker1 != null)
+        if (hasInitialized == true && tracker1 != null && tracker2 != null)
         {
 
             // HIP JOINT KINEMATICS //
@@ -62,13 +77,38 @@ public class Knee_Physical_Virtual_Collocation : MonoBehaviour
 
             Quaternion relativeRotation = Quaternion.Inverse(VIVErotation2) * VIVErotation1 ;
             Vector3 relativeEulerAngles_knee = relativeRotation.eulerAngles ;
+            Vector3 eulerRotationKnee = knee1.transform.localEulerAngles    ;
 
-            Vector3 eulerRotationKnee = knee1.transform.localEulerAngles ;
-            eulerRotationKnee.x = NormalizeAngles(relativeEulerAngles_knee.x) - 0.540f  ;
-            //eulerRotationKnee.y = NormalizeAngles(relativeEulerAngles_knee.y) ;
-            eulerRotationKnee.z = - NormalizeAngles(relativeEulerAngles_knee.z) + 0.60f ;
+            if (initialOffset_knee_x > 0 && initialOffset_knee_z > 0)
+            {
+                eulerRotationKnee.x = NormalizeAngles(relativeEulerAngles_knee.x) - initialOffset_knee_x    ;
+                eulerRotationKnee.z = -(NormalizeAngles(relativeEulerAngles_knee.z) - initialOffset_knee_z) ;
+            }
+
+            if (initialOffset_knee_x > 0 && initialOffset_knee_z < 0)
+            {
+                eulerRotationKnee.x = NormalizeAngles(relativeEulerAngles_knee.x) - initialOffset_knee_x     ;
+                eulerRotationKnee.z = - (NormalizeAngles(relativeEulerAngles_knee.z) + initialOffset_knee_z) ;
+            }
+
+            if (initialOffset_knee_x < 0 && initialOffset_knee_z > 0)
+            {
+                eulerRotationKnee.x = NormalizeAngles(relativeEulerAngles_knee.x) + initialOffset_knee_x     ;
+                eulerRotationKnee.z = - (NormalizeAngles(relativeEulerAngles_knee.z) - initialOffset_knee_z) ;
+            }
+
+            if (initialOffset_knee_x < 0 && initialOffset_knee_z < 0)
+            {
+                eulerRotationKnee.x = NormalizeAngles(relativeEulerAngles_knee.x) + initialOffset_knee_x     ;
+                eulerRotationKnee.z = - (NormalizeAngles(relativeEulerAngles_knee.z) + initialOffset_knee_z) ;
+            }
+
+            //eulerRotationKnee.y = NormalizeAngles(relativeEulerAngles_knee.y  ) ;
+
             knee1.transform.localEulerAngles = eulerRotationKnee ;
-
+            
+            Debug.Log("Initial offset X in tracker knee: " + initialOffset_knee_x);
+            Debug.Log("Initial offset Z in tracker knee: " + initialOffset_knee_z);
 
         }
     }
