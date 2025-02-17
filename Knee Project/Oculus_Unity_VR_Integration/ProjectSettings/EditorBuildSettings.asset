@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Oculus_Hand-Human Body.unity
+    guid: 91c899d54fca3ba40bea3dff91cde879
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c6d8bd0e00b92c345a312fefd5a6fa3a, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7f4d20d178bf6a24e8449dfc2699fb99, type: 2}
