@@ -8,13 +8,7 @@ public class Script_Offsets : MonoBehaviour
     public GameObject Hip_reference;
     public GameObject Manikin_body ;
 
-    public float offset_position_x ;
-    public float offset_position_y ;
-    public float offset_position_z ;
-
-    public float offset_angle_x ;
-    public float offset_angle_y ;
-    public float offset_angle_z ;
+    public Vector3 Manikin_offset  ;
 
 
     void Start()
@@ -24,6 +18,13 @@ public class Script_Offsets : MonoBehaviour
 
     void Update()
     {
-        
+
+        Vector3 Hip_reference_position = Hip_reference.transform.position  ;
+        Vector3 Manikin_position = Hip_reference_position + Manikin_offset ;
+
+        if (Manikin_body != null)
+        {
+            Manikin_body.transform.position = Manikin_position;
+        }
     }
 }
