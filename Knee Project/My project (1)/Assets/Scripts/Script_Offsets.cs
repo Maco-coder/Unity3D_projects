@@ -17,6 +17,7 @@ public class Script_Offsets : MonoBehaviour
 
     private Vector3 Manikin_position_offset = new Vector3(0.093f, 0.017f, -1.135f) ;  // relative to the hip-reference cube //
 
+
     private float manikin_desired_angle_x = 0f ;
     private float manikin_desired_angle_y = 0f ;
     private float manikin_desired_angle_z = 0f ;
@@ -113,8 +114,8 @@ public class Script_Offsets : MonoBehaviour
             Manikin_child.transform.localEulerAngles = new Vector3(body_newX, body_newZ, body_newY);
 
             float hip_newX = -(upperLegEulerAngles.x + Upper_leg_offsets.x);
-            float hip_newY = -(upperLegEulerAngles.z + Upper_leg_offsets.y) ;
-            float hip_newZ = (upperLegEulerAngles.y + Upper_leg_offsets.z);
+            float hip_newY = -(upperLegEulerAngles.z + Upper_leg_offsets.y);
+            float hip_newZ = (upperLegEulerAngles.y + Upper_leg_offsets.z) ;
             Manikin_hip.transform.localEulerAngles = new Vector3(hip_newX, hip_newY, hip_newZ);
 
             float knee_newX = (lowerLegEulerAngles.x + Lower_leg_offsets.x);
