@@ -45,9 +45,9 @@ public class Script_Offsets : MonoBehaviour
     void Update()
     {
 
-        Quaternion Upper_leg_rotation_cube = Upper_leg_cube.rotation   ;
-        Quaternion Lower_leg_rotation_cube = Lower_leg_cube.rotation   ;
-        Quaternion Hip_rotation_cube = Hip_reference_body.rotation     ;
+        Quaternion Upper_leg_rotation_cube = Upper_leg_cube.rotation ;
+        Quaternion Lower_leg_rotation_cube = Lower_leg_cube.rotation ;
+        Quaternion Hip_rotation_cube = Hip_reference_body.rotation   ;
 
 
         if (hasReadOffsets == false && Upper_leg_cube.transform.position != Vector3.zero && Lower_leg_cube.transform.position != Vector3.zero && Hip_reference_body.transform.position != Vector3.zero)
@@ -56,10 +56,12 @@ public class Script_Offsets : MonoBehaviour
             Vector3 Upper_leg_EulerAngles = Upper_leg_rotation_cube.eulerAngles;
             Upper_leg_EulerAngles = new Vector3(NormalizeAngle(Upper_leg_EulerAngles.x), NormalizeAngle(Upper_leg_EulerAngles.y), NormalizeAngle(Upper_leg_EulerAngles.z));
 
+            Debug.Log("Data: " + Upper_leg_EulerAngles) ;
+
             Vector3 eulerRotationHip;
             eulerRotationHip.x = hip_desired_angle_x - Upper_leg_EulerAngles.x ;
-            eulerRotationHip.y = hip_desired_angle_y - Upper_leg_EulerAngles.y ;
-            eulerRotationHip.z = hip_desired_angle_z - Upper_leg_EulerAngles.z ;
+            eulerRotationHip.y = hip_desired_angle_y - (-Upper_leg_EulerAngles.z) ;
+            eulerRotationHip.z = hip_desired_angle_z - Upper_leg_EulerAngles.y ;
             Upper_leg_offsets = eulerRotationHip;
 
 
@@ -68,8 +70,8 @@ public class Script_Offsets : MonoBehaviour
             
             Vector3 eulerRotationKnee;
             eulerRotationKnee.x = knee_desired_angle_x - Lower_leg_EulerAngles.x;
-            eulerRotationKnee.y = knee_desired_angle_y - Lower_leg_EulerAngles.y;
-            eulerRotationKnee.z = knee_desired_angle_z - Lower_leg_EulerAngles.z;
+            eulerRotationKnee.y = knee_desired_angle_y - (-Lower_leg_EulerAngles.z);
+            eulerRotationKnee.z = knee_desired_angle_z - Lower_leg_EulerAngles.y;
             Lower_leg_offsets = eulerRotationKnee;
 
 
@@ -95,11 +97,14 @@ public class Script_Offsets : MonoBehaviour
         
         if (hasReadOffsets == true)
         {
-            Manikin_body.transform.position = Hip_reference.transform.position + Manikin_position_offset;
+            Manikin_body.transform.position = Hip_reference.transform.position + Manikin_position_offset;  // Positions manikin where the reference cube (hip-reference) is //
 
-            Vector3 bodyEulerAngles = Hip_reference_body.eulerAngles ;
-            Vector3 upperLegEulerAngles = Upper_leg_cube.eulerAngles ;
-            Vector3 lowerLegEulerAngles = Lower_leg_cube.eulerAngles ;
+            Vector3 R_bodyEulerAngles = Hip_reference_body.eulerAngles ;
+            Vector3 R_upperLegEulerAngles = Upper_leg_cube.eulerAngles ;
+            Vector3 R_lowerLegEulerAngles = Lower_leg_cube.eulerAngles ;
+
+            Vector3 upperLegEulerAngles = new Vector3(NormalizeAngle(R_upperLegEulerAngles.x), NormalizeAngle(R_upperLegEulerAngles.y), NormalizeAngle(R_upperLegEulerAngles.z));
+            Vector3 lowerLegEulerAngles = new Vector3(NormalizeAngle(R_upperLegEulerAngles.x), NormalizeAngle(R_upperLegEulerAngles.y), NormalizeAngle(R_upperLegEulerAngles.z));
 
             // Manually compute the new Euler angles:
 
@@ -110,12 +115,16 @@ public class Script_Offsets : MonoBehaviour
             float body_newX = Hip_reference_body.eulerAngles.x;
             float body_newY = Hip_reference_body.eulerAngles.y;
             float body_newZ = Hip_reference_body.eulerAngles.z;
-            Manikin_child.transform.localEulerAngles = new Vector3(body_newX, body_newZ, body_newY);
+            Manikin_child.transform.localEulerAngles = new Vector3(body_newX, body_newZ, body_newY); // Orients manikin to the reference cube (not essential given that the table is flat) //
 
             float hip_newX = -(upperLegEulerAngles.x + Upper_leg_offsets.x);
             float hip_newY = -(upperLegEulerAngles.z + Upper_leg_offsets.y);
             float hip_newZ = (upperLegEulerAngles.y + Upper_leg_offsets.z) ;
             Manikin_hip.transform.localEulerAngles = new Vector3(hip_newX, hip_newY, hip_newZ);
+
+            //Debug.Log("Data: " + hip_newY);
+            //Debug.Log("DataY: " + hip_newX);
+            //Debug.Log("DataZ: " + hip_newX);
 
             float knee_newX = (lowerLegEulerAngles.x + Lower_leg_offsets.x);
             float knee_newY = (lowerLegEulerAngles.z + Lower_leg_offsets.y);
