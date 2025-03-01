@@ -101,7 +101,6 @@ public class Script_Offsets : MonoBehaviour
             Vector3 upperLegEulerAngles = Upper_leg_cube.eulerAngles ;
             Vector3 lowerLegEulerAngles = Lower_leg_cube.eulerAngles ;
 
-
             // Manually compute the new Euler angles:
 
             //float body_newX = (bodyEulerAngles.x + Hip_reference_offsets.x) ;
