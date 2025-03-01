@@ -108,12 +108,12 @@ public class Script_Offsets : MonoBehaviour
             float hip_newX = -(upperLegEulerAngles.x + Upper_leg_offsets.x);
             float hip_newY = -(upperLegEulerAngles.z + Upper_leg_offsets.y);
             float hip_newZ = (upperLegEulerAngles.y + Upper_leg_offsets.z) ;
-            Manikin_hip.transform.localEulerAngles = new Vector3(hip_newX, hip_newY, hip_newZ);
+            Manikin_hip.transform.localEulerAngles = new Vector3(hip_newX, 0, hip_newZ);
 
             float knee_newX = (lowerLegEulerAngles.x + Lower_leg_offsets.x);
             float knee_newY = (lowerLegEulerAngles.z + Lower_leg_offsets.y);
             float knee_newZ = (lowerLegEulerAngles.y + Lower_leg_offsets.z);
-            Manikin_knee.transform.localEulerAngles = new Vector3(knee_newX, knee_newY, knee_newZ);
+            Manikin_knee.transform.localEulerAngles = new Vector3(knee_newX, 0, knee_newZ);
 
             //Debug.Log("Data: " + knee_newY);
 
