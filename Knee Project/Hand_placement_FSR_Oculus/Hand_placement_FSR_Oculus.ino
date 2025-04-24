@@ -12,7 +12,6 @@ const int interval = 100   ;
 unsigned long prevTime = 0 ;
 
 
-
 void setup() {
 
   Serial.begin(38400);
