@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArmatureSkinningUpdateRetarget
       objectReference: {fileID: 0}
+    - target: {fileID: 7335297518904446665, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
