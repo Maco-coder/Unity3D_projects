@@ -264,7 +264,7 @@ MonoBehaviour:
   SkeletonCoordinates: 0
   TMarkersetCoordinates: 0
   BoneNamingConvention: 0
-  DrawMarkers: 0
+  DrawMarkers: 1
   DrawTMarkersetMarkers: 0
   DrawCameras: 0
   DrawForcePlates: 0
