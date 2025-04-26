@@ -1,21 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using OptiTrack;
 using NaturalPoint;
 using NaturalPoint.NatNetLib;
 
 
 public class MarkerPositionTracker : MonoBehaviour
 {
-
-    public OptiTrackStreamingClient StreamingClient;
+    public OptitrackStreamingClient StreamingClient;
     public Transform trackedObject;
 
-    
     void Update()
     {
-
         if (StreamingClient != null && StreamingClient.IsConnected)
         {
             UnlabeledMarker[] unlabeledMarkers = StreamingClient.GetUnlabeledMarkers();
@@ -45,6 +41,5 @@ public class MarkerPositionTracker : MonoBehaviour
         {
             Debug.Log("OptiTrack Streaming Client not connected.");
         }
-
     }
 }
