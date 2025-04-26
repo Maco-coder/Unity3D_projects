@@ -12,17 +12,15 @@ public class MarkerPositionTracker : MonoBehaviour
 
     void Update()
     {
-        if (StreamingClient != null && StreamingClient.IsConnected)
+        // Fix for CS0176: Use the class name to call the static method FindDefaultClient  
+        if (StreamingClient != null && OptitrackStreamingClient.FindDefaultClient() != null)
         {
-            UnlabeledMarker[] unlabeledMarkers = StreamingClient.GetUnlabeledMarkers();
+            List<OptitrackMarkerState> unlabeledMarkers = StreamingClient.GetLatestMarkerStates();
 
-            if (unlabeledMarkers.Length > 0)
+            if (unlabeledMarkers != null && unlabeledMarkers.Count > 0)
             {
-                // Get the position of the first unlabeled marker
                 Vector3 markerPosition = unlabeledMarkers[0].Position;
 
-                // OptiTrack coordinates are often in meters, Unity in world units
-                // You might need to adjust the scale and coordinate system
                 if (trackedObject != null)
                 {
                     trackedObject.position = markerPosition;
