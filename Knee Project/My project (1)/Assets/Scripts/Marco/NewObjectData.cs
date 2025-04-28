@@ -1,28 +1,30 @@
-using System.Collections;
+using System.Collections        ;
 using System.Collections.Generic;
-using UnityEngine;
-using System.IO.Ports;
-using System.Threading;
+using UnityEngine               ;
+using System.IO.Ports           ;
+using System.Threading          ;
 
 public class NewObjectData : MonoBehaviour
 {
-    SerialPort stream = new SerialPort("COM6", 38400);
-    private Thread serialThread;
+    SerialPort stream = new SerialPort("COM7", 38400);
+    private Thread serialThread ;
     private bool running = false;
 
     private string receivedString;
     private object dataLock = new object(); // for thread safety
 
-    public int sensor1;
-    public int sensor2;
+    public int sensor1 ;
+    public int sensor2 ;
 
     public GameObject handUpperLeg ;
     public GameObject handLowerLeg ;
 
+    public float sensors_threshold ;
+
 
     void Start()
     {
-        stream.Open();
+        stream.Open() ;
         running = true;
 
         serialThread = new Thread(ReadSerial);
@@ -62,8 +64,8 @@ public class NewObjectData : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(receivedString))
             {
-                line = receivedString;
-                receivedString = null; // clear it so we don't reuse old data
+                line = receivedString ;
+                receivedString = null ; // clear it so we don't reuse old data
             }
         }
 
@@ -76,28 +78,25 @@ public class NewObjectData : MonoBehaviour
                 int.TryParse(data[0], out sensor1);
                 int.TryParse(data[1], out sensor2);
 
-                if (sensor1 > 200 && sensor2 < 200)
-                {
-                    // TODO: Add logic when sensor1 > 200 and sensor2 < 200
-                    handUpperLeg.SetActive(true);
-                    handUpperLeg.transform.position = new Vector3(-0.18f, 1.035f, -3.70f);
-                }
-
-                else if (sensor2 > 200 && sensor1 < 200)
-                {
-                    // TODO: Add logic when sensor2 > 200 and sensor1 < 200
-                    handUpperLeg.SetActive(true);
-                    handUpperLeg.transform.position = new Vector3(-0.18f, 1.035f, -3.50f);
-
-                }
-
-                else if (sensor1 > 200 && sensor2 > 200)
+                if (sensor1 > sensors_threshold && sensor2 < sensors_threshold)
                 {
                     handUpperLeg.SetActive(true);
-                    handUpperLeg.transform.position = new Vector3(0f, 1.50f, -3.70f);
+                    handUpperLeg.transform.localPosition = new Vector3(-0.09951805f, 0.2599763f, 0.02181772f);
                 }
 
-                else if (sensor1 < 200 && sensor2 < 200)
+                else if (sensor2 > sensors_threshold && sensor1 < sensors_threshold)
+                {
+                    handUpperLeg.SetActive(true);
+                    handUpperLeg.transform.localPosition = new Vector3(-0.09951805f, 0.2599763f, 0.02181772f);
+                }
+
+                else if (sensor1 > sensors_threshold && sensor2 > sensors_threshold)
+                {
+                    handUpperLeg.SetActive(true);
+                    handUpperLeg.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+                }
+
+                else if (sensor1 < sensors_threshold && sensor2 < sensors_threshold)
                 {
                     handUpperLeg.SetActive(false);
                 }

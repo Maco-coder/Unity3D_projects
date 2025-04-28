@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 635
     width: 365
     height: 312
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 1555
     height: 656
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -324,7 +324,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Marco
+    - Assets/SteamVR/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Marco
+  - Assets/SteamVR/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\mamoranl\Documents\GitHub\Unity3D_projects\Knee Project\My
     project (1)
@@ -340,9 +340,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 48750000
-    m_LastClickedID: 30024
-    m_ExpandedIDs: 00000000c8630000ca630000cc630000ce6300000864000000ca9a3b
+    m_SelectedIDs: 12640000
+    m_LastClickedID: 25618
+    m_ExpandedIDs: 00000000b0630000b2630000b4630000b6630000f0630000f263000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -370,7 +370,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c8630000ca630000cc630000ce630000
+    m_ExpandedIDs: 00000000b0630000b2630000b4630000b6630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -395,8 +395,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c6680000
-    m_LastClickedInstanceID: 26822
+    m_SelectedInstanceIDs: ae5e0000
+    m_LastClickedInstanceID: 24238
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -422,7 +422,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 226}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 205
@@ -509,24 +509,24 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 18}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9644f9ffae44f9ffb844f9ff6646f9ff14b3f9ff50caf9ffc0c3faffb2e2faff2afbfffff4ffffff
+      m_ExpandedIDs: 0873faff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Cube-Hip_clamps
-        m_OriginalName: Cube-Hip_clamps
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -549848
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 2}
       m_SearchString: 
@@ -866,9 +866,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.4554328, y: 1.7281132, z: 0.4298938}
+    m_Target: {x: -0.25118515, y: 0.8969801, z: -0.39637482}
     speed: 2
-    m_Value: {x: 0.4554328, y: 1.7281132, z: 0.4298938}
+    m_Value: {x: -0.25118515, y: 0.8969801, z: -0.39637482}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -914,13 +914,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.41622278, y: -0.35107297, z: 0.17847326, w: -0.8199545}
+    m_Target: {x: -0.043687027, y: -0.24316718, z: 0.012086919, w: -0.9693482}
     speed: 2
-    m_Value: {x: -0.4185397, y: -0.35041764, z: 0.1794666, w: -0.81842756}
+    m_Value: {x: -0.042215776, y: -0.24308531, z: 0.011716784, w: -0.969015}
   m_Size:
-    m_Target: 1.1057296
+    m_Target: 2.5106876
     speed: 2
-    m_Value: 1.1057296
+    m_Value: 2.402572
   m_Ortho:
     m_Target: 1
     speed: 2
