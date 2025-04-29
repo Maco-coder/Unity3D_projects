@@ -16,7 +16,7 @@ public class MarkerPositionTracker : MonoBehaviour
         if (StreamingClient != null && OptitrackStreamingClient.FindDefaultClient() != null)
         {
             List<OptitrackMarkerState> unlabeledMarkers = StreamingClient.GetLatestMarkerStates();
-
+            
             if (unlabeledMarkers != null && unlabeledMarkers.Count > 0)
             {
                 Vector3 markerPosition = unlabeledMarkers[0].Position;
