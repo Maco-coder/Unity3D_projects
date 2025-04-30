@@ -816,7 +816,7 @@ MonoBehaviour:
   sensor2: 0
   handUpperLeg: {fileID: 102429242}
   handLowerLeg: {fileID: 0}
-  sensors_threshold: 900
+  sensors_threshold: 800
 --- !u!4 &815288507
 Transform:
   m_ObjectHideFlags: 0
