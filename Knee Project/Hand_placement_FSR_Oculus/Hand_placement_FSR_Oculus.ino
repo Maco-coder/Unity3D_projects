@@ -30,11 +30,11 @@ void loop() {
 
   if (currentTime - prevTime){
 
-    Serial.print(valSensor1)   ;
-    Serial.print(", ")         ;
-    Serial.println(valSensor2) ;
+    Serial.print(valSensor1)  ;
+    Serial.print(",")         ;
+    Serial.println(valSensor2);
 
-    prevTime = currentTime   ;
+    prevTime = currentTime    ;
     
   }
 
