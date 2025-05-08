@@ -6,7 +6,7 @@ using System.Threading          ;
 
 public class NewObjectData : MonoBehaviour
 {
-    SerialPort stream = new SerialPort("COM6", 38400);
+    SerialPort stream = new SerialPort("COM8", 9600);
     private Thread serialThread ;
     private bool running = false;
 
