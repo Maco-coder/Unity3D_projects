@@ -524,7 +524,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -9082362208595849712, guid: 0c14eed859bfc4a408cdca3c907782e1, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1560937422}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c14eed859bfc4a408cdca3c907782e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142019590}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c14eed859bfc4a408cdca3c907782e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142019589}
   m_SourcePrefab: {fileID: 100100000, guid: 0c14eed859bfc4a408cdca3c907782e1, type: 3}
 --- !u!1 &312510515
 GameObject:
@@ -780,6 +786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftHandMoving
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011344192480, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -941,6 +951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 649874181}
+  - component: {fileID: 649874182}
   m_Layer: 0
   m_Name: finger_index_r_end
   m_TagString: Untagged
@@ -963,6 +974,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 640842643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &649874182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649874180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796b75e345bd64d47a31edd757bd2670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weight: 1
+  m_Data:
+    m_Root: {fileID: 1482692242}
+    m_Tip: {fileID: 649874181}
+    m_Target: {fileID: 1153763165}
+    m_ChainRotationWeight: 1
+    m_TipRotationWeight: 1
+    m_MaxIterations: 15
+    m_Tolerance: 0.0001
+    m_MaintainTargetPositionOffset: 0
+    m_MaintainTargetRotationOffset: 0
 --- !u!1 &680598875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1323,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815288505}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ccfbd89d0a0ec84aade28014f28d6ec, type: 3}
   m_Name: 
@@ -1328,6 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hip_markerSet: {fileID: 680598880}
+  positionOffset: {x: -0.05, y: 0, z: 0.15}
   upper_leg_cube: {fileID: 1675568731}
   lower_leg_cube: {fileID: 1105332730}
   kneeModelPrefab: {fileID: 2142019587}
@@ -1447,6 +1482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1073398944}
+  - component: {fileID: 1073398945}
   m_Layer: 0
   m_Name: finger_ring_r_end
   m_TagString: Untagged
@@ -1469,6 +1505,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1932946165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1073398945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073398943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796b75e345bd64d47a31edd757bd2670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weight: 1
+  m_Data:
+    m_Root: {fileID: 2087010750}
+    m_Tip: {fileID: 1073398944}
+    m_Target: {fileID: 1237470400}
+    m_ChainRotationWeight: 1
+    m_TipRotationWeight: 1
+    m_MaxIterations: 15
+    m_Tolerance: 0.0001
+    m_MaintainTargetPositionOffset: 0
+    m_MaintainTargetRotationOffset: 0
 --- !u!1 &1092099906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1690,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1112965631}
+  - component: {fileID: 1112965632}
   m_Layer: 0
   m_Name: finger_pinky_r_end
   m_TagString: Untagged
@@ -1653,6 +1713,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1353045794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1112965632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112965630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796b75e345bd64d47a31edd757bd2670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weight: 1
+  m_Data:
+    m_Root: {fileID: 934752572}
+    m_Tip: {fileID: 1112965631}
+    m_Target: {fileID: 1889945952}
+    m_ChainRotationWeight: 1
+    m_TipRotationWeight: 1
+    m_MaxIterations: 15
+    m_Tolerance: 0.0001
+    m_MaintainTargetPositionOffset: 0
+    m_MaintainTargetRotationOffset: 0
 --- !u!1 &1153763164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,6 +1875,8 @@ GameObject:
   - component: {fileID: 1293283466}
   - component: {fileID: 1293283465}
   - component: {fileID: 1293283464}
+  - component: {fileID: 1293283470}
+  - component: {fileID: 1293283469}
   m_Layer: 0
   m_Name: vr_glove_model
   m_TagString: Untagged
@@ -1887,6 +1972,55 @@ Transform:
   - {fileID: 1456556449}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1293283469
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293283463}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!54 &1293283470
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293283463}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1353045793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,6 +2062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1441993991}
+  - component: {fileID: 1441993992}
   m_Layer: 0
   m_Name: finger_middle_r_end
   m_TagString: Untagged
@@ -1950,6 +2085,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 489136204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441993992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441993990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796b75e345bd64d47a31edd757bd2670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weight: 1
+  m_Data:
+    m_Root: {fileID: 1269817655}
+    m_Tip: {fileID: 1441993991}
+    m_Target: {fileID: 446356458}
+    m_ChainRotationWeight: 1
+    m_TipRotationWeight: 1
+    m_MaxIterations: 15
+    m_Tolerance: 0.0001
+    m_MaintainTargetPositionOffset: 0
+    m_MaintainTargetRotationOffset: 0
 --- !u!1 &1456556448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,7 +2344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79, type: 3}
       propertyPath: DrawMarkers
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79, type: 3}
       propertyPath: LocalAddress
@@ -2251,7 +2409,7 @@ MonoBehaviour:
   ringMarkerID: 2080
   pinkyMarkerID: 1040
   optitrackPositionScale: {x: 1, y: 1, z: 1}
-  optitrackRotationEulerOffset: {x: -48, y: 0, z: 0}
+  optitrackRotationEulerOffset: {x: 0, y: 0, z: 0}
   invertZAxis: 0
   trackingLosttimeout: 0.2
 --- !u!1001 &1560937421
@@ -3021,6 +3179,55 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c14eed859bfc4a408cdca3c907782e1, type: 3}
   m_PrefabInstance: {fileID: 207377317}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &2142019589
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142019587}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &2142019590
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142019587}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &2142205165
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine               ;
 public class KneeModel : MonoBehaviour
 {
     public Transform hip_markerSet ;  // The three markers on the 3D printed part with clamps
-    private Vector3 positionOffset = new Vector3(0.05f, 0.0f, 0.04f) ;  // Offset required to align virtual manikin with hip_markerSet; did trial an error to find it
+    public Vector3 positionOffset = new Vector3(0.1f, 0.0f, 0.04f) ;  // Offset required to align virtual manikin with hip_markerSet; did trial an error to find it
 
     public Transform upper_leg_cube;
     public Transform lower_leg_cube;
