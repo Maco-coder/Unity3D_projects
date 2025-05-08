@@ -19,6 +19,8 @@ public class NewObjectData : MonoBehaviour
     public GameObject handUpperLeg ;
     public GameObject handLowerLeg ;
 
+    public GameObject movingHand ;
+
     public float sensors_threshold ;
 
 
@@ -81,24 +83,28 @@ public class NewObjectData : MonoBehaviour
                 if (sensor1 > sensors_threshold && sensor2 < sensors_threshold)
                 {
                     handUpperLeg.SetActive(true);
+                    movingHand.SetActive(false) ;
                     handUpperLeg.transform.localPosition = new Vector3(-0.09951805f, 0.2599763f, 0.02181772f);
                 }
 
                 else if (sensor2 > sensors_threshold && sensor1 < sensors_threshold)
                 {
                     handUpperLeg.SetActive(true);
+                    movingHand.SetActive(false) ;
                     handUpperLeg.transform.localPosition = new Vector3(-0.09951805f, 0.2599763f, 0.02181772f);
                 }
 
                 else if (sensor1 > sensors_threshold && sensor2 > sensors_threshold)
                 {
                     handUpperLeg.SetActive(true);
+                    movingHand.SetActive(false) ;
                     handUpperLeg.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
                 }
 
                 else if (sensor1 < sensors_threshold && sensor2 < sensors_threshold)
                 {
                     handUpperLeg.SetActive(false);
+                    movingHand.SetActive(true)   ;
                 }
             }
         }
