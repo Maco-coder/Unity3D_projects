@@ -9,7 +9,7 @@ using System.IO.Ports            ;
 public class Sensors : MonoBehaviour
 {
 
-    SerialPort stream = new SerialPort("COM4", 38400) ;
+    SerialPort stream = new SerialPort("COM10", 38400) ;
     
     string filePath = "Assets/SavedData/savedData.txt";
     string filePath_grades = "Assets/SavedData/Grades.txt";
@@ -102,7 +102,7 @@ public class Sensors : MonoBehaviour
         FSRUpper.value = Upper_value  ;
         FSRlower1.value = Lower1_value ;
         FSRlower2.value = Lower2_value ;
-        FSRlower3.value = Lower3_value ;
+        FSRlower3.value = Lower3_value - 320 ;
 
 
 //        if (Input.GetKeyDown("s"))
@@ -129,25 +129,43 @@ public class Sensors : MonoBehaviour
 //       }
 
 
-//        if ((tension_gauge) >= 70 && (tension_gauge) <90)
-//        {
-//            grade_injury.text = ("healthy");
-//        }
+        if ((tension_gauge) >= 832 && (tension_gauge) <950)
+        {
+            grade_injury.text = ("healthy");
+        }
 
-//        if ((tension_gauge) >= 90 && (tension_gauge) < 120)
-//        {
-//            grade_injury.text = ("1");
-//        }
+        if ((tension_gauge) >= 740 && (tension_gauge) < 772)
+        {
+            grade_injury.text = ("grade 1");
+        }
 
-//       if ((tension_gauge) >= 120 && (tension_gauge) < 150)
-//        {
-//            grade_injury.text = ("2");
-//        }
+       if ((tension_gauge) >= 461 && (tension_gauge) < 660)
+        {
+            grade_injury.text = ("grade 2");
+        }
         
-//        if ((tension_gauge) >= 150)
-//        {
-//            grade_injury.text = ("3");
-//        }
+        if ((tension_gauge) >= 10 && (tension_gauge) < 353)
+        {
+            grade_injury.text = ("grade 3");
+        }
+
+
+        if ((tension_gauge) >= 353 && (tension_gauge) < 461)
+        {
+            grade_injury.text = ("undefined");
+        }
+
+        if ((tension_gauge) >= 660 && (tension_gauge) < 740)
+        {
+            grade_injury.text = ("undefined");
+        }
+
+        if ((tension_gauge) >= 772 && (tension_gauge) < 832)
+        {
+            grade_injury.text = ("undefined");
+        }
+
+
 
 //        System.IO.File.AppendAllText(filePath, receivedstring + "\n");
 
