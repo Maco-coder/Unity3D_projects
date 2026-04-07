@@ -1299,7 +1299,7 @@ MonoBehaviour:
   - {fileID: 1943658171}
   lightColor: {r: 1, g: 0.6773983, b: 0.33773577, a: 1}
   intensity: 0.05
-  blinkInterval: 0.25
+  blinkInterval: 0.5
 --- !u!4 &1986554213
 Transform:
   m_ObjectHideFlags: 0
