@@ -7,26 +7,26 @@ public class SphereLightController : MonoBehaviour
     [Header("Spheres and Settings")]
     public List<GameObject> spheres; // Assign all your sphere GameObjects here
     public Color lightColor = Color.white;
-    public float intensity = 1f; // Can be used if you attach Light component
-    public float blinkInterval = 0.5f; // Default blink interval
+    public float intensity = 1f; // If using real Light component
+    public float blinkInterval = 0.5f; // Time between on/off
 
     private List<Material> sphereMaterials = new List<Material>();
+    private bool isOn = true;
 
     void Start()
     {
-        // Cache materials and set initial color
+        // Cache materials and initialize color
         foreach (var sphere in spheres)
         {
             Renderer rend = sphere.GetComponent<Renderer>();
             if (rend != null)
             {
-                // Use an instance of the material so we can change it individually
-                Material mat = rend.material;
+                Material mat = rend.material; // instance so it can be changed individually
                 mat.color = lightColor;
                 sphereMaterials.Add(mat);
             }
 
-            // Optional: Add a Light component if you want real lighting
+            // Optional: Add a Light component if you want real light
             Light l = sphere.GetComponent<Light>();
             if (l == null)
             {
@@ -37,27 +37,30 @@ public class SphereLightController : MonoBehaviour
             }
         }
 
-        // Start blinking pattern
-        StartCoroutine(BlinkPattern());
+        StartCoroutine(BlinkAll());
     }
 
-    IEnumerator BlinkPattern()
+    IEnumerator BlinkAll()
     {
         while (true)
         {
-            for (int i = 0; i < spheres.Count; i++)
-            {
-                // Simple example: blink in a wave pattern
-                sphereMaterials[i].color = lightColor * Random.Range(0f, 1f); // dim to off randomly
-                Light l = spheres[i].GetComponent<Light>();
-                if (l != null)
-                {
-                    l.enabled = !l.enabled;
-                }
+            // Toggle state
+            isOn = !isOn;
 
-                yield return new WaitForSeconds(blinkInterval / spheres.Count);
+            // Update all spheres
+            foreach (var mat in sphereMaterials)
+            {
+                mat.color = isOn ? lightColor : Color.black;
             }
-            yield return null;
+
+            foreach (var sphere in spheres)
+            {
+                Light l = sphere.GetComponent<Light>();
+                if (l != null)
+                    l.enabled = isOn;
+            }
+
+            yield return new WaitForSeconds(blinkInterval);
         }
     }
 }
