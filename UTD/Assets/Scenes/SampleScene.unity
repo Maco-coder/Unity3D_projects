@@ -1297,7 +1297,7 @@ MonoBehaviour:
   - {fileID: 245795481}
   - {fileID: 294325567}
   - {fileID: 1943658171}
-  lightColor: {r: 0, g: 0.82807684, b: 1, a: 1}
+  lightColor: {r: 1, g: 0.6773983, b: 0.33773577, a: 1}
   intensity: 0.05
   blinkInterval: 0.25
 --- !u!4 &1986554213
