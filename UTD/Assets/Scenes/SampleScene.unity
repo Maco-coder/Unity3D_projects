@@ -534,13 +534,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 1.5, z: -12}
+  m_LocalRotation: {x: -0.043619405, y: 0, z: 0, w: 0.9990483}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -10, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,13 +681,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9330127, y: -0.066987306, z: 0.24999997, w: 0.25000006}
+  m_LocalRotation: {x: 0.8365164, y: -0.12940949, z: 0.22414386, w: 0.48296288}
   m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 150, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 120, y: -30, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,9 +1342,8 @@ MonoBehaviour:
   - {fileID: 267209621}
   - {fileID: 1943658171}
   - {fileID: 294325567}
-  lightColor: {r: 0.5113207, g: 1, b: 0.58848065, a: 1}
-  intensity: 0.2
-  blinkInterval: 0.5
+  lightColor: {r: 1, g: 0.840769, b: 0.4666667, a: 1}
+  fadeSpeed: 0.5
 --- !u!4 &1986554213
 Transform:
   m_ObjectHideFlags: 0
